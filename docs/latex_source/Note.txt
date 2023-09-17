@@ -1,0 +1,47 @@
+20/07
+    Bab 3
+        mulai dari data set
+        data set ikan lele/nila
+        ukuran kritikal nila 5g, 10g, 15g, 25g, 50g, 100g, 150g, 200g, 250, 350g, 500g, 500g+
+        ukuran panjang kritikal lele 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13. ke berat (g) 40, 60, 80, 100, 125, 142, 167, 200, 250, 320, 500, 1kg  dan 1kg+
+        gambar dari pak eka 
+        gambar di ujikan grayscale, masing" channel di RBG dan LAB color scale. (untuk menguji harris-detector)
+        Menjelaskan input dan Output dari setiap metode yang digunakan
+
+    Extra 
+    Masukin Matching indexing ke bab 2 atau membahas dari pemahaman sendiri di bab 3 (Masukin bab 2 / Pemahaman sendiri)
+    
+
+27/07
+    Keuntungan Grayscale
+        Pemrosesan Lebih Sederhana: Gambar skala abu-abu hanya berisi satu saluran intensitas piksel (biasanya berkisar antara 0 hingga 255), berbeda dengan gambar berwarna yang memiliki tiga saluran (Merah, Hijau, dan Biru). Pemrosesan gambar skala abu-abu membutuhkan lebih sedikit perhitungan, membuat algoritme lebih cepat dan lebih efisien.
+        Fokus pada Informasi Intensitas: Banyak algoritme deteksi fitur, seperti metode Harris-Laplace, terutama bergantung pada variasi dan gradien intensitas lokal untuk mengidentifikasi titik kunci. Informasi warna mungkin tidak relevan untuk metode ini, dan mengonversi gambar menjadi skala abu-abu membantu fokus pada informasi intensitas.
+        Representasi Seragam: Gambar skala abu-abu memberikan representasi gambar yang seragam terlepas dari apakah itu berwarna atau hitam-putih. Konsistensi ini menyederhanakan penerapan algoritme dan memastikan kompatibilitas dengan berbagai teknik pemrosesan gambar.
+        Pengurangan Dimensi: Dengan mengonversi gambar berwarna menjadi skala abu-abu, Anda mengurangi dimensi data, membuatnya lebih mudah untuk memvisualisasikan, menganalisis, dan memproses gambar.
+        Praktik Standar: Gambar skala abu-abu telah banyak digunakan dalam algoritme dan pustaka visi komputer tradisional. Banyak metode deteksi dan pencocokan fitur klasik dirancang dan dioptimalkan untuk bekerja dengan gambar skala abu-abu.
+
+    Extra
+        apakah dibutuhkan Bounding box?
+
+Metode :
+    Harris-Laplace detector (Breakdown)
+        Harris detector :
+            Color to grayscale
+            Spatial derivative calculation
+            Structure tensor setup
+            Harris response calculation
+            Non-maximum suppression
+
+        Laplace-of-gaussian detection :  
+              Image Smoothing
+              Blob detection with LoG applied
+              Non-Maximum suppression
+              Scale estimation
+              Thresholding
+              Blob localization
+
+22/08
+    
+
+    
+    
