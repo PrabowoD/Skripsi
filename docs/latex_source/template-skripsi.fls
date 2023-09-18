@@ -1,6 +1,6 @@
-PWD d:\Hmm\docs\latex_source
+PWD c:\Users\USER\Documents\GitHub\Skripsi\docs\latex_source
 INPUT C:\Users\USER\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT d:\Hmm\docs\latex_source\template-skripsi.tex
+INPUT c:\Users\USER\Documents\GitHub\Skripsi\docs\latex_source\template-skripsi.tex
 OUTPUT template-skripsi.log
 INPUT .\jtetiskripsi.cls
 INPUT .\jtetiskripsi.cls

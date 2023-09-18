@@ -8,31 +8,22 @@
 
 \section{\textbf{Multi-scale representation}}
 
-Pada bagian ini akan dijelaskan \emph{Multi-resolution image representation} 
-berdasarkan \emph{Gaussian filters}.\emph{Gaussian derivatives} sering digunakan untuk 
-mengekstrak fitur karakteristik. Bagian menjelasan tentang 
-bagaimana cara untuk menghitung kestabilan dari suatu gambar dan bagaimana 
-cara untuk menormalkannya untuk mendapatkan resposn turunan yang terlepas 
-dari resolusi gambar. Fitur lokal didefinisikan dari lokasi, skala dan bentuk, yang 
-akan mengalami transformasi jika dilihat dari sudut yang berbeda. Untuk 
-mengestimasi perubahan transformasi dari suatu interest point yang dieksplorasi 
-property dari \emph{Second moment matrix}, dengan komponen dari \emph{Hessian matrix} dapat 
-digunakan untuk mendeteksi karakteristik skala dari struktur lokal dan 
-mendeskripsikan bentuk struktur.
+Pada bagian ini akan dijelaskan representasi citra multi-resolusi berdasarkan filter Gaussian. 
+Turunan Gaussian sering digunakan untuk mengekstrak fitur-fitur karakteristik. Bagian ini akan menjelaskan bagaimana menghitung stabilitas 
+suatu gambar dan cara mengnormalisasi gambar tersebut untuk mendapatkan respons turunan yang tidak tergantung pada resolusi. 
+Fitur lokal didefinisikan berdasarkan lokasi, skala, dan bentuk, yang akan mengalami transformasi saat dilihat dari sudut yang berbeda. 
+Untuk memperkirakan perubahan transformasi pada suatu titik penting, kita dapat mengeksplorasi sifat dari \emph{Second moment matrix}, 
+dengan komponen dari matriks Hessian digunakan untuk mendeteksi karakteristik skala struktur lokal dan mendeskripsikan bentuk struktur.
 
 \subsection{\textbf{Gaussian scale-space}}
 
-Dalam domain diskrit dari gambar digital parameter skala juga 
-didiskritkan. Dengan demikian representasi ruang-skala adalah sekumpulan 
-gambar yang direpresentasikan pada tingkat resolusi diskrit yang berbeda. 
-Banyak penelitian tentang skala-ruang salah satunya menunjukan skala-ruang harus 
-memenuhi persamaan yang solusinya adalah ber-konvolusi dengan \emph{Gaussian 
-kernel}. Selanjutnya dia memperlihatkan bahwa kernel itu unik untuk 
-menghasilkan representasi skala-ruang. Keunikan dari \emph{Gaussian kernel} telah 
-dikonfirmasi dengan beberapa formulasi dari beberapa penelitian lain. Hasil ini 
-mengarah pada kesimpulan dimana konvolusi dengan \emph{Gaussian kernel} adalah 
-solusi terbaik untuk permasalahan konstruksi representasi skala-multi. fungsi 
-Bi-dimensional Gaussian didefinisikan :
+Dalam domain diskrit dari gambar digital, parameter skala juga diambil dalam bentuk diskrit. 
+Sebagai hasilnya, representasi ruang-skala adalah kumpulan gambar yang direpresentasikan pada tingkat resolusi diskrit yang berbeda. 
+Banyak penelitian dalam konteks skala-ruang menunjukkan bahwa salah satu persyaratan penting adalah bahwa representasi skala-ruang harus memenuhi persamaan yang dapat dicapai dengan melakukan konvolusi menggunakan kernel Gaussian. 
+Selanjutnya, penelitian ini mengindikasikan bahwa kernel Gaussian adalah satu-satunya kernel yang unik yang dapat menghasilkan representasi skala-ruang. 
+Keunikan dari kernel Gaussian ini telah dikonfirmasi melalui berbagai formulasi dalam berbagai penelitian lain. 
+Temuan ini menyimpulkan bahwa konvolusi dengan kernel Gaussian merupakan solusi optimal untuk permasalahan konstruksi representasi skala-ganda. 
+Fungsi Gaussian dua dimensi didefinisikan sebagai berikut:
 
 \begin{equation*}
 g(\sigma) = \frac{1}{2\pi\sigma^2}\exp^-\frac{x^2+y^2}{2\sigma^2}
@@ -47,18 +38,15 @@ untuk diperoleh sebagai produk satu dimensi kernel :
   g(x,y) = g(x)g(y)
 \end{equation*}
 
-Properti ini sangat berguna dalam prakteknya karena penghalusan 
-sinyal dua dimensi dapat digantikan oleh dua penghalusan satu dimensi, 
-satu untuk setiap dimensi. Filter Gaussian satu dimensi dapat 
-diimplementasikan sebagai filter rekursif, yang secara signifikan 
-mempercepat proses perhitungan dalam kasus kernel Gaussian yang lebih besar 
-(yaitu > \(\sqrt{2}\)).Kondisi kausalitas menyatakan bahwa tidak ada tambahan, 
-struktur buatan yang harus dibuat saat menghitung citra berskala kasar, yaitu citra 
-pada skala yang lebih kasar merupakan representasi citra yang disederhanakan pada 
-skala yang lebih kecil. Sifat semi-grup komutatif menyatakan bahwa n pemulusan 
-berturut-turut dari sebuah gambar memberikan hasil yang sama dengan pemulusan satu 
-kali dengan ukuran kernel sama dengan jumlah semua n kernel. Selain itu, 
-operasi n dapat dilakukan dalam urutan apa pun:
+Properti ini memiliki kegunaan yang sangat signifikan dalam praktiknya karena penghalusan sinyal dua dimensi 
+dapat digantikan oleh dua penghalusan satu dimensi, satu untuk setiap dimensi. 
+Filter Gaussian satu dimensi dapat diimplementasikan sebagai filter rekursif, yang secara signifikan mempercepat proses 
+perhitungan terutama pada kasus kernel Gaussian yang lebih besar (yaitu > \( \sqrt{2}\)). 
+Kondisi kausalitas menyatakan bahwa tidak ada struktur buatan tambahan yang perlu dibuat saat menghitung citra dalam skala kasar, 
+yang berarti citra pada skala yang lebih kasar merupakan representasi yang disederhanakan dari citra pada skala yang lebih halus. 
+Sifat semi-grup komutatif menyatakan bahwa pemulusan sebanyak n kali pada sebuah gambar menghasilkan hasil yang sama dengan pemulusan satu kali 
+menggunakan kernel dengan ukuran yang sama dengan jumlah seluruh n kernel yang digunakan. 
+Selain itu, operasi n dapat dilakukan dalam urutan apa pun:
 
 \begin{equation*}
 g(\sigma_{1}) * \cdot * g(\sigma_{n}) * I(x) = g(\sigma_{1} + \cdot + \sigma_{n}) * I(x)
@@ -82,38 +70,28 @@ Dengan I adalah gambar dan \(x = (x,y)\) adalah lokasi poin.
   \caption{}
 \end{figure}
 
-Citra berskala kasar diperoleh dengan menghaluskan citra berskala halus. 
-Operasi ini diulangi pada tingkat yang lebih kasar secara berurutan untuk 
-mendapatkan representasi multiskala. Untuk mempercepat operasi, dapat 
-mengambil sampel gambar skala kasar dengan faktor skala yang sesuai setelah setiap 
-operasi pemulusan. Namun harus berhati-hati memilih skala dan faktor pengambilan 
-sampel karena dapat menyebabkan masalah aliasing. Selain itu, hubungan 
-tambahan harus diperkenalkan untuk menemukan lokasi titik yang sesuai pada 
-tingkat skala yang berbeda. Ini membuat analisis teoretis menjadi lebih rumit.
+Citra dalam skala kasar diperoleh dengan menghaluskan citra dalam skala halus. 
+Proses ini diulangi secara berurutan pada tingkat skala yang semakin kasar untuk menghasilkan representasi multiskala. 
+Untuk mempercepat operasi ini, seringkali dilakukan pengambilan sampel pada citra skala kasar dengan faktor skala yang sesuai setelah setiap operasi pemulusan. 
+Namun, perlu berhati-hati dalam memilih skala dan faktor pengambilan sampel karena hal ini dapat menyebabkan masalah aliasing. 
+Selain itu, diperlukan penambahan hubungan tambahan untuk mencocokkan lokasi titik yang sesuai pada tingkat skala yang berbeda. 
+Ini membuat analisis teoretis menjadi lebih kompleks.
 
-Representasi skala-ruang juga dapat dibangun dengan perataan berturut-turut dari 
-gambar beresolusi tinggi dengan kernel dari skala yang berbeda. Membangun 
-ruang-skala lebih memakan waktu, ketika level skala tidak dijadikan sampel. 
-Informasi tersebut kemudian redundan, tetapi tidak perlu menghitung lokasi 
-titik yang sesuai pada skala yang berbeda. Jika mempertahankan semua titik 
-pada setiap tingkat ruang skala, dengan menjaga hubungan langsung antara 
-analisis teoretis dan komputasi nyata.
+Alternatifnya, representasi skala-ruang juga dapat dibangun dengan meratakan gambar beresolusi tinggi secara berturut-turut dengan menggunakan kernel berbagai skala. 
+Memang, membangun ruang-skala ini memerlukan lebih banyak waktu, terutama ketika tidak ada pengambilan sampel. 
+Walaupun informasi menjadi redundant, namun tidak perlu menghitung lokasi titik yang sesuai pada setiap tingkat skala. 
+Jika semua titik tetap dipertahankan pada setiap tingkat ruang-skala, maka hubungan antara analisis teoretis dan komputasi praktis tetap terjaga.
 
-Detektor fitur terutama didasarkan pada tensor struktur sederhana sebagai contoh 
-matriks momen kedua dalam detektor titik kepentingan. Skala kepentingan dalam dan luar, 
-di mana struktur dapat dianalisis, ditentukan oleh kondisi perolehan, yaitu resolusi 
-dan bidang pandang. Ukuran minimal dari sebuah struktur gambar yang dapat dianggap 
-sebagai karakteristik dibatasi oleh resolusi dan noise. Inner scale adalah faktor yang 
-relatif terhadap ukuran struktur, dengan kata lain adalah ukuran minimal dari titik 
-lingkungan yang mewakili informasi penting tentang struktur. Outer scale, yang merupakan 
-ukuran terbesar dari struktur, dibatasi oleh kendala yang menentukan karakter lokal dari fitur tersebut. 
-Hal ini juga dibatasi oleh ukuran gambar. Faktor skala harus didistribusikan secara 
-eksponensial antara batas dalam dan luar \(\sigma_{n} = \sigma_{0}s^{n}\), 
-untuk mempertahankan perubahan informasi yang seragam antara tingkat resolusi yang berurutan.
+Detektor fitur, pada dasarnya, bergantung pada struktur sederhana seperti tensor matriks momen kedua dalam deteksi titik penting. 
+Skala kepentingan dalam dan luar, yaitu di mana struktur dapat dianalisis, ditentukan oleh kondisi akuisisi, yaitu resolusi dan lapangan pandang. 
+Ukuran minimal sebuah struktur gambar yang dapat dianggap sebagai karakteristik dibatasi oleh resolusi dan noise. 
+Inner scale adalah faktor yang berhubungan dengan ukuran struktur tersebut, dengan kata lain, ukuran minimal lingkungan titik yang mengandung informasi penting tentang struktur. Outer scale, yang merupakan ukuran terbesar dari struktur, dibatasi oleh kendala yang menentukan sifat lokal dari fitur tersebut dan juga dibatasi oleh ukuran gambar itu sendiri. 
+Faktor skala harus didistribusikan secara eksponensial antara batas dalam dan luar, yaitu \(\sigma_{n} = \sigma_{0}s^{n}\), 
+agar perubahan informasi tetap seragam antara tingkat resolusi yang berurutan. 
 
 \textbf{Aﬃne scale-space.} Representasi yang lebih umum adalah ruang-skala affine. 
-Teori ruang skala affine Gaussian sangat berguna, ketika berhadapan dengan transformasi 
-yang halus dari patch gambar. Representasi ini dapat dihasilkan oleh konvolusi dengan kernel affine Gaussian. 
+Teori ruang-skala affine Gaussian sangat bermanfaat ketika berurusan dengan transformasi yang halus dari bagian citra. 
+Representasi ini dapat dihasilkan melalui konvolusi dengan kernel affine Gaussian.
 
 \begin{equation}
   g(\Sigma) = \frac{1}{2\pi\sqrt{\det\Sigma}}\exp^{-\frac{x^{T}\Sigma^{-1}x}{2}}
@@ -131,22 +109,22 @@ yang halus dari patch gambar. Representasi ini dapat dihasilkan oleh konvolusi d
   \caption{}
 \end{figure}
 
-Jika matriks \(\Sigma\) sama dengan matriks identitas dikalikan dengan skalar, fungsi ini sesuai dengan 
-\emph{Uniform Gaussian Kernel}. Penulis menangani ruang tiga dimensi (x,y,\(\sigma\)) 
-jika tradisional, filter Gaussian seragam digunakan. Kernel Gaussian kemudian ditentukan 
-oleh satu skala parameter \(\sigma\). Jika \(\Sigma\) adalah matriks 2x2 positif simetris, 
-jumlah derajat kebebasan mengarah ke ruang berdimensi tinggi yang terlalu rumit untuk ditangani. 
-Namun, kompleksitasnya berkurang jika menghitung representasi untuk satu titik citra. 
-Filter affine yang diterapkan pada suatu titik digunakan untuk masalah bentuk-dari-tekstur. 
+Jika matriks \(\Sigma\) adalah matriks identitas dikalikan dengan skalar, 
+maka fungsi ini sesuai dengan Kernel Gaussian Uniform. Penulis mengatasi ruang tiga dimensi (x, y, \(\sigma\)) 
+jika menggunakan pendekatan tradisional, di mana filter Gaussian seragam digunakan. 
+Kernel Gaussian dalam hal ini ditentukan oleh satu parameter skala, yaitu \(\sigma\). 
 
-Ada beberapa pendekatan untuk menghitung konvolusi dengan kernel affine. Salah satu 
-kemungkinan adalah menggunakan transformasi Fourier dari kernel Gaussian diskrit 
-dan melakukan perkalian dengan citra dalam domain frekuensi. Jika menghitung 
-respons filter dalam satu titik citra, tidak ada manfaat dalam menggunakan 
-filter rekursif. Biaya komputasi yang sama adalah jika mengambil sampel 
-kernel affine dan secara langsung menggabungkannya dengan citra. Metode yang 
-digunakan dalam pendekatan yang dijelaskan dalam manuskrip ini didasarkan 
-pada dekomposisi matriks kernel menjadi produk rotasi dan penskalaan matriks:
+Namun, ketika matriks \(\Sigma\) adalah matriks positif simetris 2x2, 
+kompleksitasnya menjadi lebih tinggi karena kita berada dalam ruang berdimensi tinggi yang sulit dihandle. 
+Meskipun begitu, kompleksitas ini dapat dikelola jika kita hanya menghitung representasi untuk satu titik citra. 
+Filter affine yang diterapkan pada titik tertentu biasanya digunakan untuk masalah bentuk-dari-tekstur.
+
+Ada beberapa pendekatan untuk menghitung konvolusi dengan kernel affine. 
+Salah satu pendekatan adalah dengan menggunakan transformasi Fourier dari kernel Gaussian diskrit dan melakukan perkalian dengan citra dalam domain frekuensi. 
+Jika hanya perlu menghitung respons filter pada satu titik citra, tidak ada manfaat dalam menggunakan filter rekursif. 
+Biaya komputasi yang sama akan diperoleh dengan mengambil sampel kernel affine dan langsung menggabungkannya dengan citra. 
+
+Metode yang digunakan dalam pendekatan yang dijelaskan dalam manuskrip ini didasarkan pada dekomposisi matriks kernel menjadi produk rotasi dan penskalaan matriks.
 
 
 \begin{equation*}
@@ -165,15 +143,14 @@ pada dekomposisi matriks kernel menjadi produk rotasi dan penskalaan matriks:
 \end{bmatrix}
 \end{equation*}
 
-Persamaan ini menunjukkan bahwa smoothing affine sesuai dengan konvolusi dengan 
-kernel Gaussian elips diputar. Untuk menyederhanakan proses komputasi, 
-maka dapat mengubah titik:
+Persamaan ini menunjukkan bahwa pemulusan affine setara dengan melakukan konvolusi dengan kernel Gaussian yang telah dirotasi dan memiliki bentuk elips. 
+Untuk menyederhanakan proses komputasi, kita dapat melakukan perubahan pada titik:
 
 \begin{equation*}
 x^{T}\Sigma^{-1}x = x^{T}\frac{1}{\sigma_{x}\sigma_{y}}\Sigma^{-1}_{N}x=x^{T}\Sigma^{-\frac{1}{2}}_{N}\frac{1}{\sigma_{x}\sigma_{y}}\Sigma^{-\frac{1}{2}}_{N}x=(\Sigma^{-\frac{1}{2}}_{N}x)^{T}\frac{1}{\sigma_{x}\sigma_{y}}\Sigma^{-\frac{1}{2}}_{N}x
 \end{equation*}
 
-Dengan demikian, affne smoothing dilakukan dengan konvolusi kernel seragam \(\sigma_{N} = \sqrt{\sigma_{x}\sigma_{y}}\)
+Dengan demikian, pemulusan affine dilakukan dengan melakukan konvolusi menggunakan kernel seragam \(\sigma_{N} = \sqrt{\sigma_{x}\sigma_{y}}\)
 dengan titik yang ditransformasi oleh \(x' = \Sigma^{1\frac{1}{2}}_{N}x\). Sebuah masalah terjadi ketika \(\sigma_{x}\) 
 sangat berbeda dari \(\sigma_{y}\). Dalam hal ini, pengambilan sampel citra dilakukan dengan interval \(\frac{\sigma_{x}}{\sigma_{N}}\)
 dan \(\frac{\sigma_{y}}{\sigma_{N}}\) melibatkan beberapa kehilangan informasi dan mengenalkan artefak. 
@@ -188,31 +165,25 @@ dan kemudian menghitung matriks \(\Sigma^{-\frac{1}{2}}_{N}\).
 
 \subsection{\textbf{Scale-space derivatives}}
 
-Kegunaan derivatif dalam analisis sinyal lokal dapat diilustrasikan dengan ekspansi Taylor. 
-Ekspansi Taylor memainkan peran penting dalam desain filter dan, hingga urutan yang dipilih, 
-mendekati struktur gambar secara lokal. Secara umum, ekspansi dihitung hingga urutan kedua.
+Kegunaan turunan dalam analisis sinyal lokal dapat diilustrasikan melalui ekspansi Taylor. 
+Ekspansi Taylor memegang peran penting dalam desain filter dan, pada urutan yang dipilih, mendekati struktur gambar secara lokal. 
+Secara umum, ekspansi ini dihitung hingga urutan kedua.
 
 \begin{equation*}
   I(x_{0} +\Delta x) \approx I(x_{0}) + \Delta x^{T}\nabla  I(x_{0}) + \Delta x^{T} H(x_{0}) \Delta x
 \end{equation*}
 
-\textbf{Gaussian derivatives} Sebuah fitur dapat diekstrak pada resolusi yang berbeda dengan 
-menerapkan fungsi yang sesuai pada skala yang berbeda. Fungsi deteksi sebagian besar didasarkan 
-pada turunan ruang-skala Gaussian, karena turunan linier Gaussian cocok untuk memodelkan 
-bagian depan visual manusia. Perbedaan besaran, dihitung dengan menggabungkan sinyal asli 
-dengan turunan dari Gaussian, dapat dilihat sebagai generalisasi operator perbedaan. Ketika 
-parameter skala cenderung nol, turunan skala-ruang mendekati turunan fungsi yang sebenarnya. 
-Tujuan dari analisis skala-ruang adalah untuk mengeksplorasi representasi gambar pada 
-berbagai skala untuk mengekstrak informasi yang menonjol.
+\textbf{Gaussian derivatives} Sebuah fitur dapat diekstrak pada berbagai tingkat resolusi dengan menerapkan fungsi yang sesuai pada skala yang berbeda. 
+Fungsi deteksi banyak didasarkan pada turunan Gaussian dalam ruang-skala, karena turunan Gaussian linear cocok untuk memodelkan pemrosesan visual dalam manusia. 
+Perbedaan besar ini, yang dihitung dengan menggabungkan sinyal asli dengan turunan dari Gaussian, dapat dianggap sebagai generalisasi operator perbedaan. 
+Ketika parameter skala mendekati nol, turunan dalam ruang-skala mendekati turunan dari fungsi asli. 
+Tujuan dari analisis dalam ruang-skala adalah untuk menyelidiki representasi citra pada berbagai tingkat skala guna mengekstrak informasi yang signifikan.
 
-\textbf{Uniform derivatives} Secara umum, filter yang diturunkan dari kernel Gaussian yang 
-seragam digunakan dalam praktik di domain pemrosesan citra. Derivatif pada skala yang berbeda 
-dapat dihitung dengan menghaluskan gambar dengan Gaussian dan membedakan sinyal yang 
-dihaluskan. Semua properti dari kernel Gaussian juga berlaku untuk turunannya. 
-Oleh karena itu, jika menerapkan operasi ini dalam urutan terbalik, maka mendapatkan 
-hasil yang sama. Pilihan lainnya adalah menggabungkan gambar dengan turunan dari 
-skala kernel Gaussian. Semua metode ini setara. 
-Diberikan setiap fungsi gambar \(I(x)\)turunan pertama dapat didefinisikan dengan:
+\textbf{Uniform derivatives} Secara umum, dalam praktik pemrosesan citra, filter yang berasal dari kernel Gaussian seragam sering digunakan. 
+Turunan pada berbagai tingkat skala dapat dihitung dengan menghaluskan citra menggunakan filter Gaussian dan kemudian menghitung perbedaannya. 
+Semua properti yang berlaku untuk kernel Gaussian juga berlaku untuk turunannya. Oleh karena itu, jika kita menerapkan operasi ini dalam urutan terbalik, 
+kita akan mendapatkan hasil yang sama. Alternatifnya, kita juga dapat menggabungkan citra dengan turunan dari kernel Gaussian pada berbagai skala. 
+Semua metode ini bersifat setara. Dalam hal ini, untuk setiap fungsi citra \(I(x)\), turunan pertama dapat didefinisikan sebagai berikut:
 
 \begin{equation*}
   L_{x}(x;\Sigma) = \frac{\partial}{\partial_{x}} * g(\Sigma) * I(x)

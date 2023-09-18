@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.15)  18 SEP 2023 02:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.15)  18 SEP 2023 19:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/Hmm/docs/latex_source/template-skripsi.tex
-(d:/Hmm/docs/latex_source/template-skripsi.tex
+**c:/Users/USER/Documents/GitHub/Skripsi/docs/latex_source/template-skripsi.tex
+(c:/Users/USER/Documents/GitHub/Skripsi/docs/latex_source/template-skripsi.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-03-30> (jtetiskripsi.cls
 Document Class: jtetiskripsi 
@@ -956,84 +956,85 @@ BAB II.
 <gambar/Uniform Gaussian kernel.jpg, id=229, 290.88675pt x 78.2925pt>
 File: gambar/Uniform Gaussian kernel.jpg Graphic file (type jpg)
 <use gambar/Uniform Gaussian kernel.jpg>
-Package pdftex.def Info: gambar/Uniform Gaussian kernel.jpg  used on input line 81.
+Package pdftex.def Info: gambar/Uniform Gaussian kernel.jpg  used on input line 69.
 (pdftex.def)             Requested size: 325.50082pt x 87.61172pt.
  [5 <./gambar/Uniform Gaussian kernel.jpg>]
 <gambar/Scale space.jpg, id=236, 367.3725pt x 177.0615pt>
 File: gambar/Scale space.jpg Graphic file (type jpg)
 <use gambar/Scale space.jpg>
-Package pdftex.def Info: gambar/Scale space.jpg  used on input line 124.
+Package pdftex.def Info: gambar/Scale space.jpg  used on input line 102.
 (pdftex.def)             Requested size: 325.50082pt x 156.89256pt.
 <gambar/Affine Gaussian kernel.jpg, id=237, 287.8755pt x 109.00725pt>
 File: gambar/Affine Gaussian kernel.jpg Graphic file (type jpg)
 <use gambar/Affine Gaussian kernel.jpg>
-Package pdftex.def Info: gambar/Affine Gaussian kernel.jpg  used on input line 130.
+Package pdftex.def Info: gambar/Affine Gaussian kernel.jpg  used on input line 108.
 (pdftex.def)             Requested size: 325.50082pt x 123.26656pt.
- [6 <./gambar/Scale space.jpg> <./gambar/Affine Gaussian kernel.jpg>]
+ [6 <./gambar/Scale space.jpg>]
 <gambar/Smoothing gaussian kernel.jpg, id=247, 324.61275pt x 308.352pt>
 File: gambar/Smoothing gaussian kernel.jpg Graphic file (type jpg)
 <use gambar/Smoothing gaussian kernel.jpg>
-Package pdftex.def Info: gambar/Smoothing gaussian kernel.jpg  used on input line 185.
+Package pdftex.def Info: gambar/Smoothing gaussian kernel.jpg  used on input line 162.
 (pdftex.def)             Requested size: 325.50082pt x 309.21227pt.
- [7] [8 <./gambar/Smoothing gaussian kernel.jpg>] [9]
+ [7 <./gambar/Affine Gaussian kernel.jpg>] [8 <./gambar/Smoothing gaussian kernel.jpg>] [9]
 <gambar/Uniform Gaussian derivatives.jpg, id=261, 752.21025pt x 393.26926pt>
 File: gambar/Uniform Gaussian derivatives.jpg Graphic file (type jpg)
 <use gambar/Uniform Gaussian derivatives.jpg>
-Package pdftex.def Info: gambar/Uniform Gaussian derivatives.jpg  used on input line 270.
+Package pdftex.def Info: gambar/Uniform Gaussian derivatives.jpg  used on input line 241.
 (pdftex.def)             Requested size: 325.50082pt x 170.17662pt.
- [10 <./gambar/Uniform Gaussian derivatives.jpg>] [11]
-Overfull \hbox (262.00926pt too wide) detected at line 363
+ [10 <./gambar/Uniform Gaussian derivatives.jpg>]
+Overfull \hbox (262.00926pt too wide) detected at line 334
 [][][]\OT1/cmr/m/n/12 ^^F[] = \OML/cmm/m/it/12 A\OT1/cmr/m/n/12 ^^F[]\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 AM[]A[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A[]M[]A[]\OT1/cmr/m/n/12 )[] = \OML/cmm/m/it/12 ^^[[]M[][] \OT1/cmr/m/n/12 ^^F[] = \OML/cmm/m/it/12 A\OT1/cmr/m/n/12 ^^F[]\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 AM[]A[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A[]M[]A[]\OT1/cmr/m/n/12 )[] = \OML/cmm/m/it/12 ^^[[]M[]
  []
 
-[12] [13]
+[11] [12] [13]
 <gambar/Scale trace.jpg, id=287, 370.38374pt x 468.5505pt>
 File: gambar/Scale trace.jpg Graphic file (type jpg)
 <use gambar/Scale trace.jpg>
-Package pdftex.def Info: gambar/Scale trace.jpg  used on input line 452.
+Package pdftex.def Info: gambar/Scale trace.jpg  used on input line 423.
 (pdftex.def)             Requested size: 325.50082pt x 411.7752pt.
  [14] [15 <./gambar/Scale trace.jpg>] [16] [17]
 LaTeX Info: Symbol \textasciidieresis not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 577.
+            Default family used instead on input line 548.
 LaTeX Info: Symbol \textasciidieresis not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 577.
+            Default family used instead on input line 548.
  [18] [19]
-<gambar/Scale invariant interest point detection.jpg, id=326, 626.94225pt x 210.18526pt>
+<gambar/Scale invariant interest point detection.jpg, id=327, 626.94225pt x 210.18526pt>
 File: gambar/Scale invariant interest point detection.jpg Graphic file (type jpg)
 <use gambar/Scale invariant interest point detection.jpg>
-Package pdftex.def Info: gambar/Scale invariant interest point detection.jpg  used on input line 615.
+Package pdftex.def Info: gambar/Scale invariant interest point detection.jpg  used on input line 586.
 (pdftex.def)             Requested size: 325.50082pt x 109.12376pt.
- [20]
+ [20 <./gambar/Scale invariant interest point detection.jpg>]
 <gambar/Point detect.jpg, id=334, 620.91975pt x 271.0125pt>
 File: gambar/Point detect.jpg Graphic file (type jpg)
 <use gambar/Point detect.jpg>
-Package pdftex.def Info: gambar/Point detect.jpg  used on input line 623.
+Package pdftex.def Info: gambar/Point detect.jpg  used on input line 594.
 (pdftex.def)             Requested size: 325.50082pt x 142.07278pt.
- [21 <./gambar/Scale invariant interest point detection.jpg> <./gambar/Point detect.jpg>]
+ [21 <./gambar/Point detect.jpg>]
 <gambar/Non Adapted interest point.jpg, id=339, 514.3215pt x 237.88875pt>
 File: gambar/Non Adapted interest point.jpg Graphic file (type jpg)
 <use gambar/Non Adapted interest point.jpg>
-Package pdftex.def Info: gambar/Non Adapted interest point.jpg  used on input line 637.
+Package pdftex.def Info: gambar/Non Adapted interest point.jpg  used on input line 608.
 (pdftex.def)             Requested size: 325.50082pt x 150.55312pt.
- [22 <./gambar/Non Adapted interest point.jpg>] [23] [24] [25]
-<gambar/Iterative evolution.jpg, id=370, 604.05675pt x 261.97874pt>
+ [22 <./gambar/Non Adapted interest point.jpg>] [23] [24]
+<gambar/Iterative evolution.jpg, id=359, 604.05675pt x 261.97874pt>
 File: gambar/Iterative evolution.jpg Graphic file (type jpg)
 <use gambar/Iterative evolution.jpg>
-Package pdftex.def Info: gambar/Iterative evolution.jpg  used on input line 734.
+Package pdftex.def Info: gambar/Iterative evolution.jpg  used on input line 705.
 (pdftex.def)             Requested size: 325.50082pt x 141.17459pt.
-<gambar/Affine invariant interest point detection.jpg, id=371, 480.5955pt x 398.6895pt>
+ [25]
+<gambar/Affine invariant interest point detection.jpg, id=373, 480.5955pt x 398.6895pt>
 File: gambar/Affine invariant interest point detection.jpg Graphic file (type jpg)
 <use gambar/Affine invariant interest point detection.jpg>
-Package pdftex.def Info: gambar/Affine invariant interest point detection.jpg  used on input line 749.
+Package pdftex.def Info: gambar/Affine invariant interest point detection.jpg  used on input line 720.
 (pdftex.def)             Requested size: 325.50082pt x 270.0224pt.
- [26 <./gambar/Iterative evolution.jpg>]) [27 <./gambar/Affine invariant interest point detection.jpg>] [28]
+) [26 <./gambar/Iterative evolution.jpg>] [27 <./gambar/Affine invariant interest point detection.jpg>]
 \openout2 = `bab3.aux'.
 
  (bab3.tex
 BAB III.
-) [29
+) [28
 
 
 
@@ -1050,17 +1051,17 @@ Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24160 strings out of 476331
- 421895 string characters out of 5797583
+ 24159 strings out of 476331
+ 422816 string characters out of 5797583
  1865660 words of memory out of 5000000
  44082 multiletter control sequences out of 15000+600000
  538492 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,76p,1291b,1936s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,76p,1323b,1936s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\USER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template-skripsi.pdf (36 pages, 1310429 bytes).
+Output written on template-skripsi.pdf (35 pages, 1310829 bytes).
 PDF statistics:
- 477 PDF objects out of 1000 (max. 8388607)
- 126 named destinations out of 1000 (max. 500000)
+ 473 PDF objects out of 1000 (max. 8388607)
+ 125 named destinations out of 1000 (max. 500000)
  269 words of extra memory for PDF output out of 10000 (max. 10000000)
 
