@@ -12,7 +12,7 @@ Pada bagian ini akan dijelaskan representasi citra multi-resolusi berdasarkan fi
 Turunan Gaussian sering digunakan untuk mengekstrak fitur-fitur karakteristik. Bagian ini akan menjelaskan bagaimana menghitung stabilitas 
 suatu gambar dan cara mengnormalisasi gambar tersebut untuk mendapatkan respons turunan yang tidak tergantung pada resolusi. 
 Fitur lokal didefinisikan berdasarkan lokasi, skala, dan bentuk, yang akan mengalami transformasi saat dilihat dari sudut yang berbeda. 
-Untuk memperkirakan perubahan transformasi pada suatu titik penting, kita dapat mengeksplorasi sifat dari \emph{Second moment matrix}, 
+Untuk memperkirakan perubahan transformasi pada suatu titik penting, dapat dilakukan eksplorasi sifat dari \emph{Second moment matrix}, 
 dengan komponen dari matriks Hessian digunakan untuk mendeteksi karakteristik skala struktur lokal dan mendeskripsikan bentuk struktur.
 
 \subsection{\textbf{Gaussian scale-space}}
@@ -115,8 +115,8 @@ jika menggunakan pendekatan tradisional, di mana filter Gaussian seragam digunak
 Kernel Gaussian dalam hal ini ditentukan oleh satu parameter skala, yaitu \(\sigma\). 
 
 Namun, ketika matriks \(\Sigma\) adalah matriks positif simetris 2x2, 
-kompleksitasnya menjadi lebih tinggi karena kita berada dalam ruang berdimensi tinggi yang sulit dihandle. 
-Meskipun begitu, kompleksitas ini dapat dikelola jika kita hanya menghitung representasi untuk satu titik citra. 
+kompleksitasnya menjadi lebih tinggi karena berada dalam ruang berdimensi tinggi yang sulit dihandle. 
+Meskipun begitu, kompleksitas ini dapat dikelola hanya dengan menghitung representasi untuk satu titik citra. 
 Filter affine yang diterapkan pada titik tertentu biasanya digunakan untuk masalah bentuk-dari-tekstur.
 
 Ada beberapa pendekatan untuk menghitung konvolusi dengan kernel affine. 
@@ -144,7 +144,7 @@ Metode yang digunakan dalam pendekatan yang dijelaskan dalam manuskrip ini didas
 \end{equation*}
 
 Persamaan ini menunjukkan bahwa pemulusan affine setara dengan melakukan konvolusi dengan kernel Gaussian yang telah dirotasi dan memiliki bentuk elips. 
-Untuk menyederhanakan proses komputasi, kita dapat melakukan perubahan pada titik:
+Untuk menyederhanakan proses komputasi, dapat dilakukan perubahan pada titik:
 
 \begin{equation*}
 x^{T}\Sigma^{-1}x = x^{T}\frac{1}{\sigma_{x}\sigma_{y}}\Sigma^{-1}_{N}x=x^{T}\Sigma^{-\frac{1}{2}}_{N}\frac{1}{\sigma_{x}\sigma_{y}}\Sigma^{-\frac{1}{2}}_{N}x=(\Sigma^{-\frac{1}{2}}_{N}x)^{T}\frac{1}{\sigma_{x}\sigma_{y}}\Sigma^{-\frac{1}{2}}_{N}x
@@ -181,8 +181,8 @@ Tujuan dari analisis dalam ruang-skala adalah untuk menyelidiki representasi cit
 
 \textbf{Uniform derivatives} Secara umum, dalam praktik pemrosesan citra, filter yang berasal dari kernel Gaussian seragam sering digunakan. 
 Turunan pada berbagai tingkat skala dapat dihitung dengan menghaluskan citra menggunakan filter Gaussian dan kemudian menghitung perbedaannya. 
-Semua properti yang berlaku untuk kernel Gaussian juga berlaku untuk turunannya. Oleh karena itu, jika kita menerapkan operasi ini dalam urutan terbalik, 
-kita akan mendapatkan hasil yang sama. Alternatifnya, kita juga dapat menggabungkan citra dengan turunan dari kernel Gaussian pada berbagai skala. 
+Semua properti yang berlaku untuk kernel Gaussian juga berlaku untuk turunannya. Oleh karena itu, jika menerapkan operasi ini dalam urutan terbalik, 
+akan mendapatkan hasil yang sama. Alternatifnya, didapat dengan menggabungkan citra dengan turunan dari kernel Gaussian pada berbagai skala. 
 Semua metode ini bersifat setara. Dalam hal ini, untuk setiap fungsi citra \(I(x)\), turunan pertama dapat didefinisikan sebagai berikut:
 
 \begin{equation*}
@@ -195,25 +195,24 @@ Persamaan umum untuk turunan Gauss adalah sebagai berikut:
   g_{i_{1}\cdots i_{m}}(x,\Sigma) =\frac{\partial}{\partial_{i_{1}}\cdots \partial_{i_{m}}}\frac{1}{2\pi\sqrt{\det}}\exp^{-\frac{x^{T}\Sigma^{-1}x}{2}}
 \end{equation*}
 
-di mana \(m\) adalah urutan turunan dan \(i\) adalah koordinat Cartesian pada gambar. 
-Dalam kasus ketika \(\Sigma\) adalah matriks identitas yang dikalikan dengan skalar, maka akan 
-berurusan dengan turunan Gaussian seragam tradisional. 
+Di mana \(m\) adalah urutan turunan dan \(i\) adalah koordinat Cartesius pada citra. 
+Dalam kasus di mana \(\Sigma\) adalah matriks identitas dikalikan dengan skalar, 
+maka akan berurusan dengan turunan Gaussian seragam tradisional. 
 
-\textbf{Normalized derivatives} Amplitudo turunan spasial, secara umum, berkurang dengan skala, 
-karena responsnya lebih halus pada skala yang lebih besar. Dalam kasus struktur yang ada pada rentang 
-skala besar, seperti \emph{corner} atau \emph{step-edge}, dan berharap memiliki konstanta turunan 
-atas skala. Untuk menjaga properti \emph{Scale invariance}, fungsi turunan harus dinormalisasi 
-sehubungan dengan skala turunan.Turunan \(D\) yang dinormalisasi skala dari orde \(m\) didefinisikan oleh:
+\textbf{Normalized derivatives} Amplitudo turunan spasial, secara umum, berkurang dengan skala karena responsnya menjadi lebih halus pada skala yang lebih besar. 
+Namun, dalam kasus struktur yang ada pada rentang skala besar, seperti \emph{corner} atau \emph{step-edge}, diharuskan menjaga konstan turunan terhadap skala. 
+Untuk menjaga properti \emph{scale imvariance}, fungsi turunan harus dinormalisasi dalam hubungannya dengan skala turunan. 
+Turunan spasial \(D\) yang dinormalisasi skala orde \(m\) dapat didefinisikan sebagai berikut:
 
 \begin{equation*}
   D_{i_{1}\cdots i_{m}}(x,\sigma) = \sigma^{m}L_{i_{1} \cdot i_{m}}(x,\sigma) = \sigma^{m}g_{i_{1}\cdot i_{m}}(\sigma)*I(x)
 \end{equation*}
 
-persamaan berikut menunjukkan perlunya menggunakan faktor normalisasi \(\sigma^{m}\). 
-Pertimbangkan dua citra \(I\) dan \(I'\) yang dicitrakan pada skala yang berbeda.
-Relasi antara dua gambar tersebut kemudian didefinisikan dengan: \(I(x) = I'(x')\) , 
-dimana \(x' = sx\). Perhatikan bahwa kemungkinan pergeseran suatu titik diabaikan, 
-karena dihilangkan oleh diferensiasi. Derivatif gambar kemudian:
+Persamaan berikut menunjukkan pentingnya penggunaan faktor normalisasi \(\sigma^{m}\). 
+Pertimbangkan dua citra, \(I\) dan \(I'\), yang diambil pada skala yang berbeda. 
+Hubungan antara dua citra ini dapat didefinisikan sebagai: \(I(x = I'(x'))\), 
+di mana \(x' = sx\). Perlu diperhatikan bahwa pergeseran potensial suatu titik diabaikan dalam konteks ini karena akan tereliminasi oleh operasi diferensiasi. 
+Turunan dari citra ini dapat didefinisikan sebagai berikut:
 
 \begin{equation*}
   I_{i_{1}\cdot i_{m}}(x') = s^{m}I_{i_{1}\cdot i_{m}}(sx')
@@ -232,9 +231,8 @@ Jadi, untuk turunan yang dinormalisasi, responsnya memiliki nilai yang sama:
   D_{i_{1}\cdot i_{m}}(x,\sigma) = D'_{i_{1}\cdot i_{m}}(x,s\sigma)
 \end{equation*}
 
-Dengan dapat melihat bahwa jika mengalikan turunan dengan ukuran kernel, 
-dan memperoleh nilai turunan yang sama untuk struktur lokal yang direpresentasikan 
-pada skala yang sesuai.
+Dengan cara ini, dapat dilihat bahwa dengan mengalikan turunan dengan ukuran kernel yang sesuai, 
+maka akan mendapatkan nilai turunan yang sama untuk struktur lokal yang direpresentasikan pada skala yang sesuai.
 
 \begin{figure}
   \centering{}
@@ -242,15 +240,14 @@ pada skala yang sesuai.
   \caption{}
 \end{figure}
 
-\textbf{Affine derivatives} Turunan affine sangat berguna jika berurusan dengan 
-invarian affine. Untuk mendapatkan invarian affine dari turunan struktur lokal sembarang, 
-kernel Gaussian harus disesuaikan dengan bentuk dan skala struktur. Dengan demikian bentuk 
-anisotropik dari fitur tersebut tidak dibias oleh penghalusan isotropik dengan filter seragam. 
-Untuk mengadaptasi filter, tanpa pengetahuan sebelumnya tentang bentuk struktur, diharus 
-mengeksplorasi banyak kemungkinan kombinasi dari parameter kernel. Namun, tiga derajat kebebasan 
-dari kernel affine Gaussian membuatnya sulit untuk menyelidiki semua kemungkinan kombinasi. 
-Oleh karena itu, dalam praktiknya hanya dibatasi kemungkinan bentuk kernel saja. 
-Komputasi turunan arah affine untuk semua titik citra dapat dipercepat dengan implementasi rekursif. 
+\textbf{Affine derivatives} Turunan affine sangat bermanfaat ketika berurusan dengan invarian affine. 
+Untuk mencapai invarian affine dari turunan struktur lokal yang tidak terbatas, 
+kernel Gaussian harus disesuaikan dengan bentuk dan skala struktur yang ada. 
+Dengan cara ini, bentuk anisotropik dari fitur tidak akan terpengaruh oleh penghalusan isotropik yang dihasilkan oleh filter seragam. 
+Mengadaptasi filter tanpa pengetahuan sebelumnya tentang bentuk struktur tersebut memerlukan eksplorasi banyak kemungkinan kombinasi parameter kernel. 
+Namun, tiga derajat kebebasan dalam kernel affine Gaussian membuatnya sulit untuk mengeksplorasi semua kemungkinan kombinasi tersebut. 
+Oleh karena itu, dalam praktiknya, sering kali dibatasi kemungkinan bentuk kernel yang akan digunakan. 
+Selain itu, komputasi turunan arah affine untuk semua titik citra dapat dipercepat dengan implementasi yang bersifat rekursif.
 
 \subsection{\textbf{Second moment matrix}}
 

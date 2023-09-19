@@ -40,7 +40,27 @@ Metode :
               Thresholding
               Blob localization
 
-22/08
+19/09
+    Alur Penelitian
+        Mulai
+        Pengelolahan data input
+        Memasukan berat serta panjang kritikal
+        Selesai
+    Pengujian menggunakan grayscale,RGB,LAB color scale
+        Mulai
+        Grayscale citra 
+    Metode :
+        Harris-Laplace detector (Breakdown)
+            Image Smoothing
+            Laplacian of Gaussian (LoG) Operator
+            Local Maxima detection
+            Thresholding
+            Non-Maximum suppression
+            Harris corner detector
+            Keypoint localization
+            Scale Selection
+            Descriptor Extraction
+            Keypoint Matching
     
 
     
