@@ -4,7 +4,6 @@
         data set ikan lele/nila
         ukuran kritikal nila 5g, 10g, 15g, 25g, 50g, 100g, 150g, 200g, 250, 350g, 500g, 500g+
         ukuran panjang kritikal lele 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13. ke berat (g) 40, 60, 80, 100, 125, 142, 167, 200, 250, 320, 500, 1kg  dan 1kg+
-        gambar dari pak eka 
         gambar di ujikan grayscale, masing" channel di RBG dan LAB color scale. (untuk menguji harris-detector)
         Menjelaskan input dan Output dari setiap metode yang digunakan
 
@@ -51,16 +50,23 @@ Metode :
         Grayscale citra 
     Metode :
         Harris-Laplace detector (Breakdown)
-            Image Smoothing
+            Image Smoothing / Penghalusan Citra Gambar
             Laplacian of Gaussian (LoG) Operator
-            Local Maxima detection
-            Thresholding
-            Non-Maximum suppression
+            Mendeteksi Local Maxima
+            Thresholding/ Mencari Ambang Batas 
+            Pengurangan Non-Maximum
             Harris corner detector
-            Keypoint localization
-            Scale Selection
+            lokalisasi Keypoint
+            Pemilihan skala
             Descriptor Extraction
             Keypoint Matching
+
+20/09
+    Ukuran kritikal apa itu?
+    Jika Resolusi gambar terlalu besar apakah harus merubah resolusi nya? (resolusi ditentukan)
+
+
+
     
 
     

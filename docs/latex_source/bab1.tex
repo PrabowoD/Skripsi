@@ -62,45 +62,36 @@ seperti proyeksi affine atau 3D, dengan mengaburkan lokasi gradien gambar. Detec
 Kombinasi Haris-Laplace detector memberikan hasil yang lebih baik, Laplacian memungkinkan pemilihan skala karakteristik untuk titik yang diekstraksi dengan harris detector, dengan demikian descriptor dihitung pada lingkungan titik yang sama dalam gambar dengan resolusi yang berbeda, 
 dan oleh karenanya tidak varian ke perubahan skala besar.
  
-Berdasarkan latar yang telah dijelaskan, penulis mengusulkan untuk mengukur panjang serta menghitung berat ikan dengan menggunakan metode . 
+Berdasarkan latar yang telah dijelaskan, penulis mengusulkan untuk mengukur panjang serta menghitung berat ikan dengan menggunakan metode \emph{Harris-Laplace Detection}. 
 Metode ini menggunakan dua kombinasi detektor yaitu Harris-detector dan Laplace-of-Gaussians. Hasil yang diharapkan adalah sebuah sistem yang mampu mendeteksi ikan pada gambar secara akurat dan menghitung beratnya.
 
 
 \section{Rumusan Masalah}
-Dari uraian pemasalahan diatas, perumusan masalah dalam penelitian ini adalah \textbf{“Bagaimana cara untuk mengukur panjang serta menghitung berat ikan menggunakan metode \emph{}?”}
+Dari uraian pemasalahan diatas, perumusan masalah dalam penelitian ini adalah \textbf{“Bagaimana cara untuk mengukur panjang serta menghitung berat ikan menggunakan metode \emph{Harris-Laplace Detection}?”}
 
 \section{Batasan Masalah}
-Pembatasan masalah pada penelitian ini adalah pembuatan salah satu komponen 
-dalam arsitektur mesin pencari yaitu modul \emph{indexing}. Sistem
-\emph{indexing} yang akan dibuat mengacu pada konsep arsitektur \emph{Google} 
-yang dipublikasikan pada \textit{paper} mereka. Selain itu, implementasi
-sistem \textit{indexing} ini hanya akan mencakup proses konstruksi awal index
-berdasarkan data yang sudah dikumpulkan oleh \textit{crawler}.
-
+\begin{enumerate}
+	\item Penghitungan panjang dan berat dari pada ikan dengan menggunakan \emph{harris-laplace detection} sebagai pendeteksi benda
+	\item penelitian dilakukan sampai mendapatkan hasil mendekati panjang dan berat dari ikan
+	\item gambar-foto ikan yang akan digunakan ikan nila merah dan ikan lele
+\end{enumerate}
+	
 \section{Tujuan Penelitian}
 \begin{enumerate}
-	\item Memahami arsitektur mesin pencari.
-	\item Memahami cara kerja proses \emph{indexing}.
-	\item Membuat implementasi \emph{indexing} untuk memenuhi kebutuhan mesin
-		pencari.
+	\item Memahami arsitektur .
+	\item Memahami cara kerja proses .
+	\item Membuat implementasi .
 \end{enumerate}
 
 \section{Manfaat Penelitian}
 \begin{enumerate}
 	\item Bagi penulis
-		
-	Menambah pengetahuan dibidang \emph{information retrieval} khususnya mengenai
-		\emph{search engine} dan \emph{crawling}, mengasah kemampuan
-		\emph{programming}, dan memperoleh gelar sarjana dibidang Ilmu Komputer.
-		Selain itu, penulisan ini juga merupakan media bagi penulis untuk
-		mengaplikasikan ilmu yang didapat di kampus ke kehidupan masyarakat.
+	
+
 		
 	\item Bagi Universitas Negeri Jakarta
 	
-	Menjadi pertimbangan dan evaluasi akademik khususnya Program Studi Ilmu
-		Komputer dalam penyusunan skripsi sehingga dapat meningkatkan kualitas
-		akademik di program studi Ilmu Komputer Universitas Negeri Jakarta serta
-		meningkatkan kualitas lulusannya.
+	
 			
 \end{enumerate}
 

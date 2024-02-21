@@ -1155,6 +1155,8 @@ INPUT bab1.tex
 INPUT .\bab1.tex
 INPUT bab1.tex
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmbi8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8r.tfm
 INPUT .\bab2.tex
 INPUT .\bab2.tex
 INPUT .\bab2.tex
@@ -1253,6 +1255,13 @@ INPUT .\bab3.tex
 INPUT bab3.tex
 INPUT .\bab3.tex
 INPUT bab3.tex
+INPUT .\gambar\Flowchart Penelitian.png
+INPUT .\gambar\Flowchart Penelitian.png
+INPUT gambar\Flowchart Penelitian.png
+INPUT .\gambar\Flowchart Penelitian.png
+INPUT .\gambar\Flowchart Penelitian.png
+INPUT .\gambar\Flowchart Penelitian.png
+INPUT .\gambar\Flowchart Penelitian.png
 INPUT template-skripsi.aux
 INPUT .\pengesahan.aux
 INPUT pengesahan.aux
@@ -1297,6 +1306,8 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmb8a.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmb8a.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmbi8a.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmbi8a.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmr8a.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmr8a.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmri8a.pfb

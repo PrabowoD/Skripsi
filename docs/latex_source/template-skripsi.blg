@@ -1,9 +1,0 @@
-[0] Config.pm:307> INFO - This is Biber 2.19
-[1] Config.pm:310> INFO - Logfile is 'template-skripsi.blg'
-[999] biber-MSWIN64:340> INFO - === 
-[1436] Biber.pm:419> INFO - Reading 'template-skripsi.bcf'
-[1860] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
-[1928] bbl.pm:660> INFO - Writing 'template-skripsi.bbl' with encoding 'UTF-8'
-[1929] bbl.pm:763> INFO - Output to template-skripsi.bbl
-[1930] Biber.pm:131> WARN - The file 'template-skripsi.bcf' does not contain any citations!
-[1931] Biber.pm:133> INFO - WARNINGS: 1

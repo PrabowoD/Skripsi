@@ -8,7 +8,7 @@
 
 \section{\textbf{Multi-scale representation}}
 
-Pada bagian ini akan dijelaskan representasi citra multi-resolusi berdasarkan filter Gaussian. 
+Pada bagian ini akan menjelaskan representasi citra multi-resolusi berdasarkan filter Gaussian. 
 Turunan Gaussian sering digunakan untuk mengekstrak fitur-fitur karakteristik. Bagian ini akan menjelaskan bagaimana menghitung stabilitas 
 suatu gambar dan cara mengnormalisasi gambar tersebut untuk mendapatkan respons turunan yang tidak tergantung pada resolusi. 
 Fitur lokal didefinisikan berdasarkan lokasi, skala, dan bentuk, yang akan mengalami transformasi saat dilihat dari sudut yang berbeda. 
@@ -20,16 +20,16 @@ dengan komponen dari matriks Hessian digunakan untuk mendeteksi karakteristik sk
 Dalam domain diskrit dari gambar digital, parameter skala juga diambil dalam bentuk diskrit. 
 Sebagai hasilnya, representasi ruang-skala adalah kumpulan gambar yang direpresentasikan pada tingkat resolusi diskrit yang berbeda. 
 Banyak penelitian dalam konteks skala-ruang menunjukkan bahwa salah satu persyaratan penting adalah bahwa representasi skala-ruang harus memenuhi persamaan yang dapat dicapai dengan melakukan konvolusi menggunakan kernel Gaussian. 
-Selanjutnya, penelitian ini mengindikasikan bahwa kernel Gaussian adalah satu-satunya kernel yang unik yang dapat menghasilkan representasi skala-ruang. 
+Selanjutnya, penelitian ini mengindikasikan bahwa kernel Gaussian adalah satu-satunya kernel unik yang dapat menghasilkan representasi skala-ruang. 
 Keunikan dari kernel Gaussian ini telah dikonfirmasi melalui berbagai formulasi dalam berbagai penelitian lain. 
-Temuan ini menyimpulkan bahwa konvolusi dengan kernel Gaussian merupakan solusi optimal untuk permasalahan konstruksi representasi skala-ganda. 
+Penemuan ini menyimpulkan bahwa konvolusi dengan kernel Gaussian merupakan solusi optimal untuk permasalahan konstruksi representasi skala-ganda. 
 Fungsi Gaussian dua dimensi didefinisikan sebagai berikut:
 
 \begin{equation*}
 g(\sigma) = \frac{1}{2\pi\sigma^2}\exp^-\frac{x^2+y^2}{2\sigma^2}
 \end{equation*}
 
-Keunikan dari gaussian kernel dapat diketahui dari beberapa property berikut : 
+Keunikan dari gaussian kernel dapat diketahui dari beberapa sifat berikut : 
 \emph{linearity, separability, causality, and semi group property.} Keterpisahan 
 atau \emph{separability} memungkinan \emph{multi-dimensional gaussian kernel} 
 untuk diperoleh sebagai produk satu dimensi kernel : 
@@ -37,9 +37,8 @@ untuk diperoleh sebagai produk satu dimensi kernel :
 \begin{equation*}
   g(x,y) = g(x)g(y)
 \end{equation*}
-
-Properti ini memiliki kegunaan yang sangat signifikan dalam praktiknya karena penghalusan sinyal dua dimensi 
-dapat digantikan oleh dua penghalusan satu dimensi, satu untuk setiap dimensi. 
+Sifat ini memiliki kegunaan yang sangat signifikan dalam praktiknya karena penghalusan sinyal dua dimensi 
+dapat digantikan oleh dua penghalusan satu dimensi, satu untuk setiap dimensinya. 
 Filter Gaussian satu dimensi dapat diimplementasikan sebagai filter rekursif, yang secara signifikan mempercepat proses 
 perhitungan terutama pada kasus kernel Gaussian yang lebih besar (yaitu > \( \sqrt{2}\)). 
 Kondisi kausalitas menyatakan bahwa tidak ada struktur buatan tambahan yang perlu dibuat saat menghitung citra dalam skala kasar, 
@@ -52,7 +51,7 @@ Selain itu, operasi n dapat dilakukan dalam urutan apa pun:
 g(\sigma_{1}) * \cdot * g(\sigma_{n}) * I(x) = g(\sigma_{1} + \cdot + \sigma_{n}) * I(x)
 \end{equation*}
 
-Biasanya, ruang-skala yang seragam digunakan, tetapi representasi ruang-skala umum dihitung dengan filter-filter lain.
+Biasanya, ruang-skala yang seragam digunakan, tetapi representasi ruang-skala umum dihitung dengan filter lain.
 
 \textbf{Uniform scale-space}. Perbeddan tingkat pada representasi skala-ruang
 secara umum, terbuat dari konvolusi dengan \emph{gaussian kernel} :
