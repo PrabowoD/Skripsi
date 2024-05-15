@@ -27,4 +27,5 @@
 \contentsline {subsection}{\numberline {2.4.1}\textbf {Harris-Affine detector}}{21}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}\textbf {Affine covariant points}}{26}{subsection.2.4.2}%
 \contentsline {chapter}{\numberline {III}Metode Penelitian}{29}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Desain }{29}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Flow Penelitian}{29}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Deskripsi Sistem}{29}{section.3.2}%
