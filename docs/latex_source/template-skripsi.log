@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.15)  15 MAY 2024 21:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.15)  31 OCT 2024 12:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -765,32 +765,32 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 Package biblatex Warning: Conflicting options.
 (biblatex)                '<namepart>inits' conflicts with 'uniquename=full'.
-(biblatex)                Setting 'uniquename=init' on input line 170.
+(biblatex)                Setting 'uniquename=init' on input line 169.
 
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 170.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 169.
 (C:\Users\USER\AppData\Roaming\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) (template-skripsi.aux (pengesahan.aux) (kata-pengantar.aux) (bab1.aux) (bab2.aux) (bab3.aux))
+) (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2.aux) (bab3.aux))
 \openout1 = `template-skripsi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 169.
+LaTeX Font Info:    ... okay on input line 169.
  (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count459
@@ -838,7 +838,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 170.
+Package hyperref Info: Link coloring OFF on input line 169.
 (template-skripsi.out) (template-skripsi.out)
 \@outlinefile=\write4
 \openout4 = `template-skripsi.out'.
@@ -870,7 +870,7 @@ Package biblatex Info: ... file 'bahasa.lbx' not found.
 
 
 Package biblatex Warning: Language 'bahasa' not supported.
-(biblatex)                Using dummy definitions on input line 170.
+(biblatex)                Using dummy definitions on input line 169.
 
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
@@ -880,44 +880,31 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'template-skripsi.bbl' found.
 (template-skripsi.bbl)
-Package biblatex Info: Reference section=0 on input line 170.
-Package biblatex Info: Reference segment=0 on input line 170.
+Package biblatex Info: Reference section=0 on input line 169.
+Package biblatex Info: Reference segment=0 on input line 169.
 \c@lstlisting=\count465
-<gambar/logounj.png, id=111, 186.38052pt x 186.38052pt>
+<gambar/logounj.png, id=143, 186.38052pt x 186.38052pt>
 File: gambar/logounj.png Graphic file (type png)
 <use gambar/logounj.png>
-Package pdftex.def Info: gambar/logounj.png  used on input line 172.
+Package pdftex.def Info: gambar/logounj.png  used on input line 171.
 (pdftex.def)             Requested size: 162.7473pt x 162.7498pt.
  [1
 
 {C:/Users/USER/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc} <./gambar/logounj.png>]
-\openout2 = `pengesahan.aux'.
-
- (pengesahan.tex
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 7.
- (C:\Program Files\MiKTeX\tex/latex/base\ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-Overfull \hbox (22.07805pt too wide) in paragraph at lines 33--44
- [][] 
- []
-
-) [2
-
-
-]
 \openout2 = `kata-pengantar.aux'.
 
- (kata-pengantar.tex) [3
+ (kata-pengantar.tex
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 39.
+ (C:\Program Files\MiKTeX\tex/latex/base\ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)) [2
 
 
-
-
-] [4] (template-skripsi.toc)
+] [3] (template-skripsi.toc)
 \tf@toc=\write5
 \openout5 = `template-skripsi.toc'.
 
- [5
+ [4
 
 
 
@@ -925,13 +912,13 @@ Overfull \hbox (22.07805pt too wide) in paragraph at lines 33--44
 \tf@lof=\write6
 \openout6 = `template-skripsi.lof'.
 
- [6
+ [5
 
 ] (template-skripsi.lot)
 \tf@lot=\write7
 \openout7 = `template-skripsi.lot'.
 
- [7
+ [6
 
 ]
 \openout2 = `bab1.aux'.
@@ -953,125 +940,101 @@ BAB II.
 
 
 ]
-<gambar/Uniform Gaussian kernel.jpg, id=242, 290.88675pt x 78.2925pt>
+<gambar/Uniform Gaussian kernel.jpg, id=268, 290.88675pt x 78.2925pt>
 File: gambar/Uniform Gaussian kernel.jpg Graphic file (type jpg)
 <use gambar/Uniform Gaussian kernel.jpg>
-Package pdftex.def Info: gambar/Uniform Gaussian kernel.jpg  used on input line 69.
+Package pdftex.def Info: gambar/Uniform Gaussian kernel.jpg  used on input line 76.
 (pdftex.def)             Requested size: 325.50082pt x 87.61172pt.
- [5 <./gambar/Uniform Gaussian kernel.jpg>]
-<gambar/Scale space.jpg, id=249, 367.3725pt x 177.0615pt>
-File: gambar/Scale space.jpg Graphic file (type jpg)
-<use gambar/Scale space.jpg>
-Package pdftex.def Info: gambar/Scale space.jpg  used on input line 102.
-(pdftex.def)             Requested size: 325.50082pt x 156.89256pt.
-<gambar/Affine Gaussian kernel.jpg, id=250, 287.8755pt x 109.00725pt>
-File: gambar/Affine Gaussian kernel.jpg Graphic file (type jpg)
-<use gambar/Affine Gaussian kernel.jpg>
-Package pdftex.def Info: gambar/Affine Gaussian kernel.jpg  used on input line 108.
-(pdftex.def)             Requested size: 325.50082pt x 123.26656pt.
- [6 <./gambar/Scale space.jpg>]
-<gambar/Smoothing gaussian kernel.jpg, id=260, 324.61275pt x 308.352pt>
-File: gambar/Smoothing gaussian kernel.jpg Graphic file (type jpg)
-<use gambar/Smoothing gaussian kernel.jpg>
-Package pdftex.def Info: gambar/Smoothing gaussian kernel.jpg  used on input line 162.
-(pdftex.def)             Requested size: 325.50082pt x 309.21227pt.
- [7 <./gambar/Affine Gaussian kernel.jpg>] [8 <./gambar/Smoothing gaussian kernel.jpg>] [9]
-<gambar/Uniform Gaussian derivatives.jpg, id=274, 752.21025pt x 393.26926pt>
+ [5 <./gambar/Uniform Gaussian kernel.jpg>] [6]
+<gambar/Uniform Gaussian derivatives.jpg, id=279, 752.21025pt x 393.26926pt>
 File: gambar/Uniform Gaussian derivatives.jpg Graphic file (type jpg)
 <use gambar/Uniform Gaussian derivatives.jpg>
-Package pdftex.def Info: gambar/Uniform Gaussian derivatives.jpg  used on input line 239.
+Package pdftex.def Info: gambar/Uniform Gaussian derivatives.jpg  used on input line 172.
 (pdftex.def)             Requested size: 325.50082pt x 170.17662pt.
- [10 <./gambar/Uniform Gaussian derivatives.jpg>] [11]
-Overfull \hbox (262.00926pt too wide) detected at line 331
+ [7] [8 <./gambar/Uniform Gaussian derivatives.jpg>]
+Overfull \hbox (262.00926pt too wide) detected at line 265
 [][][]\OT1/cmr/m/n/12 ^^F[] = \OML/cmm/m/it/12 A\OT1/cmr/m/n/12 ^^F[]\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 AM[]A[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A[]M[]A[]\OT1/cmr/m/n/12 )[] = \OML/cmm/m/it/12 ^^[[]M[][] \OT1/cmr/m/n/12 ^^F[] = \OML/cmm/m/it/12 A\OT1/cmr/m/n/12 ^^F[]\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 AM[]A[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A[]M[]A[]\OT1/cmr/m/n/12 )[] = \OML/cmm/m/it/12 ^^[[]M[]
  []
 
-[12] [13]
-<gambar/Scale trace.jpg, id=300, 370.38374pt x 468.5505pt>
+[9] [10] [11]
+<gambar/Scale trace.jpg, id=313, 370.38374pt x 468.5505pt>
 File: gambar/Scale trace.jpg Graphic file (type jpg)
 <use gambar/Scale trace.jpg>
-Package pdftex.def Info: gambar/Scale trace.jpg  used on input line 420.
+Package pdftex.def Info: gambar/Scale trace.jpg  used on input line 354.
 (pdftex.def)             Requested size: 325.50082pt x 411.7752pt.
- [14] [15 <./gambar/Scale trace.jpg>] [16] [17]
+ [12] [13 <./gambar/Scale trace.jpg>] [14] [15]
 LaTeX Info: Symbol \textasciidieresis not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 545.
+            Default family used instead on input line 479.
 LaTeX Info: Symbol \textasciidieresis not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 545.
- [18] [19]
-<gambar/Scale invariant interest point detection.jpg, id=339, 626.94225pt x 210.18526pt>
+            Default family used instead on input line 479.
+ [16] [17]
+<gambar/Scale invariant interest point detection.jpg, id=354, 626.94225pt x 210.18526pt>
 File: gambar/Scale invariant interest point detection.jpg Graphic file (type jpg)
 <use gambar/Scale invariant interest point detection.jpg>
-Package pdftex.def Info: gambar/Scale invariant interest point detection.jpg  used on input line 583.
+Package pdftex.def Info: gambar/Scale invariant interest point detection.jpg  used on input line 517.
 (pdftex.def)             Requested size: 325.50082pt x 109.12376pt.
- [20 <./gambar/Scale invariant interest point detection.jpg>]
-<gambar/Point detect.jpg, id=347, 620.91975pt x 271.0125pt>
+<gambar/Point detect.jpg, id=355, 620.91975pt x 271.0125pt>
 File: gambar/Point detect.jpg Graphic file (type jpg)
 <use gambar/Point detect.jpg>
-Package pdftex.def Info: gambar/Point detect.jpg  used on input line 591.
+Package pdftex.def Info: gambar/Point detect.jpg  used on input line 525.
 (pdftex.def)             Requested size: 325.50082pt x 142.07278pt.
- [21 <./gambar/Point detect.jpg>]
-<gambar/Non Adapted interest point.jpg, id=352, 514.3215pt x 237.88875pt>
+ [18 <./gambar/Scale invariant interest point detection.jpg>]
+<gambar/Non Adapted interest point.jpg, id=361, 514.3215pt x 237.88875pt>
 File: gambar/Non Adapted interest point.jpg Graphic file (type jpg)
 <use gambar/Non Adapted interest point.jpg>
-Package pdftex.def Info: gambar/Non Adapted interest point.jpg  used on input line 605.
+Package pdftex.def Info: gambar/Non Adapted interest point.jpg  used on input line 539.
 (pdftex.def)             Requested size: 325.50082pt x 150.55312pt.
- [22 <./gambar/Non Adapted interest point.jpg>] [23] [24]
-<gambar/Iterative evolution.jpg, id=372, 604.05675pt x 261.97874pt>
+ [19 <./gambar/Point detect.jpg>] [20 <./gambar/Non Adapted interest point.jpg>] [21] [22]
+<gambar/Iterative evolution.jpg, id=385, 604.05675pt x 261.97874pt>
 File: gambar/Iterative evolution.jpg Graphic file (type jpg)
 <use gambar/Iterative evolution.jpg>
-Package pdftex.def Info: gambar/Iterative evolution.jpg  used on input line 702.
+Package pdftex.def Info: gambar/Iterative evolution.jpg  used on input line 636.
 (pdftex.def)             Requested size: 325.50082pt x 141.17459pt.
- [25]
-<gambar/Affine invariant interest point detection.jpg, id=386, 480.5955pt x 398.6895pt>
+ [23]
+<gambar/Affine invariant interest point detection.jpg, id=399, 480.5955pt x 398.6895pt>
 File: gambar/Affine invariant interest point detection.jpg Graphic file (type jpg)
 <use gambar/Affine invariant interest point detection.jpg>
-Package pdftex.def Info: gambar/Affine invariant interest point detection.jpg  used on input line 717.
+Package pdftex.def Info: gambar/Affine invariant interest point detection.jpg  used on input line 651.
 (pdftex.def)             Requested size: 325.50082pt x 270.0224pt.
-) [26 <./gambar/Iterative evolution.jpg>] [27 <./gambar/Affine invariant interest point detection.jpg>] [28]
+) [24 <./gambar/Iterative evolution.jpg>] [25 <./gambar/Affine invariant interest point detection.jpg>]
 \openout2 = `bab3.aux'.
 
  (bab3.tex
 BAB III.
-<gambar/Flowchart Penelitian.png, id=399, 422.57875pt x 322.20375pt>
-File: gambar/Flowchart Penelitian.png Graphic file (type png)
-<use gambar/Flowchart Penelitian.png>
-Package pdftex.def Info: gambar/Flowchart Penelitian.png  used on input line 13.
-(pdftex.def)             Requested size: 183.09227pt x 139.60686pt.
-<gambar/Penghitungan Berat.png, id=400, 439.6425pt x 348.30125pt>
-File: gambar/Penghitungan Berat.png Graphic file (type png)
-<use gambar/Penghitungan Berat.png>
-Package pdftex.def Info: gambar/Penghitungan Berat.png  used on input line 19.
-(pdftex.def)             Requested size: 183.09227pt x 145.05252pt.
-) [29
+[26
 
 
 
 
- <./gambar/Flowchart Penelitian.png>] [30 <./gambar/Penghitungan Berat.png>]
+] [27]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 54.
+ (C:\Users\USER\AppData\Roaming\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [28] [29] [30]) [31]
 
-LaTeX Warning: Empty bibliography on input line 216.
+LaTeX Warning: Empty bibliography on input line 215.
 
-(template-skripsi.aux (pengesahan.aux) (kata-pengantar.aux) (bab1.aux) (bab2.aux) (bab3.aux))
+(template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2.aux) (bab3.aux))
 Package rerunfilecheck Info: File `template-skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 6EE24254930F19FC374D539CA18C5D2A;4231.
+(rerunfilecheck)             Checksum: 2DE2FA990883EB83427FE57DA065E194;5575.
 Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 \openout1 = `template-skripsi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24183 strings out of 476331
- 423388 string characters out of 5797583
- 1865660 words of memory out of 5000000
- 44095 multiletter control sequences out of 15000+600000
- 539588 words of font info for 65 fonts, out of 8000000 for 9000
+ 24171 strings out of 476331
+ 421998 string characters out of 5797583
+ 1864660 words of memory out of 5000000
+ 44078 multiletter control sequences out of 15000+600000
+ 543190 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,76p,1323b,1936s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\USER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template-skripsi.pdf (37 pages, 1335955 bytes).
+Output written on template-skripsi.pdf (37 pages, 1242739 bytes).
 PDF statistics:
- 507 PDF objects out of 1000 (max. 8388607)
- 133 named destinations out of 1000 (max. 500000)
- 287 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 547 PDF objects out of 1000 (max. 8388607)
+ 146 named destinations out of 1000 (max. 500000)
+ 326 words of extra memory for PDF output out of 10000 (max. 10000000)
 

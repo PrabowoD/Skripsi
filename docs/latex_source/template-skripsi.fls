@@ -964,9 +964,6 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT .\template-skripsi.aux
 INPUT template-skripsi.aux
 INPUT template-skripsi.aux
-INPUT .\pengesahan.aux
-INPUT pengesahan.aux
-INPUT pengesahan.aux
 INPUT .\kata-pengantar.aux
 INPUT kata-pengantar.aux
 INPUT kata-pengantar.aux
@@ -1076,23 +1073,23 @@ INPUT .\gambar\logounj.png
 INPUT .\gambar\logounj.png
 INPUT .\gambar\logounj.png
 INPUT .\gambar\logounj.png
-INPUT .\pengesahan.tex
-INPUT .\pengesahan.tex
-INPUT .\pengesahan.tex
+INPUT .\kata-pengantar.tex
+INPUT .\kata-pengantar.tex
+INPUT .\kata-pengantar.tex
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Users\USER\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\base\8r.enc
-OUTPUT pengesahan.aux
-INPUT .\pengesahan.tex
-INPUT .\pengesahan.tex
-INPUT .\pengesahan.tex
-INPUT pengesahan.tex
-INPUT .\pengesahan.tex
-INPUT pengesahan.tex
+OUTPUT kata-pengantar.aux
+INPUT .\kata-pengantar.tex
+INPUT .\kata-pengantar.tex
+INPUT .\kata-pengantar.tex
+INPUT kata-pengantar.tex
+INPUT .\kata-pengantar.tex
+INPUT kata-pengantar.tex
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
@@ -1116,26 +1113,19 @@ INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
-INPUT .\kata-pengantar.tex
-INPUT .\kata-pengantar.tex
-INPUT .\kata-pengantar.tex
-OUTPUT kata-pengantar.aux
-INPUT .\kata-pengantar.tex
-INPUT .\kata-pengantar.tex
-INPUT .\kata-pengantar.tex
-INPUT kata-pengantar.tex
-INPUT .\kata-pengantar.tex
-INPUT kata-pengantar.tex
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmri8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmro8t.tfm
 INPUT .\template-skripsi.toc
 INPUT template-skripsi.toc
 INPUT template-skripsi.toc
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
 OUTPUT template-skripsi.toc
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmbi8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8r.tfm
 INPUT .\template-skripsi.lof
 INPUT template-skripsi.lof
 INPUT template-skripsi.lof
@@ -1154,9 +1144,6 @@ INPUT .\bab1.tex
 INPUT bab1.tex
 INPUT .\bab1.tex
 INPUT bab1.tex
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmbi8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8r.tfm
 INPUT .\bab2.tex
 INPUT .\bab2.tex
 INPUT .\bab2.tex
@@ -1174,27 +1161,6 @@ INPUT .\gambar\Uniform Gaussian kernel.jpg
 INPUT .\gambar\Uniform Gaussian kernel.jpg
 INPUT .\gambar\Uniform Gaussian kernel.jpg
 INPUT .\gambar\Uniform Gaussian kernel.jpg
-INPUT .\gambar\Scale space.jpg
-INPUT .\gambar\Scale space.jpg
-INPUT gambar\Scale space.jpg
-INPUT .\gambar\Scale space.jpg
-INPUT .\gambar\Scale space.jpg
-INPUT .\gambar\Scale space.jpg
-INPUT .\gambar\Scale space.jpg
-INPUT .\gambar\Affine Gaussian kernel.jpg
-INPUT .\gambar\Affine Gaussian kernel.jpg
-INPUT gambar\Affine Gaussian kernel.jpg
-INPUT .\gambar\Affine Gaussian kernel.jpg
-INPUT .\gambar\Affine Gaussian kernel.jpg
-INPUT .\gambar\Affine Gaussian kernel.jpg
-INPUT .\gambar\Affine Gaussian kernel.jpg
-INPUT .\gambar\Smoothing gaussian kernel.jpg
-INPUT .\gambar\Smoothing gaussian kernel.jpg
-INPUT gambar\Smoothing gaussian kernel.jpg
-INPUT .\gambar\Smoothing gaussian kernel.jpg
-INPUT .\gambar\Smoothing gaussian kernel.jpg
-INPUT .\gambar\Smoothing gaussian kernel.jpg
-INPUT .\gambar\Smoothing gaussian kernel.jpg
 INPUT .\gambar\Uniform Gaussian derivatives.jpg
 INPUT .\gambar\Uniform Gaussian derivatives.jpg
 INPUT gambar\Uniform Gaussian derivatives.jpg
@@ -1255,24 +1221,15 @@ INPUT .\bab3.tex
 INPUT bab3.tex
 INPUT .\bab3.tex
 INPUT bab3.tex
-INPUT .\gambar\Flowchart Penelitian.png
-INPUT .\gambar\Flowchart Penelitian.png
-INPUT gambar\Flowchart Penelitian.png
-INPUT .\gambar\Flowchart Penelitian.png
-INPUT .\gambar\Flowchart Penelitian.png
-INPUT .\gambar\Flowchart Penelitian.png
-INPUT .\gambar\Flowchart Penelitian.png
-INPUT .\gambar\Penghitungan Berat.png
-INPUT .\gambar\Penghitungan Berat.png
-INPUT gambar\Penghitungan Berat.png
-INPUT .\gambar\Penghitungan Berat.png
-INPUT .\gambar\Penghitungan Berat.png
-INPUT .\gambar\Penghitungan Berat.png
-INPUT .\gambar\Penghitungan Berat.png
+INPUT C:\Users\USER\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ptm.fd
+INPUT C:\Users\USER\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ptm.fd
+INPUT C:\Users\USER\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ptm.fd
+INPUT C:\Users\USER\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ptm.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8c.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8c.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT template-skripsi.aux
-INPUT .\pengesahan.aux
-INPUT pengesahan.aux
-INPUT pengesahan.aux
 INPUT .\kata-pengantar.aux
 INPUT kata-pengantar.aux
 INPUT kata-pengantar.aux

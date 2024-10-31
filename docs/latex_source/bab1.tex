@@ -15,22 +15,20 @@ Salah satu dari kekayaan hayati yang dimiliki oleh Indonesia adalah ikan. Ikan
 merupakan bahan pangan yang paling banyak dikonsumsi oleh masyarakat 
 Indonesia sejak zaman dahulu. Terbukti dengan banyaknya kuliner dengan bahan 
 baku ikan di Indonesia. Selain menjadi bahan pangan masyarakat Indonesia juga 
-memelihara ikan sebagai hiasan yang mereka taruh di dalam kolam ataupun 
-akuarium.
+memelihara ikan sebagai hiasan yang mereka taruh di dalam kolam ataupun akuarium.
 
-Terdapat 2 cara untuk mendapatkan ikan yang pertama adalah menangkapnya pada habitatnya. 
+Terdapat beberapa cara untuk mendapatkan ikan yang pertama adalah menangkapnya pada habitatnya. 
 Cara ini sangat efektif, cepat dan dapat dilakukan setiap hari, namun dengan menangkap 
 pada habitatnya setiap hari akan mengakibatkan terjadi overfishing yang menyebabkan ikan 
 berkurang dari habitat asli-nya. Cara kedua adalah membudidaya ikan. Budidaya ikan membutuhkan 
 infrastruktur yang mendukung seperti lahan, kolam atau tambak yang memadai, bibit ikan yang akan 
-dibudidayakan, dan serta pakan ikan dalam jumlah yang banyak. Walaupun mengeluarkan modal yang cukup besar 
-dalam budidaya ikan tetapi budidaya ikan juga memberikan hasil yang sangat besar juga. Ikan hasil dari budidaya ikan dapat 
-dijual hidup dari habitat aslinya, hal ini sangat karena banyak dari rumah makan atau restoran yang membutuhkan ikan hidup 
+dibudidayakan, dan serta pakan ikan dalam jumlah yang banyak. Walaupun mengeluarkan modal yang cukup besar dalam budidaya ikan tetapi budidaya ikan juga memberikan hasil yang sangat besar juga. 
+
+Ikan hasil dari budidaya ikan dapat dijual hidup dari habitat aslinya, hal ini sangat karena banyak dari rumah makan atau restoran yang membutuhkan ikan hidup 
 untuk menjaga kualitas dari makanan yang mereka sajikan. Ikan hidup juga mempunyai rasa yang berbeda dari ikan yang sudah 
 mati pada saat dijual. Selain membudidayakan ikan sebagai bahan pangan, ada juga ikan yang dibudidayakan sebagai hiasan. 
 Secara tidak langsung membudidayakan ikan telah mengurangi terjadinya overfishing. 
-Pemerintah Indonesia mencatat pada tahun 2022 produksi ikan mencapai 17,76 juta ton dengan 5,57 juta ton dari budidaya ikan 
-dan 5,97 juta ton dari hasil tangkap laut dan perairan umum daratan.
+Pemerintah Indonesia mencatat pada tahun 2022 produksi ikan mencapai 17,76 juta ton dengan 5,57 juta ton dari budidaya ikan dan 5,97 juta ton dari hasil tangkap laut dan perairan umum daratan.
 
 Pembudidayaan ikan di Indonesia sangat besar, tetapi memiliki masalah yang sama besarnya yaitu diperlukannya usaha 
 untuk menghitung dan mengawasi jumlah ikan yang ingin dibudidayakan. Salah satu contohnya adalah penghitungan bibit ikan, 
@@ -56,37 +54,37 @@ Pencocokan gambar adalah aspek dasar dari banyak permasalahan di dalam komputer,
 dan pelacakan Gerakan (D.G. Lowe, 2005). SIFT atau Scale Invariant feature transform (D.G. Lowe, 1999) pendekatan ini mengubah gambar menjadi kumpulan besar vektor fitur lokal, 
 yang masing-masing tidak berubah terhadap terjemahan, penskalaan, dan rotasi gambar, dan sebagian tidak berubah terhadap perubahan iluminasi 
 dan proyeksi affine atau 3D. SIFT sudah banyak digunakan untuk mencocokan gambar seperti Lokalisasi dan pemetaan dengan robot (Se, S et al, 2001), penyatuan panorama (Brown et al, 2003) dan lain-lain. 
-SIFT di-identifikasi secara efisien dengan menggunakan pendekatan pemfilteran bertahap. Tahap pertama mengidentifikasi lokasi kunci dalam ruang skala dengan mencari lokasi yang maksimal atau minimal dari fungsi Different of Gaussian. 
+SIFT di-identifikasi secara efisien dengan menggunakan pendekatan pemfilteran bertahap. 
+
+Tahap pertama mengidentifikasi lokasi kunci dalam ruang skala dengan mencari lokasi yang maksimal atau minimal dari fungsi Different of Gaussian. 
 Setiap titik digunakan untuk menghasilkan vektor fitur yang mendeskripsikan wilayah gambar lokal yang diambil sampelnya relatif terhadap bingkai koordinat ruang-skalanya. Fitur mencapai invarian parsial terhadap variasi lokal, 
 seperti proyeksi affine atau 3D, dengan mengaburkan lokasi gradien gambar. Detection of local features invariant to affine transformations (K. Mikolajczyk, 2002) menjelaskan penggunaan dua kombinasi detektor yaitu Haris dan Laplacian-of-Gaussians. 
-Kombinasi Haris-Laplace detector memberikan hasil yang lebih baik, Laplacian memungkinkan pemilihan skala karakteristik untuk titik yang diekstraksi dengan harris detector, dengan demikian descriptor dihitung pada lingkungan titik yang sama dalam gambar dengan resolusi yang berbeda, 
+Kombinasi Haris  detector memberikan hasil yang lebih baik, Laplacian memungkinkan pemilihan skala karakteristik untuk titik yang diekstraksi dengan harris detector, dengan demikian descriptor dihitung pada lingkungan titik yang sama dalam gambar dengan resolusi yang berbeda, 
 dan oleh karenanya tidak varian ke perubahan skala besar.
  
-Berdasarkan latar yang telah dijelaskan, penulis mengusulkan untuk mengukur panjang serta menghitung berat ikan dengan menggunakan metode \emph{Harris-Laplace Detection}. 
+Berdasarkan latar yang telah dijelaskan, penulis mengusulkan untuk mengukur panjang serta menghitung berat ikan dengan menggunakan metode \emph{Harris-Corner Detection}. 
 Metode ini menggunakan dua kombinasi detektor yaitu Harris-detector dan Laplace-of-Gaussians. Hasil yang diharapkan adalah sebuah sistem yang mampu mendeteksi ikan pada gambar secara akurat dan menghitung beratnya.
 
 
 \section{Rumusan Masalah}
-Dari uraian pemasalahan diatas, perumusan masalah dalam penelitian ini adalah \textbf{“Bagaimana cara untuk mengukur panjang serta menghitung berat ikan menggunakan metode \emph{Harris-Laplace Detection}?”}
+Dari uraian pemasalahan diatas, perumusan masalah dalam penelitian ini adalah \textbf{“Bagaimana cara untuk mengukur panjang serta menghitung berat ikan menggunakan metode \emph{Harris-Corner Detection}?”}
 
 \section{Batasan Masalah}
 \begin{enumerate}
-	\item Penghitungan panjang dan berat dari pada ikan dengan menggunakan \emph{harris-laplace detection} sebagai pendeteksi benda
-	\item Penelitian dilakukan sampai mendapatkan hasil mendekati panjang dan berat asli dari ikan
-	\item Gambar atau Data yang akan digunakan adalah Ikan lele, Ikan Mas, dan Ikan Nila
+	\item Penghitungan panjang dan berat dari pada ikan dengan menggunakan \emph{harris-laplace detection} sebagai pendeteksi benda. 
+	\item Penelitian dilakukan sampai mendapatkan hasil panjang dan berat dari ikan. 
+	\item Gambar atau Data yang akan digunakan adalah Ikan lele, Ikan Mas, dan Ikan Nila. 
+	\item Citra yang digunakan hanya citra ikan tanpa menggunakan latar belakang atau transparan. 
+	\item Bahasa Pemrograman yang digunakan adalah python 3. 
 \end{enumerate}
 	
 \section{Tujuan Penelitian}
-\begin{enumerate}
-	\item Memahami .
-	\item Memahami .
-	\item Memahami .
-\end{enumerate}
+	Tujuan dari Penelitian adalah Membangun sebuah sistem yang mampu menghitung panjang dan berat ikan dengan menggunakan \emph{Harris-corner detection}. 
 
 \section{Manfaat Penelitian}
 \begin{enumerate}
 	\item Bagi penulis
-	
+	 Memperoleh gelar sarjana dalam bidang Ilmu Komputer, serta menambah pengalaman dalam pembangunan sebuah sistem operasi komputer dengan aplikasi dunia nyata, dan menambah pengetahuan tentang pendeteksian sudut atau korner dari \emph{Harris-corner Detection}. 
 
 		
 	\item Bagi Universitas Negeri Jakarta

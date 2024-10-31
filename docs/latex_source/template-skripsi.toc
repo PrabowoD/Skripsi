@@ -1,8 +1,8 @@
 \babel@toc {english}{}\relax 
 \babel@toc {bahasa}{}\relax 
-\contentsline {chapter}{DAFTAR ISI}{v}{chapter*.3}%
-\contentsline {chapter}{DAFTAR GAMBAR}{vi}{chapter*.4}%
-\contentsline {chapter}{DAFTAR TABEL}{vii}{chapter*.5}%
+\contentsline {chapter}{DAFTAR ISI}{iv}{chapter*.2}%
+\contentsline {chapter}{DAFTAR GAMBAR}{v}{chapter*.3}%
+\contentsline {chapter}{DAFTAR TABEL}{vi}{chapter*.4}%
 \babel@toc {bahasa}{}\relax 
 \contentsline {chapter}{\numberline {I}PENDAHULUAN}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Latar Belakang Masalah}{1}{section.1.1}%
@@ -14,18 +14,26 @@
 \contentsline {chapter}{\numberline {II}KAJIAN PUSTAKA}{4}{chapter.2}%
 \contentsline {section}{\numberline {2.1}\textbf {Multi-scale representation}}{4}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}\textbf {Gaussian scale-space}}{4}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}\textbf {Scale-space derivatives}}{8}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}\textbf {Second moment matrix}}{10}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}\textbf {Automatic scale selection}}{13}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}\textbf {Scale-space maxima}}{14}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}\textbf {Gamma normaozation}}{16}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}\textbf {Differential expressions for scale selection}}{17}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}\textbf {Scale invariant detector}}{18}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}\textbf {Harris-Laplace detector}}{18}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}\textbf {Scale covariant points}}{20}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}\textbf {Affine invariant detector}}{21}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}\textbf {Harris-Affine detector}}{21}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}\textbf {Affine covariant points}}{26}{subsection.2.4.2}%
-\contentsline {chapter}{\numberline {III}Metode Penelitian}{29}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Flow Penelitian}{29}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Deskripsi Sistem}{29}{section.3.2}%
+\contentsline {subsection}{\numberline {2.1.2}\textbf {Scale-space derivatives}}{6}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}\textbf {Second moment matrix}}{8}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}\textbf {Automatic scale selection}}{11}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}\textbf {Scale-space maxima}}{12}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}\textbf {Gamma normaozation}}{14}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}\textbf {Differential expressions for scale selection}}{15}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}\textbf {Scale invariant detector}}{16}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}\textbf {Harris-Laplace detector}}{16}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}\textbf {Scale covariant points}}{18}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}\textbf {Affine invariant detector}}{19}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}\textbf {Harris-Affine detector}}{19}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}\textbf {Affine covariant points}}{24}{subsection.2.4.2}%
+\contentsline {chapter}{\numberline {III}METODE PENELITIAN}{26}{chapter.3}%
+\contentsline {section}{\numberline {3.1}\textbf {Deskripsi Sistem}}{26}{section.3.1}%
+\contentsline {section}{\numberline {3.2}\textbf {Perancangan Sistem}}{26}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}\textbf {Pemrosesan Citra}}{26}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}\textbf {Smoothing Gaussian}}{27}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}\textbf {Perhitungan Gradien}}{28}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}\textbf {Autokorelasi}}{29}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}\textbf {Harris Respon}}{29}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}\textbf {Thresholding dan \emph {Non-Maximum suppression}}}{30}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}\textbf {Memilih Piksel}}{30}{subsection.3.2.7}%
+\contentsline {subsection}{\numberline {3.2.8}\textbf {Menghitung Panjang dan Berat}}{31}{subsection.3.2.8}%

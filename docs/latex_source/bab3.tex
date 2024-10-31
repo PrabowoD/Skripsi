@@ -4,32 +4,180 @@
 %               		    METODE PENELITIAN
 %-------------------------------------------------------------------------------
 
-\chapter{Metode Penelitian}
+\chapter{METODE PENELITIAN}
 
-\section{Flow Penelitian}
+\section{\textbf{Deskripsi Sistem}}
+    Sistem bertujuan untuk melakukan penghitungan panjang serta berat objek ikan yang menggunakan
+metode \emph{Harris-corners} dan \emph{Gausian Laplace}. Penelitian berfokus dalam menghasilkan berupa
+data hasil panjang dan berat objek ikan. Dataset citra ikan diambil secara langsung menggunakan \emph{Smartphone} pada sebuah
+penangkaran ikan. Kemudian bahasa yang akan digunakan dalam membangun sistem adalah Python versi 3.
 
-\begin{figure}
-  \centering{}
-  \includegraphics[width=0.45\textwidth]{gambar/Flowchart Penelitian.png}
-  \caption{Diagram Penghitungan panjang ikan}
-\end{figure}
+Tahapan dalam penghitungan panjang dan berat ikan menggunakan \emph{Harris-Corner Detection} adalah Pemrosesan Citra,
+\emph{Smoothing Gaussian}, Perhitungan gradien, autokorelasi matriks gradien, \emph{Harris Respons}, melakukan threshold-ing dan \emph{Non-Maximum Suppression}, menentukan koordinat sudut, perhitungan panjang dan lebar, Penghitungan berat,
+dan terakhir adalah mengasosiasikan data.
 
-\begin{figure}
-  \centering{}
-  \includegraphics[width=0.45\textwidth]{gambar/Penghitungan Berat.png}
-  \caption{Diagram Penghitungan berat ikan}
-\end{figure}
+\section{\textbf{Perancangan Sistem}}
+    Pada bagian ini akan menbahas tentang proses yang akan dilakukan untuk mengetahui tahapan yang ditempuh
+dalam membangun sistem penghitungan berat dan panjang ikan. Tahapan pertama yang dilakukan adalah melakukan \emph{input} gambar
+yang akan dibaca sistem, setelah itu citra akan diproses menggunakan \emph{Smoothing gaussian} untuk menggurangi \emph{noise}. Kemudian perhitungan gradien dilakukan bertujuan untuk menghitung setiap perubahan intensitas yang berada di sekitar titik, 
+hasil tersebut akan diolah kembali menggunakan autokorelasi matriks gradien, dan dilanjutkan dengan menjalakan \emph{Harris respons}. \emph{Harris respons} bertujuan untuk mengetahui bahwa titik tersebut adalah sebuah sudut, sisi, atau tepi berdasarkan pada hasil respon harris. 
+Setelah mendapatkan titik yang merupakan sebuah sisi, titik-titik tersebut akan dipilih. 
+Dimana hasil dari pemilihan tersebut akan menjadi cara untuk dapat menghitung panjang, lebar dan berat ikan.
 
-\section{Deskripsi Sistem}
+\subsection{\textbf{Pemrosesan Citra}}
+    Gambar yang akan digunakan berformat .jpg atau .png, dengan latar belakang yang telah dihilangkan dan digantikan dengan warna solid. 
+Gambar tersebut akan diubah dari format RGB menjadi citra \emph{grayscale}. Perubahan ini diperlukan untuk mempermudah proses pendeteksian sudut. 
 
-Dalam Penelitian yang akan dibuat adalah sebuah sistem yang dapat menghitung panjang serta berat rata-rata dari se-ekor ikan dengan menggunakan metode \emph{Harris-Corrner}.
-Fokus dari penulis terhadap penelitian ini adalah untuk menghitung panjang serta berat rata-rata dari objek ikan. 
-Citra yang digunakan oleh penulis diambil dari sebuah peternakan ikan, dimana citra tersebut akan penulis gunakan dalam pengujian sistem penghitungan panjang serta berat rata-rata ikan.
+\newpage
+\subsection{\textbf{Smoothing Gaussian}}
+    Metode \emph{Smoothing Gaussian} digunakan untuk mengurangi \emph{noise} pada gambar sebelum melanjutkan ke perhitungan lebih lanjut.
+\emph{Noise} adalah gangguan yang muncul dalam gambar digital yang dapat mengaburkan detail atau informasi penting. \emph{noise} dapat disebabkan oleh berbagai faktor, seperti kualitas sensor kamera yang rendah, pencahayaan yang buruk, atau kesalahan dalam proses pemindahan data.
+Dalam gambar, \emph{noise} biasanya terlihat sebagai bintik-bintik acak atau intensitas piksel yang tidak diinginkan. Keberadaan \emph{noise} ini dapat menjadi masalah dalam proses pendeteksian sudut, karena \emph{noise} dapat menyebabkan munculnya sudut palsu yang tidak sesuai dengan gambar asli.
+    
+    Langkah pertama dalam \emph{smoothing Gaussian} adalah membentuk \emph{Gaussian kernel}. Pemilihan ukuran kernel sangat berpengaruh terhadap hasil \emph{smoothing}, khususnya pada tingkat kehalusan gambar dan jumlah \emph{noise} yang berkurang.
+Semakin besar kernel yang digunakan, semakin banyak \emph{noise} yang dihilangkan, tetapi hal ini dapat menyebabkan detail gambar ikut terhapus. Sebaliknya, jika kernel yang digunakan berukuran kecil, detail gambar akan lebih terjaga, tetapi \emph{noise} mungkin masih tetap ada.
+Setelah menentukan ukuran kernel yang akan digunakan kernel dapat dihitung dengan menggunakan persamaan \eqref{eq:gaussian kernel}.
 
-Bahasa yang penulis gunakan dalam perancangan sistem adalah Python 3. 
-Tujuan penelitian adalah mendapatkan hasil perhitungan panjang dan berat ikan secara komputasi yang mana dihasilkan panjang dan berat ikan dari sebuah citra ikan. 
+    Langkah selanjutnya adalah mengaplikasikan kernel pada gambar. Proses ini dilakukan dengan menerapkan kernel secara berulang pada setiap piksel di seluruh gambar.
+Namun, sebelum langkah tersebut, gambar perlu di-\emph{padding} terlebih dahulu. \emph{Padding} adalah proses menambahkan piksel pada tepi gambar sebelum pemrosesan dengan kernel atau model dimulai.
+Tujuan dari \emph{padding} adalah untuk mempertahankan ukuran gambar setelah diterapkannya operasi tertentu, seperti konvolusi. 
+Setelah \emph{padding} diterapkan, konvolusi akan dilakukan dengan menggunakan persamaan \eqref{eq:konvolusi}. 
 
-Tahapan yang akan diproses dalam penghitungan berat dan panjang ikan dengan menggunakan \emph{Harris-corner} adalah memasukan atau menginput citra ikan, lalu mendeteksi korner dari ikan menggunakan \emph{Harris-corner} dan menghitung panjang serta berat ikan mengunakan korner hasil dari \emph{Harris-corner}. 
+\newpage
+\subsection{\textbf{Perhitungan Gradien}}
+    Gambar yang telah diperhalus akan dilanjutkan dengan menghitung gradient pada setiap \emph{pixel}-nya. Tujuan dari penghitungan gradien adalah untuk mengetahui perubahan intensitas pada setiap piksel, yang pada umumnya akan menujukan tepi atau kontur dalam sebuah gambar.
+Penghitungan gradient juga memerlukan kernel untuk dapat bekerja, terdapat banyak kernel yang dapat digunakan untuk menghitung gradient, contohnya kernel sobel. 
 
+    Kernel Sobel digunakan untuk menghitung estimasi gradien dengan memberikan bobot yang lebih besar pada piksel tetangga terdekat di sekitar piksel pusat.
+Kernel sobel terdiri dari dua matriks \(3 x 3\), yang bertujuan untuk menghitung gradient pada dua arah yaitu:
+ \begin{itemize}
+    \item \textbf{Gradien Horizontal} (Gx): Mengukur perubahan intensitas sepanjang sumbu x.
+    \item \textbf{Gradien Vertical} (Gy): Mengukur perubahan intensitas sepanjang sumbu y.
+\end{itemize}
+    Berikut adalah kernel yang akan digunakan dalam operator sobel :
+\begin{enumerate}
+    \item Kernel Sobel Horizontal
+    \begin{equation*}
+        Sx = 
+        \begin{bmatrix}
+            -1 & 0 & 1 \\
+            -2 & 0 & 2 \\
+            -1 & 0 & 1
+          \end{bmatrix}
+    \end{equation*}
 
+    \item  Kernel Sobel Vertical
+    \begin{equation*}
+        Sy = 
+        \begin{bmatrix}
+            -1 & -2 & -1 \\
+            0 & 0 & 0 \\
+            1 & 2 & 1
+          \end{bmatrix}
+    \end{equation*}
+
+\end{enumerate}
+Perhitungan gradien juga akan menggunakan rumus \eqref{eq:konvolusi} tetapi gaussian filter akan diganti dengan kernel sobel horizontal (Gx) dan kernel sobel vertical (Gy).
+Maka rumusannya akan seperti berikut :
+\begin{equation}
+    \begin{aligned}
+        Ix = Sx * I(x)\\ Iy = Sy * I(x)
+    \end{aligned}
+\end{equation}
+
+\newpage
+\subsection{\textbf{Autokorelasi}}
+    Setelah hasil dari perhitungan gradien didapatkan, hasil tersebut akan dibuat menjadi matriks kembali dengan rumus \eqref{eq:autokorelasi}.
+Nilai gradien dihitung untuk mendapatkan koefisien matriks autokorelasi. Setelah koefisien didapatkan, koefisien tersebut akan dikonvolusi dengan filter gaussian.
+Baru setelah itu hasil dari konvolusi digunakan untuk membentuk matriks \(M\) yang akan digunakan untuk perhitungan selanjutnya. Bentuk dari matriks \(M\) sebagai berikut :
+
+\begin{equation*}
+    \begin{aligned}
+        \Sigma Ix = g(\sigma) * Ix^2 \\
+        \Sigma IxIy = g(\sigma) * Ix * Iy \\
+        \Sigma Iy = g(\sigma) * Iy^2
+    \end{aligned}
+\end{equation*}
+
+\begin{equation}
+    M = 
+    \begin{bmatrix}
+        \Sigma Ix & \Sigma IxIy \\
+        \Sigma IxIy & \Sigma Iy
+    \end{bmatrix} 
+\end{equation}
+
+\subsection{\textbf{Harris Respon}}
+    Matriks \(M\) digunakan untuk menghitung respon harris, menggunakan rumus harris yaitu:
+\begin{equation}
+    R(x,y) = Det(M) - k * (trace(M))^2
+\end{equation}
+Dimana \(Det(M)\) :
+\begin{equation*}
+    Det(M) = \Sigma Ix * \Sigma Iy - \Sigma IxIy^2
+\end{equation*}
+Dan \(trace(M)\) 
+\begin{equation*}
+    trace(M) = \Sigma Ix + \Sigma Iy
+\end{equation*}
+
+\newpage
+\subsection{\textbf{Thresholding dan \emph{Non-Maximum suppression}}}
+    Setelah nilai harris didapatkan tahapan langkah selanjutnya adalah melakukan Thresholding.
+Thresholding adalah cara untuk memilih hasil deteksi dengan cara menetapkan nilai ambang batas.
+Jika nilai harris melebihi dari ambang batas, maka piksel tersebut akan dianggap sebagai potensial sudut, Sebaliknya jika nilai harris lebih kecil maka piksel tersebut akan diabaikan.
+Tujuannya supaya mengurangi piksel yang perlu menjadi diproses lebih lanjut. 
+\begin{equation}
+    Corner(x,y) = 
+    \begin{cases}  
+        1 & \text{jika } R(x,y) > T \\ 
+        0 & \text{jika } R(x,y) <= T
+    \end{cases}
+\end{equation}
+
+    Setelah melewatin Thresholding, setiap piksel yang telah lolos akan diperiksa kembali dengan \emph{Non-Maximum Suppression} atau NMS.
+NMS bertujuan untuk mengelolah kembali piksel yang saling berdekatan satu sama lain. NMS akan memilih piksel pada \emph{range} tertentu, piksel dengan nilai \(R\) terbesar akan terpilih sebagai puncak lokan dan dipertahankan sebagai sudut, dan yang lainnya akan diabaikan.
+\begin{equation*}
+    NMS(x,y) =
+    \begin{cases}
+        1 & \text{jika } R(x,y) = MaxLocal R(i,j) \\
+        0 & \text{lainnya }
+    \end{cases}
+\end{equation*}
+Dimana \emph{MaxLocal} \(R(i,j)\) adalah nilai maksimum yang berada disekitar piksel \((x,y)\).
+
+\subsection{\textbf{Memilih Piksel}}
+    Setelah sudut telah melalui Thresholding dan NMS, sudut-sudut tersebut akan dipilih berdasarkan kriteria yang telah ditentukan.
+\begin{enumerate}
+    \item Sudut berada pada bagian ekor.
+    \item Sudut berada pada bagian mulut.
+    \item Sudut berada pada bagian sirip atas.
+    \item Sudut berada pada bagian bawah atau perut.
+\end{enumerate}
+
+Keempat kriteria tersebut dibutuhkan untuk mempermudah dalam penghitungan panjang dan lebar.
+
+\newpage
+\subsection{\textbf{Menghitung Panjang dan Berat}}
+    Untuk menghitung panjang dan lebar asli sebuah benda dalam gambar dibutuhkan dua hal, yaitu skala dan panjang benda pada gambar.
+Skala dapat dicari dengan dua cara yaitu menggunakan benda referensi, atau dengan menggunakan resolusi pada gambar tersebut.
+    
+    Kedua cara tersebut memilik kelebihan dan kekurang masing-masing, contohnya menggunakan benda referensi.
+ Metode ini memerlukan benda lain dalam gambar dan mengetahui panjang dari benda lain tersebut, jika tidak ada benda lain pada gambar diperlukan pengambilan gambar pada jarak yang sama dengan benda yang ingin dicari panjangnya.
+ Kelebihan dari metode ini adalah akurasi yang tinggi, metode selanjutnya juga sama menggunakan resolusi gambar dapat mempermudah penghitungan, namun akurasi dari penghitungan panjang akan berkurang.
+
+    Setelah diketahui panjang dan lebar, langkah berikutnya adalah menghitung berat. Penghitungan berat pada gambar akan dilakukan dengan menggunakan interpolasi dengan data yang telah diambil. Menggunakan rumus sebagai berikut:
+\begin{equation}
+    Wn = Wx + (Ln - Lx / Ly - Lx) * (Wy - Wx)
+\end{equation}
+Dimana 
+\begin{itemize} 
+    \item Wn berat yang dicari.
+    \item Wx berat sebelum.
+    \item Wy berat sesudah.
+    \item Ln panjang dari berat yang dicari.
+    \item Lx panjang dari berat sebelum.
+    \item Ly panjang dari berat sesudah.
+\end{itemize}
+    Jika diatas akan dilakukan kembali jika lebar dari ikan juga berbeda.
 

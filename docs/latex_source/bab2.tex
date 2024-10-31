@@ -26,8 +26,14 @@ Penemuan ini menyimpulkan bahwa konvolusi dengan kernel Gaussian merupakan solus
 Fungsi Gaussian dua dimensi didefinisikan sebagai berikut:
 
 \begin{equation*}
-g(\sigma) = \frac{1}{2\pi\sigma^2}\exp^-\frac{x^2+y^2}{2\sigma^2}
+g(\sigma) = \frac{1}{2\pi\sigma_{x}\sigma_{y}}\exp^-\frac{(x^2+\mu_{x})+(y^2+\mu_{y})}{2\sigma_{x}\sigma_{y}}
 \end{equation*}
+
+Jika \(\mu_{x} = \mu_{y} = 0\) dan \(\sigma_{x} = \sigma_{y}\) maka dapat disederhanakan menjadi :
+\begin{equation}
+g(\sigma) = \frac{1}{2\pi\sigma^2}\exp^-\frac{x^2+y^2}{2\sigma^2}
+\label{eq:gaussian kernel}
+\end{equation}
 
 Keunikan dari gaussian kernel dapat diketahui dari beberapa sifat berikut : 
 \emph{linearity, separability, causality, and semi group property.} Keterpisahan 
@@ -49,7 +55,7 @@ menggunakan kernel dengan ukuran yang sama dengan jumlah seluruh n kernel yang d
 Selain itu, operasi n dapat dilakukan dalam urutan apa pun:
 
 \begin{equation*}
-g(\sigma_{1}) * \cdot * g(\sigma_{n}) * I(x) = g(\sigma_{1} + \cdot + \sigma_{n}) * I(x)
+g(\sigma_{1}) * \cdots * g(\sigma_{n}) * I(x) = g(\sigma_{1} + \cdots + \sigma_{n}) * I(x)
 \end{equation*}
 
 Biasanya, ruang-skala yang seragam digunakan, tetapi representasi ruang-skala umum dihitung dengan filter lain.
@@ -57,9 +63,10 @@ Biasanya, ruang-skala yang seragam digunakan, tetapi representasi ruang-skala um
 \textbf{Uniform scale-space}. Perbeddan tingkat pada representasi skala-ruang
 secara umum, terbuat dari konvolusi dengan \emph{gaussian kernel} :
 
-\begin{equation*}
+\begin{equation}
 L(x,\sigma) = g(\sigma) * I(x)
-\end{equation*}
+\label{eq:konvolusi}
+\end{equation}
 
 Dengan I adalah gambar dan \(x = (x,y)\) adalah lokasi poin.
 \emph{Kernel} adalah simetris sirkular dan diparameterisasi dari satu skala faktor \(\sigma \).
@@ -72,9 +79,9 @@ Dengan I adalah gambar dan \(x = (x,y)\) adalah lokasi poin.
 
 Citra dalam skala kasar diperoleh dengan menghaluskan citra dalam skala halus. 
 Proses ini diulangi secara berurutan pada tingkat skala yang semakin kasar untuk menghasilkan representasi multiskala. 
-Untuk mempercepat operasi ini, seringkali dilakukan pengambilan sampel pada citra skala kasar dengan faktor skala yang sesuai setelah setiap operasi pemulusan. 
-Namun, perlu berhati-hati dalam memilih skala dan faktor pengambilan sampel karena hal ini dapat menyebabkan masalah aliasing. 
-Selain itu, diperlukan penambahan hubungan tambahan untuk mencocokkan lokasi titik yang sesuai pada tingkat skala yang berbeda. 
+Untuk mempercepat operasi, seringkali dilakukan pengambilan sampel pada citra skala kasar dengan faktor skala yang sesuai setelah setiap operasi pemulusan. 
+Perlu berhati-hati dalam memilih skala dan faktor pengambilan sampel karena hal ini dapat menyebabkan masalah aliasing. 
+Selain itu, diperlukannya penambahan hubungan untuk mencocokkan lokasi titik yang sesuai pada tingkat skala yang berbeda. 
 Ini membuat analisis teoretis menjadi lebih kompleks.
 
 Alternatifnya, representasi skala-ruang juga dapat dibangun dengan meratakan gambar beresolusi tinggi secara berturut-turut dengan menggunakan kernel berbagai skala. 
@@ -87,81 +94,7 @@ Skala kepentingan dalam dan luar, yaitu di mana struktur dapat dianalisis, diten
 Ukuran minimal sebuah struktur gambar yang dapat dianggap sebagai karakteristik dibatasi oleh resolusi dan noise. 
 Inner scale adalah faktor yang berhubungan dengan ukuran struktur tersebut, dengan kata lain, ukuran minimal lingkungan titik yang mengandung informasi penting tentang struktur. Outer scale, yang merupakan ukuran terbesar dari struktur, dibatasi oleh kendala yang menentukan sifat lokal dari fitur tersebut dan juga dibatasi oleh ukuran gambar itu sendiri. 
 Faktor skala harus didistribusikan secara eksponensial antara batas dalam dan luar, yaitu \(\sigma_{n} = \sigma_{0}s^{n}\), 
-agar perubahan informasi tetap seragam antara tingkat resolusi yang berurutan. 
-
-\textbf{Aﬃne scale-space.} Representasi yang lebih umum adalah ruang-skala affine. 
-Teori ruang-skala affine Gaussian sangat bermanfaat ketika berurusan dengan transformasi yang halus dari bagian citra. 
-Representasi ini dapat dihasilkan melalui konvolusi dengan kernel affine Gaussian.
-
-\begin{equation}
-  g(\Sigma) = \frac{1}{2\pi\sqrt{\det\Sigma}}\exp^{-\frac{x^{T}\Sigma^{-1}x}{2}}
-\end{equation}
-
-\begin{figure}
-  \centering{}
-  \includegraphics[width=0.8\textwidth]{gambar/Scale space.jpg}
-  \caption{}
-\end{figure}
-
-\begin{figure}
-  \centering{}
-  \includegraphics[width=0.8\textwidth]{gambar/Affine Gaussian kernel.jpg}
-  \caption{}
-\end{figure}
-
-Jika matriks \(\Sigma\) adalah matriks identitas dikalikan dengan skalar, 
-maka fungsi ini sesuai dengan Kernel Gaussian Uniform. Penulis mengatasi ruang tiga dimensi (x, y, \(\sigma\)) 
-jika menggunakan pendekatan tradisional, di mana filter Gaussian seragam digunakan. 
-Kernel Gaussian dalam hal ini ditentukan oleh satu parameter skala, yaitu \(\sigma\). 
-
-Namun, ketika matriks \(\Sigma\) adalah matriks positif simetris 2x2, 
-kompleksitasnya menjadi lebih tinggi karena berada dalam ruang berdimensi tinggi yang sulit dihandle. 
-Meskipun begitu, kompleksitas ini dapat dikelola hanya dengan menghitung representasi untuk satu titik citra. 
-Filter affine yang diterapkan pada titik tertentu biasanya digunakan untuk masalah bentuk-dari-tekstur.
-
-Ada beberapa pendekatan untuk menghitung konvolusi dengan kernel affine. 
-Salah satu pendekatan adalah dengan menggunakan transformasi Fourier dari kernel Gaussian diskrit dan melakukan perkalian dengan citra dalam domain frekuensi. 
-Jika hanya perlu menghitung respons filter pada satu titik citra, tidak ada manfaat dalam menggunakan filter rekursif. 
-Biaya komputasi yang sama akan diperoleh dengan mengambil sampel kernel affine dan langsung menggabungkannya dengan citra. 
-
-Metode yang digunakan dalam pendekatan yang dijelaskan dalam manuskrip ini didasarkan pada dekomposisi matriks kernel menjadi produk rotasi dan penskalaan matriks.
-
-
-\begin{equation*}
-\Sigma = R^{T} \cdot D \cdot R =  
-\begin{bmatrix} 
-\cos (\phi )&  -\sin (\phi) \\ 
-\sin (\phi )& \cos (\phi) 
-\end{bmatrix} 
-\begin{bmatrix}
-\sigma_{x} &0 \\
-0 & \sigma_{y}
-\end{bmatrix}
-\begin{bmatrix}
-\cos (\phi )&  \sin (\phi) \\ 
--\sin (\phi )& \cos (\phi)
-\end{bmatrix}
-\end{equation*}
-
-Persamaan ini menunjukkan bahwa pemulusan affine setara dengan melakukan konvolusi dengan kernel Gaussian yang telah dirotasi dan memiliki bentuk elips. 
-Untuk menyederhanakan proses komputasi, dapat dilakukan perubahan pada titik:
-
-\begin{equation*}
-x^{T}\Sigma^{-1}x = x^{T}\frac{1}{\sigma_{x}\sigma_{y}}\Sigma^{-1}_{N}x=x^{T}\Sigma^{-\frac{1}{2}}_{N}\frac{1}{\sigma_{x}\sigma_{y}}\Sigma^{-\frac{1}{2}}_{N}x=(\Sigma^{-\frac{1}{2}}_{N}x)^{T}\frac{1}{\sigma_{x}\sigma_{y}}\Sigma^{-\frac{1}{2}}_{N}x
-\end{equation*}
-
-Dengan demikian, pemulusan affine dilakukan dengan melakukan konvolusi menggunakan kernel seragam \(\sigma_{N} = \sqrt{\sigma_{x}\sigma_{y}}\)
-dengan titik yang ditransformasi oleh \(x' = \Sigma^{1\frac{1}{2}}_{N}x\). Sebuah masalah terjadi ketika \(\sigma_{x}\) 
-sangat berbeda dari \(\sigma_{y}\). Dalam hal ini, pengambilan sampel citra dilakukan dengan interval \(\frac{\sigma_{x}}{\sigma_{N}}\)
-dan \(\frac{\sigma_{y}}{\sigma_{N}}\) melibatkan beberapa kehilangan informasi dan mengenalkan artefak. 
-Mengatasi masalah ini dapat mengatur ukuran kernel yang seragam untuk \(\sigma_{N} = \max(\sigma_{x},\sigma_{y})\)
-dan kemudian menghitung matriks \(\Sigma^{-\frac{1}{2}}_{N}\). 
-
-\begin{figure}
-  \centering{}
-  \includegraphics[width=0.8\textwidth]{gambar/Smoothing gaussian kernel.jpg}
-  \caption{}
-\end{figure}
+agar perubahan informasi tetap seragam antara tingkat resolusi yang berurutan.
 
 \subsection{\textbf{Scale-space derivatives}}
 
@@ -261,11 +194,12 @@ dan didefinisikan dengan:
    \mu_{11} & \mu_{12} \\
    \mu_{21} & \mu_{22} 
    \end{bmatrix} =
-   \sigma^{2}_{D}g(\sigma_{I}) *
+   \sigma^{2}_{D} g(\sigma_{I}) *
    \begin{bmatrix}
    L^{2}_{x}(x,\sigma_{D}) & L_{x}L_{y}(x,\sigma_{D}) \\
    L_{x}L_{y}(x,\sigma_{D}) & L^{2}_{y}(x,\sigma_{D}) 
    \end{bmatrix}
+   \label{eq:autokorelasi}
 \end{equation}
 
 Ini menjelaskan distribusi gradien di lingkungan lokal dari suatu titik. Derivatif gradien ditentukan 
