@@ -1,0 +1,65 @@
+%!TEX root = ./template-skripsi.tex
+%-------------------------------------------------------------------------------
+%                            BAB II
+%                          KAJIAN TEORI
+%-------------------------------------------------------------------------------
+
+\chapter{KAJIAN PUSTAKA}
+
+\section{Pengertian Deteksi Fitur}
+  Deteksi fitur adalah salah satu teknik penting dalam pengolahan citra digital yang digunakan untuk mengekstraksi informasi spesifik dari gambar. 
+Fitur pada citra dapat berupa titik sudut (corner), tepi (edge), atau pola tertentu yang dapat digunakan untuk mengidentifikasi karakteristik objek di dalam gambar. 
+Deteksi fitur sangat penting karena fitur-fitur ini sering kali tidak terpengaruh oleh perubahan pencahayaan, rotasi, atau skala, sehingga dapat digunakan untuk berbagai aplikasi seperti pemetaan, pengenalan objek, dan pencocokan gambar.
+
+\section{\emph{Harris-Corner Detection}}
+  \emph{Harris-Corner Detection} merupakan salah satu dari sekian banyak algoritma untuk mendeteksi fitur (\emph{feature}), algoritma ini pertama kali diperkenalkan oleh Chris Harris dan Mike Stephens pada tahun 1988 (\cite{Harris2013}). 
+Ide dibalik metode Harris adalah untuk mendeteksi titik sudut berdasarkan variasi intensitas di area sekitar: wilayah yang kecil di sekitar fitur menunjukan perubahan intensitas yang besar dibandingkan dengan pergeseran jendela ke segala arah (\cite{Sanchez2018}).
+Dengan melibatkan matriks momen kedua (\emph{second moment matrix}) untuk menghitung variasi perubahan intensitas dalam dua arah utama.
+
+\begin{equation}
+  R = det(M) - k * (trace(M))^2
+  \label{HarrisCorner}
+\end{equation}
+
+  Nilai \(R\) akan menunjukan keberadaan sudut pada area tersebut. 
+Jika nilai \(R\) yang besar akan menunjukan keberadaan sudut di area tersebut, sebaliknya nilai \(R\) yang kecil menunjukan daerah tersebut merupakan tepi atau sisi.
+
+\section{\emph{Second moment matrix}}
+  Matriks momen kedua (\emph{second moment matrix}) adalah matriks simetris 2x2 yang mencerminkan variasi intensitas di sekitar piksel dalam sebuah citra. Matriks ini seringkali digunakan untuk mendeteksi fitur, atau mendeskripsikan struktur dari \emph{local image}.
+Matriks ini juga panggil sebagai matriks \emph{auto-correlation} bisa dilihat pada \ref{SecondMomentMatrix}
+
+\begin{equation}
+  M = 
+    \begin{bmatrix}
+      A & C \\
+      C & B
+    \end{bmatrix}
+    = g(\sigma_{I}) *
+      \begin{bmatrix}
+        I_{x}^2 & I_{x}I_{y} \\
+        I_{x}I_{y} & I_{y}^2
+      \end{bmatrix}
+  \label{SecondMomentMatrix}
+\end{equation}
+
+Hasil dari turunan dihitung pada setiap posisi dan koefisien dari matriks dikonvolusi dengan fungsi gaussian. Langkah ini merupakan langkang paling lama karena menggunakan tiga konvolusi gaussian (\cite{Sanchez2018}). 
+Matriks ini memiliki dua nilai eigen, nilai tersebut dapat memungkinkan mengidentifikasi suatu area :
+
+\begin{itemize}
+  \item Jika kedua nilai eigen kecil, maka area tersebut adalah \emph{flat area}.
+  \item Jika satu nilai besar, dan satu kecil, maka area tersebut adalah tepi.
+  \item Jika kedua nilai eigen besar, maka kemungkinan besar area terbuat adalah sudut (\emph{corner}).
+\end{itemize}
+
+Dengan menggunakan sifat tersebut menghitung respon sudut menggunakan analisis nilai eigen atau menggunakan metode lain, salah satunya fungsi kekuatan sudut Harris \(R\) seperti yang dijelaskan pada \ref{HarrisCorner}.
+
+\section{\emph{Gradient}}
+  Gradient dalam matematika dan pemrosesan citra adalah sebuah konsep yang menunjukan arah perubahan sebuah nilai intensitas pada suatu titik pada gambar 2-Dimensi atau 3-Dimensi. 
+Dalam gambar atau citra digital, Gradien memainkan peran utama dalam membentuk matriks auto-korelasi, yang nilai eigen-nya menggambarkan struktur lokal gambar. 
+Wilayah dengan nilai eigen tinggi di semua arah menunjukkan sudut, sedangkan wilayah dengan satu nilai eigen tinggi menggambarkan tepi. (\cite{Harris2013})
+
+  Berbagai operator gradien, seperti Sobel, Prewitt, dan Scharr, digunakan untuk menghitung gradien dalam gambar dengan mendeteksi perubahan intensitas piksel di sepanjang arah tertentu. 
+Operator Sobel, sebagai salah satu metode yang paling umum, menggunakan kernel konvolusi untuk menghitung gradien dalam arah horizontal (x) dan vertikal (y), menghasilkan peta gradien yang mengidentifikasi tepi dan perubahan penting dalam struktur gambar.
+
+
+

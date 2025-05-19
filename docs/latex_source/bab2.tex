@@ -6,16 +6,16 @@
 
 \chapter{KAJIAN PUSTAKA}
 
-\section{\textbf{Multi-scale representation}}
+\section{Multi-scale representation}
 
 Pada bagian ini akan menjelaskan representasi citra multi-resolusi berdasarkan filter Gaussian. 
 Turunan Gaussian sering digunakan untuk mengekstrak fitur-fitur karakteristik. Bagian ini akan menjelaskan bagaimana menghitung stabilitas 
-suatu gambar dan cara mengnormalisasi gambar tersebut untuk mendapatkan respons turunan yang tidak tergantung pada resolusi. 
+suatu gambar dan cara menormalisasi gambar adalah untuk mendapatkan respons turunan yang tidak tergantung pada resolusi. 
 Fitur lokal didefinisikan berdasarkan lokasi, skala, dan bentuk, yang akan mengalami transformasi saat dilihat dari sudut yang berbeda. 
 Untuk memperkirakan perubahan transformasi pada suatu titik penting, dapat dilakukan eksplorasi sifat dari \emph{Second moment matrix}, 
 dengan komponen dari matriks Hessian digunakan untuk mendeteksi karakteristik skala struktur lokal dan mendeskripsikan bentuk struktur.
 
-\subsection{\textbf{Gaussian scale-space}}
+\subsection{Gaussian scale-space}
 
 Dalam domain diskrit dari gambar digital, parameter skala juga diambil dalam bentuk diskrit. 
 Sebagai hasilnya, representasi ruang-skala adalah kumpulan gambar yang direpresentasikan pada tingkat resolusi diskrit yang berbeda. 
@@ -96,7 +96,7 @@ Inner scale adalah faktor yang berhubungan dengan ukuran struktur tersebut, deng
 Faktor skala harus didistribusikan secara eksponensial antara batas dalam dan luar, yaitu \(\sigma_{n} = \sigma_{0}s^{n}\), 
 agar perubahan informasi tetap seragam antara tingkat resolusi yang berurutan.
 
-\subsection{\textbf{Scale-space derivatives}}
+\subsection{Scale-space derivatives}
 
 Kegunaan turunan dalam analisis sinyal lokal dapat diilustrasikan melalui ekspansi Taylor. 
 Ekspansi Taylor memegang peran penting dalam desain filter dan, pada urutan yang dipilih, mendekati struktur gambar secara lokal. 
@@ -182,7 +182,7 @@ Namun, tiga derajat kebebasan dalam kernel affine Gaussian membuatnya sulit untu
 Oleh karena itu, dalam praktiknya, sering kali dibatasi kemungkinan bentuk kernel yang akan digunakan. 
 Selain itu, komputasi turunan arah affine untuk semua titik citra dapat dipercepat dengan implementasi yang bersifat rekursif.
 
-\subsection{\textbf{Second moment matrix}}
+\subsection{Second moment matrix}
 
 \emph{Second Moment matrix} dijelaskan pada bagian ini sering digunakan untuk deteksi 
 fitur atau deskripsi struktur citra lokal. Matriks ini disebut juga \emph{Auto-correlation Matrix} 
@@ -332,7 +332,7 @@ Perhatikan kesamaan antara \(Q\) dan \(Q_{A}\). Meskipun, \(Q_{A}\) cenderung no
 Berlawanan dengan pendekatan, pola gambar tidak dinormalisasi afin dalam prosedur iteratif yang memperkirakan bentuk anisotropik. 
 Selanjutnya, dalam percobaan selanjutnya, melihat bahwa prosedur ini menyimpang lebih sering jika skala lokal dipilih dengan ukuran \(Q_{A}\) maksimum.
 
-\section{\textbf{Automatic scale selection}}
+\section{Automatic scale selection}
 Skala invariansi merupakan salah satu tujuan dalam pekerjaan ini, oleh karena itu pada bagian ini kami fokus 
 pada metode untuk menentukan skala struktur citra lokal. Pemilihan skala otomatis dan sifat dari skala yang 
 dipilih telah dipelajari secara ekstensif. Idenya adalah untuk memilih skala karakteristik, 
@@ -341,7 +341,7 @@ dapat eksis pada rentang skala dan dalam rentang ini tidak ada skala persepsi ya
 Namun, untuk deskriptor tertentu sebuah skala dapat diberi nama karakteristik, jika deskriptor yang 
 dihitung pada skala ini dapat menyampaikan informasi lebih banyak dibandingkan dengan deskriptor pada skala lain.
 
-\subsection{\textbf{Scale-space maxima}}
+\subsection{Scale-space maxima}
 Berikut ini disajikan hubungan analitis antara skala maksimum ruang dan skala struktur citra lokal. 
 Biarkan \(F\) menjadi fungsi yang dinormalisasi sehubungan dengan skala, yang digunakan untuk membangun ruang-skala. 
 Himpunan respons untuk titik \(x\) kemudian ditentukan oleh \(F(x,\sigma_{n})\) dengan \(\sigma_{n} =\sigma_{0}s^{n}\). 
@@ -403,7 +403,7 @@ Dapat juga menunjukkan bahwa tidak ada skala ekstrem untuk turunan orde pertama 
 
 Dengan demikian, dapat memulihkan skala fitur dengan melihat maksimum turunan orde kedua yang dinormalisasi.
 
-\subsection{\textbf{Gamma normaozation}}
+\subsection{Gamma normaozation}
 Faktor normalisasi, yang diterapkan untuk menghitung turunan skala-ruang, memiliki properti, yang dapat sangat 
 berguna untuk parameterisasi mekanisme pemilihan skala. Pada bagian ini menganalisis pengaruh faktor 
 normalisasi pada maxima lokal atas skala. Alih-alih menormalkan turunan dengan faktor \(\sigma^{n}\), 
@@ -446,7 +446,7 @@ gambar teoritis yang sempurna. Dalam kasus gambar nyata, tekstur, yang sering mu
 hubungan di atas menunjukkan kemampuan ekspresi diferensial untuk memilih skala struktur citra lokal dan juga menunjukkan pengaruh faktor normalisasi \(\gamma\) pada maksimum skala-ruang. 
 Hasil percobaan membuktikan hubungan ini.
 
-\subsection{\textbf{Differential expressions for scale selection}}
+\subsection{Differential expressions for scale selection}
 Turunan yang dihitung dalam koordinat Cartesian umumnya tidak terkait dengan struktur gambar, oleh karena itu operator struktur yang berguna dibuat dari kombinasi 
 beberapa turunan Gaussian. Pada bagian ini menyajikan operator, yang sering digunakan dalam konteks pemilihan fitur lokal skala. Operator pemilihan skala setidaknya 
 harus invarian terhadap rotasi untuk mempertahankan invarian minimum. Invariansi iluminasi kurang kritis karena fitur dilokalkan pada fungsi ekstrem lokal. 
@@ -484,9 +484,9 @@ Pemilihan skala menggunakan determinan matriks Hessian digunakan. Jejak matriks 
 
 Namun, operator ini tidak diadaptasi untuk perubahan skala. Untuk menghadapi transformasi tersebut, Dufournaud et al. membuat parameter operator Harris berdasarkan skala. Hal ini memungkinkan titik-titik minat dideteksi pada skala yang berbeda.
 
-\section{\textbf{Scale invariant detector}}
+\section{Scale invariant detector}
 
-\subsection{\textbf{Harris-Laplace detector}}
+\subsection{Harris-Laplace detector}
 Pada bagian ini kami mengusulkan detektor titik minat baru yang menggabungkan detektor Harris yang andal dan pemilihan skala berbasis Laplacian. Evaluasi detektor interest point yang disajikan menunjukkan keunggulan detektor Harris dibandingkan dengan pendekatan lain yang ada. Dalam eksperimen diperhatikan bahwa skala mengadaptasi fungsi Harris jarang mencapai maxima atas skala dalam representasi skala-ruang. Jika terlalu sedikit interest point yang terdeteksi, gambar tidak terwakili dengan andal. Oleh karena itu, tinggalkan ide pencarian 3D maxima dari fungsi Harris. Selanjutnya, percobaan menunjukkan bahwa fungsi LoG memungkinkan persentase tertinggi dari skala karakteristik yang benar dapat ditemukan. Oleh karena itu, kami mengusulkan untuk menggunakan Laplacian untuk memilih skala titik yang diekstraksi dengan detektor Harris. Detektor Harris-Laplace menggunakan fungsi Harris untuk melokalkan titik di setiap tingkat representasi ruang-skala. Selanjutnya, ia memilih titik-titik yang Laplacian-of-Gaussian mencapai skala maksimum. Dengan cara ini, gabungkan kedua metode ini untuk mendapatkan detektor titik minat yang andal yang tidak berubah terhadap perubahan skala yang signifikan.
 
 Berikut ini dijelaskan secara detail algoritma deteksi. Usulkan dua implementasi dari gagasan umum yang disajikan di atas. Yang pertama adalah algoritma cepat untuk mendeteksi lokasi titik minat dan skala wilayah karakteristik terkait. Yang kedua memberikan estimasi lokasi dan skala yang tepat dari setiap titik minat yang mungkin.
@@ -511,7 +511,7 @@ Matriks \(\mu(x,\sigma_{n})\) sebenarnya dihitung dengan skala integrasi \(\sigm
 
 Titik awal dapat dideteksi dengan perubahan skala yang lebih besar antara dua tingkat representasi berurutan, yaitu \(s = 1.4\). Interval skala yang lebih kecil yaitu \(s = 1.12\), dalam algoritma iteratif memberikan perkiraan lokasi dan skala yang lebih baik. Seperti yang dapat dibayangkan, titik awal yang terdeteksi pada struktur lokal yang sama tetapi pada level representasi yang berbeda harus menyatu ke lokasi yang sama dan skala yang sama. Sangat mudah untuk menemukan titik yang mirip menggunakan koordinat titik dan skala. Untuk mewakili struktur, hanya dapat menyimpan salah satunya. Pendekatan ini memberikan titik-titik, yang lokasi dan skalanya diperkirakan dengan akurasi tinggi. Itu juga menemukan parameter yang benar untuk poin, yang ditolak oleh ukuran Laplacian dalam pendekatan Harris-Laplace. Namun, algoritma iteratif yang diterapkan untuk setiap titik awal memakan waktu lebih lama dibandingkan dengan pendekatan Harris-Laplace.
 
-\subsection{\textbf{Scale covariant points}}
+\subsection{Scale covariant points}
 \begin{figure}
   \centering{}
   \includegraphics[width=0.8\textwidth]{gambar/Scale invariant interest point detection.jpg}
@@ -528,10 +528,10 @@ Pada gambar di atas kami menyajikan beberapa contoh titik yang terdeteksi dengan
 
 Gambar di atas menunjukkan representasi skala-ruang untuk dua citra dengan titik-titik yang dideteksi dengan metode Harris-Laplace. Untuk setiap level skala objek, kami menyajikan titik-titik yang dipilih. Ada banyak korespondensi point-to-point antara level yang rasio skalanya sesuai dengan perubahan skala nyata antara gambar (ditunjukkan dengan pointer). Selain itu, sangat sedikit titik yang terdeteksi di lokasi yang sama tetapi pada level yang berbeda. Oleh karena itu, titik-titik merupakan karakteristik pada bidang citra dan dalam dimensi skala.
 
-\section{\textbf{Affine invariant detector}}
+\section{Affine invariant detector}
 Sebuah detektor invarian affine dapat dilihat sebagai generalisasi dari detektor invarian skala. Dalam kasus transformasi affine penskalaan bisa tidak seragam, yang berbeda di setiap arah. Penskalaan yang tidak seragam berpengaruh terhadap lokalisasi, skala dan bentuk struktur lokal yang khas. Oleh karena itu, detektor skala invarian gagal dalam kasus transformasi affine yang signifikan.
 
-\subsection{\textbf{Harris-Affine detector}}
+\subsection{Harris-Affine detector}
 Dalam kasus transformasi afin, perubahan skala dapat berbeda di setiap arah. Detektor Harris-Laplace yang disajikan akan gagal dalam kasus transformasi affine yang penting karena mengasumsikan perubahan skala yang seragam. Angka ?? menyajikan dua pasang titik yang terdeteksi dalam gambar dengan deformasi afin yang signifikan. Baris atas menunjukkan titik yang terdeteksi dengan detektor Harris multiskala. Skala yang dipilih dengan Laplacian ditampilkan dalam warna hitam. Jika diproyeksikan lingkungan lingkaran dari titik yang bersesuaian menggunakan transformasi affine, diperoleh daerah elips yang tidak menutupi bagian yang sama dari gambar. Dapat dilihat titik yang diproyeksikan ditampilkan di baris bawah (berwarna putih) ditumpangkan pada titik Harris-Laplace yang sesuai (berwarna hitam)
 
 \begin{figure}

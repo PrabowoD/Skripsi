@@ -16,5 +16,314 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Amri2020}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8b7f10e5198a0b6db65f8369846c2a18}{%
+           family={Amri},
+           familyi={A\bibinitperiod},
+           given={Chaisar\bibnamedelimb Fadli\bibnamedelima Al},
+           giveni={C\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8b7f10e5198a0b6db65f8369846c2a18}
+      \strng{fullhash}{8b7f10e5198a0b6db65f8369846c2a18}
+      \strng{bibnamehash}{8b7f10e5198a0b6db65f8369846c2a18}
+      \strng{authorbibnamehash}{8b7f10e5198a0b6db65f8369846c2a18}
+      \strng{authornamehash}{8b7f10e5198a0b6db65f8369846c2a18}
+      \strng{authorfullhash}{8b7f10e5198a0b6db65f8369846c2a18}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Dalam melakukan pembudidayaan ikan lele, biasanya terdapat kendala dalam melakukan penghitungan bibit atau jumlah ikan yang ingin dibeli ataupun dipasarkan, karena biasanya dalam membeli ataupun menjual bibit ini hingga mencapai ribuan ekor bibit ikan, dengan jumlah bibit yang terlalu banyak akan sangat tidak efektif apabila dihitung secara satu persatu ataupun menakar dengan menggunakan sebuah tempat. Dengan adanya penelitian ini tentunya bertujuan memudahkan pembudidaya ikan lele dalam menghitung bibit ikan yang akan mereka beli, serta agar pembudidaya ikan lele ini dalam membeli ikan tidak merasa rugi dan tidak membutuhkan waktu lama dalam menghitung. Maka diperlukan sebuah alat yang dapat menghitung ikan secara otomatis untuk memudahkan mengelola kegiatan usaha mereka. Solusi yang diusulkan untuk mengatasi masalah ini adalah membuat sebuah pengembangan sistem alat penghitung bibit ikan lele berbasis Arduino dengan menggunakan teknologi sensor proximity E18-D80NK. Perangkat penghitung terdiri dari sistem mekanis dan elektrik. Dimana pada sistem rancang bangun penghitung bibit ikan ini dirancang dengan sebuah tempat penampungan atau tangki yang dapat menampung ikan dan air, kemudian dialirkan menuju outlet tempat ikan keluar yang sudah terdapat sensor untuk mendeteksi apabila ada bibit ikan yang melintas didepannya. Hasil dari penelitian yang telah dilakukan dimana sistem rancang bangun fish counter untuk menghitung bibit ikan lele ini sudah dapat menghitung atau bekerja dengan baik. Dengan persentase error rata- rata 4,07{\%} dari tujuh kali pengujian yang dilakukan. Sehingga tingkat keberhasilan alat ini melebihi 95{\%}. Kesalahan pembacaan terjadi disebabkan oleh dua faktor, yang mana pada saat ikan yang akan dihitung melintas didepan sensor, ikan yang berada didepan, berdempetan dengan kepala ikan yang berada dibelakangnya sehingga bisa menyebabkan pembacaannya hanya terhitung satu ekor bibit ikan saja, selain itu sensor ini sedikit kurang responsive apabila bibit ikan yang melintas didepannya bergerak terlalu cepat dengan waktu dibawah 2 ms.}
+      \field{journaltitle}{Skripsi Program Sarjana Teknik Elektro, Universitas Islam Indonesia}
+      \field{title}{{Rancang Bangun Fish Counter Untuk Menghitung Bibit Ikan Lele}}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 37}
+      \range{pages}{37}
+      \verb{file}
+      \verb :C$\backslash$:/Users/USER/Desktop/Paper/Probably/16524051 Chaisar Fadli Al Amri.pdf:pdf
+      \endverb
+      \keyw{Arduino vii,BibitIkanLele,Counter}
+    \endentry
+    \entry{Diansari2013}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3b8d58b56f0f6c9f1b8be35ac3c70c9d}{%
+           family={Diansari},
+           familyi={D\bibinitperiod},
+           given={RR.Vanya\bibnamedelima Rhossitha},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=366ffbc32d22feb46be20e5dab16a48c}{%
+           family={Endang},
+           familyi={E\bibinitperiod},
+           given={Arini},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a1fceea1f4bbd82fbbd9d5d3d22badf}{%
+           family={Tita},
+           familyi={T\bibinitperiod},
+           given={Elfitasari},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1d24ef7c8b3ae03ad28810bdf657e8a7}
+      \strng{fullhash}{7517529b8ed68b475cdef7cad52b85aa}
+      \strng{bibnamehash}{7517529b8ed68b475cdef7cad52b85aa}
+      \strng{authorbibnamehash}{7517529b8ed68b475cdef7cad52b85aa}
+      \strng{authornamehash}{1d24ef7c8b3ae03ad28810bdf657e8a7}
+      \strng{authorfullhash}{7517529b8ed68b475cdef7cad52b85aa}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Ikan nila (Oreochromis niloticus) di Indonesia merupakan salah satu ikan air tawar yang memiliki nilai ekonomis tinggi dan merupakan komoditas penting dalam bisnis ikan air tawar dunia, cara budidaya yang relatif mudah, rasa yang disukai banyak orang, harga yang relatif terjangkau dan toleransi terhadap lingkungan yang lebih tinggi. Peningkatan padat tebar hingga mencapai daya dukung maksimum akan menyebabkan pertumbuhan ikan menurun. Peningkatan padat penebaran akan diikuti dengan peningkatan jumlah pakan, buangan metabolisme tubuh, konsumsi oksigen, dan dapat menurunkan kualitas air. Penurunan kualitas air akan mengakibatkan ikan menjadi stres sehingga pertumbuhan menurun dan ikan rentan mengalami kematian. Tujuan dari penelitian ini adalah untuk mengetahui pengaruh kepadatan yang berbeda terhadap kelulushidupan dan pertumbuhan ikan nila (O.niloticus) pada sistem resirkulasi dengan filter zeolit, mengetahui jumlah kepadatan ikan terbaik yang menghasilkan kelulushidupan dan pertumbuhan benih ikan nila (O. niloticus) dan mengetahui efektifitas filter zeolit. Materi yang digunakan adalah berupa kepadatan ikan nila yang berbeda dalam sistem resirkulasi dengan filter zeolit serta hewan uji berupa benih ikan nila ukuran 4-6 cm dengan padat tebar 10, 15, dan 20 ekor . Metode yang digunakan dalam penelitian ini adalah metode eksperimental, menggunakan rancangan acak lengkap (RAL) dengan menggunakan 3 perlakuan dan 3 kali ulangan, yaitu perlakuan A (kepadatan 10 ekor), perlakuan B (kepadatan 15 ekor), dan perlakuan C (kepadatan 20 ekor). Data yang dikumpulkan meliputi pertumbuhan panjang mutlak, laju pertumbuhan spesifik, kadar ammonia, kelulushidupan, dan kualitas air. Hasil penelitian menunjukkan bahwa pengaruh padat penebaran yang berbeda memberikan pengaruh yang sangat nyata (P{<}0,01) terhadap pertumbuhan ikan nila, tetapi tidak berpengaruh nyata (P{>}0,05) terhadap kelulushidupan. Kelulushidupan dari setiap perlakuan adalah perlakuan A sebesar 86,67±5,77 {\%}, perlakuan B sebesar 84,44±3,85 {\%}, dan perlakuan C sebesar 78,33±2,89 {\%}. Rata-rata pertumbuhan panjang ikan nila tertinggi pada perlakuan A sebesar 3,53±0,06 cm, yang terendah pada perlakuan C sebesar 2,57±0,06 cm. Rata-rata laju pertumbuhan spesifik ikan nila tertinggi pada perlakuan A sebesar 2,45±0,07 {\%}/hari, yang terendah adalah perlakuan C yaitu sebesar 1,76±0,05 {\%}/hari. Efektifitas filter zeolit pada perlakuan A dapat bekerja hingga batas akhir penelitian, dibandingkan dengan perlakuan B dan C yang hanya mencapai hari ke 20.}
+      \field{journaltitle}{Jurnal Aquakultur Manajemen dan Teknologi}
+      \field{number}{3}
+      \field{title}{{PENGARUH KEPADATAN YANG BERBEDA TERHADAP KELULUSHIDUPAN DAN PERTUMBUHAN IKAN NILA (Oreochromis niloticus) PADA SISTEM RESIRKULASI DENGAN FILTER ZEOLIT}}
+      \field{volume}{2}
+      \field{year}{2013}
+      \field{pages}{37\bibrangedash 45}
+      \range{pages}{9}
+      \verb{file}
+      \verb :C$\backslash$:/Users/USER/Documents/GitHub/Skripsi/docs/latex{\_}source/pdf/Pengaruh Kepadatan Yang Berbeda Terhadap Kelulushidupan Dan Pertumbuhan Ikan Nila (Oreochromis niloticus) Pada Sistem Resirkulasi Dengan Filter Zeolit.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ejournal3.undip.ac.id/index.php/jamt/article/view/4791
+      \endverb
+      \verb{url}
+      \verb https://ejournal3.undip.ac.id/index.php/jamt/article/view/4791
+      \endverb
+      \keyw{Tilapia,density,growth,resirculation,survival rate}
+    \endentry
+    \entry{Harris2013}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=aa81fda54b78d656cfed925799d9fe1e}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dd803fa32fd9cb4643a4bbe6c21e39d4}{%
+           family={Stephens},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Alvey Vision Club}%
+      }
+      \strng{namehash}{c62c360be832fb8d2c4b6c984d3a1dc6}
+      \strng{fullhash}{83060376bef95055a892b98ba8ae32c5}
+      \strng{bibnamehash}{83060376bef95055a892b98ba8ae32c5}
+      \strng{authorbibnamehash}{83060376bef95055a892b98ba8ae32c5}
+      \strng{authornamehash}{c62c360be832fb8d2c4b6c984d3a1dc6}
+      \strng{authorfullhash}{83060376bef95055a892b98ba8ae32c5}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Consistency of image edge filtering is of prime importance for 3D interpretation of image sequences using feature tracking algorithms. To cater for image regions containing texture and isolated features, a combined corner and edge detector based on the local auto-correlation function is utilised, and it is shown to perform with good consistency on natural imagery.}
+      \field{booktitle}{Procedings of the Alvey Vision Conference 1988}
+      \field{title}{{A Combined Corner and Edge Detector}}
+      \field{year}{1988}
+      \field{pages}{23.1\bibrangedash 23.6}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.5244/C.2.23
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/USER/Documents/GitHub/Skripsi/docs/latex{\_}source/pdf/A combined corner and edge detector.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.bmva.org/bmvc/1988/avc-88-023.html
+      \endverb
+      \verb{url}
+      \verb http://www.bmva.org/bmvc/1988/avc-88-023.html
+      \endverb
+    \endentry
+    \entry{Lowe1999}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=282604e42f1f3c8f1347283c98e7a7b8}{%
+           family={Lowe},
+           familyi={L\bibinitperiod},
+           given={D.G.},
+           giveni={D\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{282604e42f1f3c8f1347283c98e7a7b8}
+      \strng{fullhash}{282604e42f1f3c8f1347283c98e7a7b8}
+      \strng{bibnamehash}{282604e42f1f3c8f1347283c98e7a7b8}
+      \strng{authorbibnamehash}{282604e42f1f3c8f1347283c98e7a7b8}
+      \strng{authornamehash}{282604e42f1f3c8f1347283c98e7a7b8}
+      \strng{authorfullhash}{282604e42f1f3c8f1347283c98e7a7b8}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Seventh IEEE International Conference on Computer Vision}
+      \field{isbn}{0-7695-0164-8}
+      \field{title}{{Object recognition from local scale-invariant features}}
+      \field{year}{1999}
+      \field{pages}{1150\bibrangedash 1157 vol.2}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1109/ICCV.1999.790410
+      \endverb
+      \verb{urlraw}
+      \verb http://ieeexplore.ieee.org/document/790410/
+      \endverb
+      \verb{url}
+      \verb http://ieeexplore.ieee.org/document/790410/
+      \endverb
+    \endentry
+    \entry{Lowe2004}{article}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=83f4643381c1cc2c483b4210498fedb0}{%
+           family={Lowe},
+           familyi={L\bibinitperiod},
+           given={David\bibnamedelima G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{fullhash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{bibnamehash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{authorbibnamehash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{authornamehash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{authorfullhash}{83f4643381c1cc2c483b4210498fedb0}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0920-5691}
+      \field{journaltitle}{International Journal of Computer Vision}
+      \field{month}{11}
+      \field{number}{2}
+      \field{title}{{Distinctive Image Features from Scale-Invariant Keypoints}}
+      \field{volume}{60}
+      \field{year}{2004}
+      \field{pages}{91\bibrangedash 110}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1023/B:VISI.0000029664.99615.94
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1023/B:VISI.0000029664.99615.94
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1023/B:VISI.0000029664.99615.94
+      \endverb
+    \endentry
+    \entry{Mikolajczyk2004}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=15ba95a5d65938b99eaf1f46dd4c25b8}{%
+           family={Mikolajczyk},
+           familyi={M\bibinitperiod},
+           given={Krystian},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=58e4a9845eac42a4b0e5205cf0970fc0}{%
+           family={Schmid},
+           familyi={S\bibinitperiod},
+           given={Cordelia},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{db5b7994e7eae2f576fa656ce51b0564}
+      \strng{fullhash}{7754ef74182918a2ae94ae7327246382}
+      \strng{bibnamehash}{7754ef74182918a2ae94ae7327246382}
+      \strng{authorbibnamehash}{7754ef74182918a2ae94ae7327246382}
+      \strng{authornamehash}{db5b7994e7eae2f576fa656ce51b0564}
+      \strng{authorfullhash}{7754ef74182918a2ae94ae7327246382}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper we propose a novel approach for detecting interest points invariant to scale and affine transformations. Our scale and affine invariant detectors are based on the following recent results: (1) Interest points extracted with the Harris detector can be adapted to affine transformations and give repeatable results (geometrically stable). (2) The characteristic scale of a local structure is indicated by a local extremum over scale of normalized derivatives (the Laplacian). (3) The affine shape of a point neighborhood is estimated based on the second moment matrix. Our scale invariant detector computes a multi-scale representation for the Harris interest point detector and then selects points at which a local measure (the Laplacian) is maximal over scales. This provides a set of distinctive points which are invariant to scale, rotation and translation as well as robust to illumination changes and limited changes of viewpoint. The characteristic scale determines a scale invariant region for each point. We extend the scale invariant detector to affine invariance by estimating the affine shape of a point neighborhood. An iterative algorithm modifies location, scale and neighborhood of each point and converges to affine invariant points. This method can deal with significant affine transformations including large scale changes. The characteristic scale and the affine shape of neighborhood determine an affine invariant region for each point. We present a comparative evaluation of different detectors and show that our approach provides better results than existing methods. The performance of our detector is also confirmed by excellent matching results; the image is described by a set of scale/affine invariant descriptors computed on the regions associated with our points.}
+      \field{issn}{09205691}
+      \field{journaltitle}{International Journal of Computer Vision}
+      \field{number}{1}
+      \field{title}{{Scale {\&} affine invariant interest point detectors}}
+      \field{volume}{60}
+      \field{year}{2004}
+      \field{pages}{63\bibrangedash 86}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1023/B:VISI.0000027790.02288.f2
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/USER/Documents/GitHub/Skripsi/docs/latex{\_}source/pdf/An affine invariant interest point detector.pdf:pdf
+      \endverb
+      \keyw{Affine invariance,Interest points,Local features,Matching,Recognition,Scale invariance}
+    \endentry
+    \entry{Sanchez2018}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=54c8c27a96a1513959ac18517c5a8cfb}{%
+           family={Sánchez},
+           familyi={S\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de4736b631e168a5aac4367af4ea1e8f}{%
+           family={Monzón},
+           familyi={M\bibinitperiod},
+           given={Nelson},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=52061d41c6256a171651d031ff91c2ab}{%
+           family={Salgado},
+           familyi={S\bibinitperiod},
+           given={Agustín},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f2072da755ac29b5c786ca3cd4c836dd}
+      \strng{fullhash}{a703b8c13b7e98fb7fa5b4f6e8ad3f9d}
+      \strng{bibnamehash}{a703b8c13b7e98fb7fa5b4f6e8ad3f9d}
+      \strng{authorbibnamehash}{a703b8c13b7e98fb7fa5b4f6e8ad3f9d}
+      \strng{authornamehash}{f2072da755ac29b5c786ca3cd4c836dd}
+      \strng{authorfullhash}{a703b8c13b7e98fb7fa5b4f6e8ad3f9d}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this work, we present an implementation and thorough study of the Harris corner detector. This feature detector relies on the analysis of the eigenvalues of the autocorrelation matrix. The algorithm comprises seven steps, including several measures for the classification of corners, a generic non-maximum suppression method for selecting interest points, and the possibility to obtain the corners position with subpixel accuracy. We study each step in detail and propose several alternatives for improving the precision and speed. The experiments analyze the repeatability rate of the detector using different types of transformations.}
+      \field{issn}{21051232}
+      \field{journaltitle}{Image Processing On Line}
+      \field{number}{March}
+      \field{title}{{An analysis and implementation of the harris corner detector}}
+      \field{volume}{8}
+      \field{year}{2018}
+      \field{pages}{305\bibrangedash 328}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.5201/ipol.2018.229
+      \endverb
+      \keyw{Autocorrelation matrix,Feature detector,Harris corner,Interest point,Non-maximum suppression}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

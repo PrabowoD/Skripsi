@@ -32,16 +32,16 @@ Pemerintah Indonesia mencatat pada tahun 2022 produksi ikan mencapai 17,76 juta 
 
 Pembudidayaan ikan di Indonesia sangat besar, tetapi memiliki masalah yang sama besarnya yaitu diperlukannya usaha 
 untuk menghitung dan mengawasi jumlah ikan yang ingin dibudidayakan. Salah satu contohnya adalah penghitungan bibit ikan, 
-dalam hal tersebut penghitungan bibit lele oleh para pedagang masih menggunakan cara manual (Al-Amri, 2020). 
+dalam hal tersebut penghitungan bibit lele oleh para pedagang masih menggunakan cara manual (\cite{Amri2020}). 
 Ikan dipindahkan kedalam sebuah wadah dan mengukur besar ikan dengan alat yang telah dibuat, lalu dipindahkan lagi satu persatu 
 atau dihitung sesuai dengan berat untuk mendapatkan jumlah ikan. Cara-cara seperti tadi sangat tidak efisien dan atau tidak akurat, 
 ikan yang diukur lalu dihitung satu persatu memerlukan waktu yang sangat lama bila memerlukan jumlah yang sangat banyak. 
 Sementar teknik penimbangan hanya memberikan hasil perkiraan jumlah yang akurasinya masih perlu dipertanyakan. 
 
 Masalah sangat penting dimana budidaya ikan sangat mementingkan banyak-nya jumlah ikan dalam tepat budidaya-nya, 
-namun populasi ikan yang berlebihan akan memperlambat pertumbuhan ikan (Diansari et al, 2013), 
+namun populasi ikan yang berlebihan akan memperlambat pertumbuhan ikan (\cite{Diansari2013}), 
 tapi disisi lain populasi ikan yang sangat sedikit akan mengurangi efisiensi lahan yang dimilik oleh peternak ikan. 
-Dalam hal ini Al-Amri (2020) menciptakan sebuah sistem dapat menghitung jumlah ikan dengan menggunakan sensor proximity. 
+Dalam hal ini (\cite{Amri2020}) menciptakan sebuah sistem dapat menghitung jumlah ikan dengan menggunakan sensor proximity. 
 Hasil dari uji coba yang didapat sangat baik dengan presentasi error rata-rata sebesar 4,07 dengan waktu selama 228 detik untuk 1000 bibit ikan, 
 sedangkan jika dihitung secara manual akan membutuhkan waktu 20 menit untuk 1000 bibit ikan. 
 
@@ -51,19 +51,19 @@ pendeteksian dan mengamati pergerakan ikan, lalu pada penelitian Nugraha B (2022
 Namun kedua penelitian sebelumnya masih sangat general hanya untuk mendeteksi ikan saja dan masih belum memiliki fungsi lainnya. 
 
 Pencocokan gambar adalah aspek dasar dari banyak permasalahan di dalam komputer, termasuk  pendeteksian benda atau pemandangan, memecahkan bangunan 3D dari banyak gambar, 
-dan pelacakan Gerakan (D.G. Lowe, 2005). SIFT atau Scale Invariant feature transform (D.G. Lowe, 1999) pendekatan ini mengubah gambar menjadi kumpulan besar vektor fitur lokal, 
+dan pelacakan Gerakan (\cite{Lowe2004}). SIFT atau Scale Invariant feature transform (\cite{Lowe1999}) pendekatan ini mengubah gambar menjadi kumpulan besar vektor fitur lokal, 
 yang masing-masing tidak berubah terhadap terjemahan, penskalaan, dan rotasi gambar, dan sebagian tidak berubah terhadap perubahan iluminasi 
-dan proyeksi affine atau 3D. SIFT sudah banyak digunakan untuk mencocokan gambar seperti Lokalisasi dan pemetaan dengan robot (Se, S et al, 2001), penyatuan panorama (Brown et al, 2003) dan lain-lain. 
+dan proyeksi affine atau 3D. SIFT sudah banyak digunakan untuk mencocokan gambar seperti Lokalisasi dan pemetaan dengan robot, penyatuan panorama dan lain-lain. 
 SIFT di-identifikasi secara efisien dengan menggunakan pendekatan pemfilteran bertahap. 
 
 Tahap pertama mengidentifikasi lokasi kunci dalam ruang skala dengan mencari lokasi yang maksimal atau minimal dari fungsi Different of Gaussian. 
 Setiap titik digunakan untuk menghasilkan vektor fitur yang mendeskripsikan wilayah gambar lokal yang diambil sampelnya relatif terhadap bingkai koordinat ruang-skalanya. Fitur mencapai invarian parsial terhadap variasi lokal, 
-seperti proyeksi affine atau 3D, dengan mengaburkan lokasi gradien gambar. Detection of local features invariant to affine transformations (K. Mikolajczyk, 2002) menjelaskan penggunaan dua kombinasi detektor yaitu Haris dan Laplacian-of-Gaussians. 
-Kombinasi Haris  detector memberikan hasil yang lebih baik, Laplacian memungkinkan pemilihan skala karakteristik untuk titik yang diekstraksi dengan harris detector, dengan demikian descriptor dihitung pada lingkungan titik yang sama dalam gambar dengan resolusi yang berbeda, 
+seperti proyeksi affine atau 3D, dengan mengaburkan lokasi gradien gambar. \emph{Detection of local features invariant to affine transformations} (\cite{Mikolajczyk2004}) menjelaskan penggunaan detektor Haris. 
+Kombinasi Haris detector memberikan hasil yang lebih baik, Laplacian memungkinkan pemilihan skala karakteristik untuk titik yang diekstraksi dengan harris detector, dengan demikian descriptor dihitung pada lingkungan titik yang sama dalam gambar dengan resolusi yang berbeda, 
 dan oleh karenanya tidak varian ke perubahan skala besar.
  
 Berdasarkan latar yang telah dijelaskan, penulis mengusulkan untuk mengukur panjang serta menghitung berat ikan dengan menggunakan metode \emph{Harris-Corner Detection}. 
-Metode ini menggunakan dua kombinasi detektor yaitu Harris-detector dan Laplace-of-Gaussians. Hasil yang diharapkan adalah sebuah sistem yang mampu mendeteksi ikan pada gambar secara akurat dan menghitung beratnya.
+Hasil yang diharapkan adalah sebuah sistem yang mampu menghitung panjang serta berat ikan pada gambar secara akurat
 
 
 \section{Rumusan Masalah}
@@ -71,26 +71,25 @@ Dari uraian pemasalahan diatas, perumusan masalah dalam penelitian ini adalah \t
 
 \section{Batasan Masalah}
 \begin{enumerate}
-	\item Penghitungan panjang dan berat dari pada ikan dengan menggunakan \emph{harris-laplace detection} sebagai pendeteksi benda. 
+	\item Penghitungan panjang dan berat dari pada ikan dengan menggunakan \emph{harris-corners detection} sebagai pendeteksi benda. 
 	\item Penelitian dilakukan sampai mendapatkan hasil panjang dan berat dari ikan. 
-	\item Gambar atau Data yang akan digunakan adalah Ikan lele, Ikan Mas, dan Ikan Nila. 
-	\item Citra yang digunakan hanya citra ikan tanpa menggunakan latar belakang atau transparan. 
+	\item Gambar atau data yang akan digunakan adalah ikan lele, ikan mas, dan ikan nila. 
+	\item Citra yang digunakan hanya citra ikan yang latar belakang telah dihilangkan. 
 	\item Bahasa Pemrograman yang digunakan adalah python 3. 
 \end{enumerate}
 	
 \section{Tujuan Penelitian}
-	Tujuan dari Penelitian adalah Membangun sebuah sistem yang mampu menghitung panjang dan berat ikan dengan menggunakan \emph{Harris-corner detection}. 
+	Tujuan dari Penelitian adalah Membangun sebuah sistem yang mampu menghitung panjang dan berat objek pada cirta ikan dengan menggunakan metode \emph{Harris-corner detection}. 
 
 \section{Manfaat Penelitian}
 \begin{enumerate}
 	\item Bagi penulis
-	 Memperoleh gelar sarjana dalam bidang Ilmu Komputer, serta menambah pengalaman dalam pembangunan sebuah sistem operasi komputer dengan aplikasi dunia nyata, dan menambah pengetahuan tentang pendeteksian sudut atau korner dari \emph{Harris-corner Detection}. 
+	 Memperoleh gelar sarjana dalam bidang Ilmu Komputer, dan menambah pengalaman dalam pembangunan sebuah sistem operasi komputer dengan aplikasi dunia nyata, serta pengetahuan tentang pendeteksian sudut atau korner dari \emph{Harris-corner Detection}. 
 
 		
-	\item Bagi Universitas Negeri Jakarta
-	
-	
-			
+	\item Bagi Program Studi Ilmu Komputer
+	Penelitian "Penghitungan Panjang Dan Lebar Ikan Menggunakan Harris-Corners Detection" bisa dapat dijadikan sebagai referensi dan menambah wawasan warga prodi Ilmu Komputer Universitas Negeri Jakarta.
+		
 \end{enumerate}
 
 % Baris ini digunakan untuk membantu dalam melakukan sitasi

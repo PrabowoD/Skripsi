@@ -970,9 +970,9 @@ INPUT kata-pengantar.aux
 INPUT .\bab1.aux
 INPUT bab1.aux
 INPUT bab1.aux
-INPUT .\bab2.aux
-INPUT bab2.aux
-INPUT bab2.aux
+INPUT .\bab2dif1.aux
+INPUT bab2dif1.aux
+INPUT bab2dif1.aux
 INPUT .\bab3.aux
 INPUT bab3.aux
 INPUT bab3.aux
@@ -1120,12 +1120,9 @@ INPUT .\template-skripsi.toc
 INPUT template-skripsi.toc
 INPUT template-skripsi.toc
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
 OUTPUT template-skripsi.toc
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmbi8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8r.tfm
 INPUT .\template-skripsi.lof
 INPUT template-skripsi.lof
 INPUT template-skripsi.lof
@@ -1144,73 +1141,25 @@ INPUT .\bab1.tex
 INPUT bab1.tex
 INPUT .\bab1.tex
 INPUT bab1.tex
-INPUT .\bab2.tex
-INPUT .\bab2.tex
-INPUT .\bab2.tex
-OUTPUT bab2.aux
-INPUT .\bab2.tex
-INPUT .\bab2.tex
-INPUT .\bab2.tex
-INPUT bab2.tex
-INPUT .\bab2.tex
-INPUT bab2.tex
-INPUT .\gambar\Uniform Gaussian kernel.jpg
-INPUT .\gambar\Uniform Gaussian kernel.jpg
-INPUT gambar\Uniform Gaussian kernel.jpg
-INPUT .\gambar\Uniform Gaussian kernel.jpg
-INPUT .\gambar\Uniform Gaussian kernel.jpg
-INPUT .\gambar\Uniform Gaussian kernel.jpg
-INPUT .\gambar\Uniform Gaussian kernel.jpg
-INPUT .\gambar\Uniform Gaussian derivatives.jpg
-INPUT .\gambar\Uniform Gaussian derivatives.jpg
-INPUT gambar\Uniform Gaussian derivatives.jpg
-INPUT .\gambar\Uniform Gaussian derivatives.jpg
-INPUT .\gambar\Uniform Gaussian derivatives.jpg
-INPUT .\gambar\Uniform Gaussian derivatives.jpg
-INPUT .\gambar\Uniform Gaussian derivatives.jpg
-INPUT .\gambar\Scale trace.jpg
-INPUT .\gambar\Scale trace.jpg
-INPUT gambar\Scale trace.jpg
-INPUT .\gambar\Scale trace.jpg
-INPUT .\gambar\Scale trace.jpg
-INPUT .\gambar\Scale trace.jpg
-INPUT .\gambar\Scale trace.jpg
-INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
-INPUT .\gambar\Scale invariant interest point detection.jpg
-INPUT .\gambar\Scale invariant interest point detection.jpg
-INPUT gambar\Scale invariant interest point detection.jpg
-INPUT .\gambar\Scale invariant interest point detection.jpg
-INPUT .\gambar\Scale invariant interest point detection.jpg
-INPUT .\gambar\Scale invariant interest point detection.jpg
-INPUT .\gambar\Scale invariant interest point detection.jpg
-INPUT .\gambar\Point detect.jpg
-INPUT .\gambar\Point detect.jpg
-INPUT gambar\Point detect.jpg
-INPUT .\gambar\Point detect.jpg
-INPUT .\gambar\Point detect.jpg
-INPUT .\gambar\Point detect.jpg
-INPUT .\gambar\Point detect.jpg
-INPUT .\gambar\Non Adapted interest point.jpg
-INPUT .\gambar\Non Adapted interest point.jpg
-INPUT gambar\Non Adapted interest point.jpg
-INPUT .\gambar\Non Adapted interest point.jpg
-INPUT .\gambar\Non Adapted interest point.jpg
-INPUT .\gambar\Non Adapted interest point.jpg
-INPUT .\gambar\Non Adapted interest point.jpg
-INPUT .\gambar\Iterative evolution.jpg
-INPUT .\gambar\Iterative evolution.jpg
-INPUT gambar\Iterative evolution.jpg
-INPUT .\gambar\Iterative evolution.jpg
-INPUT .\gambar\Iterative evolution.jpg
-INPUT .\gambar\Iterative evolution.jpg
-INPUT .\gambar\Iterative evolution.jpg
-INPUT .\gambar\Affine invariant interest point detection.jpg
-INPUT .\gambar\Affine invariant interest point detection.jpg
-INPUT gambar\Affine invariant interest point detection.jpg
-INPUT .\gambar\Affine invariant interest point detection.jpg
-INPUT .\gambar\Affine invariant interest point detection.jpg
-INPUT .\gambar\Affine invariant interest point detection.jpg
-INPUT .\gambar\Affine invariant interest point detection.jpg
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmbi8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8r.tfm
+INPUT .\bab2dif1.tex
+INPUT .\bab2dif1.tex
+INPUT .\bab2dif1.tex
+OUTPUT bab2dif1.aux
+INPUT .\bab2dif1.tex
+INPUT .\bab2dif1.tex
+INPUT .\bab2dif1.tex
+INPUT bab2dif1.tex
+INPUT .\bab2dif1.tex
+INPUT bab2dif1.tex
+INPUT C:\Users\USER\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ptm.fd
+INPUT C:\Users\USER\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ptm.fd
+INPUT C:\Users\USER\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ptm.fd
+INPUT C:\Users\USER\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ptm.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8c.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8c.vf
 INPUT .\bab3.tex
 INPUT .\bab3.tex
 INPUT .\bab3.tex
@@ -1221,12 +1170,13 @@ INPUT .\bab3.tex
 INPUT bab3.tex
 INPUT .\bab3.tex
 INPUT bab3.tex
-INPUT C:\Users\USER\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ptm.fd
-INPUT C:\Users\USER\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ptm.fd
-INPUT C:\Users\USER\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ptm.fd
-INPUT C:\Users\USER\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ptm.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8c.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8c.vf
+INPUT .\gambar\Flowchar Penetianv2.png
+INPUT .\gambar\Flowchar Penetianv2.png
+INPUT gambar\Flowchar Penetianv2.png
+INPUT .\gambar\Flowchar Penetianv2.png
+INPUT .\gambar\Flowchar Penetianv2.png
+INPUT .\gambar\Flowchar Penetianv2.png
+INPUT .\gambar\Flowchar Penetianv2.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT template-skripsi.aux
@@ -1236,9 +1186,9 @@ INPUT kata-pengantar.aux
 INPUT .\bab1.aux
 INPUT bab1.aux
 INPUT bab1.aux
-INPUT .\bab2.aux
-INPUT bab2.aux
-INPUT bab2.aux
+INPUT .\bab2dif1.aux
+INPUT bab2dif1.aux
+INPUT bab2dif1.aux
 INPUT .\bab3.aux
 INPUT bab3.aux
 INPUT bab3.aux
@@ -1246,28 +1196,18 @@ INPUT .\template-skripsi.out
 INPUT .\template-skripsi.out
 INPUT template-skripsi.run.xml
 OUTPUT template-skripsi.run.xml
-INPUT C:\Users\USER\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
-INPUT C:\Users\USER\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmb8a.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmb8a.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmbi8a.pfb

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.15)  31 OCT 2024 12:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.15)  29 DEC 2024 16:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -770,7 +770,7 @@ Package biblatex Warning: Conflicting options.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 169.
 (C:\Users\USER\AppData\Roaming\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2.aux) (bab3.aux))
+) (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2dif1.aux) (bab3.aux))
 \openout1 = `template-skripsi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 169.
@@ -883,7 +883,7 @@ Package biblatex Info: ... file 'template-skripsi.bbl' found.
 Package biblatex Info: Reference section=0 on input line 169.
 Package biblatex Info: Reference segment=0 on input line 169.
 \c@lstlisting=\count465
-<gambar/logounj.png, id=143, 186.38052pt x 186.38052pt>
+<gambar/logounj.png, id=107, 186.38052pt x 186.38052pt>
 File: gambar/logounj.png Graphic file (type png)
 <use gambar/logounj.png>
 Package pdftex.def Info: gambar/logounj.png  used on input line 171.
@@ -929,112 +929,72 @@ BAB I.
 
 
 
-] [2]) [3]
-\openout2 = `bab2.aux'.
+] [2] [3]) [4]
+\openout2 = `bab2dif1.aux'.
 
- (bab2.tex
+ (bab2dif1.tex
 BAB II.
-[4
+[5
 
 
 
 
 ]
-<gambar/Uniform Gaussian kernel.jpg, id=268, 290.88675pt x 78.2925pt>
-File: gambar/Uniform Gaussian kernel.jpg Graphic file (type jpg)
-<use gambar/Uniform Gaussian kernel.jpg>
-Package pdftex.def Info: gambar/Uniform Gaussian kernel.jpg  used on input line 76.
-(pdftex.def)             Requested size: 325.50082pt x 87.61172pt.
- [5 <./gambar/Uniform Gaussian kernel.jpg>] [6]
-<gambar/Uniform Gaussian derivatives.jpg, id=279, 752.21025pt x 393.26926pt>
-File: gambar/Uniform Gaussian derivatives.jpg Graphic file (type jpg)
-<use gambar/Uniform Gaussian derivatives.jpg>
-Package pdftex.def Info: gambar/Uniform Gaussian derivatives.jpg  used on input line 172.
-(pdftex.def)             Requested size: 325.50082pt x 170.17662pt.
- [7] [8 <./gambar/Uniform Gaussian derivatives.jpg>]
-Overfull \hbox (262.00926pt too wide) detected at line 265
-[][][]\OT1/cmr/m/n/12 ^^F[] = \OML/cmm/m/it/12 A\OT1/cmr/m/n/12 ^^F[]\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 AM[]A[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A[]M[]A[]\OT1/cmr/m/n/12 )[] = \OML/cmm/m/it/12 ^^[[]M[][] \OT1/cmr/m/n/12 ^^F[] = \OML/cmm/m/it/12 A\OT1/cmr/m/n/12 ^^F[]\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 AM[]A[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A[]M[]A[]\OT1/cmr/m/n/12 )[] = \OML/cmm/m/it/12 ^^[[]M[]
- []
-
-[9] [10] [11]
-<gambar/Scale trace.jpg, id=313, 370.38374pt x 468.5505pt>
-File: gambar/Scale trace.jpg Graphic file (type jpg)
-<use gambar/Scale trace.jpg>
-Package pdftex.def Info: gambar/Scale trace.jpg  used on input line 354.
-(pdftex.def)             Requested size: 325.50082pt x 411.7752pt.
- [12] [13 <./gambar/Scale trace.jpg>] [14] [15]
-LaTeX Info: Symbol \textasciidieresis not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 479.
-LaTeX Info: Symbol \textasciidieresis not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 479.
- [16] [17]
-<gambar/Scale invariant interest point detection.jpg, id=354, 626.94225pt x 210.18526pt>
-File: gambar/Scale invariant interest point detection.jpg Graphic file (type jpg)
-<use gambar/Scale invariant interest point detection.jpg>
-Package pdftex.def Info: gambar/Scale invariant interest point detection.jpg  used on input line 517.
-(pdftex.def)             Requested size: 325.50082pt x 109.12376pt.
-<gambar/Point detect.jpg, id=355, 620.91975pt x 271.0125pt>
-File: gambar/Point detect.jpg Graphic file (type jpg)
-<use gambar/Point detect.jpg>
-Package pdftex.def Info: gambar/Point detect.jpg  used on input line 525.
-(pdftex.def)             Requested size: 325.50082pt x 142.07278pt.
- [18 <./gambar/Scale invariant interest point detection.jpg>]
-<gambar/Non Adapted interest point.jpg, id=361, 514.3215pt x 237.88875pt>
-File: gambar/Non Adapted interest point.jpg Graphic file (type jpg)
-<use gambar/Non Adapted interest point.jpg>
-Package pdftex.def Info: gambar/Non Adapted interest point.jpg  used on input line 539.
-(pdftex.def)             Requested size: 325.50082pt x 150.55312pt.
- [19 <./gambar/Point detect.jpg>] [20 <./gambar/Non Adapted interest point.jpg>] [21] [22]
-<gambar/Iterative evolution.jpg, id=385, 604.05675pt x 261.97874pt>
-File: gambar/Iterative evolution.jpg Graphic file (type jpg)
-<use gambar/Iterative evolution.jpg>
-Package pdftex.def Info: gambar/Iterative evolution.jpg  used on input line 636.
-(pdftex.def)             Requested size: 325.50082pt x 141.17459pt.
- [23]
-<gambar/Affine invariant interest point detection.jpg, id=399, 480.5955pt x 398.6895pt>
-File: gambar/Affine invariant interest point detection.jpg Graphic file (type jpg)
-<use gambar/Affine invariant interest point detection.jpg>
-Package pdftex.def Info: gambar/Affine invariant interest point detection.jpg  used on input line 651.
-(pdftex.def)             Requested size: 325.50082pt x 270.0224pt.
-) [24 <./gambar/Iterative evolution.jpg>] [25 <./gambar/Affine invariant interest point detection.jpg>]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 49.
+ (C:\Users\USER\AppData\Roaming\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)) [6]
 \openout2 = `bab3.aux'.
 
  (bab3.tex
 BAB III.
-[26
+<gambar/Flowchar Penetianv2.png, id=233, 322.20375pt x 643.40375pt>
+File: gambar/Flowchar Penetianv2.png Graphic file (type png)
+<use gambar/Flowchar Penetianv2.png>
+Package pdftex.def Info: gambar/Flowchar Penetianv2.png  used on input line 29.
+(pdftex.def)             Requested size: 193.32373pt x 386.04523pt.
+[7
 
 
 
 
-] [27]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 54.
- (C:\Users\USER\AppData\Roaming\MiKTeX\tex/latex/psnfss\ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [28] [29] [30]) [31]
+] [8 <./gambar/Flowchar Penetianv2.png>]
 
-LaTeX Warning: Empty bibliography on input line 215.
+LaTeX Warning: Reference `eq:gaussian kernel' on page 9 undefined on input line 46.
 
-(template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2.aux) (bab3.aux))
+
+LaTeX Warning: Reference `eq:konvolusi' on page 9 undefined on input line 51.
+
+[9]
+
+LaTeX Warning: Reference `eq:konvolusi' on page 10 undefined on input line 86.
+
+[10] [11] [12]) [13] [14
+
+
+
+] (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2dif1.aux) (bab3.aux))
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `template-skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 2DE2FA990883EB83427FE57DA065E194;5575.
+(rerunfilecheck)             Checksum: 475D2052EBC01261323DE8BA34657EF6;3842.
 Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 \openout1 = `template-skripsi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24171 strings out of 476331
- 421998 string characters out of 5797583
- 1864660 words of memory out of 5000000
- 44078 multiletter control sequences out of 15000+600000
- 543190 words of font info for 68 fonts, out of 8000000 for 9000
+ 24316 strings out of 476331
+ 425019 string characters out of 5797583
+ 1861660 words of memory out of 5000000
+ 44294 multiletter control sequences out of 15000+600000
+ 542853 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,76p,1323b,1936s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\USER\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template-skripsi.pdf (37 pages, 1242739 bytes).
+ 75i,10n,76p,2719b,1936s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on template-skripsi.pdf (20 pages, 280703 bytes).
 PDF statistics:
- 547 PDF objects out of 1000 (max. 8388607)
- 146 named destinations out of 1000 (max. 500000)
- 326 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 346 PDF objects out of 1000 (max. 8388607)
+ 84 named destinations out of 1000 (max. 500000)
+ 219 words of extra memory for PDF output out of 10000 (max. 10000000)
 
