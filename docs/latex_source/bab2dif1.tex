@@ -22,7 +22,7 @@ Dengan melibatkan matriks momen kedua (\emph{second moment matrix}) untuk menghi
 \end{equation}
 
   Nilai \(R\) akan menunjukan keberadaan sudut pada area tersebut. 
-Jika nilai \(R\) yang besar akan menunjukan keberadaan sudut di area tersebut, sebaliknya nilai \(R\) yang kecil menunjukan daerah tersebut merupakan tepi atau sisi.
+Jika nilai \(R\) yang besar akan menunjukan keberadaan sudut di area tersebut, sebaliknya nilai \(R\) yang kecil menunjukan daerah tersebut merupakan tepi.
 
 \section{\emph{Second moment matrix}}
   Matriks momen kedua (\emph{second moment matrix}) adalah matriks simetris 2x2 yang mencerminkan variasi intensitas di sekitar piksel dalam sebuah citra. Matriks ini seringkali digunakan untuk mendeteksi fitur, atau mendeskripsikan struktur dari \emph{local image}.
@@ -54,7 +54,7 @@ Matriks ini memiliki dua nilai eigen, nilai tersebut dapat memungkinkan mengiden
 Dengan menggunakan sifat tersebut menghitung respon sudut menggunakan analisis nilai eigen atau menggunakan metode lain, salah satunya fungsi kekuatan sudut Harris \(R\) seperti yang dijelaskan pada \ref{HarrisCorner}.
 
 \section{\emph{Gradient}}
-  Gradient dalam matematika dan pemrosesan citra adalah sebuah konsep yang menunjukan arah perubahan sebuah nilai intensitas pada suatu titik pada gambar 2-Dimensi atau 3-Dimensi. 
+  Gradien dalam matematika dan pemrosesan citra adalah sebuah konsep yang menunjukan arah perubahan sebuah nilai intensitas pada suatu titik pada gambar 2-Dimensi atau 3-Dimensi. 
 Dalam gambar atau citra digital, Gradien memainkan peran utama dalam membentuk matriks auto-korelasi, yang nilai eigen-nya menggambarkan struktur lokal gambar. 
 Wilayah dengan nilai eigen tinggi di semua arah menunjukkan sudut, sedangkan wilayah dengan satu nilai eigen tinggi menggambarkan tepi. (\cite{Harris2013})
 

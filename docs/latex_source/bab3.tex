@@ -19,10 +19,10 @@ dan terakhir adalah mengasosiasikan data.
 \section{Perancangan Sistem}
     Pada bagian ini akan menbahas tentang proses yang akan dilakukan untuk mengetahui tahapan yang ditempuh
 dalam membangun sistem penghitungan berat dan panjang ikan. Tahapan pertama yang dilakukan adalah melakukan \emph{input} gambar
-yang akan dibaca sistem, setelah itu citra akan diproses menggunakan \emph{Smoothing gaussian} untuk menggurangi \emph{noise}. Kemudian perhitungan gradien dilakukan bertujuan untuk menghitung setiap perubahan intensitas yang berada di sekitar titik, 
-hasil tersebut akan diolah kembali menggunakan autokorelasi matriks gradien, dan dilanjutkan dengan menjalakan \emph{Harris respons}. \emph{Harris respons} bertujuan untuk mengetahui bahwa titik tersebut adalah sebuah sudut, sisi, atau tepi berdasarkan pada hasil respon harris. 
+yang akan dibaca sistem, setelah itu citra akan diproses menggunakan \emph{Smoothing gaussian} untuk mengurangi \emph{noise}. Kemudian perhitungan gradien dilakukan bertujuan untuk menghitung setiap perubahan intensitas yang berada di sekitar titik, 
+hasil tersebut akan diolah kembali menggunakan autokorelasi matriks gradien, dan dilanjutkan dengan menjalakan \emph{Harris respons}. \emph{Harris respons} bertujuan untuk mengetahui bahwa titik tersebut adalah sebuah sudut, atau sisi berdasarkan pada hasil respon harris. 
 Hasil dari harris akan memasuki tahapan thresholding dan \emph{non-maximum suppression} untuk memilih sudut maximum pada area tertentu. Setelah mendapatkan titik yang merupakan sebuah sisi, titik-titik tersebut akan dipilih. 
-Dimana hasil dari pemilihan tersebut akan menjadi cara untuk dapat menghitung panjang, lebar dan berat ikan. Gambaran perancangan sistem yang sederhana bisa dilihat pada gambar \ref*{Alur Penelitian}
+Dimana hasil dari pemilihan tersebut akan menjadi cara untuk dapat menghitung panjang, lebar dan berat ikan. Gambaran perancangan sistem yang sederhana terdapat pada gambar \ref*{Alur Penelitian}
 
 \begin{figure}
     \centering
@@ -51,11 +51,11 @@ Tujuan dari \emph{padding} adalah untuk mempertahankan ukuran gambar setelah dit
 Setelah \emph{padding} diterapkan, konvolusi akan dilakukan dengan menggunakan persamaan \eqref{eq:konvolusi} . 
 
 \subsection{Perhitungan Gradien}
-    Gambar yang telah diperhalus akan dilanjutkan dengan menghitung gradient pada setiap \emph{pixel}-nya. Tujuan dari penghitungan gradien adalah untuk mengetahui perubahan intensitas pada setiap piksel, yang pada umumnya akan menujukan tepi atau kontur dalam sebuah gambar.
-Penghitungan gradient juga memerlukan kernel untuk dapat bekerja, terdapat banyak kernel yang dapat digunakan untuk menghitung gradient, contohnya kernel sobel. 
+    Gambar yang telah diperhalus akan dilanjutkan dengan menghitung gradien pada setiap \emph{pixel}-nya. Tujuan dari penghitungan gradien adalah untuk mengetahui perubahan intensitas pada setiap piksel, yang pada umumnya akan menujukan tepi atau kontur dalam sebuah gambar.
+Penghitungan gradien juga memerlukan kernel untuk dapat bekerja, terdapat banyak kernel yang dapat digunakan untuk menghitung gradien, contohnya kernel sobel. 
 
     Kernel Sobel digunakan untuk menghitung estimasi gradien dengan memberikan bobot yang lebih besar pada piksel tetangga terdekat di sekitar piksel pusat.
-Kernel sobel terdiri dari dua matriks \(3 x 3\), yang bertujuan untuk menghitung gradient pada dua arah yaitu:
+Kernel sobel terdiri dari dua matriks \(3 x 3\), yang bertujuan untuk menghitung gradien pada dua arah yaitu:
  \begin{itemize}
     \item \textbf{Gradien Horizontal} \((G_{x})\): Mengukur perubahan intensitas sepanjang sumbu x.
     \item \textbf{Gradien Vertical} \((G_{y})\): Mengukur perubahan intensitas sepanjang sumbu y.
@@ -94,7 +94,7 @@ Maka rumusannya akan seperti berikut :
 
 \subsection{Menghitung Second Moment Matriks}
     Setelah hasil dari perhitungan gradien didapatkan, hasil tersebut akan dibuat menjadi matriks kembali dengan rumus \eqref{SecondMomentMatrix}. Nilai gradien dihitung untuk mendapatkan koefisien matriks autokorelasi. Setelah koefisien didapatkan, koefisien tersebut akan dikonvolusi dengan filter gaussian.
-Baru setelah itu hasil dari konvolusi digunakan untuk membentuk matriks \(M\) yang akan digunakan untuk perhitungan selanjutnya. Bentuk dari matriks \(M\) sebagai berikut :
+Hasil dari konvolusi digunakan untuk membentuk matriks \(M\) yang akan digunakan untuk perhitungan selanjutnya. Bentuk dari matriks \(M\) sebagai berikut :
 
 \begin{equation*}
     \begin{aligned}
