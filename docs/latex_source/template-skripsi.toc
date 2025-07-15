@@ -28,4 +28,4 @@
 \contentsline {subsection}{\numberline {3.2.6}Thresholding dan \emph {Non-Maximum suppression}}{12}{subsection.3.2.6}%
 \contentsline {subsection}{\numberline {3.2.7}Memilih Piksel}{13}{subsection.3.2.7}%
 \contentsline {subsection}{\numberline {3.2.8}Menghitung Panjang dan Berat}{14}{subsection.3.2.8}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{16}{equation.3.2.7}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{16}{equation.3.7}%
