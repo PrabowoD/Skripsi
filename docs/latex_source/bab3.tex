@@ -8,7 +8,7 @@
 
 \section{Deskripsi Sistem}
     Sistem bertujuan untuk melakukan penghitungan panjang serta berat objek ikan yang menggunakan
-metode \emph{Harris-corners} dan \emph{Gausian Laplace}. Penelitian berfokus dalam menghasilkan berupa
+metode \emph{Harris-Corner Detection} dan \emph{Gausian Laplace}. Penelitian berfokus dalam menghasilkan berupa
 data hasil panjang dan berat objek ikan. Dataset citra ikan diambil secara langsung menggunakan \emph{Smartphone} pada sebuah
 penangkaran ikan. Kemudian bahasa yang akan digunakan dalam membangun sistem adalah Python versi 3.
 
@@ -126,7 +126,7 @@ Dan \(trace(M)\)
     trace(M) = \Sigma I_{x} + \Sigma I_{y}
 \end{equation*}
 
-    Penggunaan harris respon bertujuan untuk menandai bahwa piksel tersebut adalah sudut atau tidak.
+    Penggunaan \emph{Harris-Corner Detection} bertujuan untuk menandai bahwa piksel tersebut adalah sudut atau tidak.
 
 
 \subsection{Thresholding dan \emph{Non-Maximum suppression}}
@@ -162,7 +162,15 @@ Dimana \emph{MaxLocal} \(R(i,j)\) adalah nilai maksimum yang berada disekitar pi
     \item Sudut berada pada bagian bawah atau perut.
 \end{enumerate}
 
-Keempat kriteria tersebut dibutuhkan untuk mempermudah dalam penghitungan panjang dan lebar.
+Pemilihan empat kriteria tersebut untuk mepermudah dalam mencari panjang dan lebar dari ikan. penghitungan panjang akan menggunakan sudut pada mulut dan ekor ikan, sedangkan lebar akan mengguanakan sirip atas dan bagian bawah perut ikan. 
+namun kriteria tersebut dapat berubah jika jenis ikan yang digunakan seperti ikan lele maka :
+\begin{enumerate}
+    \item Sudut berada pada bagian ekor.
+    \item Sudut berada pada bagian mulut.
+    \item Sudut berada pada bagian sirip kanan.
+    \item Sudut berada pada bagian sirip kiri.
+\end{enumerate}
+
 
 
 \subsection{Menghitung Panjang dan Berat}

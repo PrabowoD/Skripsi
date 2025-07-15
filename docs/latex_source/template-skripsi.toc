@@ -16,15 +16,16 @@
 \contentsline {section}{\numberline {2.2}\emph {Harris-Corner Detection}}{5}{section.2.2}%
 \contentsline {section}{\numberline {2.3}\emph {Second moment matrix}}{5}{section.2.3}%
 \contentsline {section}{\numberline {2.4}\emph {Gradient}}{6}{section.2.4}%
-\contentsline {chapter}{\numberline {III}METODE PENELITIAN}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Deskripsi Sistem}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Perancangan Sistem}{7}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Pemrosesan Citra}{9}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Smoothing Gaussian}{9}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Perhitungan Gradien}{10}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Menghitung Second Moment Matriks}{10}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Harris Respon}{11}{subsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.2.6}Thresholding dan \emph {Non-Maximum suppression}}{11}{subsection.3.2.6}%
-\contentsline {subsection}{\numberline {3.2.7}Memilih Piksel}{12}{subsection.3.2.7}%
-\contentsline {subsection}{\numberline {3.2.8}Menghitung Panjang dan Berat}{12}{subsection.3.2.8}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{14}{equation.3.2.7}%
+\contentsline {section}{\numberline {2.5}\emph {Gaussian Smoothing}}{7}{section.2.5}%
+\contentsline {chapter}{\numberline {III}METODE PENELITIAN}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Deskripsi Sistem}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Perancangan Sistem}{8}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Pemrosesan Citra}{10}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Smoothing Gaussian}{10}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Perhitungan Gradien}{11}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Menghitung Second Moment Matriks}{11}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Harris Respon}{12}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Thresholding dan \emph {Non-Maximum suppression}}{12}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Memilih Piksel}{13}{subsection.3.2.7}%
+\contentsline {subsection}{\numberline {3.2.8}Menghitung Panjang dan Berat}{14}{subsection.3.2.8}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{16}{equation.3.2.7}%

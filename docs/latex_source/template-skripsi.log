@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.15)  10 JUN 2025 16:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.15)  15 JUL 2025 09:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -883,7 +883,7 @@ Package biblatex Info: ... file 'template-skripsi.bbl' found.
 Package biblatex Info: Reference section=0 on input line 169.
 Package biblatex Info: Reference segment=0 on input line 169.
 \c@lstlisting=\count465
-<gambar/logounj.png, id=107, 513.92pt x 513.92pt>
+<gambar/logounj.png, id=111, 513.92pt x 513.92pt>
 File: gambar/logounj.png Graphic file (type png)
 <use gambar/logounj.png>
 Package pdftex.def Info: gambar/logounj.png  used on input line 171.
@@ -943,33 +943,33 @@ BAB II.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 49.
  (C:\Users\USER\AppData\Roaming\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)) [6]
+)) [6] [7]
 \openout2 = `bab3.aux'.
 
  (bab3.tex
 BAB III.
-<gambar/Flowchar Penetianv2.png, id=236, 322.20375pt x 643.40375pt>
+<gambar/Flowchar Penetianv2.png, id=246, 322.20375pt x 643.40375pt>
 File: gambar/Flowchar Penetianv2.png Graphic file (type png)
 <use gambar/Flowchar Penetianv2.png>
 Package pdftex.def Info: gambar/Flowchar Penetianv2.png  used on input line 29.
 (pdftex.def)             Requested size: 193.32373pt x 386.04523pt.
-[7
+[8
 
 
 
 
-] [8 <./gambar/Flowchar Penetianv2.png>]
+] [9 <./gambar/Flowchar Penetianv2.png>]
 
-LaTeX Warning: Reference `eq:gaussian kernel' on page 9 undefined on input line 46.
+LaTeX Warning: Reference `eq:gaussian kernel' on page 10 undefined on input line 46.
 
 
-LaTeX Warning: Reference `eq:konvolusi' on page 9 undefined on input line 51.
+LaTeX Warning: Reference `eq:konvolusi' on page 10 undefined on input line 51.
 
-[9]
+[10]
 
-LaTeX Warning: Reference `eq:konvolusi' on page 10 undefined on input line 86.
+LaTeX Warning: Reference `eq:konvolusi' on page 11 undefined on input line 86.
 
-[10] [11] [12]) [13] [14
+[11] [12] [13] [14]) [15] [16
 
 
 
@@ -978,23 +978,23 @@ LaTeX Warning: Reference `eq:konvolusi' on page 10 undefined on input line 86.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `template-skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 475D2052EBC01261323DE8BA34657EF6;3842.
+(rerunfilecheck)             Checksum: EE5F5D8EAED382E66DC6CB8CACD086CC;3990.
 Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 \openout1 = `template-skripsi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24319 strings out of 476331
- 425048 string characters out of 5797583
- 1860660 words of memory out of 5000000
- 44296 multiletter control sequences out of 15000+600000
+ 24327 strings out of 476331
+ 425125 string characters out of 5797583
+ 1861660 words of memory out of 5000000
+ 44297 multiletter control sequences out of 15000+600000
  542853 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,76p,2719b,1936s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template-skripsi.pdf (20 pages, 343150 bytes).
+Output written on template-skripsi.pdf (22 pages, 346269 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
- 85 named destinations out of 1000 (max. 500000)
- 219 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 368 PDF objects out of 1000 (max. 8388607)
+ 92 named destinations out of 1000 (max. 500000)
+ 227 words of extra memory for PDF output out of 10000 (max. 10000000)
 

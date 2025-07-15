@@ -47,14 +47,14 @@ SIFT sudah banyak digunakan untuk mencocokan gambar seperti Lokalisasi dan pemet
 Tahap pertama mengidentifikasi lokasi kunci dalam ruang skala dengan mencari lokasi yang maksimal atau minimal dari fungsi \emph{Different of Gaussian}. 
 Setiap titik digunakan untuk menghasilkan vektor fitur yang mendeskripsikan wilayah gambar lokal yang diambil sampelnya relatif terhadap bingkai koordinat ruang-skalanya. Fitur mencapai invarian parsial terhadap variasi lokal, 
 seperti proyeksi affine atau 3D, dengan mengaburkan lokasi gradien gambar. \emph{Detection of local features invariant to affine transformations} (\cite{Mikolajczyk2004}) menjelaskan penggunaan detektor Haris. 
-Kombinasi Haris detector memberikan hasil yang lebih baik, Laplacian memungkinkan pemilihan skala karakteristik untuk titik yang diekstraksi dengan harris detector, dengan demikian descriptor dihitung pada lingkungan titik yang sama dalam gambar dengan resolusi yang berbeda, dan oleh karenanya tidak varian ke perubahan skala besar.
+Kombinasi Haris detector memberikan hasil yang lebih baik, Laplacian memungkinkan pemilihan skala karakteristik untuk titik yang diekstraksi dengan \emph{Harris-Corner Detection}, dengan demikian descriptor dihitung pada lingkungan titik yang sama dalam gambar dengan resolusi yang berbeda, dan oleh karenanya tidak varian ke perubahan skala besar.
 
 Berbagai metode telah dikembangkan untuk mendeteksi atau melacak ikan, seperti penggunaan metode GMM dan Kalman Filter yang efektif untuk pelacakan gerakan (Alim, 2021), atau GrabCut yang membantu dalam pemisahan objek dari latar belakang (Nugraha, 2022). 
 Namun, metode-metode tersebut tidak dirancang untuk secara langsung mengekstraksi fitur geometris seperti panjang dan bentuk ikan.
 
 Di sisi lain, metode seperti SIFT memang kuat terhadap skala dan rotasi, tetapi proses perhitungannya relatif kompleks dan memerlukan waktu komputasi lebih tinggi (\cite{Lowe2004}). 
 Untuk kasus estimasi bentuk linear seperti panjang dan lebar, pendekatan berbasis deteksi sudut seperti \emph{Harris-Corner Detection} terbukti lebih efisien dan akurat dalam mendeteksi titik-titik sudut penting pada citra (\cite{Harris2013}). 
-\emph{Harris-Corner} memberikan kestabilan terhadap rotasi dan noise lokal serta memiliki struktur komputasi yang lebih ringan dibanding SIFT, sehingga cocok untuk diterapkan dalam sistem real-time atau dengan perangkat keras terbatas.
+\emph{Harris-Corner Detection} memberikan kestabilan terhadap rotasi dan noise lokal serta memiliki struktur komputasi yang lebih ringan dibanding SIFT, sehingga cocok untuk diterapkan dalam sistem real-time atau dengan perangkat keras terbatas.
 
 Oleh karena itu, dalam penelitian ini dipilih metode \emph{Harris-Corner Detection} untuk mengekstraksi sudut penting dari ikan dalam citra guna melakukan estimasi panjang dan berat secara otomatis. 
 Hasil yang diharapkan adalah sebuah sistem yang mampu mengestimasi panjang serta berat ikan pada gambar secara akurat

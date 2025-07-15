@@ -18,7 +18,7 @@ Dengan melibatkan matriks momen kedua (\emph{second moment matrix}) untuk menghi
 
 \begin{equation}
   R = det(M) - k * (trace(M))^2
-  \label{HarrisCorner}
+  \label{Harris-Corner Detection}
 \end{equation}
 
   Nilai \(R\) akan menunjukan keberadaan sudut pada area tersebut. 
@@ -51,7 +51,7 @@ Matriks ini memiliki dua nilai eigen, nilai tersebut dapat memungkinkan mengiden
   \item Jika kedua nilai eigen besar, maka kemungkinan besar area terbuat adalah sudut (\emph{corner}).
 \end{itemize}
 
-Dengan menggunakan sifat tersebut menghitung respon sudut menggunakan analisis nilai eigen atau menggunakan metode lain, salah satunya fungsi kekuatan sudut Harris \(R\) seperti yang dijelaskan pada \ref{HarrisCorner}.
+Dengan menggunakan sifat tersebut menghitung respon sudut menggunakan analisis nilai eigen atau menggunakan metode lain, salah satunya fungsi kekuatan sudut Harris \(R\) seperti yang dijelaskan pada \ref{Harris-Corner Detection}.
 
 \section{\emph{Gradient}}
   Gradien dalam matematika dan pemrosesan citra adalah sebuah konsep yang menunjukan arah perubahan sebuah nilai intensitas pada suatu titik pada gambar 2-Dimensi atau 3-Dimensi. 
@@ -61,5 +61,6 @@ Wilayah dengan nilai eigen tinggi di semua arah menunjukkan sudut, sedangkan wil
   Berbagai operator gradien, seperti Sobel, Prewitt, dan Scharr, digunakan untuk menghitung gradien dalam gambar dengan mendeteksi perubahan intensitas piksel di sepanjang arah tertentu. 
 Operator Sobel, sebagai salah satu metode yang paling umum, menggunakan kernel konvolusi untuk menghitung gradien dalam arah horizontal (x) dan vertikal (y), menghasilkan peta gradien yang mengidentifikasi tepi dan perubahan penting dalam struktur gambar.
 
+\section{\emph{Gaussian Smoothing}}
 
 
