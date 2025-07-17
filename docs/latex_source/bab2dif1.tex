@@ -27,7 +27,7 @@ Dalam domain diskrit citra digital, parameter skala juga direpresentasikan secar
 Dengan demikian, representasi ruang-skala merupakan kumpulan gambar yang direpresentasikan oleh perbedaan tingkat resolusi diskrit. 
 Sebuah penelitian menunjukkan bahwa ruang-skala harus memenuhi persamaan yang dapat dicapai melalui konvolusi dengan kernel Gaussian. 
 Selanjutnya, penelitian tersebut memperlihatkan bahwa kernel Gaussian adalah satu-satunya kernel unik yang dapat menghasilkan representasi skala-ruang. 
-Keunikan dari kernel Gaussian ini telah dikonfirmasi melalui berbagai formulasi dalam berbagai penelitian lain (\cite[hlm. 92--93]{Lowe2004}; \cite[hlm. 13--15]{mikolajczyk:tel-00584096}). 
+Keunikan kernel Gaussian ini telah dikonfirmasi melalui berbagai formulasi dalam sejumlah penelitian lain (\cite[hlm. 92--93]{Lowe2004}; \cite[hlm. 13--15]{mikolajczyk:tel-00584096}). 
 Temuan ini menyimpulkan bahwa konvolusi dengan kernel Gaussian merupakan solusi optimal untuk masalah konstruksi representasi multi-skala. Fungsi Gaussian dua dimensi didefinisikan sebagai berikut:
 
 \begin{equation*}
@@ -79,8 +79,8 @@ Dengan \(I\) adalah gambar dan \(x = (x,y)\) adalah lokasi poin.
 \end{figure}
 
 \section{\emph{Gradient}}
-  Gradien dalam matematika dan pemrosesan citra adalah sebuah konsep yang menunjukan arah perubahan sebuah nilai intensitas pada suatu titik pada gambar 2-Dimensi atau 3-Dimensi. 
-Dalam gambar atau citra digital, Gradien memainkan peran utama dalam membentuk matriks auto-korelasi, yang nilai eigen-nya menggambarkan struktur lokal gambar. 
+  Gradien dalam matematika dan pemrosesan citra adalah sebuah konsep yang menunjukkan arah perubahan sebuah nilai intensitas pada suatu titik pada gambar 2-Dimensi atau 3-Dimensi. 
+Dalam gambar atau citra digital, Gradien memainkan peran utama dalam membentuk matriks auto-korelasi, yang nilai eigennya menggambarkan struktur lokal gambar. 
 Wilayah dengan nilai eigen tinggi di semua arah menunjukkan sudut, sedangkan wilayah dengan satu nilai eigen tinggi menggambarkan tepi (\cite[hlm. 305--306]{Sanchez2018}).
 
   Berbagai operator gradien, seperti Sobel, Prewitt, dan Scharr, digunakan untuk menghitung gradien dalam gambar dengan mendeteksi perubahan intensitas piksel di sepanjang arah tertentu. 
@@ -110,7 +110,7 @@ Operator Sobel, sebagai salah satu metode yang paling umum, menggunakan kernel k
 
 \section{\emph{Second moment matrix}}
   Matriks momen kedua (\emph{second moment matrix}) adalah matriks simetris 2x2 yang mencerminkan variasi intensitas di sekitar piksel dalam sebuah citra. Matriks ini seringkali digunakan untuk mendeteksi fitur, atau mendeskripsikan struktur dari \emph{local image}.
-Matriks ini juga panggil sebagai matriks \emph{auto-correlation} bisa dilihat pada \ref{eq:SecondMomentMatrix}
+Matriks ini juga panggil sebagai matriks auto-korelasi, seperti pada rumus \ref{eq:SecondMomentMatrix}
 
 \begin{equation}
   M = 
@@ -126,21 +126,21 @@ Matriks ini juga panggil sebagai matriks \emph{auto-correlation} bisa dilihat pa
   \label{eq:SecondMomentMatrix}
 \end{equation}
 
-Hasil dari turunan dihitung pada setiap posisi dan koefisien dari matriks dikonvolusi dengan fungsi gaussian. Langkah ini merupakan langkang paling lama karena menggunakan tiga konvolusi gaussian (\cite[hlm. 307]{Sanchez2018}). 
+Hasil dari turunan dihitung pada setiap posisi dan koefisien dari matriks dikonvolusi dengan fungsi gaussian. Langkah ini merupakan langkah paling lama karena menggunakan tiga konvolusi Gaussian (\cite[hlm. 307]{Sanchez2018}). 
 
-Matriks ini memiliki dua nilai eigen, nilai tersebut dapat memungkinkan mengidentifikasi suatu area :
+Matriks ini memiliki dua nilai eigen, yang memungkinkan identifikasi suatu area sebagai berikut:
 
 \begin{itemize}
   \item Jika kedua nilai eigen kecil, maka area tersebut adalah \emph{flat area}.
   \item Jika satu nilai besar, dan satu kecil, maka area tersebut adalah tepi.
-  \item Jika kedua nilai eigen besar, maka kemungkinan besar area terbuat adalah sudut (\emph{corner}).
+  \item Jika kedua nilai eigen besar, maka kemungkinan besar area tersebut adalah sudut (\emph{corner}).
 \end{itemize}
 
-Dengan menggunakan sifat tersebut menghitung respon sudut menggunakan analisis nilai eigen atau menggunakan metode lain, salah satunya fungsi kekuatan sudut Harris \(R\) seperti yang dijelaskan pada \ref{Harris-Corner Detection}.
+Dengan menggunakan sifat tersebut, respon sudut dapat dihitung menggunakan analisis nilai eigen atau metode lain, salah satunya fungsi kekuatan sudut Harris \(R\) seperti yang dijelaskan pada rumus \ref{Harris-Corner Detection}.
 
 \section{\emph{Harris-Corner Detection}}
   \emph{Harris-Corner Detection} merupakan salah satu dari sekian banyak algoritma untuk mendeteksi fitur (\emph{feature}), algoritma ini pertama kali diperkenalkan oleh Chris Harris dan Mike Stephens pada tahun 1988 (\cite{Harris2013}). 
-Ide dibalik metode Harris adalah untuk mendeteksi titik sudut berdasarkan variasi intensitas di area sekitar: wilayah yang kecil di sekitar fitur menunjukan perubahan intensitas yang besar dibandingkan dengan pergeseran jendela ke segala arah (\cite[hlm. 305--308]{Sanchez2018}).
+Ide dibalik metode Harris adalah untuk mendeteksi titik sudut berdasarkan variasi intensitas di area sekitar: wilayah yang kecil di sekitar fitur menunjukkan perubahan intensitas yang besar dibandingkan dengan pergeseran jendela ke segala arah (\cite[hlm. 305--308]{Sanchez2018}).
 Dengan melibatkan matriks momen kedua (\emph{second moment matrix}) untuk menghitung variasi perubahan intensitas dalam dua arah utama.
 
 \begin{equation}
@@ -148,8 +148,8 @@ Dengan melibatkan matriks momen kedua (\emph{second moment matrix}) untuk menghi
   \label{Harris-Corner Detection}
 \end{equation}
 
-  Nilai \(R\) akan menunjukan keberadaan sudut pada area tersebut. 
-Jika nilai \(R\) yang besar akan menunjukan keberadaan sudut di area tersebut, sebaliknya nilai \(R\) yang kecil menunjukan daerah tersebut merupakan tepi.
+  Nilai \(R\) akan menunjukkan keberadaan sudut pada area tersebut. 
+Jika nilai \(R\) yang besar akan menunjukkan keberadaan sudut di area tersebut, sebaliknya nilai \(R\) yang kecil menunjukkan daerah tersebut merupakan tepi.
 
 \section{Euclidean dan Interpolasi}
   Pada pengolahan citra digital, perhitungan jarak atau panjang antara dua titik sangat penting untuk berbagai aplikasi, seperti pengukuran objek, deteksi fitur, dan transformasi citra. Dua metode dasar yang sering digunakan adalah rumus Euclidean dan interpolasi.

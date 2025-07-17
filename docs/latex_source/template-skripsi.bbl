@@ -194,56 +194,14 @@
       \verb :C$\backslash$:/Users/User/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Harris, Stephens - 2013 - A Combined Corner and Edge Detector(2).pdf:pdf
       \endverb
     \endentry
-    \entry{Lowe1999}{inproceedings}{}{}
-      \name{author}{1}{}{%
-        {{un=1,uniquepart=given,hash=282604e42f1f3c8f1347283c98e7a7b8}{%
-           family={Lowe},
-           familyi={L\bibinitperiod},
-           given={D.G.},
-           giveni={D\bibinitperiod},
-           givenun=1}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{282604e42f1f3c8f1347283c98e7a7b8}
-      \strng{fullhash}{282604e42f1f3c8f1347283c98e7a7b8}
-      \strng{fullhashraw}{282604e42f1f3c8f1347283c98e7a7b8}
-      \strng{bibnamehash}{282604e42f1f3c8f1347283c98e7a7b8}
-      \strng{authorbibnamehash}{282604e42f1f3c8f1347283c98e7a7b8}
-      \strng{authornamehash}{282604e42f1f3c8f1347283c98e7a7b8}
-      \strng{authorfullhash}{282604e42f1f3c8f1347283c98e7a7b8}
-      \strng{authorfullhashraw}{282604e42f1f3c8f1347283c98e7a7b8}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the Seventh IEEE International Conference on Computer Vision}
-      \field{isbn}{0-7695-0164-8}
-      \field{title}{{Object recognition from local scale-invariant features}}
-      \field{year}{1999}
-      \field{pages}{1150\bibrangedash 1157 vol.2}
-      \range{pages}{-1}
-      \verb{doi}
-      \verb 10.1109/ICCV.1999.790410
-      \endverb
-      \verb{urlraw}
-      \verb http://ieeexplore.ieee.org/document/790410/
-      \endverb
-      \verb{url}
-      \verb http://ieeexplore.ieee.org/document/790410/
-      \endverb
-    \endentry
     \entry{Lowe2004}{article}{}{}
       \name{author}{1}{}{%
-        {{un=1,uniquepart=given,hash=83f4643381c1cc2c483b4210498fedb0}{%
+        {{un=0,uniquepart=base,hash=83f4643381c1cc2c483b4210498fedb0}{%
            family={Lowe},
            familyi={L\bibinitperiod},
            given={David\bibnamedelima G.},
            giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod},
-           givenun=1}}%
+           givenun=0}}%
       }
       \strng{namehash}{83f4643381c1cc2c483b4210498fedb0}
       \strng{fullhash}{83f4643381c1cc2c483b4210498fedb0}
@@ -313,52 +271,6 @@
       \verb https://theses.hal.science/tel-00584096
       \endverb
       \keyw{Interest points ; feature detection ; affine invariance}
-    \endentry
-    \entry{Mikolajczyk2004}{article}{}{}
-      \name{author}{2}{ul=2}{%
-        {{un=0,uniquepart=base,hash=15ba95a5d65938b99eaf1f46dd4c25b8}{%
-           family={Mikolajczyk},
-           familyi={M\bibinitperiod},
-           given={Krystian},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=58e4a9845eac42a4b0e5205cf0970fc0}{%
-           family={Schmid},
-           familyi={S\bibinitperiod},
-           given={Cordelia},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{7754ef74182918a2ae94ae7327246382}
-      \strng{fullhash}{7754ef74182918a2ae94ae7327246382}
-      \strng{fullhashraw}{7754ef74182918a2ae94ae7327246382}
-      \strng{bibnamehash}{7754ef74182918a2ae94ae7327246382}
-      \strng{authorbibnamehash}{7754ef74182918a2ae94ae7327246382}
-      \strng{authornamehash}{7754ef74182918a2ae94ae7327246382}
-      \strng{authorfullhash}{7754ef74182918a2ae94ae7327246382}
-      \strng{authorfullhashraw}{7754ef74182918a2ae94ae7327246382}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{In this paper we propose a novel approach for detecting interest points invariant to scale and affine transformations. Our scale and affine invariant detectors are based on the following recent results: (1) Interest points extracted with the Harris detector can be adapted to affine transformations and give repeatable results (geometrically stable). (2) The characteristic scale of a local structure is indicated by a local extremum over scale of normalized derivatives (the Laplacian). (3) The affine shape of a point neighborhood is estimated based on the second moment matrix. Our scale invariant detector computes a multi-scale representation for the Harris interest point detector and then selects points at which a local measure (the Laplacian) is maximal over scales. This provides a set of distinctive points which are invariant to scale, rotation and translation as well as robust to illumination changes and limited changes of viewpoint. The characteristic scale determines a scale invariant region for each point. We extend the scale invariant detector to affine invariance by estimating the affine shape of a point neighborhood. An iterative algorithm modifies location, scale and neighborhood of each point and converges to affine invariant points. This method can deal with significant affine transformations including large scale changes. The characteristic scale and the affine shape of neighborhood determine an affine invariant region for each point. We present a comparative evaluation of different detectors and show that our approach provides better results than existing methods. The performance of our detector is also confirmed by excellent matching results; the image is described by a set of scale/affine invariant descriptors computed on the regions associated with our points.}
-      \field{issn}{09205691}
-      \field{journaltitle}{International Journal of Computer Vision}
-      \field{number}{1}
-      \field{title}{{Scale {\&} affine invariant interest point detectors}}
-      \field{volume}{60}
-      \field{year}{2004}
-      \field{pages}{63\bibrangedash 86}
-      \range{pages}{24}
-      \verb{doi}
-      \verb 10.1023/B:VISI.0000027790.02288.f2
-      \endverb
-      \verb{file}
-      \verb :C$\backslash$:/Users/User/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Mikolajczyk, Schmid - 2004 - Scale {\&} affine invariant interest point detectors(2).pdf:pdf
-      \endverb
-      \keyw{Affine invariance,Interest points,Local features,Matching,Recognition,Scale invariance}
     \endentry
     \entry{Sanchez2018}{article}{}{}
       \name{author}{3}{}{%

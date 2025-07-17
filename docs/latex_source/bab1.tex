@@ -16,43 +16,23 @@ Seiring perkembangan teknologi, pengolahan citra digital menawarkan solusi otoma
 
 Metode \emph{Harris-Corner Detection} merupakan salah satu algoritma deteksi sudut yang banyak digunakan karena kestabilannya terhadap rotasi, noise, dan efisiensi komputasi (\cite{Harris2013}). Dengan menerapkan metode ini pada citra ikan, sistem dapat secara otomatis mendeteksi titik-titik sudut penting, sehingga proses pengukuran panjang dan estimasi berat ikan dapat dilakukan secara digital, cepat, dan minim kontak langsung dengan ikan.
 
-Oleh karena itu, penelitian ini bertujuan untuk membangun sistem pengukuran panjang dan estimasi berat ikan berbasis citra digital menggunakan metode \emph{Harris-Corner Detection}. Diharapkan sistem ini dapat membantu pembudidaya ikan dalam melakukan monitoring pertumbuhan ikan secara efisien dan akurat, serta mendukung pengambilan keputusan dalam manajemen budidaya. Dalam hal ini (\cite{Amri2020}) menciptakan sebuah sistem dapat menghitung jumlah ikan dengan menggunakan sensor proximity.
+Berbagai penelitian sebelumnya telah mengembangkan metode untuk mendeteksi atau melacak ikan, seperti penggunaan metode GMM dan Kalman Filter untuk pelacakan gerakan (Alim, 2021), serta GrabCut untuk pemisahan objek dari latar belakang (Nugraha, 2022). Namun, metode-metode tersebut umumnya hanya fokus pada deteksi keberadaan ikan atau pelacakan pergerakan, dan belum secara langsung mengekstraksi fitur geometris seperti panjang dan berat ikan.
 
-Deteksi objek (Object detection) adalah salah satu dari visi komputer. Salah satu objektif nya adalah mengetahui lokasi dari sebuah objek pada gambar atau video. 
-Pada penelitian Alim H (2021) telah membuat sebuah tracking movement ikan dengan menggunakan metode GMM dan Kalman filter penggunaan metode tersebut dapat memungkinkan 
-pendeteksian dan mengamati pergerakan ikan, lalu pada penelitian Nugraha B (2022) pengekstraksi gambar menggunakan metode grabcut memudahkan mengekstrak gambar ikan dalam sebuah citra ikan. 
-Namun kedua penelitian sebelumnya masih sangat general hanya untuk mendeteksi ikan saja dan masih belum memiliki fungsi lainnya. 
+Di sisi lain, metode seperti SIFT (\emph{Scale Invariant Feature Transform}) (\cite{Lowe2004}) memang kuat terhadap perubahan skala dan rotasi, namun proses perhitungannya relatif kompleks dan memerlukan waktu komputasi lebih tinggi. Untuk kasus estimasi bentuk linear seperti panjang dan lebar, pendekatan berbasis deteksi sudut seperti \emph{Harris-Corner Detection} terbukti lebih efisien dan akurat dalam mendeteksi titik-titik sudut penting pada citra (\cite{Harris2013}). \emph{Harris-Corner Detection} memberikan kestabilan terhadap rotasi dan noise lokal serta memiliki struktur komputasi yang lebih ringan dibanding SIFT, sehingga cocok untuk diterapkan dalam sistem real-time atau perangkat keras terbatas.
 
-Pencocokan gambar adalah aspek dasar dari banyak permasalahan di dalam komputer, termasuk pendeteksian benda atau pemandangan, memecahkan bangunan 3D dari banyak gambar, dan pelacakan Gerakan (\cite{Lowe2004}). 
-SIFT atau \emph{Scale Invariant feature transform} (\cite{Lowe1999}) pendekatan ini mengubah gambar menjadi kumpulan besar vektor fitur lokal, yang masing-masing tidak berubah terhadap terjemahan, penskalaan, dan rotasi gambar, dan sebagian tidak berubah terhadap perubahan iluminasi dan proyeksi affine atau 3D. 
-SIFT sudah banyak digunakan untuk mencocokan gambar seperti Lokalisasi dan pemetaan dengan robot, penyatuan panorama dan lain-lain. SIFT di-identifikasi secara efisien dengan menggunakan pendekatan pemfilteran bertahap. 
-
-Tahap pertama mengidentifikasi lokasi kunci dalam ruang skala dengan mencari lokasi yang maksimal atau minimal dari fungsi \emph{Different of Gaussian}. 
-Setiap titik digunakan untuk menghasilkan vektor fitur yang mendeskripsikan wilayah gambar lokal yang diambil sampelnya relatif terhadap bingkai koordinat ruang-skalanya. Fitur mencapai invarian parsial terhadap variasi lokal, 
-seperti proyeksi affine atau 3D, dengan mengaburkan lokasi gradien gambar. \emph{Detection of local features invariant to affine transformations} (\cite{Mikolajczyk2004}) menjelaskan penggunaan detektor Haris. 
-Kombinasi Haris detector memberikan hasil yang lebih baik, Laplacian memungkinkan pemilihan skala karakteristik untuk titik yang diekstraksi dengan \emph{Harris-Corner Detection}, dengan demikian descriptor dihitung pada lingkungan titik yang sama dalam gambar dengan resolusi yang berbeda, dan oleh karenanya tidak varian ke perubahan skala besar.
-
-Berbagai metode telah dikembangkan untuk mendeteksi atau melacak ikan, seperti penggunaan metode GMM dan Kalman Filter yang efektif untuk pelacakan gerakan (Alim, 2021), atau GrabCut yang membantu dalam pemisahan objek dari latar belakang (Nugraha, 2022). 
-Namun, metode-metode tersebut tidak dirancang untuk secara langsung mengekstrak fitur geometris seperti panjang dan bentuk ikan.
-
-Di sisi lain, metode seperti SIFT memang kuat terhadap skala dan rotasi, tetapi proses perhitungannya relatif kompleks dan memerlukan waktu komputasi lebih tinggi (\cite{Lowe2004}). 
-Untuk kasus estimasi bentuk linear seperti panjang dan lebar, pendekatan berbasis deteksi sudut seperti \emph{Harris-Corner Detection} terbukti lebih efisien dan akurat dalam mendeteksi titik-titik sudut penting pada citra (\cite{Harris2013}). 
-\emph{Harris-Corner Detection} memberikan kestabilan terhadap rotasi dan noise lokal serta memiliki struktur komputasi yang lebih ringan dibanding SIFT, sehingga cocok untuk diterapkan dalam sistem real-time atau dengan perangkat keras terbatas.
-
-Oleh karena itu, dalam penelitian ini dipilih metode \emph{Harris-Corner Detection} untuk mengekstraksi sudut penting dari ikan dalam citra guna melakukan estimasi panjang dan berat secara otomatis. 
-Hasil yang diharapkan adalah sebuah sistem yang mampu mengestimasi panjang serta berat ikan pada gambar secara akurat
-
+Oleh karena itu, penelitian ini bertujuan untuk membangun sistem pengukuran panjang dan estimasi berat ikan berbasis citra digital menggunakan metode \emph{Harris-Corner Detection}. Diharapkan sistem ini dapat membantu pembudidaya ikan dalam melakukan monitoring pertumbuhan ikan secara efisien dan akurat, serta mendukung pengambilan keputusan dalam manajemen budidaya.
 
 \section{Rumusan Masalah}
-Berdasarkan pemaparan masalah diatas, perumusan masalah dalam penelitian ini adalah \textbf{“Bagaimana cara mengukur panjang serta menghitung berat ikan menggunakan metode \emph{Harris-Corner Detection}?”}
+Berdasarkan pemaparan masalah di atas, perumusan masalah dalam penelitian ini adalah \textbf{“Bagaimana cara mengukur panjang serta menghitung berat ikan menggunakan metode \emph{Harris-Corner Detection}?”}
 
 \section{Batasan Masalah}
 \begin{enumerate}
-	\item Sistem hanya menghitung panjang dan berat ikan dengan menggunakan \emph{harris-corners detection}. 
+	\item Sistem hanya menghitung panjang dan berat ikan dengan menggunakan \emph{Harris-Corners Detection}. 
 	\item Jenis Ikan yang digunakan adalah ikan lele, ikan mas, dan ikan nila.
-	\item Sumber gambar berupa dataset yang diambil langsung dari lapangan dan telah dihilangkan latar belakangnya.
-	\item Citra yang digunakan hanya tampak samping. 
-	\item Bahasa Pemrograman menggunakan python 3 atau lebih. 
+	\item Sumber gambar berupa dataset yang diambil langsung dari lapangan.
+	\item Dataset telah dihilangkan latar belakangnya dan digantikan dengan warna solid hitam.
+	\item Citra yang digunakan hanya citra tampak samping. 
+	\item Bahasa Pemrograman menggunakan Python 3 atau lebih baru. 
 \end{enumerate}
 	
 \section{Tujuan Penelitian}
@@ -61,12 +41,12 @@ Berdasarkan pemaparan masalah diatas, perumusan masalah dalam penelitian ini ada
 \section{Manfaat Penelitian}
 \begin{enumerate}
 	\item Bagi penulis
-	 Memperoleh gelar sarjana dalam bidang Ilmu Komputer, dan menambah pengalaman dalam pembangunan sebuah sistem operasi komputer dengan aplikasi dunia nyata, serta pengetahuan tentang pendeteksian sudut atau korner dari \emph{Harris-corner Detection}. 
+	 Memperoleh gelar sarjana dalam bidang Ilmu Komputer, dan menambah pengalaman dalam pembangunan sebuah sistem komputer untuk aplikasi dunia nyata, serta pengetahuan tentang pendeteksian sudut atau \emph{corner} dari \emph{Harris-corner Detection}. 
 
 		
 	\item Bagi Program Studi Ilmu Komputer
-	Penelitian "Penghitungan Panjang Dan Berat Ikan Menggunakan Harris-Corners Detection" bisa dapat dijadikan sebagai referensi dan menambah wawasan warga prodi Ilmu Komputer Universitas Negeri Jakarta.
-		
+	Penelitian "Penghitungan Panjang dan Berat Ikan Menggunakan Harris-Corners Detection" dapat dijadikan sebagai referensi dan menambah wawasan mahasiswa dan sivitas akademika Ilmu Komputer Universitas Negeri Jakarta.
+
 \end{enumerate}
 
 % Baris ini digunakan untuk membantu dalam melakukan sitasi

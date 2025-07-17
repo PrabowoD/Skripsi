@@ -319,6 +319,7 @@ INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmri8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmro8t.tfm
 INPUT .\template-skripsi.lof
 INPUT .\template-skripsi.lof
 INPUT template-skripsi.lof
@@ -333,7 +334,6 @@ OUTPUT bab1.aux
 INPUT .\bab1.tex
 INPUT .\bab1.tex
 INPUT bab1.tex
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmro8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmbi8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8r.tfm
@@ -370,6 +370,33 @@ INPUT .\gambar\Flowchar Penetianv2.png
 INPUT .\gambar\Flowchar Penetianv2.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT .\Picts\IMG_20240121_131125.jpg
+INPUT .\Picts\IMG_20240121_131125.jpg
+INPUT .\Picts\IMG_20240121_131125.jpg
+INPUT .\Picts\IMG_20240121_131125.jpg
+INPUT .\Picts\IMG_20240121_131125.jpg
+INPUT .\Picts\IMG_20240121_131125.jpg
+INPUT .\Picts\IMG_20240121_131125.jpg
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
+INPUT .\Picts\IMG_20240121_132544.jpg
+INPUT .\Picts\IMG_20240121_132544.jpg
+INPUT .\Picts\IMG_20240121_132544.jpg
+INPUT .\Picts\IMG_20240121_132544.jpg
+INPUT .\Picts\IMG_20240121_132544.jpg
+INPUT .\Picts\IMG_20240121_132544.jpg
+INPUT .\Picts\IMG_20240121_132544.jpg
+INPUT .\Picts\IMG_20240121_140044.jpg
+INPUT .\Picts\IMG_20240121_140044.jpg
+INPUT .\Picts\IMG_20240121_140044.jpg
+INPUT .\Picts\IMG_20240121_140044.jpg
+INPUT .\Picts\IMG_20240121_140044.jpg
+INPUT .\Picts\IMG_20240121_140044.jpg
+INPUT .\Picts\IMG_20240121_140044.jpg
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT template-skripsi.aux
 INPUT .\bab1.aux
 INPUT .\bab1.aux
