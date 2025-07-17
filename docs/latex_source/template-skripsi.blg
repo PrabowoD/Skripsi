@@ -1,17 +1,15 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'template-skripsi.blg'
-[79] biber-MSWIN64:342> INFO - === 
-[108] Biber.pm:421> INFO - Reading 'template-skripsi.bcf'
-[189] Biber.pm:1002> INFO - Found 7 citekeys in bib section 0
-[201] Biber.pm:4487> INFO - Processing section 0
-[209] Biber.pm:4678> INFO - Looking for bibtex file 'daftar-pustaka.bib' for section 0
-[243] bibtex.pm:1713> INFO - LaTeX decoding ...
-[266] bibtex.pm:1519> INFO - Found BibTeX data source 'daftar-pustaka.bib'
-[337] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[337] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[337] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[337] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[346] bbl.pm:676> INFO - Writing 'template-skripsi.bbl' with encoding 'UTF-8'
-[350] bbl.pm:779> INFO - Output to template-skripsi.bbl
-[351] Biber.pm:132> WARN - legacy month field 'nov' in entry 'Lowe2004' is not an integer - this will probably not sort properly.
-[351] Biber.pm:134> INFO - WARNINGS: 1
+[68] biber-MSWIN64:342> INFO - === 
+[91] Biber.pm:421> INFO - Reading 'template-skripsi.bcf'
+[165] Biber.pm:1002> INFO - Found 9 citekeys in bib section 0
+[175] Biber.pm:4487> INFO - Processing section 0
+[182] Biber.pm:4678> INFO - Looking for bibtex file 'daftar-pustaka.bib' for section 0
+[214] bibtex.pm:1713> INFO - LaTeX decoding ...
+[238] bibtex.pm:1519> INFO - Found BibTeX data source 'daftar-pustaka.bib'
+[317] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[317] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[317] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[317] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[328] bbl.pm:676> INFO - Writing 'template-skripsi.bbl' with encoding 'UTF-8'
+[333] bbl.pm:779> INFO - Output to template-skripsi.bbl

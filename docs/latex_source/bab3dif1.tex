@@ -26,7 +26,7 @@ Dimana hasil dari pemilihan tersebut akan menjadi cara untuk dapat menghitung pa
 
 \begin{figure}
     \centering
-    \includegraphics[scale= 0.7]{gambar/Flowchar Penetianv2.png}
+    \includegraphics[scale= 0.6]{gambar/Flowchar Penetianv2.png}
     \caption{Alur Penelitian}
     \label{Alur Penelitian}
 \end{figure}
@@ -154,61 +154,57 @@ NMS bertujuan untuk mengelolah kembali piksel yang saling berdekatan satu sama l
 Dimana \emph{MaxLocal} \(R(i,j)\) adalah nilai maksimum yang berada disekitar piksel \((x,y)\).
 
 \subsection{Memilih Piksel}
-    Setelah sudut-sudut hasil Thresholding dan NMS diperoleh, langkah selanjutnya adalah memilih piksel-piksel yang akan digunakan sebagai acuan pengukuran panjang dan lebar ikan. Pemilihan titik-titik sudut ini didasarkan pada jarak maksimum antar titik, sehingga diperoleh titik-titik yang mewakili bagian-bagian utama tubuh ikan, seperti ujung kepala (mulut), ujung ekor, sirip atas, dan bagian bawah perut.
-
-    Proses pemilihan dilakukan dengan cara mencari pasangan titik sudut yang memiliki jarak Euclidean terjauh satu sama lain. Rumus jarak Euclidean antara dua titik \((x_1, y_1)\) dan \((x_2, y_2)\) adalah:
-\begin{equation}
-    d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
-\end{equation}
-
-    Langkah-langkah pemilihan titik adalah sebagai berikut:
+    Setelah sudut telah melalui Thresholding dan NMS, sudut-sudut tersebut akan dipilih berdasarkan kriteria yang telah ditentukan.
 \begin{enumerate}
-    \item Hitung jarak Euclidean untuk setiap pasangan titik sudut yang terdeteksi.
-    \item Pilih dua titik dengan jarak maksimum sebagai titik ujung (biasanya mewakili mulut dan ekor ikan).
-    \item Untuk menentukan titik sirip atas dan bawah, cari dua titik lain yang memiliki jarak maksimum secara vertikal terhadap garis yang menghubungkan dua titik utama (mulut dan ekor).
+    \item Titik kanan berada pada bagian ekor.
+    \item Titik kiri pada bagian mulut.
+    \item Titik atas pada bagian sirip atas.
+    \item titik bawah pada bagian bawah atau perut.
 \end{enumerate}
 
-    Dengan pendekatan ini, pemilihan titik menjadi lebih objektif dan akurat karena didasarkan pada distribusi spasial sudut-sudut hasil deteksi, bukan hanya pada posisi relatif secara manual. Jika jenis ikan memiliki morfologi khusus (misal ikan lele), penyesuaian dapat dilakukan dengan memilih titik-titik yang relevan sesuai bentuk tubuh ikan.
+Pemilihan empat kriteria tersebut untuk mepermudah dalam mencari panjang dan lebar dari ikan. penghitungan panjang akan menggunakan sudut pada mulut dan ekor ikan, sedangkan lebar akan mengguanakan sirip atas dan bagian bawah perut ikan. 
+namun kriteria tersebut berubah jika jenis ikan yang digunakan seperti ikan lele, maka :
+\begin{enumerate}
+    \item Titik kanan pada bagian ekor.
+    \item Titik kiri pada bagian mulut.
+    \item Titik atas pada bagian sirip kanan.
+    \item Titik bawah pada bagian sirip kiri.
+\end{enumerate}
+    Disebabkan
 
-    Rumus umum untuk mencari jarak maksimum antar titik sudut:
-\begin{equation*}
-    d_{max} = \max_{i,j} \sqrt{(x_i - x_j)^2 + (y_i - y_j)^2}
-\end{equation*}
-    di mana \(i\) dan \(j\) adalah indeks dari titik-titik sudut hasil deteksi.
 
-    Dengan cara ini, titik-titik yang dipilih akan secara otomatis mewakili bagian terjauh dari tubuh ikan, sehingga pengukuran panjang dan lebar menjadi lebih representatif.
 \subsection{Menghitung Panjang dan Berat}
-    Setelah titik-titik sudut utama diperoleh dari proses pemilihan piksel, langkah selanjutnya adalah menghitung panjang ikan berdasarkan jarak Euclidean antara dua titik terjauh tersebut. Rumus yang digunakan adalah:
+    Setelah menentukan titik Rumus untuk menghitung panjang dan lebar dengan menggunakan koordinat yang telah dipilih adalah sebagai berikut :
 \begin{equation}
     d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
-\end{equation}
-    di mana \((x_1, y_1)\) dan \((x_2, y_2)\) adalah koordinat dua titik sudut terjauh hasil deteksi. Nilai \(d\) ini merupakan panjang ikan dalam satuan piksel.
-
-    Untuk mengonversi panjang dari satuan piksel ke satuan nyata, diperlukan faktor skala. Skala dapat diperoleh dengan dua cara, yaitu menggunakan objek referensi yang diketahui ukurannya dalam gambar, atau berdasarkan resolusi gambar:
+\end{equation}    
+    
+    Nilai \((x_1, y_1)\) dan \((x_2, y_2)\) adalah dua titik \emph{corner} terjauh. Hasil perhitungan panjang ikan tersebut masih berada pada satuan pixel, untuk menghitung panjang dan lebar asli sebuah benda dalam gambar dibutuhkan dua hal, yaitu skala dan panjang benda pada gambar.
+Skala dapat dicari dengan dua cara yaitu menggunakan benda referensi, atau dengan menggunakan resolusi pada gambar tersebut.
+    
+    Kedua cara tersebut memilik kelebihan dan kekurang masing-masing, contohnya menggunakan benda referensi.
+ Metode ini memerlukan benda lain dalam gambar dan mengetahui panjang dari benda lain tersebut, jika tidak ada benda lain pada gambar diperlukan pengambilan gambar pada jarak yang sama dengan benda yang ingin dicari panjangnya.
+ Kelebihan dari metode ini adalah akurasi yang tinggi, metode selanjutnya juga sama menggunakan resolusi gambar dapat mempermudah penghitungan, namun akurasi dari penghitungan panjang akan berkurang.
 \begin{equation*}
-    Skala = \frac{\text{Ukuran nyata (cm)}}{\text{Ukuran pada gambar (piksel)}}
+    Skala = \frac{Ukurang Nyata dalam cm}{Ukuran gambar dalam pixel}
 \end{equation*}
+
 \begin{equation}
-    Panjang\ Nyata = d \times Skala
+    Jarak Nyata = Jarak gambar * Skala
 \end{equation}
 
-    Setelah panjang ikan dalam satuan nyata diketahui, estimasi berat ikan dapat dilakukan menggunakan rumus interpolasi linier berdasarkan data panjang dan berat ikan yang telah diketahui sebelumnya. Rumus interpolasi linier yang digunakan adalah:
+    Setelah diketahui panjang dan lebar, langkah berikutnya adalah menghitung berat. Penghitungan berat pada gambar akan dilakukan dengan menggunakan interpolasi dengan data yang telah diambil. Menggunakan rumus sebagai berikut:
 \begin{equation}
-    W_n = W_x + \frac{(L_n - L_x)}{(L_y - L_x)} \times (W_y - W_x)
+    Wn = Wx + (\frac{Ln - Lx}{Ly - Lx}) * (Wy - Wx)
 \end{equation}
-    di mana:
-\begin{itemize}
-    \item \(W_n\) = berat ikan yang dicari,
-    \item \(L_n\) = panjang ikan hasil pengukuran,
-    \item \(L_x\) dan \(L_y\) = panjang ikan pada data referensi sebelum dan sesudah,
-    \item \(W_x\) dan \(W_y\) = berat ikan pada data referensi sebelum dan sesudah.
+Dimana 
+\begin{itemize} 
+    \item Wn berat yang dicari.
+    \item Wx berat sebelum.
+    \item Wy berat sesudah.
+    \item Ln Luas dari berat yang dicari.
+    \item Lx Luas dari berat sebelum.
+    \item Ly Luas dari berat sesudah.
 \end{itemize}
+    Perhitungan diatas akan dilakukan kembali jika lebar dari ikan juga berbeda.
 
-    Dengan metode ini, sistem dapat menghitung panjang ikan secara otomatis dari citra digital dan mengestimasi berat ikan berdasarkan data referensi, sehingga proses pengukuran menjadi lebih efisien, akurat, dan minim kontak langsung
-
-\section{Perancangan Experiment}
-    Setelah sistem selesai dibangun, langkah selanjutnya adalah melakukan eksperimen untuk menguji sistem yang telah dibuat. Eksperimen dilakukan dengan cara mengambil gambar ikan lele, ikan mas, dan ikan nila yang telah dihilangkan latar belakangnya.
-    
-    Gambar yang diambil akan digunakan sebagai data uji coba, kemudian gambar tersebut akan dimasukkan ke dalam sistem. Hasil dari sistem akan dibandingkan dengan hasil pengukuran manual untuk mengetahui akurasi dari sistem.
-    
-    Pengukuran manual dilakukan dengan cara mengukur panjang dan berat ikan secara langsung menggunakan alat ukur seperti penggaris atau timbangan. Hasil dari pengukuran manual akan digunakan sebagai acuan untuk mengevaluasi kinerja sistem.

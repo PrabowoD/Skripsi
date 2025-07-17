@@ -49,7 +49,7 @@
       \field{pages}{1\bibrangedash 37}
       \range{pages}{37}
       \verb{file}
-      \verb :C$\backslash$:/Users/USER/Desktop/Paper/Probably/16524051 Chaisar Fadli Al Amri.pdf:pdf
+      \verb :C$\backslash$:/Users/User/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Amri - 2020 - Rancang Bangun Fish Counter Untuk Menghitung Bibit Ikan Lele(2).pdf:pdf
       \endverb
       \keyw{Arduino vii,BibitIkanLele,Counter}
     \endentry
@@ -97,7 +97,7 @@
       \field{pages}{37\bibrangedash 45}
       \range{pages}{9}
       \verb{file}
-      \verb :C$\backslash$:/Users/USER/Documents/GitHub/Skripsi/docs/latex{\_}source/pdf/Pengaruh Kepadatan Yang Berbeda Terhadap Kelulushidupan Dan Pertumbuhan Ikan Nila (Oreochromis niloticus) Pada Sistem Resirkulasi Dengan Filter Zeolit.pdf:pdf
+      \verb :C$\backslash$:/Users/User/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Diansari, Endang, Tita - 2013 - PENGARUH KEPADATAN YANG BERBEDA TERHADAP KELULUSHIDUPAN DAN PERTUMBUHAN IKAN NILA (Oreochromis niloti(2).pdf:pdf
       \endverb
       \verb{urlraw}
       \verb https://ejournal3.undip.ac.id/index.php/jamt/article/view/4791
@@ -107,7 +107,53 @@
       \endverb
       \keyw{Tilapia,density,growth,resirculation,survival rate}
     \endentry
-    \entry{Harris2013}{inproceedings}{}{}
+    \entry{Gonzalez2018}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=07713b8c79fe78ffaf9ab728a5f3ce88}{%
+           family={Gonzalez},
+           familyi={G\bibinitperiod},
+           given={Rafael\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f7e4f4ce32d8e1ac04f7ee5eefcabe8f}{%
+           family={Woods},
+           familyi={W\bibinitperiod},
+           given={Richard\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{b2d3f574078f3bec786a6f4bed9913c2}
+      \strng{fullhash}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{fullhashraw}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{bibnamehash}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{authorbibnamehash}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{authornamehash}{b2d3f574078f3bec786a6f4bed9913c2}
+      \strng{authorfullhash}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{authorfullhashraw}{629c2754a63b62c1f205866b8ab085f9}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4}
+      \field{isbn}{978-0-13-335672-4}
+      \field{title}{{Digital Image Processing}}
+      \field{year}{2018}
+      \verb{file}
+      \verb :C$\backslash$:/Users/User/Documents/GitHub/Skripsi/docs/latex{\_}source/pdf/Digital.Image.Processing.4th.Edition.Gonzalez{\&}Woods.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://books.google.com/books?id=0F05vgAACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.com/books?id=0F05vgAACAAJ
+      \endverb
+    \endentry
+    \entry{Harris2013}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=aa81fda54b78d656cfed925799d9fe1e}{%
            family={Harris},
@@ -121,9 +167,6 @@
            given={M.},
            giveni={M\bibinitperiod},
            givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Alvey Vision Club}%
       }
       \strng{namehash}{c62c360be832fb8d2c4b6c984d3a1dc6}
       \strng{fullhash}{83060376bef95055a892b98ba8ae32c5}
@@ -140,22 +183,15 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Consistency of image edge filtering is of prime importance for 3D interpretation of image sequences using feature tracking algorithms. To cater for image regions containing texture and isolated features, a combined corner and edge detector based on the local auto-correlation function is utilised, and it is shown to perform with good consistency on natural imagery.}
-      \field{booktitle}{Procedings of the Alvey Vision Conference 1988}
       \field{title}{{A Combined Corner and Edge Detector}}
-      \field{year}{1988}
+      \field{year}{2013}
       \field{pages}{23.1\bibrangedash 23.6}
       \range{pages}{-1}
       \verb{doi}
-      \verb 10.5244/C.2.23
+      \verb 10.5244/c.2.23
       \endverb
       \verb{file}
-      \verb :C$\backslash$:/Users/USER/Documents/GitHub/Skripsi/docs/latex{\_}source/pdf/A combined corner and edge detector.pdf:pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://www.bmva.org/bmvc/1988/avc-88-023.html
-      \endverb
-      \verb{url}
-      \verb http://www.bmva.org/bmvc/1988/avc-88-023.html
+      \verb :C$\backslash$:/Users/User/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Harris, Stephens - 2013 - A Combined Corner and Edge Detector(2).pdf:pdf
       \endverb
     \endentry
     \entry{Lowe1999}{inproceedings}{}{}
@@ -225,7 +261,6 @@
       \field{labeltitlesource}{title}
       \field{issn}{0920-5691}
       \field{journaltitle}{International Journal of Computer Vision}
-      \field{month}{11}
       \field{number}{2}
       \field{title}{{Distinctive Image Features from Scale-Invariant Keypoints}}
       \field{volume}{60}
@@ -242,8 +277,45 @@
       \verb http://link.springer.com/10.1023/B:VISI.0000029664.99615.94
       \endverb
     \endentry
+    \entry{mikolajczyk:tel-00584096}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=15ba95a5d65938b99eaf1f46dd4c25b8}{%
+           family={Mikolajczyk},
+           familyi={M\bibinitperiod},
+           given={Krystian},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Institut National Polytechnique de Grenoble - INPG}%
+      }
+      \strng{namehash}{15ba95a5d65938b99eaf1f46dd4c25b8}
+      \strng{fullhash}{15ba95a5d65938b99eaf1f46dd4c25b8}
+      \strng{fullhashraw}{15ba95a5d65938b99eaf1f46dd4c25b8}
+      \strng{bibnamehash}{15ba95a5d65938b99eaf1f46dd4c25b8}
+      \strng{authorbibnamehash}{15ba95a5d65938b99eaf1f46dd4c25b8}
+      \strng{authornamehash}{15ba95a5d65938b99eaf1f46dd4c25b8}
+      \strng{authorfullhash}{15ba95a5d65938b99eaf1f46dd4c25b8}
+      \strng{authorfullhashraw}{15ba95a5d65938b99eaf1f46dd4c25b8}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Detection of local features invariant to affines transformations}}
+      \field{type}{Theses}
+      \field{year}{2002}
+      \verb{urlraw}
+      \verb https://theses.hal.science/tel-00584096
+      \endverb
+      \verb{url}
+      \verb https://theses.hal.science/tel-00584096
+      \endverb
+      \keyw{Interest points ; feature detection ; affine invariance}
+    \endentry
     \entry{Mikolajczyk2004}{article}{}{}
-      \name{author}{2}{}{%
+      \name{author}{2}{ul=2}{%
         {{un=0,uniquepart=base,hash=15ba95a5d65938b99eaf1f46dd4c25b8}{%
            family={Mikolajczyk},
            familyi={M\bibinitperiod},
@@ -257,12 +329,12 @@
            giveni={C\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{db5b7994e7eae2f576fa656ce51b0564}
+      \strng{namehash}{7754ef74182918a2ae94ae7327246382}
       \strng{fullhash}{7754ef74182918a2ae94ae7327246382}
       \strng{fullhashraw}{7754ef74182918a2ae94ae7327246382}
       \strng{bibnamehash}{7754ef74182918a2ae94ae7327246382}
       \strng{authorbibnamehash}{7754ef74182918a2ae94ae7327246382}
-      \strng{authornamehash}{db5b7994e7eae2f576fa656ce51b0564}
+      \strng{authornamehash}{7754ef74182918a2ae94ae7327246382}
       \strng{authorfullhash}{7754ef74182918a2ae94ae7327246382}
       \strng{authorfullhashraw}{7754ef74182918a2ae94ae7327246382}
       \field{sortinit}{M}
@@ -284,7 +356,7 @@
       \verb 10.1023/B:VISI.0000027790.02288.f2
       \endverb
       \verb{file}
-      \verb :C$\backslash$:/Users/USER/Documents/GitHub/Skripsi/docs/latex{\_}source/pdf/An affine invariant interest point detector.pdf:pdf
+      \verb :C$\backslash$:/Users/User/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Mikolajczyk, Schmid - 2004 - Scale {\&} affine invariant interest point detectors(2).pdf:pdf
       \endverb
       \keyw{Affine invariance,Interest points,Local features,Matching,Recognition,Scale invariance}
     \endentry

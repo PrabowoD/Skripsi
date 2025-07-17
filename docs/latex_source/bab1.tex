@@ -8,32 +8,15 @@
 
 \section{Latar Belakang Masalah}
 
-% Intro
-Indonesia merupakan sebuah negara yang memiliki berbagai macam kekayaan hayatinya, dan juga negara dengan jumlah pulau terbanyak di dunia. 
-Salah satu kekayaan hayati Indonesia adalah ikan. Ikan merupakan bahan pangan yang paling banyak dikonsumsi oleh masyarakat Indonesia sejak zaman dahulu. 
-Terbukti dengan banyaknya kuliner dengan bahan baku ikan di Indonesia.
+Indonesia merupakan negara kepulauan dengan kekayaan hayati yang melimpah, salah satunya adalah ikan yang menjadi sumber pangan utama masyarakat. Budidaya ikan di Indonesia terus berkembang untuk memenuhi kebutuhan konsumsi dan permintaan pasar, baik sebagai bahan pangan maupun ikan hias. Salah satu aspek penting dalam budidaya ikan adalah pengukuran panjang dan berat ikan, yang berperan dalam pemantauan pertumbuhan, penentuan dosis pakan, serta penentuan harga jual.
 
-Terdapat beberapa cara untuk mendapatkan ikan yang pertama adalah menangkapnya pada habitatnya. 
-Cara ini sangat efektif, cepat dan dapat dilakukan setiap hari, namun dengan menangkap pada habitatnya setiap hari akan mengakibatkan terjadi overfishing yang menyebabkan ikan berkurang dari habitat asli-nya. 
-Cara kedua adalah membudidaya ikan. Budidaya ikan membutuhkan infrastruktur yang mendukung seperti lahan, kolam atau tambak yang memadai, bibit ikan yang akan dibudidayakan, dan serta pakan ikan dalam jumlah yang banyak. 
-Walaupun mengeluarkan modal yang cukup besar, hasil dari budidaya ikan juga besar. 
+Namun, proses pengukuran panjang dan berat ikan di lapangan umumnya masih dilakukan secara manual, yaitu dengan menimbang dan mengukur satu per satu menggunakan alat ukur konvensional (\cite{Amri2020}). Cara ini tidak efisien, memakan waktu lama, dan berpotensi menimbulkan stres pada ikan sehingga dapat mempengaruhi kualitas dan pertumbuhan ikan. Selain itu, metode manual hanya memberikan estimasi jumlah atau berat secara keseluruhan, tanpa informasi detail mengenai distribusi ukuran ikan dalam satu populasi.
 
-Ikan hasil dari budidaya ikan dapat dijual hidup dari habitat aslinya, hal ini disebabkan oleh banyak dari rumah makan atau restoran yang membutuhkan ikan hidup untuk menjaga kualitas dari makanan yang mereka sajikan. 
-Ikan hidup juga mempunyai rasa yang berbeda dari ikan yang sudah mati pada saat dijual. Selain dibudidayakan sebagai bahan pangan, ikan yang dibudidayakan sebagai ikan hias. 
-Secara tidak langsung membudidayakan ikan telah mengurangi terjadinya overfishing. 
-Pemerintah Indonesia mencatat pada tahun 2022 produksi ikan mencapai 17,76 juta ton dengan 5,57 juta ton dari budidaya ikan dan 5,97 juta ton dari hasil tangkap laut dan perairan umum daratan.
+Seiring perkembangan teknologi, pengolahan citra digital menawarkan solusi otomatis untuk mengukur panjang dan berat ikan secara cepat dan akurat. Salah satu metode yang dapat digunakan adalah deteksi titik sudut (\emph{corner detection}) pada citra ikan. Titik sudut pada tubuh ikan, seperti ujung kepala dan ekor, dapat digunakan sebagai acuan untuk mengukur panjang ikan secara otomatis dari citra (\cite{Harris2013}). Dengan mengetahui panjang ikan, berat ikan juga dapat diestimasi menggunakan rumus atau model regresi yang sesuai (\cite{Diansari2013}).
 
-Pembudidayaan ikan di Indonesia sangat besar, tetapi memiliki masalah yang sama besarnya yaitu diperlukannya usaha untuk menghitung dan mengawasi jumlah ikan yang ingin dibudidayakan. 
-Salah satu contohnya adalah penghitungan bibit ikan, dalam hal tersebut penghitungan bibit lele oleh para pedagang masih menggunakan cara manual (\cite{Amri2020}). 
-Ikan dipindahkan kedalam sebuah wadah dan mengukur besar ikan dengan alat yang telah dibuat, lalu dipindahkan lagi satu persatu atau dihitung sesuai dengan berat untuk mendapatkan jumlah ikan. 
-Cara-cara seperti tadi sangat tidak efisien dan atau tidak akurat, ikan yang diukur lalu dihitung satu persatu memerlukan waktu yang sangat lama bila memerlukan jumlah yang sangat banyak. 
-Sementar teknik penimbangan hanya memberikan hasil perkiraan jumlah yang akurasinya masih perlu dipertanyakan. 
+Metode \emph{Harris-Corner Detection} merupakan salah satu algoritma deteksi sudut yang banyak digunakan karena kestabilannya terhadap rotasi, noise, dan efisiensi komputasi (\cite{Harris2013}). Dengan menerapkan metode ini pada citra ikan, sistem dapat secara otomatis mendeteksi titik-titik sudut penting, sehingga proses pengukuran panjang dan estimasi berat ikan dapat dilakukan secara digital, cepat, dan minim kontak langsung dengan ikan.
 
-Masalah sangat penting dimana budidaya ikan sangat mementingkan banyak-nya jumlah ikan dalam tepat budidaya-nya, namun populasi ikan yang berlebihan akan memperlambat pertumbuhan ikan (\cite{Diansari2013}), 
-tapi disisi lain populasi ikan yang sangat sedikit akan mengurangi efisiensi lahan yang dimilik oleh peternak ikan. 
-Dalam hal ini (\cite{Amri2020}) menciptakan sebuah sistem dapat menghitung jumlah ikan dengan menggunakan sensor proximity. 
-Hasil dari uji coba yang didapat sangat baik dengan presentasi error rata-rata sebesar 4,07 dengan waktu selama 228 detik untuk 1000 bibit ikan, 
-sedangkan jika dihitung secara manual akan membutuhkan waktu 20 menit untuk 1000 bibit ikan. 
+Oleh karena itu, penelitian ini bertujuan untuk membangun sistem pengukuran panjang dan estimasi berat ikan berbasis citra digital menggunakan metode \emph{Harris-Corner Detection}. Diharapkan sistem ini dapat membantu pembudidaya ikan dalam melakukan monitoring pertumbuhan ikan secara efisien dan akurat, serta mendukung pengambilan keputusan dalam manajemen budidaya. Dalam hal ini (\cite{Amri2020}) menciptakan sebuah sistem dapat menghitung jumlah ikan dengan menggunakan sensor proximity.
 
 Deteksi objek (Object detection) adalah salah satu dari visi komputer. Salah satu objektif nya adalah mengetahui lokasi dari sebuah objek pada gambar atau video. 
 Pada penelitian Alim H (2021) telah membuat sebuah tracking movement ikan dengan menggunakan metode GMM dan Kalman filter penggunaan metode tersebut dapat memungkinkan 
@@ -50,7 +33,7 @@ seperti proyeksi affine atau 3D, dengan mengaburkan lokasi gradien gambar. \emph
 Kombinasi Haris detector memberikan hasil yang lebih baik, Laplacian memungkinkan pemilihan skala karakteristik untuk titik yang diekstraksi dengan \emph{Harris-Corner Detection}, dengan demikian descriptor dihitung pada lingkungan titik yang sama dalam gambar dengan resolusi yang berbeda, dan oleh karenanya tidak varian ke perubahan skala besar.
 
 Berbagai metode telah dikembangkan untuk mendeteksi atau melacak ikan, seperti penggunaan metode GMM dan Kalman Filter yang efektif untuk pelacakan gerakan (Alim, 2021), atau GrabCut yang membantu dalam pemisahan objek dari latar belakang (Nugraha, 2022). 
-Namun, metode-metode tersebut tidak dirancang untuk secara langsung mengekstraksi fitur geometris seperti panjang dan bentuk ikan.
+Namun, metode-metode tersebut tidak dirancang untuk secara langsung mengekstrak fitur geometris seperti panjang dan bentuk ikan.
 
 Di sisi lain, metode seperti SIFT memang kuat terhadap skala dan rotasi, tetapi proses perhitungannya relatif kompleks dan memerlukan waktu komputasi lebih tinggi (\cite{Lowe2004}). 
 Untuk kasus estimasi bentuk linear seperti panjang dan lebar, pendekatan berbasis deteksi sudut seperti \emph{Harris-Corner Detection} terbukti lebih efisien dan akurat dalam mendeteksi titik-titik sudut penting pada citra (\cite{Harris2013}). 
@@ -65,12 +48,11 @@ Berdasarkan pemaparan masalah diatas, perumusan masalah dalam penelitian ini ada
 
 \section{Batasan Masalah}
 \begin{enumerate}
-	\item Sistem hanya menghitung panjang dan berat ikan dengan menggunakan menggunakan \emph{harris-corners detection}. 
+	\item Sistem hanya menghitung panjang dan berat ikan dengan menggunakan \emph{harris-corners detection}. 
 	\item Jenis Ikan yang digunakan adalah ikan lele, ikan mas, dan ikan nila.
 	\item Sumber gambar berupa dataset yang diambil langsung dari lapangan dan telah dihilangkan latar belakangnya.
 	\item Citra yang digunakan hanya tampak samping. 
 	\item Bahasa Pemrograman menggunakan python 3 atau lebih. 
-	\item 
 \end{enumerate}
 	
 \section{Tujuan Penelitian}
