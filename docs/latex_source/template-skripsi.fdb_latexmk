@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber template-skripsi"] 0 "template-skripsi.bcf" "template-skripsi.bbl" "template-skripsi" 1752797375.73539 -1
+["biber template-skripsi"] 0 "template-skripsi.bcf" "template-skripsi.bbl" "template-skripsi" 1752801362.85068 -1
   "daftar-pustaka.bib" 1752710237 11677 69e64a350e1965dda932a5b6e3802e44 ""
-  "template-skripsi.bcf" 1752797375 110288 f1aff53ef35c033e1352024f45578573 "pdflatex"
+  "template-skripsi.bcf" 1752801362 110288 f1aff53ef35c033e1352024f45578573 "pdflatex"
   (generated)
   "template-skripsi.bbl"
   "template-skripsi.blg"
   (rewritten before read)
-["pdflatex"] 1752797374.15856 "c:/Users/User/Documents/GitHub/Skripsi/docs/latex_source/template-skripsi.tex" "template-skripsi.pdf" "template-skripsi" 1752797375.73596 0
+["pdflatex"] 1752801361.2792 "c:/Users/User/Documents/GitHub/Skripsi/docs/latex_source/template-skripsi.tex" "template-skripsi.pdf" "template-skripsi" 1752801362.85141 0
   "C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/times/ptmb8r.tfm" 1136747054 4524 6bce29db5bc272ba5f332261583fee9c ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/times/ptmb8t.tfm" 1136747054 6880 f19b8995b61c334d78fc734065f6b4d4 ""
@@ -163,25 +163,25 @@
   "Picts/IMG_20240121_131125.jpg" 1751377139 4088839 c90882c1d31ae92ce08702bccff3ee41 ""
   "Picts/IMG_20240121_132544.jpg" 1751377139 4702639 f986cc145d2da64861a619c4002803f9 ""
   "Picts/IMG_20240121_140044.jpg" 1751377139 3702967 5a760135d8c3bd9b39f521d1d4ba11b7 ""
-  "bab1.aux" 1752797375 5169 4d1f30b4b053b7dc383e39576168caad "pdflatex"
-  "bab1.tex" 1752753871 5689 edf5324fec7fa5b1dd1e0c4284379829 ""
-  "bab2dif1.aux" 1752797375 6629 0a0224db2089ed7386bcb4b862dd6b65 "pdflatex"
+  "bab1.aux" 1752801362 5169 d11bad1c9b479f7cb7e26aae0dd7e711 "pdflatex"
+  "bab1.tex" 1752801359 6026 9a68961bfa804c151ac0fb39790bd3c4 ""
+  "bab2dif1.aux" 1752801362 6629 e589cd0dbacb5c716838048f10ebee08 "pdflatex"
   "bab2dif1.tex" 1752797056 13901 edd8e55a29e4368150cc4a41c3eada9d ""
-  "bab3.aux" 1752797375 7054 2056f263954380db2c0eac76b324d625 "pdflatex"
-  "bab3.tex" 1752797373 19322 ef2f5c578296e02f28c8b36c39eae2a2 ""
+  "bab3.aux" 1752801362 7054 91b6529b141070cd1d43b1dad9c66472 "pdflatex"
+  "bab3.tex" 1752797516 19322 ef2f5c578296e02f28c8b36c39eae2a2 ""
   "c:/Users/User/Documents/GitHub/Skripsi/docs/latex_source/template-skripsi.tex" 1752716034 6260 218b1a7c87859778a69f4fb3d70be4b7 ""
-  "gambar/Alur Penelitian.png" 1752792932 21649 dfe7485b0ec52a3eae883d7ce32bb1ad ""
+  "gambar/Alur Penelitian.png" 1752800275 25098 079fc52ea7a653a55af166346834b087 ""
   "gambar/Uniform Gaussian kernel.jpg" 1751377139 13965 0c4c0133bfaa56d97eb9789bd0fdd259 ""
   "gambar/logounj.png" 1751377139 169713 dc9c4334c08a52994e184ae68e1c99d7 ""
   "jtetiskripsi.cls" 1751377139 13890 cb90d5e37be9baeca2da4e47f85bbf43 ""
-  "template-skripsi.aux" 1752797375 3666 a8d78e430f7ee2d562cc67fcc16961c0 "pdflatex"
+  "template-skripsi.aux" 1752801362 3666 a8d78e430f7ee2d562cc67fcc16961c0 "pdflatex"
   "template-skripsi.bbl" 1752753836 19564 510012f850dcb7e31179bf8c68435bad "biber template-skripsi"
-  "template-skripsi.lof" 1752797375 466 9fbb89355defb45069dff937a3520702 "pdflatex"
-  "template-skripsi.lot" 1752797375 177 e7e84d7c4fa500c11ad715394bb6cbd8 "pdflatex"
-  "template-skripsi.out" 1752797375 5645 7d8eb639854c6448dc140cd64c760db7 "pdflatex"
-  "template-skripsi.run.xml" 1752797375 2445 2a29ac86e6bffb8d2fd9a6012c09d07f "pdflatex"
+  "template-skripsi.lof" 1752801362 466 9fbb89355defb45069dff937a3520702 "pdflatex"
+  "template-skripsi.lot" 1752801362 177 e7e84d7c4fa500c11ad715394bb6cbd8 "pdflatex"
+  "template-skripsi.out" 1752801362 5645 7d8eb639854c6448dc140cd64c760db7 "pdflatex"
+  "template-skripsi.run.xml" 1752801362 2445 2a29ac86e6bffb8d2fd9a6012c09d07f "pdflatex"
   "template-skripsi.tex" 1752716034 6260 218b1a7c87859778a69f4fb3d70be4b7 ""
-  "template-skripsi.toc" 1752797375 3131 f782c467ee7d6298d362b29c44d87a9d "pdflatex"
+  "template-skripsi.toc" 1752801362 3131 f782c467ee7d6298d362b29c44d87a9d "pdflatex"
   (generated)
   "bab1.aux"
   "bab2dif1.aux"
