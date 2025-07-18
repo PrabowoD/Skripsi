@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.15)  18 JUL 2025 08:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.15)  18 JUL 2025 17:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -768,7 +768,7 @@ Package biblatex Warning: Conflicting options.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 169.
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) (template-skripsi.aux (bab1.aux) (bab2dif1.aux) (bab3.aux))
+) (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2dif1.aux) (bab3.aux))
 \openout1 = `template-skripsi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 169.
@@ -881,36 +881,85 @@ Package biblatex Info: ... file 'template-skripsi.bbl' found.
 Package biblatex Info: Reference section=0 on input line 169.
 Package biblatex Info: Reference segment=0 on input line 169.
 \c@lstlisting=\count489
-<gambar/logounj.png, id=151, 513.92pt x 513.92pt>
+<gambar/logounj.png, id=155, 513.92pt x 513.92pt>
 File: gambar/logounj.png Graphic file (type png)
 <use gambar/logounj.png>
 Package pdftex.def Info: gambar/logounj.png  used on input line 171.
 (pdftex.def)             Requested size: 162.7473pt x 162.74825pt.
 
 
+Package pdfpages Warning: Option `page' is unknow to \includepdf.
+(pdfpages)                Did you mean `pages'? (Note the `s'!)
+(pdfpages)                OK, I'll proceed as if it were `pages'.
+
+<sps/Lembar Pengesahan.pdf, id=157, 597.23125pt x 844.15375pt>
+File: sps/Lembar Pengesahan.pdf Graphic file (type pdf)
+<use sps/Lembar Pengesahan.pdf>
+Package pdftex.def Info: sps/Lembar Pengesahan.pdf  used on input line 179.
+(pdftex.def)             Requested size: 597.22978pt x 844.15169pt.
+<sps/Lembar Pengesahan.pdf, id=159, page=1, 597.23125pt x 844.15375pt>
+File: sps/Lembar Pengesahan.pdf Graphic file (type pdf)
+<use sps/Lembar Pengesahan.pdf, page 1>
+Package pdftex.def Info: sps/Lembar Pengesahan.pdf , page1 used on input line 179.
+(pdftex.def)             Requested size: 597.22978pt x 844.15169pt.
+File: sps/Lembar Pengesahan.pdf Graphic file (type pdf)
+<use sps/Lembar Pengesahan.pdf, page 1>
+Package pdftex.def Info: sps/Lembar Pengesahan.pdf , page1 used on input line 179.
+(pdftex.def)             Requested size: 597.73099pt x 844.86012pt.
+
+
 [1
 
-{C:/Users/User/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc} <./gambar/logounj.png>] (template-skripsi.toc
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 3.
+{C:/Users/User/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc} <./gambar/logounj.png>]
+File: sps/Lembar Pengesahan.pdf Graphic file (type pdf)
+<use sps/Lembar Pengesahan.pdf, page 1>
+Package pdftex.def Info: sps/Lembar Pengesahan.pdf , page1 used on input line 179.
+(pdftex.def)             Requested size: 597.73099pt x 844.86012pt.
+File: sps/Lembar Pengesahan.pdf Graphic file (type pdf)
+<use sps/Lembar Pengesahan.pdf, page 1>
+Package pdftex.def Info: sps/Lembar Pengesahan.pdf , page1 used on input line 179.
+(pdftex.def)             Requested size: 597.73099pt x 844.86012pt.
+
+
+File: sps/Lembar Pengesahan.pdf Graphic file (type pdf)
+<use sps/Lembar Pengesahan.pdf, page 1>
+Package pdftex.def Info: sps/Lembar Pengesahan.pdf , page1 used on input line 179.
+(pdftex.def)             Requested size: 597.73099pt x 844.86012pt.
+[2
+
+ <./sps/Lembar Pengesahan.pdf>]
+\openout2 = `kata-pengantar.aux'.
+
+ (kata-pengantar.tex
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 40.
  (C:\Program Files\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ))
+
+[3
+
+
+]
+
+[4] (template-skripsi.toc
+
+[5
+
+
+
+])
 \tf@toc=\write5
 \openout5 = `template-skripsi.toc'.
 
 
 
-[2
-
-]
-
-[3] (template-skripsi.lof)
+[6] (template-skripsi.lof)
 \tf@lof=\write6
 \openout6 = `template-skripsi.lof'.
 
 
 
-[4
+[7
 
 ] (template-skripsi.lot)
 \tf@lot=\write7
@@ -918,7 +967,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
 
 
-[5
+[8
 
 ]
 \openout2 = `bab1.aux'.
@@ -950,7 +999,7 @@ BAB II.
 ]
 
 [5]
-<gambar/Uniform Gaussian kernel.jpg, id=286, 290.88675pt x 78.2925pt>
+<gambar/Uniform Gaussian kernel.jpg, id=316, 290.88675pt x 78.2925pt>
 File: gambar/Uniform Gaussian kernel.jpg Graphic file (type jpg)
 <use gambar/Uniform Gaussian kernel.jpg>
 Package pdftex.def Info: gambar/Uniform Gaussian kernel.jpg  used on input line 77.
@@ -974,7 +1023,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
  (bab3.tex
 BAB III.
-<gambar/Alur Penelitian.png, id=324, 472.76625pt x 392.46625pt>
+<gambar/Alur Penelitian.png, id=353, 472.76625pt x 392.46625pt>
 File: gambar/Alur Penelitian.png Graphic file (type png)
 <use gambar/Alur Penelitian.png>
 Package pdftex.def Info: gambar/Alur Penelitian.png  used on input line 29.
@@ -999,24 +1048,24 @@ Package pdftex.def Info: gambar/Alur Penelitian.png  used on input line 29.
 [16]
 
 [17]
-<Picts/IMG_20240121_131125.jpg, id=377, 4175.6pt x 1879.02pt>
-File: Picts/IMG_20240121_131125.jpg Graphic file (type jpg)
-<use Picts/IMG_20240121_131125.jpg>
-Package pdftex.def Info: Picts/IMG_20240121_131125.jpg  used on input line 205.
+<gambar/IMG_20240121_131125.jpg, id=407, 4175.6pt x 1879.02pt>
+File: gambar/IMG_20240121_131125.jpg Graphic file (type jpg)
+<use gambar/IMG_20240121_131125.jpg>
+Package pdftex.def Info: gambar/IMG_20240121_131125.jpg  used on input line 205.
 (pdftex.def)             Requested size: 113.81102pt x 51.20729pt.
-<Picts/IMG_20240121_132544.jpg, id=378, 4175.6pt x 1879.02pt>
-File: Picts/IMG_20240121_132544.jpg Graphic file (type jpg)
-<use Picts/IMG_20240121_132544.jpg>
-Package pdftex.def Info: Picts/IMG_20240121_132544.jpg  used on input line 210.
+<gambar/IMG_20240121_132544.jpg, id=408, 4175.6pt x 1879.02pt>
+File: gambar/IMG_20240121_132544.jpg Graphic file (type jpg)
+<use gambar/IMG_20240121_132544.jpg>
+Package pdftex.def Info: gambar/IMG_20240121_132544.jpg  used on input line 210.
 (pdftex.def)             Requested size: 113.81102pt x 51.20729pt.
-<Picts/IMG_20240121_140044.jpg, id=379, 4175.6pt x 1879.02pt>
-File: Picts/IMG_20240121_140044.jpg Graphic file (type jpg)
-<use Picts/IMG_20240121_140044.jpg>
-Package pdftex.def Info: Picts/IMG_20240121_140044.jpg  used on input line 215.
+<gambar/IMG_20240121_140044.jpg, id=409, 4175.6pt x 1879.02pt>
+File: gambar/IMG_20240121_140044.jpg Graphic file (type jpg)
+<use gambar/IMG_20240121_140044.jpg>
+Package pdftex.def Info: gambar/IMG_20240121_140044.jpg  used on input line 215.
 (pdftex.def)             Requested size: 113.81102pt x 51.20729pt.
 
 
-[18 <./Picts/IMG_20240121_131125.jpg> <./Picts/IMG_20240121_132544.jpg> <./Picts/IMG_20240121_140044.jpg>]
+[18 <./gambar/IMG_20240121_131125.jpg> <./gambar/IMG_20240121_132544.jpg> <./gambar/IMG_20240121_140044.jpg>]
 
 [19])
 
@@ -1026,29 +1075,29 @@ Package pdftex.def Info: Picts/IMG_20240121_140044.jpg  used on input line 215.
 
 
 
-] (template-skripsi.aux (bab1.aux) (bab2dif1.aux) (bab3.aux))
+] (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2dif1.aux) (bab3.aux))
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-11>
  ***********
 Package rerunfilecheck Info: File `template-skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 7D8EB639854C6448DC140CD64C760DB7;5645.
+(rerunfilecheck)             Checksum: 43580F5ADEF1D413C9075D01C9F7925C;5777.
 Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 \openout1 = `template-skripsi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24502 strings out of 468149
- 424438 string characters out of 5441152
- 1283341 words of memory out of 5000000
- 52639 multiletter control sequences out of 15000+600000
+ 24552 strings out of 468149
+ 425935 string characters out of 5441152
+ 1286113 words of memory out of 5000000
+ 52672 multiletter control sequences out of 15000+600000
  662916 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,84p,2726b,1940s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,17n,84p,2726b,2231s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template-skripsi.pdf (26 pages, 12882704 bytes).
+Output written on template-skripsi.pdf (29 pages, 12903949 bytes).
 PDF statistics:
- 476 PDF objects out of 1000 (max. 8388607)
- 115 named destinations out of 1000 (max. 500000)
- 327 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 506 PDF objects out of 1000 (max. 8388607)
+ 125 named destinations out of 1000 (max. 500000)
+ 350 words of extra memory for PDF output out of 10000 (max. 10000000)
 

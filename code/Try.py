@@ -1,47 +1,39 @@
 import numpy as np
+import cv2 as cv2
 from scipy import ndimage
-from Smoothing_Image import gaussian_kernel
-from Convolve import apply_kernel
-from Gradient import Compute_Gradient_X, Compute_Gradient_Y
-from AutoCorrelation import AutoCorrelation_Ixx, AutoCorrelation_Iyy, AutoCorrelation_Ixy
-from Harris_Respon import Harris
+from Pre_Processing import *
+from Smoothing_Image import *
+from Convolve import *
+from Gradient import *
+from AutoCorrelation import *
+from Harris_Respon import *
 
 # Contoh penggunaan dengan citra buatan
 if __name__ == "__main__":
-    # Buat citra buatan 5x5
-    image = np.array([[10, 20, 30, 40, 50],
-                      [60, 70, 80, 90, 100],
-                      [110, 120, 130, 140, 150],
-                      [160, 170, 180, 190, 200],
-                      [210, 220, 230, 240, 250]], dtype=np.float32)
-
-    # Buat kernel Gaussian 
-    kernel = gaussian_kernel(size=3, sigma=1)
-
-    # Terapkan Gaussian smoothing
-    smoothed_image = apply_kernel(image, kernel)
+    
+    # Baca citra dari file
+    image = Input_image("Picts")
+    
+    #Preproses citra
+    preprocessed_images = [preprocess_image(img) for img in image]
     
     # Terapkan Gradient
-    Gradient_X = Compute_Gradient_X(smoothed_image)
-    Gradient_Y = Compute_Gradient_Y(smoothed_image)
+    Gradient_X = Compute_Gradient_X(preprocessed_images)
+    Gradient_Y = Compute_Gradient_Y(preprocessed_images)
     
     # Terapkan Convolusi
-    Ixx = AutoCorrelation_Ixx(Gradient_X, kernel)
-    Ixy = AutoCorrelation_Ixy(Gradient_X, Gradient_Y, kernel)
-    Iyy = AutoCorrelation_Iyy(Gradient_Y,kernel)
-    
+    Ixx = AutoCorrelation_Ixx(Gradient_X)
+    Ixy = AutoCorrelation_Ixy(Gradient_X, Gradient_Y)
+    Iyy = AutoCorrelation_Iyy(Gradient_Y)
+
     # Respon Harris
     Harris_respon = Harris(Ixx, Ixy, Iyy)
     
     #Menentukan Korner
-    threshold = 1e-5
-    corners = np.zeros_like(Harris_respon)
-    corners[Harris_respon > threshold] = 1
+    threshold = 0.01 * np.max(Harris_respon[0])
+    corners_list = []
+for response in Harris_respon:
+    corners = np.zeros_like(response)
+    corners[response > threshold] = [0, 0, 255]
+    corners_list.append(corners)
 
-    # Tampilkan citra asli dan citra hasil smoothing
-    print("Citra Asli:\n", image)
-    print("\nKernel Gaussian:\n", kernel)
-    print("\nCitra Setelah Gaussian Smoothing:\n", smoothed_image)
-    print("\nHarris_respon:\n", Harris_respon)
-    print("\nCorner terpilih:\n", corners)
-    

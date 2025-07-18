@@ -2,7 +2,7 @@ import numpy as np
 
 # Fungsi untuk membuat Gaussian kernel 2D
 def gaussian_kernel(size, sigma=1):
-    
+        
     # Tentukan titik pusat kernel
     kernel_range = range(-size//2 + 1, size//2 + 1)
     x, y = np.meshgrid(kernel_range, kernel_range)

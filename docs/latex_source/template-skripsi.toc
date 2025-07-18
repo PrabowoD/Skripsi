@@ -1,8 +1,9 @@
 \babel@toc {english}{}\relax 
 \babel@toc {bahasa}{}\relax 
-\contentsline {chapter}{DAFTAR ISI}{iii}{chapter*.1}%
-\contentsline {chapter}{DAFTAR GAMBAR}{iv}{chapter*.2}%
-\contentsline {chapter}{DAFTAR TABEL}{v}{chapter*.3}%
+\contentsline {chapter}{Lembar Pengesahan}{iii}{Doc-Start}%
+\contentsline {chapter}{DAFTAR ISI}{vi}{chapter*.2}%
+\contentsline {chapter}{DAFTAR GAMBAR}{vii}{chapter*.3}%
+\contentsline {chapter}{DAFTAR TABEL}{viii}{chapter*.4}%
 \babel@toc {bahasa}{}\relax 
 \contentsline {chapter}{\numberline {I}PENDAHULUAN}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Latar Belakang Masalah}{1}{section.1.1}%
