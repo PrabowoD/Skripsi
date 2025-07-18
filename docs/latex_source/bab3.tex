@@ -26,18 +26,24 @@ Hasil dari pemilihan tersebut akan digunakan untuk menghitung panjang, lebar, da
 
 \begin{figure}
     \centering
-    \includegraphics[scale= 0.7]{gambar/Flowchar Penetianv2.png}
+    \includegraphics[scale= 0.7]{gambar/Alur Penelitian.png}
     \caption{Alur Penelitian}
     \label{Alur Penelitian}
 \end{figure}
 
-\section{Pemrosesan Citra}
-    Gambar yang akan digunakan berformat .jpg atau .png, dengan latar belakang yang telah dihilangkan dan digantikan dengan warna solid hitam.  Jenis dataset dapat dilihat pada Gambar \ref{fig:dataset}.
-Proses input citra ke dalam sistem dilakukan menggunakan library \emph{scikit-image (skimage)} pada bahasa pemrograman Python. \emph{Scikit-image} merupakan library open-source yang digunakan untuk pemrosesan citra digital, menyediakan berbagai fungsi seperti pembacaan, konversi, filtering, segmentasi, dan analisis citra secara efisien. Dengan \emph{skimage.io.imread}, citra dapat dibaca dan diproses lebih lanjut secara efisien.
-Setelah citra berhasil diinput, langkah selanjutnya adalah konversi ke \emph{grayscale} untuk mempermudah proses pendeteksian sudut agar lebih akurat.
+\section{Pra-Processing Citra}
+    Pada tahap ini, citra ikan yang akan digunakan sebagai input sistem akan melalui beberapa tahapan pra-processing.
+Pra-processing bertujuan untuk mempersiapkan citra agar siap untuk diproses lebih lanjut. Langkah-langkah pra-processing yang dilakukan adalah sebagai berikut:
+\begin{enumerate}
+    \item Gambar yang akan digunakan berformat .jpg atau .png, dengan latar belakang yang telah dihilangkan dan digantikan dengan warna solid hitam.  Jenis dataset dapat dilihat pada Gambar \ref{fig:dataset}.
+    \item Proses input citra ke dalam sistem dilakukan menggunakan library \emph{scikit-image (skimage)} pada bahasa pemrograman Python. \emph{Scikit-image} merupakan library open-source yang digunakan untuk pemrosesan citra digital, menyediakan berbagai fungsi seperti pembacaan, konversi, filtering, segmentasi, dan analisis citra secara efisien. Dengan \emph{skimage.io.imread}, citra dapat dibaca dan diproses lebih lanjut secara efisien.
+    \item Setelah citra berhasil diinput, langkah selanjutnya adalah konversi ke \emph{grayscale} untuk mempermudah proses pendeteksian sudut agar lebih akurat.
+    \item Setelah citra dikonversi ke \emph{grayscale}, langkah selanjutnya adalah menerapkan \emph{Gaussian smoothing} untuk mengurangi \emph{noise} pada gambar.
+\end{enumerate}
+
 
 \subsection{Smoothing Gaussian}
-    Metode \emph{Smoothing Gaussian} digunakan untuk mengurangi \emph{noise} pada gambar sebelum melanjutkan ke perhitungan lebih lanjut.
+    \emph{Smoothing Gaussian} digunakan untuk mengurangi \emph{noise} pada gambar sebelum melanjutkan ke perhitungan lebih lanjut.
 \emph{Noise} adalah gangguan yang muncul dalam gambar digital yang dapat mengaburkan detail atau informasi penting. \emph{noise} dapat disebabkan oleh berbagai faktor, seperti kualitas sensor kamera yang rendah, pencahayaan yang buruk, atau kesalahan dalam proses pemindahan data.
 Dalam gambar, \emph{noise} biasanya terlihat sebagai bintik-bintik acak atau intensitas piksel yang tidak diinginkan. Keberadaan \emph{noise} ini dapat menjadi masalah dalam proses pendeteksian sudut, karena \emph{noise} dapat menyebabkan munculnya sudut palsu yang tidak sesuai dengan gambar asli.
     
@@ -59,35 +65,12 @@ Kernel sobel terdiri dari dua matriks \(3 x 3\), yang bertujuan untuk menghitung
  \begin{itemize}
     \item \textbf{Gradien Horizontal} \((G_{x})\): Mengukur perubahan intensitas sepanjang sumbu x.
     \item \textbf{Gradien Vertical} \((G_{y})\): Mengukur perubahan intensitas sepanjang sumbu y.
-\end{itemize}
-    Berikut adalah kernel yang akan digunakan dalam operator sobel :
-\begin{enumerate}
-    \item Kernel Sobel Horizontal
-    \begin{equation*}
-        S_{x} = 
-        \begin{bmatrix}
-            -1 & 0 & 1 \\
-            -2 & 0 & 2 \\
-            -1 & 0 & 1
-          \end{bmatrix}
-    \end{equation*}
-
-    \item  Kernel Sobel Vertical
-    \begin{equation*}
-        S_{y} = 
-        \begin{bmatrix}
-            -1 & -2 & -1 \\
-            0 & 0 & 0 \\
-            1 & 2 & 1
-          \end{bmatrix}
-    \end{equation*}
-
-\end{enumerate}
+\end{itemize}Kernel operator sobel dapat dilihat pada persamaan \eqref{eq:sobel-kernel}. 
 Perhitungan gradien juga akan menggunakan rumus \eqref{eq:konvolusi} tetapi gaussian filter akan diganti dengan kernel sobel horizontal (Gx) dan kernel sobel vertical (Gy).
 Maka rumusannya akan seperti berikut :
 \begin{equation}
     \begin{aligned}
-        G_{x} = Sx * I(x)\\ G_{y} = Sy * I(x)
+        G_{x} = S_{x} * I(x)\\ G_{y} = S_{y} * I(x)
     \end{aligned}
 \end{equation}
 
@@ -113,7 +96,7 @@ Hasil dari konvolusi digunakan untuk membentuk matriks \(M\) yang akan digunakan
 \end{equation}
 
 \subsection{Harris Respon}
-    Matriks \(M\) digunakan untuk menghitung respon harris, menggunakan rumus harris yaitu:
+    Matriks \(M\) digunakan untuk menghitung respon Harris, menggunakan rumus Harris yaitu:
 \begin{equation}
     R(x,y) = Det(M) - k * (trace(M))^2
 \end{equation}
@@ -128,6 +111,7 @@ Dan \(trace(M)\)
 
     Dimana \(k = 0.04\). Penggunaan \emph{Harris-Corner Detection} bertujuan untuk menandai bahwa piksel tersebut adalah sudut atau tidak.
 
+    Nilai respon Harris (\(R\)) menunjukkan seberapa besar kemungkinan suatu piksel merupakan titik sudut pada citra. Jika nilai \(R\) besar dan positif, maka area tersebut memiliki perubahan intensitas yang signifikan ke segala arah dan kemungkinan merupakan sudut (\emph{corner}). Jika nilai \(R\) kecil atau negatif, maka area tersebut cenderung merupakan tepi atau bagian datar. Dengan demikian, perhitungan respon Harris sangat penting untuk membedakan antara sudut, tepi, dan area datar pada citra, sehingga hanya titik-titik yang benar-benar merupakan sudut yang akan dipilih untuk proses selanjutnya.
 
 \subsection{Thresholding dan \emph{Non-Maximum suppression}}
     Setelah nilai harris didapatkan tahapan langkah selanjutnya adalah melakukan Thresholding.

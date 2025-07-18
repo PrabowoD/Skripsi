@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.15)  17 JUL 2025 19:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.15)  18 JUL 2025 07:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -960,7 +960,7 @@ Package pdftex.def Info: gambar/Uniform Gaussian kernel.jpg  used on input line 
 [6]
 
 [7 <./gambar/Uniform Gaussian kernel.jpg>]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 134.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 135.
  (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -974,11 +974,11 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
  (bab3.tex
 BAB III.
-<gambar/Flowchar Penetianv2.png, id=323, 322.20375pt x 643.40375pt>
-File: gambar/Flowchar Penetianv2.png Graphic file (type png)
-<use gambar/Flowchar Penetianv2.png>
-Package pdftex.def Info: gambar/Flowchar Penetianv2.png  used on input line 29.
-(pdftex.def)             Requested size: 225.54108pt x 450.37955pt.
+<gambar/Alur Penelitian.png, id=323, 312.16624pt x 402.50375pt>
+File: gambar/Alur Penelitian.png Graphic file (type png)
+<use gambar/Alur Penelitian.png>
+Package pdftex.def Info: gambar/Alur Penelitian.png  used on input line 29.
+(pdftex.def)             Requested size: 218.51488pt x 281.7507pt.
 
 
 [11
@@ -988,7 +988,7 @@ Package pdftex.def Info: gambar/Flowchar Penetianv2.png  used on input line 29.
 
 ]
 
-[12 <./gambar/Flowchar Penetianv2.png>]
+[12 <./gambar/Alur Penelitian.png>]
 
 [13]
 
@@ -999,26 +999,26 @@ Package pdftex.def Info: gambar/Flowchar Penetianv2.png  used on input line 29.
 [16]
 
 [17]
-
-[18]
-<Picts/IMG_20240121_131125.jpg, id=377, 4175.6pt x 1879.02pt>
+<Picts/IMG_20240121_131125.jpg, id=376, 4175.6pt x 1879.02pt>
 File: Picts/IMG_20240121_131125.jpg Graphic file (type jpg)
 <use Picts/IMG_20240121_131125.jpg>
-Package pdftex.def Info: Picts/IMG_20240121_131125.jpg  used on input line 221.
+Package pdftex.def Info: Picts/IMG_20240121_131125.jpg  used on input line 205.
 (pdftex.def)             Requested size: 113.81102pt x 51.20729pt.
-<Picts/IMG_20240121_132544.jpg, id=378, 4175.6pt x 1879.02pt>
+<Picts/IMG_20240121_132544.jpg, id=377, 4175.6pt x 1879.02pt>
 File: Picts/IMG_20240121_132544.jpg Graphic file (type jpg)
 <use Picts/IMG_20240121_132544.jpg>
-Package pdftex.def Info: Picts/IMG_20240121_132544.jpg  used on input line 226.
+Package pdftex.def Info: Picts/IMG_20240121_132544.jpg  used on input line 210.
 (pdftex.def)             Requested size: 113.81102pt x 51.20729pt.
-<Picts/IMG_20240121_140044.jpg, id=379, 4175.6pt x 1879.02pt>
+<Picts/IMG_20240121_140044.jpg, id=378, 4175.6pt x 1879.02pt>
 File: Picts/IMG_20240121_140044.jpg Graphic file (type jpg)
 <use Picts/IMG_20240121_140044.jpg>
-Package pdftex.def Info: Picts/IMG_20240121_140044.jpg  used on input line 231.
+Package pdftex.def Info: Picts/IMG_20240121_140044.jpg  used on input line 215.
 (pdftex.def)             Requested size: 113.81102pt x 51.20729pt.
 
 
-[19 <./Picts/IMG_20240121_131125.jpg> <./Picts/IMG_20240121_132544.jpg> <./Picts/IMG_20240121_140044.jpg>])
+[18 <./Picts/IMG_20240121_131125.jpg> <./Picts/IMG_20240121_132544.jpg> <./Picts/IMG_20240121_140044.jpg>]
+
+[19])
 
 [20]
 
@@ -1032,23 +1032,23 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-11>
  ***********
 Package rerunfilecheck Info: File `template-skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: B9751899DAA0F1E505BF1163CB86BFC2;5625.
+(rerunfilecheck)             Checksum: 7D8EB639854C6448DC140CD64C760DB7;5645.
 Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 \openout1 = `template-skripsi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24498 strings out of 468149
- 424428 string characters out of 5441152
- 1283299 words of memory out of 5000000
- 52638 multiletter control sequences out of 15000+600000
+ 24501 strings out of 468149
+ 424431 string characters out of 5441152
+ 1283341 words of memory out of 5000000
+ 52639 multiletter control sequences out of 15000+600000
  662916 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,10n,84p,2726b,1940s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template-skripsi.pdf (26 pages, 12883594 bytes).
+Output written on template-skripsi.pdf (26 pages, 12880868 bytes).
 PDF statistics:
- 471 PDF objects out of 1000 (max. 8388607)
- 112 named destinations out of 1000 (max. 500000)
+ 474 PDF objects out of 1000 (max. 8388607)
+ 114 named destinations out of 1000 (max. 500000)
  327 words of extra memory for PDF output out of 10000 (max. 10000000)
 

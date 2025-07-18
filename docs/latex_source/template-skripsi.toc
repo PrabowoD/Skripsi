@@ -25,17 +25,17 @@
 \contentsline {chapter}{\numberline {III}METODE PENELITIAN}{11}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Deskripsi Sistem}{11}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Perancangan Sistem}{11}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Pemrosesan Citra}{13}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Pra-Processing Citra}{12}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Smoothing Gaussian}{13}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Perhitungan Gradien}{14}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Menghitung Second Moment Matriks}{15}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.2}Perhitungan Gradien}{13}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Menghitung Second Moment Matriks}{14}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Harris Respon}{15}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Thresholding dan \emph {Non-Maximum suppression}}{16}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.5}Thresholding dan \emph {Non-Maximum suppression}}{15}{subsection.3.3.5}%
 \contentsline {subsection}{\numberline {3.3.6}Memilih Piksel}{16}{subsection.3.3.6}%
 \contentsline {subsection}{\numberline {3.3.7}Menghitung Panjang dan Berat}{17}{subsection.3.3.7}%
 \contentsline {section}{\numberline {3.4}Perancangan Eksperimen}{18}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}pra-processing}{18}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Deteksi Sudut}{19}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Pengukuran Panjang dan Berat}{20}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.3}Pengukuran Panjang dan Berat}{19}{subsection.3.4.3}%
 \contentsline {subsection}{\numberline {3.4.4}Evaluasi Akurasi}{20}{subsection.3.4.4}%
 \contentsline {chapter}{DAFTAR PUSTAKA}{21}{equation.3.9}%
