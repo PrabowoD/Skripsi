@@ -8,18 +8,39 @@
 
 \section{Pengertian Citra Digital}
   Citra digital adalah representasi visual dari objek atau pemandangan yang diwakili dalam bentuk data numerik.
-Sebuah citra dapat didefinisikan sebagai fungsi dua dimensi, \(f(x, y)\), di mana \(x\) dan \(y\) adalah koordinat spasial (bidang), dan amplitudo \(f\) pada setiap pasangan koordinat \((x, y)\) disebut intensitas atau tingkat keabuan citra pada titik tersebut. Ketika \(x\), \(y\), dan nilai intensitas \(f\) semuanya merupakan besaran yang terbatas dan diskret, maka citra tersebut disebut citra digital. Bidang pengolahan citra digital mengacu pada pemrosesan citra digital dengan menggunakan komputer digital (\cite[hlm. 1--6]{Gonzalez2018}).
+Sebuah citra dapat didefinisikan sebagai fungsi dua dimensi, \(f(x, y)\), di mana \(x\) dan \(y\) adalah koordinat spasial (bidang), dan amplitudo \(f\) pada setiap pasangan koordinat \((x, y)\) disebut intensitas atau tingkat keabuan citra pada titik tersebut. Ketika \(x\), \(y\), dan nilai intensitas \(f\) semuanya merupakan besaran yang terbatas dan diskret, maka citra tersebut disebut citra digital, seperti pada gambar~\ref{fig:spasial}. Bidang pengolahan citra digital mengacu pada pemrosesan citra digital dengan menggunakan komputer digital (\cite[hlm. 1--6]{Gonzalez2018}).
+\begin{figure}
+  \centering
+    \includegraphics[keepaspectratio, width=7cm]{gambar/representing-digital-image-n.jpg}
+    \caption{Representasi gambar digital}\label{fig:spasial}
 
+\end{figure}
 \section{Pengolahan Citra Digital}
   Pengolahan citra digital adalah proses manipulasi citra digital untuk meningkatkan kualitas, mengubah representasi, atau mengekstrak informasi yang berguna. Proses ini melibatkan berbagai teknik dan algoritma yang dapat digunakan untuk mengolah citra, seperti penghalusan, peningkatan kontras, deteksi tepi, dan segmentasi. Pengolahan citra digital memiliki aplikasi luas dalam berbagai bidang, termasuk pengenalan pola, visi komputer, dan analisis citra medis (\cite[hlm. 27--32]{Gonzalez2018}). 
   Salah satu tahapan penting dalam pengolahan citra adalah konversi citra ke dalam bentuk grayscale sebelum dilakukan ekstraksi fitur atau deteksi tepi (\cite[hlm. 307--308]{Sanchez2018}).
 
 \section{Citra Grayscale}
-  Citra grayscale adalah representasi citra yang hanya menggunakan satu saluran warna, yaitu tingkat keabuan. Citra ini dihasilkan dengan mengubah citra berwarna menjadi skala abu-abu, di mana setiap piksel dalam citra hanya memiliki nilai intensitas yang mewakili tingkat keabuan. Proses ini sering dilakukan untuk menyederhanakan analisis citra, karena mengurangi kompleksitas data yang harus diproses (\cite[hlm. 27--32]{Gonzalez2018}). 
+  Citra grayscale adalah representasi citra yang hanya menggunakan satu saluran warna, yaitu tingkat keabuan. Citra ini dihasilkan dengan mengubah citra berwarna menjadi skala abu-abu, di mana setiap piksel dalam citra hanya memiliki nilai intensitas yang mewakili tingkat keabuan, seperti pada gambar~\ref{fig:grayscale}. Proses ini sering dilakukan untuk menyederhanakan analisis citra, karena mengurangi kompleksitas data yang harus diproses (\cite[hlm. 27--32]{Gonzalez2018}). 
   Penggunaan citra grayscale sangat umum dalam proses deteksi fitur multi-skala dan algoritma deteksi sudut seperti Harris-Corner Detection, karena memudahkan perhitungan gradien dan matriks momen kedua (\cite[hlm. 307--308]{Sanchez2018}).
 
 \section{Multi-Scale Feature Detection}
   Deteksi fitur multi-skala adalah pendekatan yang digunakan untuk mendeteksi fitur pada berbagai skala dalam citra. Pendekatan ini penting karena objek dalam citra dapat muncul pada berbagai ukuran, dan deteksi fitur yang efektif harus mampu mengenali objek tersebut terlepas dari skala yang digunakan. Salah satu metode yang umum digunakan dalam deteksi fitur multi-skala adalah \emph{Gaussian Pyramid}, di mana citra asli dihaluskan dan diperkecil untuk membuat serangkaian citra dengan resolusi yang berbeda. Dengan cara ini, fitur dapat diekstraksi dari setiap tingkat piramida, memungkinkan deteksi yang lebih robust terhadap perubahan skala (\cite[hlm. 91--92]{Lowe2004}).
+\begin{figure}
+	\centering
+	\begin{subfigure}{.3\textwidth}
+		\centering
+        \includegraphics[keepaspectratio, width=4cm]{gambar/IMG_20240121_131125.jpg}
+		\caption{Input Image}
+    \end{subfigure}
+
+	\begin{subfigure}{.3\textwidth}
+		\centering
+		\includegraphics[keepaspectratio, width=4cm]{gambar/IMG_20240121_131125 copy.jpg}
+		\caption{Grayscale image}
+	\end{subfigure} 
+
+\caption{Grayscale image}\label{fig:grayscale}
+\end{figure}
 
 \subsection{Gaussian scale-space}
 
@@ -27,20 +48,20 @@ Dalam domain diskrit citra digital, parameter skala juga direpresentasikan secar
 Dengan demikian, representasi ruang-skala merupakan kumpulan gambar yang direpresentasikan oleh perbedaan tingkat resolusi diskrit. 
 Sebuah penelitian menunjukkan bahwa ruang-skala harus memenuhi persamaan yang dapat dicapai melalui konvolusi dengan kernel Gaussian. 
 Selanjutnya, penelitian tersebut memperlihatkan bahwa kernel Gaussian adalah satu-satunya kernel unik yang dapat menghasilkan representasi skala-ruang. 
-Keunikan kernel Gaussian ini telah dikonfirmasi melalui berbagai formulasi dalam sejumlah penelitian lain (\cite[hlm. 92--93]{Lowe2004}; \cite[hlm. 13--15]{mikolajczyk:tel-00584096}). 
+Keunikan kernel Gaussian ini telah dikonfirmasi melalui berbagai formulasi dalam sejumlah penelitian lain (\cite[hlm. 92--93]{Lowe2004};~\cite[hlm. 13--15]{mikolajczyk:tel-00584096}). 
 Temuan ini menyimpulkan bahwa konvolusi dengan kernel Gaussian merupakan solusi optimal untuk masalah konstruksi representasi multi-skala. Fungsi Gaussian dua dimensi didefinisikan sebagai berikut:
 
 \begin{equation*}
 g(\sigma) = \frac{1}{2\pi\sigma_{x}\sigma_{y}}\exp\left(-\frac{(x^2+\mu_{x})+(y^2+\mu_{y})}{2\sigma_{x}\sigma_{y}}\right)
 \end{equation*}
 
-Jika \(\mu_{x} = \mu_{y} = 0\) dan \(\sigma_{x} = \sigma_{y}\) maka dapat disederhanakan menjadi :
+Jika \(\mu_{x} = \mu_{y} = 0\) dan \(\sigma_{x} = \sigma_{y}\) maka dapat disederhanakan menjadi:
 \begin{equation}
 g(\sigma) = \frac{1}{2\pi\sigma^2}\exp\left(-\frac{x^2+y^2}{2\sigma^2}\right)
 \label{eq:gaussian kernel}
 \end{equation}
 
-Keunikan dari kernel Gaussian dapat diketahui dari beberapa sifat berikut : 
+Keunikan dari kernel Gaussian dapat diketahui dari beberapa sifat berikut: 
 \emph{linearity, separability, causality, and semi group property.} Keterpisahan 
 atau \emph{separability} memungkinan \emph{multi-dimensional Gaussian kernel} diperoleh sebagai hasil perkalian kernel satu dimensi:
 
@@ -62,7 +83,7 @@ g(\sigma_{1}) * \cdots * g(\sigma_{n}) * I(x) = g(\sigma_{1} + \cdots + \sigma_{
 
 Biasanya, ruang-skala yang seragam digunakan, tetapi representasi ruang-skala yang lebih umum dihitung menggunakan filter afine (\cite[hlm. 14--15]{mikolajczyk:tel-00584096}).
 
-\textbf{Uniform scale-space}. Perbedaan tingkat pada representasi ruang-skala secara umum, terbuat dari konvolusi dengan \emph{gaussian kernel} :
+\textbf{Uniform scale-space}. Perbedaan tingkat pada representasi ruang-skala secara umum, terbuat dari konvolusi dengan \emph{gaussian kernel}:
 
 \begin{equation}
 L(x,\sigma) = g(\sigma) * I(x)
@@ -75,7 +96,7 @@ Dengan \(I\) adalah gambar dan \(x = (x,y)\) adalah lokasi poin.
 \begin{figure}
   \centering{}
   \includegraphics[width=0.8\textwidth]{gambar/Uniform Gaussian kernel.jpg}
-  \caption{}
+  \caption{Uniform gaussian Kernel}
 \end{figure}
 
 \section{\emph{Gradient}}
@@ -110,8 +131,8 @@ Operator Sobel, sebagai salah satu metode yang paling umum, menggunakan kernel k
   Di mana \(G_x\) dan \(G_y\) adalah hasil konvolusi citra dengan kernel Sobel untuk arah x dan y. Peta gradien ini sangat berguna dalam deteksi tepi, segmentasi citra, dan ekstraksi fitur, karena membantu mengidentifikasi area dengan perubahan intensitas yang signifikan (\cite[hlm. 306--307]{Sanchez2018}).
 
 \section{\emph{Second moment matrix}}
-  Matriks momen kedua (\emph{second moment matrix}) adalah matriks simetris 2x2 yang mencerminkan variasi intensitas di sekitar piksel dalam sebuah citra. Matriks ini seringkali digunakan untuk mendeteksi fitur, atau mendeskripsikan struktur dari \emph{local image}.
-Matriks ini juga panggil sebagai matriks auto-korelasi, seperti pada rumus \ref{eq:SecondMomentMatrix}
+  Matriks momen kedua (\emph{second moment matrix}) adalah matriks simetris \(2 \times 2\) yang mencerminkan variasi intensitas di sekitar piksel dalam sebuah citra. Matriks ini seringkali digunakan untuk mendeteksi fitur, atau mendeskripsikan struktur dari \emph{local image}.
+Matriks ini juga panggil sebagai matriks auto-korelasi, seperti pada rumus~\ref{eq:SecondMomentMatrix}
 
 \begin{equation}
   M = 
@@ -137,7 +158,7 @@ Matriks ini memiliki dua nilai eigen, yang memungkinkan identifikasi suatu area 
   \item Jika kedua nilai eigen besar, maka kemungkinan besar area tersebut adalah sudut (\emph{corner}).
 \end{itemize}
 
-Dengan menggunakan sifat tersebut, respon sudut dapat dihitung menggunakan analisis nilai eigen atau metode lain, salah satunya fungsi kekuatan sudut Harris \(R\) seperti yang dijelaskan pada rumus \ref{Harris-Corner Detection}.
+Dengan menggunakan sifat tersebut, respon sudut dapat dihitung menggunakan analisis nilai eigen atau metode lain, salah satunya fungsi kekuatan sudut Harris \(R\) seperti yang dijelaskan pada rumus~\ref{Harris-Corner Detection}.
 
 \section{\emph{Harris-Corner Detection}}
   \emph{Harris-Corner Detection} merupakan salah satu dari sekian banyak algoritma untuk mendeteksi fitur (\emph{feature}), algoritma ini pertama kali diperkenalkan oleh Chris Harris dan Mike Stephens pada tahun 1988 (\cite{Harris2013}). 
@@ -145,7 +166,7 @@ Ide dibalik metode Harris adalah untuk mendeteksi titik sudut berdasarkan varias
 Dengan melibatkan matriks momen kedua (\emph{second moment matrix}) untuk menghitung variasi perubahan intensitas dalam dua arah utama.
 
 \begin{equation}
-  R = det(M) - k * (trace(M))^2
+  R = \det(M) - k * {trace(M)}^2
   \label{Harris-Corner Detection}
 \end{equation}
 
@@ -157,7 +178,7 @@ Jika nilai \(R\) yang besar akan menunjukkan keberadaan sudut di area tersebut, 
 
   \textbf{Euclidean} merupakan cara paling dasar untuk mengukur jarak lurus antara dua titik dalam ruang dua dimensi. Rumus ini didasarkan pada teorema Pythagoras, di mana jarak antara dua titik \(P_1(x_1, y_1)\) dan \(P_2(x_2, y_2)\) dihitung sebagai:
 \begin{equation}
-  d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+  d = \sqrt({x_2 - x_1}^2 + {y_2 - y_1}^2)
   \label{eq:euclidean}
 \end{equation}
   Dengan \(d\) adalah jarak Euclidean antara dua titik. Rumus ini juga dapat diperluas ke dimensi yang lebih tinggi dan digunakan secara luas untuk mengukur kedekatan atau kemiripan antara dua piksel atau fitur pada citra (\cite[hlm. 34]{Gonzalez2018}).

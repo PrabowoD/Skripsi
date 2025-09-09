@@ -11,6 +11,9 @@ def Input_image(image_path):
             image = cv2.imread(full_path, cv2.IMREAD_GRAYSCALE)
             if image is not None:
                 images.append(image)
+                
+                save_filename = os.path.join("Output", filename)
+                cv2.imwrite(save_filename, image)
     return np.array(images)
 
 

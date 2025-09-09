@@ -18,7 +18,7 @@ Metode \emph{Harris-Corner Detection} merupakan salah satu algoritma deteksi sud
 
 Berbagai penelitian sebelumnya telah mengembangkan metode untuk mendeteksi atau melacak ikan, seperti penggunaan metode GMM dan Kalman Filter untuk pelacakan gerakan (Alim, 2021), serta GrabCut untuk pemisahan objek dari latar belakang (Nugraha, 2022). Namun, metode-metode tersebut umumnya hanya fokus pada deteksi keberadaan ikan atau pelacakan pergerakan, dan belum secara langsung mengekstraksi fitur geometris seperti panjang dan berat ikan.
 
-Di sisi lain, metode seperti SIFT (\emph{Scale Invariant Feature Transform}) (\cite{Lowe2004}) memang kuat terhadap perubahan skala dan rotasi, namun proses perhitungannya relatif kompleks dan memerlukan waktu komputasi lebih tinggi. Untuk kasus estimasi bentuk linear seperti panjang dan lebar, pendekatan berbasis deteksi sudut seperti \emph{Harris-Corner Detection} terbukti lebih efisien dan akurat dalam mendeteksi titik-titik sudut penting pada citra (\cite{Harris2013}). \emph{Harris-Corner Detection} memberikan kestabilan terhadap rotasi dan noise lokal serta memiliki struktur komputasi yang lebih ringan dibanding SIFT, sehingga cocok untuk diterapkan dalam sistem real-time atau perangkat keras terbatas.
+Di sisi lain, metode seperti SIFT (\emph{Scale Invariant Feature Transform}) (\cite{Lowe2004}) memang kuat terhadap perubahan skala dan rotasi, namun proses perhitungannya relatif kompleks dan memerlukan waktu komputasi lebih tinggi. Untuk kasus estimasi bentuk linear seperti panjang dan lebar, pendekatan berbasis deteksi sudut seperti \emph{Harris-Corner Detection} terbukti lebih efisien dan akurat dalam mendeteksi titik-titik sudut penting pada citra (\cite{Harris2013}).\emph{Harris-Corner Detection} memberikan kestabilan terhadap rotasi dan noise lokal serta memiliki struktur komputasi yang lebih ringan dibanding SIFT, sehingga cocok untuk diterapkan dalam sistem real-time atau perangkat keras terbatas.
 
 Oleh karena itu, penelitian ini bertujuan untuk membangun sistem pengukuran panjang dan estimasi berat ikan berbasis citra digital menggunakan metode \emph{Harris-Corner Detection}. Diharapkan sistem ini dapat membantu pembudidaya ikan dalam melakukan monitoring pertumbuhan ikan secara efisien dan akurat, serta mendukung pengambilan keputusan dalam manajemen budidaya.
 
@@ -32,7 +32,7 @@ Berdasarkan pemaparan masalah di atas, perumusan masalah dalam penelitian ini ad
 	\item Sumber gambar berupa dataset yang diambil langsung dari lapangan.
 	\item Dataset telah dihilangkan latar belakangnya dan digantikan dengan warna solid hitam.
 	\item Citra yang digunakan hanya citra tampak samping. 
-	\item Bahasa Pemrograman menggunakan Python 3 atau lebih baru. 
+	\item Bahasa Pemrograman menggunakan Python 3 atau lebih. 
 \end{enumerate}
 	
 \section{Tujuan Penelitian}
@@ -41,10 +41,10 @@ Tujuan dari penelitian ini adalah untuk mengembangkan sistem yang dapat mengukur
 \section{Manfaat Penelitian}
 \begin{enumerate}
     \item Bagi penulis\\
-    Memperoleh gelar sarjana dalam bidang Ilmu Komputer, serta menambah pengalaman dalam pembangunan sebuah sistem komputer untuk aplikasi dunia nyata, dan pengetahuan tentang pendeteksian sudut (\emph{corner}) dari \emph{Harris-Corner Detection}.
+    Menambah pengalaman dan pengetahuan dalam pembangunan sebuah sistem komputer untuk aplikasi dunia nyata, dan pengetahuan tentang pendeteksian sudut (\emph{corner}) dari \emph{Harris-Corner Detection}.
     
     \item Bagi Program Studi Ilmu Komputer\\
-    Penelitian "Penghitungan Panjang dan Berat Ikan Menggunakan Harris-Corner Detection" dapat dijadikan sebagai referensi dan menambah wawasan mahasiswa dan sivitas akademika Ilmu Komputer Universitas Negeri Jakarta.
+    Penelitian dapat dijadikan sebagai referensi dan menambah wawasan bagi mahasiswa dan sivitas akademika Ilmu Komputer Universitas Negeri Jakarta.
 
     \item Bagi Industri\\
     Sistem pengukuran panjang dan berat ikan berbasis citra digital dapat meningkatkan efisiensi proses monitoring dan seleksi ikan pada sektor perikanan. Teknologi ini membantu industri dalam mengoptimalkan manajemen budidaya, mempercepat proses grading, serta mengurangi risiko kerusakan fisik pada ikan akibat pengukuran manual.

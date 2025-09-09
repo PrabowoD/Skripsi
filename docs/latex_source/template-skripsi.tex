@@ -75,11 +75,11 @@
 
 \renewbibmacro*{textcite}{%
   \ifboolexpr{
-    ( not test {\iffieldundef{prenote}} and
-      test {\ifnumequal{\value{citecount}}{1}} )
+    (not test {\iffieldundef{prenote}} and
+      test {\ifnumequal{\value{citecount}}{1}})
     or
-    ( not test {\iffieldundef{postnote}} and
-      test {\ifnumequal{\value{citecount}}{\value{citetotal}}} )
+    (not test {\iffieldundef{postnote}} and
+      test {\ifnumequal{\value{citecount}}{\value{citetotal}}})
   }
     {\DeclareFieldAlias{textcitehyperref}{noformat}}
     {}%
@@ -176,7 +176,7 @@
 %-----------------------------------------------------------------
 
 %\include{pengesahan}
-\includepdf [page=-]{sps/Lembar Pengesahan.pdf}
+\includepdf[page=-]{sps/Lembar Pengesahan.pdf}
 \addcontentsline{toc}{chapter}{Lembar Pengesahan}
 \include{kata-pengantar}
 \singlespacing{}
