@@ -208,3 +208,40 @@ Dimana
 \end{itemize}
     Perhitungan diatas akan dilakukan kembali jika lebar dari ikan juga berbeda.
 
+    \section{Perancangan Eksperimen}
+   Pada bagian ini akan membahas tentang perancangan eksperimen yang dilakukan untuk menguji sistem yang telah dibangun. Eksperimen ini bertujuan untuk mengevaluasi akurasi pengukuran panjang dan berat ikan menggunakan metode \emph{Harris-Corner Detection}.
+   Dataset yang digunakan dalam eksperimen ini adalah citra ikan yang diambil secara langsung dari penangkaran ikan.
+   Citra yang digunakan berjumlah 32 gambar ikan dengan berbagai jenis dan ukuran dapat dilihat pada Gambar~\ref{fig:dataset}.
+   Setiap gambar akan melalui \emph{pra-processing} untuk menghilangkan latar belakang, mengubah ke format \emph{grayscale}, dan melakukan \emph{smoothing Gaussian}.
+   Setelah itu, sistem akan melakukan deteksi sudut menggunakan metode \emph{Harris-Corner Detection} untuk mendeteksi sudut-sudut penting pada tubuh ikan.
+   Setelah sudut-sudut terdeteksi, sistem akan memilih titik-titik sudut yang relevan untuk pengukuran panjang dan lebar ikan.
+   Panjang ikan akan dihitung berdasarkan jarak Euclidean antara dua titik sudut terjauh yang terdeteksi.
+
+\subsection{Sumber data}
+    Data yang digunakan dalam eksperimen ini adalah citra ikan yang diambil secara langsung dari penangkaran ikan. Citra diambil menggunakan kamera smartphone dengan resolusi tinggi untuk memastikan kualitas gambar yang baik.
+Jenis ikan yang digunakan dalam eksperimen ini meliputi ikan mas, ikan lele, dan ikan nila merah. Setiap gambar akan melalui tahap \emph{pra-processing} untuk menghilangkan latar belakang dan mengubah ke format \emph{grayscale}. Dataset yang digunakan berjumlah 32 gambar ikan dengan berbagai jenis dan ukuran dapat dilihat pada Gambar~\ref{fig:dataset}.
+
+\subsection{Pra-Processing}
+    Sebelum melakukan eksperimen, citra ikan yang digunakan akan melalui tahap pra-processing. 
+Tahap ini bertujuan untuk mempersiapkan citra agar siap untuk diproses lebih lanjut. 
+Langkah-langkah pra-processing yang dilakukan meliputi pengambilan citra ikan menggunakan kamera smartphone, kemudian latar belakang citra dihilangkan secara manual untuk mendapatkan objek ikan secara lebih jelas. 
+Selanjutnya, citra yang diambil akan diubah ke format \emph{grayscale} untuk mempermudah proses deteksi sudut. 
+Setelah itu, citra grayscale akan diproses menggunakan metode \emph{smoothing Gaussian} untuk mengurangi \emph{noise} yang ada pada citra sehingga hasil deteksi sudut menjadi lebih akurat.
+
+\subsection{Deteksi Sudut}
+    Setelah tahap pra-processing selesai, sistem akan melakukan deteksi sudut menggunakan metode \emph{Harris-Corner Detection}. Langkah-langkah yang dilakukan adalah sebagai berikut: 
+    \begin{enumerate}
+            \item \textbf{Perhitungan Gradien}: Sistem akan menghitung gradien pada setiap piksel citra yang telah dihaluskan menggunakan kernel Sobel.
+            \item \textbf{Matriks Autokorelasi}: Hasil gradien akan digunakan untuk membentuk matriks autokorelasi \(M\) yang berisi informasi tentang perubahan intensitas pada citra.
+            \item \textbf{Respon Harris}: Sistem akan menghitung nilai respon Harris \(R\) untuk setiap piksel menggunakan matriks \(M\).
+            \item \textbf{thresholding dan NMS}: Nilai respon Harris akan di thresholding untuk menghilangkan piksel-piksel yang tidak signifikan, kemudian dilakukan \emph{Non-Maximum Suppression} (NMS) untuk mengekstrak sudut-sudut yang paling menonjol.
+            \item \textbf{Pemilihan Piksel}: Sistem akan memilih piksel-piksel sudut yang relevan berdasarkan jarak maksimum antar titik, untuk menentukan titik-titik utama pada tubuh ikan.
+        \end{enumerate}
+
+\subsection{Pengukuran Panjang dan Berat}
+    Setelah titik-titik sudut utama diperoleh, sistem akan menghitung panjang ikan berdasarkan jarak Euclidean antara dua titik terjauh yang terdeteksi. Langkah-langkah yang dilakukan adalah sebagai berikut:
+\begin{enumerate}
+    \item \textbf{Penghitungan Panjang}: Sistem akan menghitung panjang ikan menggunakan rumus jarak Euclidean antara dua titik sudut terjauh.
+    \item \textbf{Penghitungan Skala}: Sistem akan menentukan faktor skala untuk mengonversi panjang dari satuan piksel ke satuan nyata, menggunakan objek referensi atau resolusi gambar.
+    \item \textbf{Estimasi Berat}: Sistem akan mengestimasi berat ikan menggunakan rumus interpolasi linier berdasarkan data panjang dan berat ikan yang telah diketahui sebelumnya.
+\end{enumerate}

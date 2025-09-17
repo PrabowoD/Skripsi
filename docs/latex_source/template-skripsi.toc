@@ -1,9 +1,9 @@
 \babel@toc {english}{}\relax 
 \babel@toc {bahasa}{}\relax 
 \contentsline {chapter}{Lembar Pengesahan}{iii}{Doc-Start}%
-\contentsline {chapter}{DAFTAR ISI}{vi}{chapter*.2}%
-\contentsline {chapter}{DAFTAR GAMBAR}{vii}{chapter*.3}%
-\contentsline {chapter}{DAFTAR TABEL}{viii}{chapter*.4}%
+\contentsline {chapter}{DAFTAR ISI}{v}{chapter*.2}%
+\contentsline {chapter}{DAFTAR GAMBAR}{vi}{chapter*.3}%
+\contentsline {chapter}{DAFTAR TABEL}{vii}{chapter*.4}%
 \babel@toc {bahasa}{}\relax 
 \contentsline {chapter}{\numberline {I}PENDAHULUAN}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Latar Belakang Masalah}{1}{section.1.1}%
@@ -20,23 +20,18 @@
 \contentsline {subsection}{\numberline {2.4.1}Gaussian scale-space}{5}{subsection.2.4.1}%
 \contentsline {section}{\numberline {2.5}\emph {Gradient}}{7}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Operator Sobel}{8}{subsection.2.5.1}%
-\contentsline {section}{\numberline {2.6}\emph {Second moment matrix}}{8}{section.2.6}%
+\contentsline {section}{\numberline {2.6}\emph {Second moment matrix}}{9}{section.2.6}%
 \contentsline {section}{\numberline {2.7}\emph {Harris-Corner Detection}}{9}{section.2.7}%
 \contentsline {section}{\numberline {2.8}Euclidean dan Interpolasi}{10}{section.2.8}%
-\contentsline {chapter}{\numberline {III}METODE PENELITIAN}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Deskripsi Sistem}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Perancangan Sistem}{11}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Pra-Processing Citra}{12}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Smoothing Gaussian}{13}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Perhitungan Gradien}{14}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Menghitung Second Moment Matriks}{14}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Harris Respon}{15}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Thresholding dan`\emph {Non-Maximum suppression}}{15}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}Memilih Piksel}{16}{subsection.3.3.6}%
-\contentsline {subsection}{\numberline {3.3.7}Menghitung Panjang dan Berat}{17}{subsection.3.3.7}%
-\contentsline {section}{\numberline {3.4}Perancangan Eksperimen}{18}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}pra-processing}{18}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Deteksi Sudut}{19}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Pengukuran Panjang dan Berat}{19}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Evaluasi Akurasi}{20}{subsection.3.4.4}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{21}{equation.3.9}%
+\contentsline {chapter}{\numberline {III}METODE PENELITIAN}{12}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Deskripsi Sistem}{12}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Pra-Processing Citra}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Smoothing Gaussian}{14}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Perhitungan Gradien}{15}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Menghitung Second Moment Matriks}{16}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Harris Respon}{16}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Thresholding dan \emph {Non-Maximum suppression}}{17}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Pemilihan Piksel}{17}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Menghitung Panjang dan Berat}{18}{subsection.3.8.1}%
+\contentsline {section}{\numberline {3.9}Evaluasi Akurasi}{19}{section.3.9}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{20}{equation.3.8}%

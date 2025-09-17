@@ -321,6 +321,90 @@
       \endverb
       \keyw{Autocorrelation matrix,Feature detector,Harris corner,Interest point,Non-maximum suppression}
     \endentry
+    \entry{Sporring1997}{book}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=bf5b953fbb48b34d51016e189c95c47a}{%
+           family={Sporring},
+           familyi={S\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c9b6d63ce136a49b628e2f47ddd7df25}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Mads},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=78c640a01477f0fa1988c75d8614d4cc}{%
+           family={Florack},
+           familyi={F\bibinitperiod},
+           given={Luc},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=afced39a1a76e7f344f58b7f0f270307}{%
+           family={Johansen},
+           familyi={J\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=bf5b953fbb48b34d51016e189c95c47a}{%
+           family={Sporring},
+           familyi={S\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c9b6d63ce136a49b628e2f47ddd7df25}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Mads},
+           giveni={M\bibinitperiod}}}%
+        {{hash=78c640a01477f0fa1988c75d8614d4cc}{%
+           family={Florack},
+           familyi={F\bibinitperiod},
+           given={Luc},
+           giveni={L\bibinitperiod}}}%
+        {{hash=afced39a1a76e7f344f58b7f0f270307}{%
+           family={Johansen},
+           familyi={J\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Netherlands}%
+      }
+      \strng{namehash}{69f68f30d8b5d90016098202010a4e4d}
+      \strng{fullhash}{9ddb61e9d7cb32c630dc1da765475ebf}
+      \strng{fullhashraw}{9ddb61e9d7cb32c630dc1da765475ebf}
+      \strng{bibnamehash}{69f68f30d8b5d90016098202010a4e4d}
+      \strng{authorbibnamehash}{69f68f30d8b5d90016098202010a4e4d}
+      \strng{authornamehash}{69f68f30d8b5d90016098202010a4e4d}
+      \strng{authorfullhash}{9ddb61e9d7cb32c630dc1da765475ebf}
+      \strng{authorfullhashraw}{9ddb61e9d7cb32c630dc1da765475ebf}
+      \strng{editorbibnamehash}{69f68f30d8b5d90016098202010a4e4d}
+      \strng{editornamehash}{69f68f30d8b5d90016098202010a4e4d}
+      \strng{editorfullhash}{9ddb61e9d7cb32c630dc1da765475ebf}
+      \strng{editorfullhashraw}{9ddb61e9d7cb32c630dc1da765475ebf}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-90-481-4852-3}
+      \field{title}{Gaussian Scale-Space Theory}
+      \field{volume}{8}
+      \field{year}{1997}
+      \verb{doi}
+      \verb 10.1007/978-94-015-8802-7
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-94-015-8802-7
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-94-015-8802-7
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

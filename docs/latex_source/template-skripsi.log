@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.2)  9 SEP 2025 07:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.17)  17 SEP 2025 09:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -407,57 +407,73 @@ Package: longtable 2024-12-18 v4.23 Multi-page Table package (DPC)
 \WF@box=\box64
 \WF@everypar=\toks30
 Package: wrapfig 2003/01/31  v 3.6
-) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+\csq@reset=\count326
+\csq@gtype=\count327
+\csq@glevel=\count328
+\csq@qlevel=\count329
+\csq@maxlvl=\count330
+\csq@tshold=\count331
+\csq@ltx@everypar=\toks31
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
+File: csquotes.cfg 
+)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count326
+\lrq@indent=\count332
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count327
-\c@listtotal=\count328
-\c@listcount=\count329
-\c@liststart=\count330
-\c@liststop=\count331
-\c@citecount=\count332
-\c@citetotal=\count333
-\c@multicitecount=\count334
-\c@multicitetotal=\count335
-\c@instcount=\count336
-\c@maxnames=\count337
-\c@minnames=\count338
-\c@maxitems=\count339
-\c@minitems=\count340
-\c@citecounter=\count341
-\c@maxcitecounter=\count342
-\c@savedcitecounter=\count343
-\c@uniquelist=\count344
-\c@uniquename=\count345
-\c@refsection=\count346
-\c@refsegment=\count347
-\c@maxextratitle=\count348
-\c@maxextratitleyear=\count349
-\c@maxextraname=\count350
-\c@maxextradate=\count351
-\c@maxextraalpha=\count352
-\c@abbrvpenalty=\count353
-\c@highnamepenalty=\count354
-\c@lownamepenalty=\count355
-\c@maxparens=\count356
-\c@parenlevel=\count357
-\blx@tempcnta=\count358
-\blx@tempcntb=\count359
-\blx@tempcntc=\count360
-\c@blx@maxsection=\count361
-\blx@maxsegment@0=\count362
-\blx@notetype=\count363
-\blx@parenlevel@text=\count364
-\blx@parenlevel@foot=\count365
-\blx@sectionciteorder@0=\count366
-\blx@sectionciteorderinternal@0=\count367
-\blx@entrysetcounter=\count368
-\blx@biblioinstance=\count369
+\c@tabx@nest=\count333
+\c@listtotal=\count334
+\c@listcount=\count335
+\c@liststart=\count336
+\c@liststop=\count337
+\c@citecount=\count338
+\c@citetotal=\count339
+\c@multicitecount=\count340
+\c@multicitetotal=\count341
+\c@instcount=\count342
+\c@maxnames=\count343
+\c@minnames=\count344
+\c@maxitems=\count345
+\c@minitems=\count346
+\c@citecounter=\count347
+\c@maxcitecounter=\count348
+\c@savedcitecounter=\count349
+\c@uniquelist=\count350
+\c@uniquename=\count351
+\c@refsection=\count352
+\c@refsegment=\count353
+\c@maxextratitle=\count354
+\c@maxextratitleyear=\count355
+\c@maxextraname=\count356
+\c@maxextradate=\count357
+\c@maxextraalpha=\count358
+\c@abbrvpenalty=\count359
+\c@highnamepenalty=\count360
+\c@lownamepenalty=\count361
+\c@maxparens=\count362
+\c@parenlevel=\count363
+\blx@tempcnta=\count364
+\blx@tempcntb=\count365
+\blx@tempcntc=\count366
+\c@blx@maxsection=\count367
+\blx@maxsegment@0=\count368
+\blx@notetype=\count369
+\blx@parenlevel@text=\count370
+\blx@parenlevel@foot=\count371
+\blx@sectionciteorder@0=\count372
+\blx@sectionciteorderinternal@0=\count373
+\blx@entrysetcounter=\count374
+\blx@biblioinstance=\count375
 \labelnumberwidth=\skip99
 \labelalphawidth=\skip100
 \biblabelsep=\skip101
@@ -469,9 +485,9 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@bcfin=\read4
 \blx@bcfout=\write3
 \blx@langwohyphens=\language80
-\c@mincomprange=\count370
-\c@maxcomprange=\count371
-\c@mincompwidth=\count372
+\c@mincomprange=\count376
+\c@maxcomprange=\count377
+\c@mincompwidth=\count378
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
@@ -481,74 +497,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'authoryear-icomp.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count373
-\c@savedafterword=\count374
-\c@annotator=\count375
-\c@savedannotator=\count376
-\c@author=\count377
-\c@savedauthor=\count378
-\c@bookauthor=\count379
-\c@savedbookauthor=\count380
-\c@commentator=\count381
-\c@savedcommentator=\count382
-\c@editor=\count383
-\c@savededitor=\count384
-\c@editora=\count385
-\c@savededitora=\count386
-\c@editorb=\count387
-\c@savededitorb=\count388
-\c@editorc=\count389
-\c@savededitorc=\count390
-\c@foreword=\count391
-\c@savedforeword=\count392
-\c@holder=\count393
-\c@savedholder=\count394
-\c@introduction=\count395
-\c@savedintroduction=\count396
-\c@namea=\count397
-\c@savednamea=\count398
-\c@nameb=\count399
-\c@savednameb=\count400
-\c@namec=\count401
-\c@savednamec=\count402
-\c@translator=\count403
-\c@savedtranslator=\count404
-\c@shortauthor=\count405
-\c@savedshortauthor=\count406
-\c@shorteditor=\count407
-\c@savedshorteditor=\count408
-\c@labelname=\count409
-\c@savedlabelname=\count410
-\c@institution=\count411
-\c@savedinstitution=\count412
-\c@lista=\count413
-\c@savedlista=\count414
-\c@listb=\count415
-\c@savedlistb=\count416
-\c@listc=\count417
-\c@savedlistc=\count418
-\c@listd=\count419
-\c@savedlistd=\count420
-\c@liste=\count421
-\c@savedliste=\count422
-\c@listf=\count423
-\c@savedlistf=\count424
-\c@location=\count425
-\c@savedlocation=\count426
-\c@organization=\count427
-\c@savedorganization=\count428
-\c@origlocation=\count429
-\c@savedoriglocation=\count430
-\c@origpublisher=\count431
-\c@savedorigpublisher=\count432
-\c@publisher=\count433
-\c@savedpublisher=\count434
-\c@language=\count435
-\c@savedlanguage=\count436
-\c@origlanguage=\count437
-\c@savedoriglanguage=\count438
-\c@pageref=\count439
-\c@savedpageref=\count440
+\c@afterword=\count379
+\c@savedafterword=\count380
+\c@annotator=\count381
+\c@savedannotator=\count382
+\c@author=\count383
+\c@savedauthor=\count384
+\c@bookauthor=\count385
+\c@savedbookauthor=\count386
+\c@commentator=\count387
+\c@savedcommentator=\count388
+\c@editor=\count389
+\c@savededitor=\count390
+\c@editora=\count391
+\c@savededitora=\count392
+\c@editorb=\count393
+\c@savededitorb=\count394
+\c@editorc=\count395
+\c@savededitorc=\count396
+\c@foreword=\count397
+\c@savedforeword=\count398
+\c@holder=\count399
+\c@savedholder=\count400
+\c@introduction=\count401
+\c@savedintroduction=\count402
+\c@namea=\count403
+\c@savednamea=\count404
+\c@nameb=\count405
+\c@savednameb=\count406
+\c@namec=\count407
+\c@savednamec=\count408
+\c@translator=\count409
+\c@savedtranslator=\count410
+\c@shortauthor=\count411
+\c@savedshortauthor=\count412
+\c@shorteditor=\count413
+\c@savedshorteditor=\count414
+\c@labelname=\count415
+\c@savedlabelname=\count416
+\c@institution=\count417
+\c@savedinstitution=\count418
+\c@lista=\count419
+\c@savedlista=\count420
+\c@listb=\count421
+\c@savedlistb=\count422
+\c@listc=\count423
+\c@savedlistc=\count424
+\c@listd=\count425
+\c@savedlistd=\count426
+\c@liste=\count427
+\c@savedliste=\count428
+\c@listf=\count429
+\c@savedlistf=\count430
+\c@location=\count431
+\c@savedlocation=\count432
+\c@organization=\count433
+\c@savedorganization=\count434
+\c@origlocation=\count435
+\c@savedoriglocation=\count436
+\c@origpublisher=\count437
+\c@savedorigpublisher=\count438
+\c@publisher=\count439
+\c@savedpublisher=\count440
+\c@language=\count441
+\c@savedlanguage=\count442
+\c@origlanguage=\count443
+\c@savedoriglanguage=\count444
+\c@pageref=\count445
+\c@savedpageref=\count446
 \shorthandwidth=\skip107
 \shortjournalwidth=\skip108
 \shortserieswidth=\skip109
@@ -572,19 +588,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count441
-\c@textcitetotal=\count442
-\c@textcitemaxnames=\count443
-\c@biburlbigbreakpenalty=\count444
-\c@biburlbreakpenalty=\count445
-\c@biburlnumpenalty=\count446
-\c@biburlucpenalty=\count447
-\c@biburllcpenalty=\count448
+\c@textcitecount=\count447
+\c@textcitetotal=\count448
+\c@textcitemaxnames=\count449
+\c@biburlbigbreakpenalty=\count450
+\c@biburlbreakpenalty=\count451
+\c@biburlnumpenalty=\count452
+\c@biburlucpenalty=\count453
+\c@biburllcpenalty=\count454
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count449
+\c@smartand=\count455
 )
 Package biblatex Info: Trying to load bibliography style 'authoryear-icomp'...
 Package biblatex Info: ... file 'authoryear-icomp.bbx' found.
@@ -598,8 +614,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count450
-\c@bbx:relatedtotal=\count451
+\c@bbx:relatedcount=\count456
+\c@bbx:relatedtotal=\count457
 )))
 Package biblatex Info: Trying to load citation style 'authoryear-icomp'...
 Package biblatex Info: ... file 'authoryear-icomp.cbx' found.
@@ -633,7 +649,7 @@ Package biblatex Info: Document encoding is UTF8 ....
 Package: expl3 2025-08-13 L3 programming layer (loader) 
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count452
+\l__color_backend_stack_int=\count458
 ))
 Package biblatex Info: ... and expl3
 (biblatex)             2025-08-13 L3 programming layer (loader) 
@@ -652,7 +668,7 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2024/11/17 v2.01 AMS text
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks31
+\@emptytoks=\toks32
 \ex@=\dimen198
 )) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
@@ -660,14 +676,14 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count453
+\inf@bad=\count459
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count454
-\leftroot@=\count455
+\uproot@=\count460
+\leftroot@=\count461
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count456
-\DOTSCASE@=\count457
+\classnum@=\count462
+\DOTSCASE@=\count463
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -680,128 +696,126 @@ LaTeX Info: Redefining \Bigg on input line 724.
 \big@size=\dimen256
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count458
+\macc@depth=\count464
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count459
+\c@MaxMatrixCols=\count465
 \dotsspace@=\muskip22
-\c@parentequation=\count460
-\dspbrk@lvl=\count461
-\tag@help=\toks32
-\row@=\count462
-\column@=\count463
-\maxfields@=\count464
-\andhelp@=\toks33
+\c@parentequation=\count466
+\dspbrk@lvl=\count467
+\tag@help=\toks33
+\row@=\count468
+\column@=\count469
+\maxfields@=\count470
+\andhelp@=\toks34
 \eqnshift@=\dimen257
 \alignsep@=\dimen258
 \tagshift@=\dimen259
 \tagwidth@=\dimen260
 \totwidth@=\dimen261
 \lineht@=\dimen262
-\@envbody=\toks34
+\@envbody=\toks35
 \multlinegap=\skip122
 \multlinetaggap=\skip123
-\mathdisplay@stack=\toks35
+\mathdisplay@stack=\toks36
 LaTeX Info: Redefining \[ on input line 2949.
 LaTeX Info: Redefining \] on input line 2950.
 ) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
-\@float@every@algorithm=\toks36
-\c@algorithm=\count465
+\@float@every@algorithm=\toks37
+\c@algorithm=\count471
 ) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudocode.sty
 Package: algpseudocode 
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count466
-\c@ALG@rem=\count467
-\c@ALG@nested=\count468
+\c@ALG@line=\count472
+\c@ALG@rem=\count473
+\c@ALG@nested=\count474
 \ALG@tlm=\skip124
 \ALG@thistlm=\skip125
-\c@ALG@Lnr=\count469
-\c@ALG@blocknr=\count470
-\c@ALG@storecount=\count471
-\c@ALG@tmpcounter=\count472
+\c@ALG@Lnr=\count475
+\c@ALG@blocknr=\count476
+\c@ALG@storecount=\count477
+\c@ALG@tmpcounter=\count478
 \ALG@tmplength=\skip126
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count473
+\lst@mode=\count479
 \lst@gtempboxa=\box67
-\lst@token=\toks37
-\lst@length=\count474
+\lst@token=\toks38
+\lst@length=\count480
 \lst@currlwidth=\dimen263
-\lst@column=\count475
-\lst@pos=\count476
+\lst@column=\count481
+\lst@pos=\count482
 \lst@lostspace=\dimen264
 \lst@width=\dimen265
-\lst@newlines=\count477
-\lst@lineno=\count478
+\lst@newlines=\count483
+\lst@lineno=\count484
 \lst@maxwidth=\dimen266
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
 File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
 ) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-\c@lstnumber=\count479
-\lst@skipnumbers=\count480
+\c@lstnumber=\count485
+\lst@skipnumbers=\count486
 \lst@framebox=\box68
 ) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'english'.
 
-
-Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
-(biblatex)                Loading 'csquotes' recommended.
-
-\@quotelevel=\count481
-\@quotereset=\count482
 
 Package biblatex Warning: Conflicting options.
 (biblatex)                '<namepart>inits' conflicts with 'uniquename=full'.
-(biblatex)                Setting 'uniquename=init' on input line 169.
+(biblatex)                Setting 'uniquename=init' on input line 170.
 
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 169.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 170.
 (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (template-skripsi.aux (kata-pengantar.aux) (bab1.aux) (bab2dif1.aux) (bab3.aux))
 \openout1 = `template-skripsi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 170.
+LaTeX Font Info:    ... okay on input line 170.
  (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count483
+\scratchcounter=\count487
 \scratchdimen=\dimen267
 \scratchbox=\box69
-\nofMPsegments=\count484
-\nofMParguments=\count485
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count486
+\nofMPsegments=\count488
+\nofMParguments=\count489
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count490
 \MPscratchDim=\dimen268
-\MPnumerator=\count487
-\makeMPintoPDFobject=\count488
-\everyMPtoPDFconversion=\toks39
+\MPnumerator=\count491
+\makeMPintoPDFobject=\count492
+\everyMPtoPDFconversion=\toks40
 ) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -836,7 +850,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 169.
+Package hyperref Info: Link coloring OFF on input line 170.
 (template-skripsi.out) (template-skripsi.out)
 \@outlinefile=\write4
 \openout4 = `template-skripsi.out'.
@@ -868,7 +882,7 @@ Package biblatex Info: ... file 'bahasa.lbx' not found.
 
 
 Package biblatex Warning: Language 'bahasa' not supported.
-(biblatex)                Using dummy definitions on input line 169.
+(biblatex)                Using dummy definitions on input line 170.
 
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
@@ -878,33 +892,27 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'template-skripsi.bbl' found.
 (template-skripsi.bbl)
-Package biblatex Info: Reference section=0 on input line 169.
-Package biblatex Info: Reference segment=0 on input line 169.
-\c@lstlisting=\count489
-<gambar/logounj.png, id=155, 513.92pt x 513.92pt>
+Package biblatex Info: Reference section=0 on input line 170.
+Package biblatex Info: Reference segment=0 on input line 170.
+\c@lstlisting=\count493
+<gambar/logounj.png, id=135, 513.92pt x 513.92pt>
 File: gambar/logounj.png Graphic file (type png)
 <use gambar/logounj.png>
-Package pdftex.def Info: gambar/logounj.png  used on input line 171.
+Package pdftex.def Info: gambar/logounj.png  used on input line 172.
 (pdftex.def)             Requested size: 162.7473pt x 162.74825pt.
-
-
-Package pdfpages Warning: Option `page' is unknow to \includepdf.
-(pdfpages)                Did you mean `pages'? (Note the `s'!)
-(pdfpages)                OK, I'll proceed as if it were `pages'.
-
-<sps/Lembar Pengesahan.pdf, id=157, 597.23125pt x 844.15375pt>
+<sps/Lembar Pengesahan.pdf, id=137, 597.23125pt x 844.15375pt>
 File: sps/Lembar Pengesahan.pdf Graphic file (type pdf)
 <use sps/Lembar Pengesahan.pdf>
-Package pdftex.def Info: sps/Lembar Pengesahan.pdf  used on input line 179.
+Package pdftex.def Info: sps/Lembar Pengesahan.pdf  used on input line 180.
 (pdftex.def)             Requested size: 597.22978pt x 844.15169pt.
-<sps/Lembar Pengesahan.pdf, id=159, page=1, 597.23125pt x 844.15375pt>
+<sps/Lembar Pengesahan.pdf, id=139, page=1, 597.23125pt x 844.15375pt>
 File: sps/Lembar Pengesahan.pdf Graphic file (type pdf)
 <use sps/Lembar Pengesahan.pdf, page 1>
-Package pdftex.def Info: sps/Lembar Pengesahan.pdf , page1 used on input line 179.
+Package pdftex.def Info: sps/Lembar Pengesahan.pdf , page1 used on input line 180.
 (pdftex.def)             Requested size: 597.22978pt x 844.15169pt.
 File: sps/Lembar Pengesahan.pdf Graphic file (type pdf)
 <use sps/Lembar Pengesahan.pdf, page 1>
-Package pdftex.def Info: sps/Lembar Pengesahan.pdf , page1 used on input line 179.
+Package pdftex.def Info: sps/Lembar Pengesahan.pdf , page1 used on input line 180.
 (pdftex.def)             Requested size: 597.73099pt x 844.86012pt.
 
 
@@ -913,17 +921,17 @@ Package pdftex.def Info: sps/Lembar Pengesahan.pdf , page1 used on input line 17
 {C:/Users/USER/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./gambar/logounj.png>]
 File: sps/Lembar Pengesahan.pdf Graphic file (type pdf)
 <use sps/Lembar Pengesahan.pdf, page 1>
-Package pdftex.def Info: sps/Lembar Pengesahan.pdf , page1 used on input line 179.
+Package pdftex.def Info: sps/Lembar Pengesahan.pdf , page1 used on input line 180.
 (pdftex.def)             Requested size: 597.73099pt x 844.86012pt.
 File: sps/Lembar Pengesahan.pdf Graphic file (type pdf)
 <use sps/Lembar Pengesahan.pdf, page 1>
-Package pdftex.def Info: sps/Lembar Pengesahan.pdf , page1 used on input line 179.
+Package pdftex.def Info: sps/Lembar Pengesahan.pdf , page1 used on input line 180.
 (pdftex.def)             Requested size: 597.73099pt x 844.86012pt.
 
 
 File: sps/Lembar Pengesahan.pdf Graphic file (type pdf)
 <use sps/Lembar Pengesahan.pdf, page 1>
-Package pdftex.def Info: sps/Lembar Pengesahan.pdf , page1 used on input line 179.
+Package pdftex.def Info: sps/Lembar Pengesahan.pdf , page1 used on input line 180.
 (pdftex.def)             Requested size: 597.73099pt x 844.86012pt.
 [2
 
@@ -941,25 +949,23 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
 ]
 
-[4] (template-skripsi.toc
-
-[5
-
-
-
-])
+[4] (template-skripsi.toc)
 \tf@toc=\write5
 \openout5 = `template-skripsi.toc'.
 
 
 
-[6] (template-skripsi.lof)
+[5
+
+
+
+] (template-skripsi.lof)
 \tf@lof=\write6
 \openout6 = `template-skripsi.lof'.
 
 
 
-[7
+[6
 
 ] (template-skripsi.lot)
 \tf@lot=\write7
@@ -967,7 +973,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
 
 
-[8
+[7
 
 ]
 \openout2 = `bab1.aux'.
@@ -989,7 +995,7 @@ BAB I.
 
  (bab2dif1.tex
 BAB II.
-<gambar/representing-digital-image-n.jpg, id=292, 194.22563pt x 170.88844pt>
+<gambar/representing-digital-image-n.jpg, id=264, 194.22563pt x 170.88844pt>
 File: gambar/representing-digital-image-n.jpg Graphic file (type jpg)
 <use gambar/representing-digital-image-n.jpg>
 Package pdftex.def Info: gambar/representing-digital-image-n.jpg  used on input line 14.
@@ -1002,12 +1008,12 @@ Package pdftex.def Info: gambar/representing-digital-image-n.jpg  used on input 
 
 
 ]
-<gambar/IMG_20240121_131125.jpg, id=309, 4175.6pt x 1879.02pt>
+<gambar/IMG_20240121_131125.jpg, id=281, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_131125.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_131125.jpg>
 Package pdftex.def Info: gambar/IMG_20240121_131125.jpg  used on input line 32.
 (pdftex.def)             Requested size: 113.81102pt x 51.20729pt.
-<gambar/IMG_20240121_131125 copy.jpg, id=310, 4175.6pt x 1879.02pt>
+<gambar/IMG_20240121_131125 copy.jpg, id=282, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_131125 copy.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_131125 copy.jpg>
 Package pdftex.def Info: gambar/IMG_20240121_131125 copy.jpg  used on input line 38.
@@ -1017,7 +1023,7 @@ Package pdftex.def Info: gambar/IMG_20240121_131125 copy.jpg  used on input line
 [5 <./gambar/representing-digital-image-n.jpg>]
 
 [6 <./gambar/IMG_20240121_131125.jpg> <./gambar/IMG_20240121_131125 copy.jpg>]
-<gambar/Uniform Gaussian kernel.jpg, id=331, 290.88675pt x 78.2925pt>
+<gambar/Uniform Gaussian kernel.jpg, id=305, 290.88675pt x 78.2925pt>
 File: gambar/Uniform Gaussian kernel.jpg Graphic file (type jpg)
 <use gambar/Uniform Gaussian kernel.jpg>
 Package pdftex.def Info: gambar/Uniform Gaussian kernel.jpg  used on input line 98.
@@ -1032,47 +1038,48 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 15
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
-[9])
+[9]
 
-[10]
+[10])
+
+[11]
 \openout2 = `bab3.aux'.
 
  (bab3.tex
 BAB III.
-<gambar/Alur Penelitian.png, id=364, 472.76625pt x 392.46625pt>
-File: gambar/Alur Penelitian.png Graphic file (type png)
-<use gambar/Alur Penelitian.png>
-Package pdftex.def Info: gambar/Alur Penelitian.png  used on input line 29.
-(pdftex.def)             Requested size: 330.93411pt x 274.72449pt.
 
 
-[11
+[12
 
 
 
 
 ]
+<gambar/Alur Penelitian.png, id=347, 472.76625pt x 392.46625pt>
+File: gambar/Alur Penelitian.png Graphic file (type png)
+<use gambar/Alur Penelitian.png>
+Package pdftex.def Info: gambar/Alur Penelitian.png  used on input line 31.
+(pdftex.def)             Requested size: 330.93411pt x 274.72449pt.
 
-[12 <./gambar/Alur Penelitian.png>]
+
+[13 <./gambar/Alur Penelitian.png>]
 File: gambar/IMG_20240121_131125.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_131125.jpg>
-Package pdftex.def Info: gambar/IMG_20240121_131125.jpg  used on input line 47.
+Package pdftex.def Info: gambar/IMG_20240121_131125.jpg  used on input line 49.
 (pdftex.def)             Requested size: 85.35826pt x 38.39113pt.
-<gambar/IMG_20240121_132544.jpg, id=379, 4175.6pt x 1879.02pt>
+<gambar/IMG_20240121_132544.jpg, id=356, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_132544.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_132544.jpg>
-Package pdftex.def Info: gambar/IMG_20240121_132544.jpg  used on input line 52.
+Package pdftex.def Info: gambar/IMG_20240121_132544.jpg  used on input line 54.
 (pdftex.def)             Requested size: 85.35826pt x 38.39113pt.
-<gambar/IMG_20240121_140044.jpg, id=380, 4175.6pt x 1879.02pt>
+<gambar/IMG_20240121_140044.jpg, id=357, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_140044.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_140044.jpg>
-Package pdftex.def Info: gambar/IMG_20240121_140044.jpg  used on input line 57.
+Package pdftex.def Info: gambar/IMG_20240121_140044.jpg  used on input line 59.
 (pdftex.def)             Requested size: 85.35826pt x 38.39113pt.
 
 
-[13 <./gambar/IMG_20240121_132544.jpg> <./gambar/IMG_20240121_140044.jpg>]
-
-[14]
+[14 <./gambar/IMG_20240121_132544.jpg> <./gambar/IMG_20240121_140044.jpg>]
 
 [15]
 
@@ -1080,13 +1087,11 @@ Package pdftex.def Info: gambar/IMG_20240121_140044.jpg  used on input line 57.
 
 [17]
 
-[18]
+[18])
 
-[19])
+[19]
 
-[20]
-
-[21
+[20
 
 
 
@@ -1096,23 +1101,23 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
 Package rerunfilecheck Info: File `template-skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: C292EBCF646160A4ED0291CA82461D90;5774.
+(rerunfilecheck)             Checksum: 8AEC95B5560BF9AF3C3A7D3CF936995F;4949.
 Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 \openout1 = `template-skripsi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24573 strings out of 468133
- 430432 string characters out of 5431197
- 1286981 words of memory out of 5000000
- 52707 multiletter control sequences out of 15000+600000
+ 25133 strings out of 468133
+ 440235 string characters out of 5431196
+ 1305323 words of memory out of 5000000
+ 53273 multiletter control sequences out of 15000+600000
  662916 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,17n,84p,2726b,2231s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,17n,84p,2726b,1940s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template-skripsi.pdf (29 pages, 16751293 bytes).
+Output written on template-skripsi.pdf (27 pages, 16744658 bytes).
 PDF statistics:
- 517 PDF objects out of 1000 (max. 8388607)
- 127 named destinations out of 1000 (max. 500000)
- 360 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 474 PDF objects out of 1000 (max. 8388607)
+ 113 named destinations out of 1000 (max. 500000)
+ 320 words of extra memory for PDF output out of 10000 (max. 10000000)
 

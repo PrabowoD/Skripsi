@@ -55,14 +55,14 @@ Temuan ini menyimpulkan bahwa konvolusi dengan kernel Gaussian merupakan solusi 
 g(\sigma) = \frac{1}{2\pi\sigma_{x}\sigma_{y}}\exp\left(-\frac{(x^2+\mu_{x})+(y^2+\mu_{y})}{2\sigma_{x}\sigma_{y}}\right)
 \end{equation*}
 
-Jika \(\mu_{x} = \mu_{y} = 0\) dan \(\sigma_{x} = \sigma_{y}\) maka dapat disederhanakan menjadi:
+Dimana \(\mu_{x}\) dan \(\mu_{y}\) adalah \(mean\) atau rata-rata dari sumbu-x dan sumbu-y, dan \(\sigma_{x}\) dan \(\sigma_{y}\) adalah \(standard~deviation\) atau deviasi standar dari sumbu-x dan sumbu-y. Jika \(\mu_{x} = \mu_{y} = 0\) dan \(\sigma_{x} = \sigma_{y}\) maka dapat disederhanakan menjadi:
 \begin{equation}
 g(\sigma) = \frac{1}{2\pi\sigma^2}\exp\left(-\frac{x^2+y^2}{2\sigma^2}\right)
 \label{eq:gaussian kernel}
 \end{equation}
 
 Keunikan dari kernel Gaussian dapat diketahui dari beberapa sifat berikut: 
-\emph{linearity, separability, causality, and semi group property.} Keterpisahan 
+\emph{linearity, separability, causality, and semi group property}. Pembahasan lebih lanjut mengenai properti ini dapat ditemukan dalam literatur \emph{Gaussian~Scale-Space~Theory} oleh~\cite{Sporring1997}. Keterpisahan 
 atau \emph{separability} memungkinan \emph{multi-dimensional Gaussian kernel} diperoleh sebagai hasil perkalian kernel satu dimensi:
 
 \begin{equation*}
@@ -86,7 +86,7 @@ Biasanya, ruang-skala yang seragam digunakan, tetapi representasi ruang-skala ya
 \textbf{Uniform scale-space}. Perbedaan tingkat pada representasi ruang-skala secara umum, terbuat dari konvolusi dengan \emph{gaussian kernel}:
 
 \begin{equation}
-L(x,\sigma) = g(\sigma) * I(x)
+G(x,\sigma) = g(\sigma) * I(x)
 \label{eq:konvolusi}
 \end{equation}
 
@@ -122,7 +122,7 @@ Operator Sobel, sebagai salah satu metode yang paling umum, menggunakan kernel k
   \label{eq:sobel-kernel}
 \end{equation}
 
-  Dengan menggunakan kernel ini, gradien dalam arah x dan y dapat dihitung dengan mengkonvolusi citra dengan masing-masing kernel. Hasilnya adalah dua peta gradien yang menunjukkan perubahan intensitas dalam arah horizontal dan vertikal. Magnitudo gradien dapat dihitung dengan rumus berikut:
+  Dengan menggunakan kernel ini, gradien dalam arah x dan y dapat dihitung dengan mengkonvolusi citra dengan masing-masing kernel. Hasilnya adalah dua peta gradien yang menunjukkan perubahan intensitas dalam arah horizontal (\(Sx\)) dan vertikal (\(Sy\)). Magnitudo gradien dapat dihitung dengan rumus berikut:
 
 \begin{equation}
   G = \sqrt{G_x^2 + G_y^2}

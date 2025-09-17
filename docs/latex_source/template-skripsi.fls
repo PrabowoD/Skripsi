@@ -156,6 +156,14 @@ INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\tools\longtable.sty
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\tools\longtable.sty
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\wrapfig\wrapfig.sty
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\wrapfig\wrapfig.sty
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.sty
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.sty
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.def
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.def
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.def
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.cfg
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.cfg
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.cfg
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.sty
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.sty
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.sty
@@ -340,9 +348,9 @@ INPUT .\template-skripsi.toc
 INPUT .\template-skripsi.toc
 INPUT template-skripsi.toc
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
+OUTPUT template-skripsi.toc
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
-OUTPUT template-skripsi.toc
 INPUT .\template-skripsi.lof
 INPUT .\template-skripsi.lof
 INPUT template-skripsi.lof

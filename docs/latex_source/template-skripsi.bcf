@@ -2389,16 +2389,17 @@
     <bcf:citekey order="12" intorder="1">Lowe2004</bcf:citekey>
     <bcf:citekey order="13" intorder="1">Lowe2004</bcf:citekey>
     <bcf:citekey order="14" intorder="1">mikolajczyk:tel-00584096</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">Lowe2004</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">mikolajczyk:tel-00584096</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">Sporring1997</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Lowe2004</bcf:citekey>
     <bcf:citekey order="17" intorder="1">mikolajczyk:tel-00584096</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">Sanchez2018</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">mikolajczyk:tel-00584096</bcf:citekey>
     <bcf:citekey order="19" intorder="1">Sanchez2018</bcf:citekey>
     <bcf:citekey order="20" intorder="1">Sanchez2018</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">Harris2013</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">Sanchez2018</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">Gonzalez2018</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">Sanchez2018</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">Harris2013</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">Sanchez2018</bcf:citekey>
     <bcf:citekey order="24" intorder="1">Gonzalez2018</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">Gonzalez2018</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

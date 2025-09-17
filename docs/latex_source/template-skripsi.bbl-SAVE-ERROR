@@ -42,15 +42,12 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Dalam melakukan pembudidayaan ikan lele, biasanya terdapat kendala dalam melakukan penghitungan bibit atau jumlah ikan yang ingin dibeli ataupun dipasarkan, karena biasanya dalam membeli ataupun menjual bibit ini hingga mencapai ribuan ekor bibit ikan, dengan jumlah bibit yang terlalu banyak akan sangat tidak efektif apabila dihitung secara satu persatu ataupun menakar dengan menggunakan sebuah tempat. Dengan adanya penelitian ini tentunya bertujuan memudahkan pembudidaya ikan lele dalam menghitung bibit ikan yang akan mereka beli, serta agar pembudidaya ikan lele ini dalam membeli ikan tidak merasa rugi dan tidak membutuhkan waktu lama dalam menghitung. Maka diperlukan sebuah alat yang dapat menghitung ikan secara otomatis untuk memudahkan mengelola kegiatan usaha mereka. Solusi yang diusulkan untuk mengatasi masalah ini adalah membuat sebuah pengembangan sistem alat penghitung bibit ikan lele berbasis Arduino dengan menggunakan teknologi sensor proximity E18-D80NK. Perangkat penghitung terdiri dari sistem mekanis dan elektrik. Dimana pada sistem rancang bangun penghitung bibit ikan ini dirancang dengan sebuah tempat penampungan atau tangki yang dapat menampung ikan dan air, kemudian dialirkan menuju outlet tempat ikan keluar yang sudah terdapat sensor untuk mendeteksi apabila ada bibit ikan yang melintas didepannya. Hasil dari penelitian yang telah dilakukan dimana sistem rancang bangun fish counter untuk menghitung bibit ikan lele ini sudah dapat menghitung atau bekerja dengan baik. Dengan persentase error rata- rata 4,07{\%} dari tujuh kali pengujian yang dilakukan. Sehingga tingkat keberhasilan alat ini melebihi 95{\%}. Kesalahan pembacaan terjadi disebabkan oleh dua faktor, yang mana pada saat ikan yang akan dihitung melintas didepan sensor, ikan yang berada didepan, berdempetan dengan kepala ikan yang berada dibelakangnya sehingga bisa menyebabkan pembacaannya hanya terhitung satu ekor bibit ikan saja, selain itu sensor ini sedikit kurang responsive apabila bibit ikan yang melintas didepannya bergerak terlalu cepat dengan waktu dibawah 2 ms.}
+      \field{abstract}{Dalam melakukan pembudidayaan ikan lele, biasanya terdapat kendala dalam melakukan penghitungan bibit atau jumlah ikan yang ingin dibeli ataupun dipasarkan, karena biasanya dalam membeli ataupun menjual bibit ini hingga mencapai ribuan ekor bibit ikan, dengan jumlah bibit yang terlalu banyak akan sangat tidak efektif apabila dihitung secara satu persatu ataupun menakar dengan menggunakan sebuah tempat. Dengan adanya penelitian ini tentunya bertujuan memudahkan pembudidaya ikan lele dalam menghitung bibit ikan yang akan mereka beli, serta agar pembudidaya ikan lele ini dalam membeli ikan tidak merasa rugi dan tidak membutuhkan waktu lama dalam menghitung. Maka diperlukan sebuah alat yang dapat menghitung ikan secara otomatis untuk memudahkan mengelola kegiatan usaha mereka. Solusi yang diusulkan untuk mengatasi masalah ini adalah membuat sebuah pengembangan sistem alat penghitung bibit ikan lele berbasis Arduino dengan menggunakan teknologi sensor proximity E18-D80NK. Perangkat penghitung terdiri dari sistem mekanis dan elektrik. Dimana pada sistem rancang bangun penghitung bibit ikan ini dirancang dengan sebuah tempat penampungan atau tangki yang dapat menampung ikan dan air, kemudian dialirkan menuju outlet tempat ikan keluar yang sudah terdapat sensor untuk mendeteksi apabila ada bibit ikan yang melintas didepannya. Hasil dari penelitian yang telah dilakukan dimana sistem rancang bangun fish counter untuk menghitung bibit ikan lele ini sudah dapat menghitung atau bekerja dengan baik. Dengan persentase error rata- rata 4,07% dari tujuh kali pengujian yang dilakukan. Sehingga tingkat keberhasilan alat ini melebihi 95%. Kesalahan pembacaan terjadi disebabkan oleh dua faktor, yang mana pada saat ikan yang akan dihitung melintas didepan sensor, ikan yang berada didepan, berdempetan dengan kepala ikan yang berada dibelakangnya sehingga bisa menyebabkan pembacaannya hanya terhitung satu ekor bibit ikan saja, selain itu sensor ini sedikit kurang responsive apabila bibit ikan yang melintas didepannya bergerak terlalu cepat dengan waktu dibawah 2 ms.}
       \field{journaltitle}{Skripsi Program Sarjana Teknik Elektro, Universitas Islam Indonesia}
-      \field{title}{{Rancang Bangun Fish Counter Untuk Menghitung Bibit Ikan Lele}}
+      \field{title}{Rancang Bangun Fish Counter Untuk Menghitung Bibit Ikan Lele}
       \field{year}{2020}
       \field{pages}{1\bibrangedash 37}
       \range{pages}{37}
-      \verb{file}
-      \verb :C$\backslash$:/Users/User/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Amri - 2020 - Rancang Bangun Fish Counter Untuk Menghitung Bibit Ikan Lele(2).pdf:pdf
-      \endverb
       \keyw{Arduino vii,BibitIkanLele,Counter}
     \endentry
     \entry{Diansari2013}{article}{}{}
@@ -88,17 +85,14 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Ikan nila (Oreochromis niloticus) di Indonesia merupakan salah satu ikan air tawar yang memiliki nilai ekonomis tinggi dan merupakan komoditas penting dalam bisnis ikan air tawar dunia, cara budidaya yang relatif mudah, rasa yang disukai banyak orang, harga yang relatif terjangkau dan toleransi terhadap lingkungan yang lebih tinggi. Peningkatan padat tebar hingga mencapai daya dukung maksimum akan menyebabkan pertumbuhan ikan menurun. Peningkatan padat penebaran akan diikuti dengan peningkatan jumlah pakan, buangan metabolisme tubuh, konsumsi oksigen, dan dapat menurunkan kualitas air. Penurunan kualitas air akan mengakibatkan ikan menjadi stres sehingga pertumbuhan menurun dan ikan rentan mengalami kematian. Tujuan dari penelitian ini adalah untuk mengetahui pengaruh kepadatan yang berbeda terhadap kelulushidupan dan pertumbuhan ikan nila (O.niloticus) pada sistem resirkulasi dengan filter zeolit, mengetahui jumlah kepadatan ikan terbaik yang menghasilkan kelulushidupan dan pertumbuhan benih ikan nila (O. niloticus) dan mengetahui efektifitas filter zeolit. Materi yang digunakan adalah berupa kepadatan ikan nila yang berbeda dalam sistem resirkulasi dengan filter zeolit serta hewan uji berupa benih ikan nila ukuran 4-6 cm dengan padat tebar 10, 15, dan 20 ekor . Metode yang digunakan dalam penelitian ini adalah metode eksperimental, menggunakan rancangan acak lengkap (RAL) dengan menggunakan 3 perlakuan dan 3 kali ulangan, yaitu perlakuan A (kepadatan 10 ekor), perlakuan B (kepadatan 15 ekor), dan perlakuan C (kepadatan 20 ekor). Data yang dikumpulkan meliputi pertumbuhan panjang mutlak, laju pertumbuhan spesifik, kadar ammonia, kelulushidupan, dan kualitas air. Hasil penelitian menunjukkan bahwa pengaruh padat penebaran yang berbeda memberikan pengaruh yang sangat nyata (P{<}0,01) terhadap pertumbuhan ikan nila, tetapi tidak berpengaruh nyata (P{>}0,05) terhadap kelulushidupan. Kelulushidupan dari setiap perlakuan adalah perlakuan A sebesar 86,67±5,77 {\%}, perlakuan B sebesar 84,44±3,85 {\%}, dan perlakuan C sebesar 78,33±2,89 {\%}. Rata-rata pertumbuhan panjang ikan nila tertinggi pada perlakuan A sebesar 3,53±0,06 cm, yang terendah pada perlakuan C sebesar 2,57±0,06 cm. Rata-rata laju pertumbuhan spesifik ikan nila tertinggi pada perlakuan A sebesar 2,45±0,07 {\%}/hari, yang terendah adalah perlakuan C yaitu sebesar 1,76±0,05 {\%}/hari. Efektifitas filter zeolit pada perlakuan A dapat bekerja hingga batas akhir penelitian, dibandingkan dengan perlakuan B dan C yang hanya mencapai hari ke 20.}
+      \field{abstract}{Ikan nila (Oreochromis niloticus) di Indonesia merupakan salah satu ikan air tawar yang memiliki nilai ekonomis tinggi dan merupakan komoditas penting dalam bisnis ikan air tawar dunia, cara budidaya yang relatif mudah, rasa yang disukai banyak orang, harga yang relatif terjangkau dan toleransi terhadap lingkungan yang lebih tinggi. Peningkatan padat tebar hingga mencapai daya dukung maksimum akan menyebabkan pertumbuhan ikan menurun. Peningkatan padat penebaran akan diikuti dengan peningkatan jumlah pakan, buangan metabolisme tubuh, konsumsi oksigen, dan dapat menurunkan kualitas air. Penurunan kualitas air akan mengakibatkan ikan menjadi stres sehingga pertumbuhan menurun dan ikan rentan mengalami kematian. Tujuan dari penelitian ini adalah untuk mengetahui pengaruh kepadatan yang berbeda terhadap kelulushidupan dan pertumbuhan ikan nila (O.niloticus) pada sistem resirkulasi dengan filter zeolit, mengetahui jumlah kepadatan ikan terbaik yang menghasilkan kelulushidupan dan pertumbuhan benih ikan nila (O. niloticus) dan mengetahui efektifitas filter zeolit. Materi yang digunakan adalah berupa kepadatan ikan nila yang berbeda dalam sistem resirkulasi dengan filter zeolit serta hewan uji berupa benih ikan nila ukuran 4-6 cm dengan padat tebar 10, 15, dan 20 ekor . Metode yang digunakan dalam penelitian ini adalah metode eksperimental, menggunakan rancangan acak lengkap (RAL) dengan menggunakan 3 perlakuan dan 3 kali ulangan, yaitu perlakuan A (kepadatan 10 ekor), perlakuan B (kepadatan 15 ekor), dan perlakuan C (kepadatan 20 ekor). Data yang dikumpulkan meliputi pertumbuhan panjang mutlak, laju pertumbuhan spesifik, kadar ammonia, kelulushidupan, dan kualitas air. Hasil penelitian menunjukkan bahwa pengaruh padat penebaran yang berbeda memberikan pengaruh yang sangat nyata (P<0,01) terhadap pertumbuhan ikan nila, tetapi tidak berpengaruh nyata (P>0,05) terhadap kelulushidupan. Kelulushidupan dari setiap perlakuan adalah perlakuan A sebesar 86,67±5,77 %, perlakuan B sebesar 84,44±3,85 %, dan perlakuan C sebesar 78,33±2,89 %. Rata-rata pertumbuhan panjang ikan nila tertinggi pada perlakuan A sebesar 3,53±0,06 cm, yang terendah pada perlakuan C sebesar 2,57±0,06 cm. Rata-rata laju pertumbuhan spesifik ikan nila tertinggi pada perlakuan A sebesar 2,45±0,07 %/hari, yang terendah adalah perlakuan C yaitu sebesar 1,76±0,05 %/hari. Efektifitas filter zeolit pada perlakuan A dapat bekerja hingga batas akhir penelitian, dibandingkan dengan perlakuan B dan C yang hanya mencapai hari ke 20.}
+      \field{issue}{3}
       \field{journaltitle}{Jurnal Aquakultur Manajemen dan Teknologi}
-      \field{number}{3}
-      \field{title}{{PENGARUH KEPADATAN YANG BERBEDA TERHADAP KELULUSHIDUPAN DAN PERTUMBUHAN IKAN NILA (Oreochromis niloticus) PADA SISTEM RESIRKULASI DENGAN FILTER ZEOLIT}}
+      \field{title}{PENGARUH KEPADATAN YANG BERBEDA TERHADAP KELULUSHIDUPAN DAN PERTUMBUHAN IKAN NILA (Oreochromis niloticus) PADA SISTEM RESIRKULASI DENGAN FILTER ZEOLIT}
       \field{volume}{2}
       \field{year}{2013}
       \field{pages}{37\bibrangedash 45}
       \range{pages}{9}
-      \verb{file}
-      \verb :C$\backslash$:/Users/User/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Diansari, Endang, Tita - 2013 - PENGARUH KEPADATAN YANG BERBEDA TERHADAP KELULUSHIDUPAN DAN PERTUMBUHAN IKAN NILA (Oreochromis niloti(2).pdf:pdf
-      \endverb
       \verb{urlraw}
       \verb https://ejournal3.undip.ac.id/index.php/jamt/article/view/4791
       \endverb
@@ -112,13 +106,13 @@
         {{un=0,uniquepart=base,hash=07713b8c79fe78ffaf9ab728a5f3ce88}{%
            family={Gonzalez},
            familyi={G\bibinitperiod},
-           given={Rafael\bibnamedelima C.},
+           given={Rafael\bibnamedelima C..},
            giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=f7e4f4ce32d8e1ac04f7ee5eefcabe8f}{%
            family={Woods},
            familyi={W\bibinitperiod},
-           given={Richard\bibnamedelima E.},
+           given={Richard\bibnamedelima E..},
            giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
            givenun=0}}%
       }
@@ -139,19 +133,12 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{edition}{4}
-      \field{isbn}{978-0-13-335672-4}
-      \field{title}{{Digital Image Processing}}
+      \field{abstract}{Fourth edition. "For 40 years, Image Processing has been the foundational text for the study of digital image processing. The book is suited for students at the college senior and first-year graduate level with prior background in mathematical analysis, vectors, matrices, probability, statistics, linear systems, and computer programming. As in all earlier editions, the focus of this edition of the book is on fundamentals. The 4th Edition, which celebrates the book's 40th anniversary, is based on an extensive survey of faculty, students, and independent readers in 150 institutions from 30 countries. Their feedback led to expanded or new coverage of topics such as deep learning and deep neural networks, including convolutional neural nets, the scale-invariant feature transform (SIFT), maximally-stable extremal regions (MSERs), graph cuts, k-means clustering and superpixels, active contours (snakes and level sets), and exact histogram matching. Major improvements were made in reorganizing the material on image transforms into a more cohesive presentation, and in the discussion of spatial kernels and spatial filtering. Major revisions and additions were made to examples and homework exercises throughout the book. For the first time, we added MATLAB projects at the end of every chapter, and compiled support packages for you and your teacher containing, solutions, image databases, and sample code"--Amazon.com. Introduction -- Digital image fundamentals -- Intensity transformations and spatial filtering -- Filtering in the frequency domain -- Image restoration and reconstruction -- Wavelet and other image transforms -- Color image processing -- Image compression and watermarking -- Morphological image processing -- Image segmentation I edge detection, thresholding, and region detection -- Image segmentation II active contours : snakes and level sets -- Feature extraction -- Image pattern classification.}
+      \field{isbn}{9780133356724}
+      \field{title}{Digital image processing}
       \field{year}{2018}
-      \verb{file}
-      \verb :C$\backslash$:/Users/User/Documents/GitHub/Skripsi/docs/latex{\_}source/pdf/Digital.Image.Processing.4th.Edition.Gonzalez{\&}Woods.pdf:pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://books.google.com/books?id=0F05vgAACAAJ
-      \endverb
-      \verb{url}
-      \verb https://books.google.com/books?id=0F05vgAACAAJ
-      \endverb
+      \field{pages}{1168}
+      \range{pages}{1}
     \endentry
     \entry{Harris2013}{article}{}{}
       \name{author}{2}{}{%
@@ -183,15 +170,12 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Consistency of image edge filtering is of prime importance for 3D interpretation of image sequences using feature tracking algorithms. To cater for image regions containing texture and isolated features, a combined corner and edge detector based on the local auto-correlation function is utilised, and it is shown to perform with good consistency on natural imagery.}
-      \field{title}{{A Combined Corner and Edge Detector}}
+      \field{title}{A Combined Corner and Edge Detector}
       \field{year}{2013}
       \field{pages}{23.1\bibrangedash 23.6}
       \range{pages}{-1}
       \verb{doi}
       \verb 10.5244/c.2.23
-      \endverb
-      \verb{file}
-      \verb :C$\backslash$:/Users/User/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Harris, Stephens - 2013 - A Combined Corner and Edge Detector(2).pdf:pdf
       \endverb
     \endentry
     \entry{Lowe2004}{article}{}{}
@@ -218,9 +202,10 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0920-5691}
+      \field{issue}{2}
       \field{journaltitle}{International Journal of Computer Vision}
-      \field{number}{2}
-      \field{title}{{Distinctive Image Features from Scale-Invariant Keypoints}}
+      \field{month}{11}
+      \field{title}{Distinctive Image Features from Scale-Invariant Keypoints}
       \field{volume}{60}
       \field{year}{2004}
       \field{pages}{91\bibrangedash 110}
@@ -261,8 +246,9 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{Detection of local features invariant to affines transformations}}
-      \field{type}{Theses}
+      \field{month}{7}
+      \field{title}{Detection of local features invariant to affines transformations}
+      \field{type}{phdthesis}
       \field{year}{2002}
       \verb{urlraw}
       \verb https://theses.hal.science/tel-00584096
@@ -270,7 +256,7 @@
       \verb{url}
       \verb https://theses.hal.science/tel-00584096
       \endverb
-      \keyw{Interest points ; feature detection ; affine invariance}
+      \keyw{Interest points ; feature detection ; affine invar}
     \endentry
     \entry{Sanchez2018}{article}{}{}
       \name{author}{3}{}{%
@@ -309,9 +295,9 @@
       \field{labeltitlesource}{title}
       \field{abstract}{In this work, we present an implementation and thorough study of the Harris corner detector. This feature detector relies on the analysis of the eigenvalues of the autocorrelation matrix. The algorithm comprises seven steps, including several measures for the classification of corners, a generic non-maximum suppression method for selecting interest points, and the possibility to obtain the corners position with subpixel accuracy. We study each step in detail and propose several alternatives for improving the precision and speed. The experiments analyze the repeatability rate of the detector using different types of transformations.}
       \field{issn}{21051232}
+      \field{issue}{March}
       \field{journaltitle}{Image Processing On Line}
-      \field{number}{March}
-      \field{title}{{An analysis and implementation of the harris corner detector}}
+      \field{title}{An analysis and implementation of the harris corner detector}
       \field{volume}{8}
       \field{year}{2018}
       \field{pages}{305\bibrangedash 328}
@@ -320,6 +306,90 @@
       \verb 10.5201/ipol.2018.229
       \endverb
       \keyw{Autocorrelation matrix,Feature detector,Harris corner,Interest point,Non-maximum suppression}
+    \endentry
+    \entry{Sporring1997}{book}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=bf5b953fbb48b34d51016e189c95c47a}{%
+           family={Sporring},
+           familyi={S\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c9b6d63ce136a49b628e2f47ddd7df25}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Mads},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=78c640a01477f0fa1988c75d8614d4cc}{%
+           family={Florack},
+           familyi={F\bibinitperiod},
+           given={Luc},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=afced39a1a76e7f344f58b7f0f270307}{%
+           family={Johansen},
+           familyi={J\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=bf5b953fbb48b34d51016e189c95c47a}{%
+           family={Sporring},
+           familyi={S\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c9b6d63ce136a49b628e2f47ddd7df25}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Mads},
+           giveni={M\bibinitperiod}}}%
+        {{hash=78c640a01477f0fa1988c75d8614d4cc}{%
+           family={Florack},
+           familyi={F\bibinitperiod},
+           given={Luc},
+           giveni={L\bibinitperiod}}}%
+        {{hash=afced39a1a76e7f344f58b7f0f270307}{%
+           family={Johansen},
+           familyi={J\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Netherlands}%
+      }
+      \strng{namehash}{69f68f30d8b5d90016098202010a4e4d}
+      \strng{fullhash}{9ddb61e9d7cb32c630dc1da765475ebf}
+      \strng{fullhashraw}{9ddb61e9d7cb32c630dc1da765475ebf}
+      \strng{bibnamehash}{69f68f30d8b5d90016098202010a4e4d}
+      \strng{authorbibnamehash}{69f68f30d8b5d90016098202010a4e4d}
+      \strng{authornamehash}{69f68f30d8b5d90016098202010a4e4d}
+      \strng{authorfullhash}{9ddb61e9d7cb32c630dc1da765475ebf}
+      \strng{authorfullhashraw}{9ddb61e9d7cb32c630dc1da765475ebf}
+      \strng{editorbibnamehash}{69f68f30d8b5d90016098202010a4e4d}
+      \strng{editornamehash}{69f68f30d8b5d90016098202010a4e4d}
+      \strng{editorfullhash}{9ddb61e9d7cb32c630dc1da765475ebf}
+      \strng{editorfullhashraw}{9ddb61e9d7cb32c630dc1da765475ebf}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-90-481-4852-3}
+      \field{title}{Gaussian Scale-Space Theory}
+      \field{volume}{8}
+      \field{year}{1997}
+      \verb{doi}
+      \verb 10.1007/978-94-015-8802-7
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-94-015-8802-7
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-94-015-8802-7
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
