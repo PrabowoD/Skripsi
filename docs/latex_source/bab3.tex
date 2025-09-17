@@ -19,6 +19,9 @@ Tahapan selanjutnya adalah \(thresholding\) dan \(non-maximum~suppression\) untu
 
 Tahapan dalam penghitungan panjang dan berat ikan menggunakan \emph{Harris-Corner Detection} adalah Pemrosesan Citra, Perhitungan gradien, autokorelasi matriks gradien, \emph{Harris Respons}, melakukan threshold-ing dan \emph{Non-Maximum Suppression}, menentukan koordinat sudut, perhitungan panjang dan lebar, Penghitungan berat, dan terakhir adalah mengasosiasikan data.
 
+\section{Tahap Pengambilan Gambar}
+    Pengambilan gambar dilakukan pada sebuah penangkaran ikan menggunakan kamera \emph{smartphone} dengan resolusi 12 MP.\@ Gambar diambil pada siang hari dengan pencahayaan alami yang cukup untuk memastikan kualitas gambar yang baik. Ikan diletakkan di atas conveyor belt. Setiap gambar diambil dari sudut pandang yang konsisten, yaitu \emph{TopDown} dengan jarak 45 centimeter dari Ikan, untuk memastikan bahwa seluruh bagian ikan terlihat jelas dalam gambar. Gambar-gambar ini kemudian disimpan dalam format JPEG atau PNG untuk digunakan sebagai input dalam sistem penghitungan panjang dan berat ikan.
+
 %\section{Perancangan Sistem}
 %   Pada bagian ini akan membahas tentang proses yang akan dilakukan untuk mengetahui tahapan yang ditempuh dalam membangun sistem penghitungan berat dan panjang ikan. Tahapan pertama yang dilakukan adalah melakukan \emph{input} gambar
 %yang akan dibaca sistem, setelah itu citra akan diproses menggunakan \emph{Smoothing Gaussian} untuk mengurangi \emph{noise}. Kemudian perhitungan gradien dilakukan bertujuan untuk menghitung setiap perubahan intensitas yang berada di sekitar titik,
@@ -59,7 +62,7 @@ Pra-processing bertujuan untuk mempersiapkan citra agar siap untuk diproses lebi
 		\includegraphics[keepaspectratio, width=3cm]{gambar/IMG_20240121_140044.jpg}
 		\caption{Ikan Nila Merah}
 	\end{subfigure}
-	\caption{Jenis Ikan yang Digunakan}\label{fig:dataset}
+	\caption{Contoh Gambar dan Jenis Ikan yang Digunakan}\label{fig:dataset}
 \end{figure}
 
 \section{Smoothing Gaussian}

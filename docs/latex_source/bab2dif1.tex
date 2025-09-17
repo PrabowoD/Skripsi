@@ -163,6 +163,7 @@ Dengan menggunakan sifat tersebut, respon sudut dapat dihitung menggunakan anali
 \section{\emph{Harris-Corner Detection}}
   \emph{Harris-Corner Detection} merupakan salah satu dari sekian banyak algoritma untuk mendeteksi fitur (\emph{feature}), algoritma ini pertama kali diperkenalkan oleh Chris Harris dan Mike Stephens pada tahun 1988 (\cite{Harris2013}). 
 Ide dibalik metode Harris adalah untuk mendeteksi titik sudut berdasarkan variasi intensitas di area sekitar: wilayah yang kecil di sekitar fitur menunjukkan perubahan intensitas yang besar dibandingkan dengan pergeseran jendela ke segala arah (\cite[hlm. 305--308]{Sanchez2018}).
+Sudut adalah salah satu fitur di mana terdapat perubahan arah yang tajam pada tepi. Keunggulan penting dari metode Harris adalah sifatnya yang invarian terhadap rotasi, Rotasi adalah proses transformasi geometris yang memutar posisi piksel citra terhadap titik pusat dengan sudut tertentu tanpa mengubah bentuk asli objek. Dengan kata lain titik sudut tetap dapat terdeteksi dengan akurat meskipun citra mengalami perputaran orientasi. Hal ini menjadikan algoritma ini andal untuk aplikasi seperti pelacakan objek, pengenalan pola, dan pencocokan citra yang memerlukan konsistensi fitur meskipun terjadi perubahan sudut pandang. 
 Dengan melibatkan matriks momen kedua (\emph{second moment matrix}) untuk menghitung variasi perubahan intensitas dalam dua arah utama.
 
 \begin{equation}
