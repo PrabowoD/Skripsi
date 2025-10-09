@@ -5,19 +5,19 @@ import cv2
 def Compute_Gradient_X(images):
     Kx = np.array([[-1, 0, 1],
                    [-2, 0, 2],
-                   [-1, 0, 1]])
+                   [-1, 0, 1]], np.float32)
     gradient_images = []
     for img in images:
-        Ix = cv2.filter2D(img, -1, Kx)
+        Ix = cv2.filter2D(img.astype(np.float32), cv2.CV_32F, Kx)
         gradient_images.append(Ix)
     return gradient_images
 
 def Compute_Gradient_Y(images):
     Ky = np.array([[1, 2, 1],
                    [0, 0, 0],
-                   [-1, -2, -1]])
+                   [-1, -2, -1]], np.float32)
     gradient_images = []
     for img in images:
-        Iy = cv2.filter2D(img, -1, Ky)
+        Iy = cv2.filter2D(img.astype(np.float32), cv2.CV_32F, Ky)
         gradient_images.append(Iy)
     return gradient_images

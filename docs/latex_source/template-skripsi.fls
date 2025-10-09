@@ -251,6 +251,9 @@ INPUT bab2dif1.aux
 INPUT .\bab3.aux
 INPUT .\bab3.aux
 INPUT bab3.aux
+INPUT .\bab4.aux
+INPUT .\bab4.aux
+INPUT bab4.aux
 OUTPUT template-skripsi.aux
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -446,6 +449,12 @@ INPUT .\gambar\IMG_20240121_140044.jpg
 INPUT .\gambar\IMG_20240121_140044.jpg
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT .\bab4.tex
+INPUT .\bab4.tex
+OUTPUT bab4.aux
+INPUT .\bab4.tex
+INPUT .\bab4.tex
+INPUT bab4.tex
 INPUT template-skripsi.aux
 INPUT .\kata-pengantar.aux
 INPUT .\kata-pengantar.aux
@@ -459,6 +468,9 @@ INPUT bab2dif1.aux
 INPUT .\bab3.aux
 INPUT .\bab3.aux
 INPUT bab3.aux
+INPUT .\bab4.aux
+INPUT .\bab4.aux
+INPUT bab4.aux
 INPUT .\template-skripsi.out
 INPUT .\template-skripsi.out
 INPUT template-skripsi.run.xml
