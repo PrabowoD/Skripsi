@@ -13,7 +13,7 @@ import os
 if __name__ == "__main__":
     
     # Baca citra dari file
-    image = Input_image("Picts")
+    image = Input_image("Picts/Clean")
     
     #Preproses citra
     preprocessed_images = [preprocess_image(image) for image in image]
@@ -36,7 +36,7 @@ for idx, (img, R) in enumerate(zip(preprocessed_images, Harris_respon)):
     R_norm = np.uint8(R_norm)
 
     # Thresholding untuk menandai titik sudut
-    thresh = 0.1 * R.max()
+    thresh = 0.01 * R.max()
     mask = (R > thresh).astype(np.uint8)
     dilated = cv2.dilate(R, None)
     nms_mask = (R == dilated) & (R > thresh)
