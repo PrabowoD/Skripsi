@@ -25,7 +25,7 @@ def preprocess_image(image):
         pass
     
     # Apply Gaussian blur
-    blurred_image = cv2.GaussianBlur(image, (5, 5), sigmaX=1)
+    blurred_image = cv2.GaussianBlur(image, (3, 3), sigmaX=1)
     # Normalize the image to the range [0, 255]
     blurred_image = cv2.normalize(blurred_image, None, 0, 255, cv2.NORM_MINMAX)
 

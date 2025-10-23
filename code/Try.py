@@ -8,6 +8,7 @@ from Gradient import *
 from AutoCorrelation import *
 from Harris_Respon import *
 import os
+import pandas as pd
 
 # Contoh penggunaan dengan citra buatan
 if __name__ == "__main__":
@@ -16,7 +17,9 @@ if __name__ == "__main__":
     image = Input_image("Picts/Clean")
     
     #Preproses citra
-    preprocessed_images = [preprocess_image(image) for image in image]
+    #preprocessed_images = [preprocess_image(x) for x in image]
+    preprocessed_images = [preprocess_image(img) for img in image]
+    preprocessed_images = np.array(preprocessed_images)
     
     # Terapkan Gradient
     Gradient_X = Compute_Gradient_X(preprocessed_images)
@@ -66,5 +69,8 @@ for i, R in enumerate(Harris_respon):
     print("  min   :", R.min())
     print("  max   :", R.max())
     print("  mean  :", R.mean())
-
+ 
+    
+for i, R in enumerate(Harris_respon):
+    pd.DataFrame(R).to_csv(f"Output/Harris_respon_{i}.csv", index=False)
 
