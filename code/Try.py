@@ -71,6 +71,24 @@ for i, R in enumerate(Harris_respon):
     print("  mean  :", R.mean())
  
     
-for i, R in enumerate(Harris_respon):
-    pd.DataFrame(R).to_csv(f"Output/Harris_respon_{i}.csv", index=False)
+# Pastikan folder Output ada
+os.makedirs("Output", exist_ok=True)
+
+# Simpan setiap array ke file CSV
+arrays_to_save = {
+    "Gradient_X": Gradient_X,
+   "Gradient_Y": Gradient_Y,
+    "Ixx": Ixx,
+    "Ixy": Ixy,
+    "Iyy": Iyy,
+    "Harris_respon": Harris_respon
+}
+
+for name, arr in arrays_to_save.items():
+    for i, a in enumerate(arr):
+        # Konversi array ke DataFrame agar bisa disimpan sebagai CSV
+        df = pd.DataFrame(a)
+        save_path = f"Output/{name}_{i}.csv"
+        df.to_csv(save_path, index=False)
+        print(f"{name} citra ke-{i} disimpan ke {save_path}")
 
