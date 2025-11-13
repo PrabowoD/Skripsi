@@ -37,35 +37,8 @@ def get_center_from_corners(corners):
 
 
 def select_near_center_points(corners, center):
-    cx, cy = center
-    result = {}
 
-    # Konversi ke format (x, y) agar mudah dibaca
-    pts = [(int(x), int(y)) for y, x in corners]
-
-    # ----- cari min_x -----
-    min_x_val = min(p[0] for p in pts)
-    min_x_candidates = [p for p in pts if p[0] == min_x_val]
-    min_x = min(min_x_candidates, key=lambda p: abs(p[1] - cy))
-
-    # ----- cari max_x -----
-    max_x_val = max(p[0] for p in pts)
-    max_x_candidates = [p for p in pts if p[0] == max_x_val]
-    max_x = min(max_x_candidates, key=lambda p: abs(p[1] - cy))
-
-    # ----- cari min_y -----
-    min_y_val = min(p[1] for p in pts)
-    min_y_candidates = [p for p in pts if p[1] == min_y_val]
-    min_y = min(min_y_candidates, key=lambda p: abs(p[0] - cx))
-
-    # ----- cari max_y -----
-    max_y_val = max(p[1] for p in pts)
-    max_y_candidates = [p for p in pts if p[1] == max_y_val]
-    max_y = min(max_y_candidates, key=lambda p: abs(p[0] - cx))
-
-    result["min_x"] = min_x
-    result["max_x"] = max_x
-    result["min_y"] = min_y
-    result["max_y"] = max_y
-
-    return result
+    for p in corners:
+        x, y = p[0], p[1]
+        if abs(x - center[0]) <=5:
+        

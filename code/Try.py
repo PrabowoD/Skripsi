@@ -74,7 +74,7 @@ for idx, (orig, corners) in enumerate(zip(image, all_corners)):
     points = get_min_max_points_direct(corners)
     center = get_center_from_bounds(points)
     cc = get_center_from_corners(corners)
-    selected_points = select_near_center_points(corners, center)
+#    selected_points = select_near_center_points(corners, center)
 
     # Titik ekstrem (hijau)
     for name, pt in points.items():
@@ -97,10 +97,10 @@ for idx, (orig, corners) in enumerate(zip(image, all_corners)):
                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1)
     
     # Titik terpilih dekat tengah (kuning)
-    for name, pt in selected_points.items():
-        cv2.circle(img_vis, pt, 6, (0, 255, 255), -1)
-        cv2.putText(img_vis, f"sel_{name}", (pt[0]+5, pt[1]-5),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 1)
+ #   for name, pt in selected_points.items():
+#        cv2.circle(img_vis, pt, 6, (0, 255, 255), -1)
+#        cv2.putText(img_vis, f"sel_{name}", (pt[0]+5, pt[1]-5),
+ #                   cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 1)
 
     # Simpan hasil ke folder Results
     save_path = os.path.join("Output", f"CenterMaxMix_{idx}.png")
