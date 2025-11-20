@@ -12,10 +12,10 @@ def get_min_max_points_direct(corners):
     max_y_point = corners[np.argmax(corners[:, 0])]
     
     points = {
-        "min_x": (int(min_x_point[1]), int(min_x_point[0])),
-        "max_x": (int(max_x_point[1]), int(max_x_point[0])),
-        "min_y": (int(min_y_point[1]), int(min_y_point[0])),
-        "max_y": (int(max_y_point[1]), int(max_y_point[0]))
+        "min_x": (int(min_x_point[0]), int(min_x_point[1])),
+        "max_x": (int(max_x_point[0]), int(max_x_point[1])),
+        "min_y": (int(min_y_point[0]), int(min_y_point[1])),
+        "max_y": (int(max_y_point[0]), int(max_y_point[1]))
     }
 
     return points
@@ -35,10 +35,3 @@ def get_center_from_corners(corners):
     mean_y = int(np.mean(corners[:, 0]))    
     return (mean_x, mean_y)
 
-
-def select_near_center_points(corners, center):
-
-    for p in corners:
-        x, y = p[0], p[1]
-        if abs(x - center[0]) <=5:
-        

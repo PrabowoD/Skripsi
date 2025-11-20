@@ -6,15 +6,15 @@ def thresholding(preprocessed_images, Harris_respon, output_dir="Output"):
     os.makedirs(output_dir, exist_ok=True)
     all_corners = []
 
-    for idx, (img, R) in enumerate(zip(preprocessed_images, Harris_respon)):
+    for idx, (img, r) in enumerate(zip(preprocessed_images, Harris_respon)):
         # Normalisasi R untuk visualisasi
-        R_norm = cv2.normalize(R, None, 0, 255, cv2.NORM_MINMAX)
+        R_norm = cv2.normalize(r, None, 0, 255, cv2.NORM_MINMAX)
         R_norm = np.uint8(R_norm)
 
         # Threshold dan Non-Maximum Suppression
-        thresh = 0.01 * R.max()
-        dilated = cv2.dilate(R, None)
-        nms_mask = (R == dilated) & (R > thresh)
+        thresh = 0.01 * r.max()
+        dilated = cv2.dilate(r, None)
+        nms_mask = (r == dilated) & (r > thresh)
         corners = np.argwhere(nms_mask)
         all_corners.append(corners)
 
