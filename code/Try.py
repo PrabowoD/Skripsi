@@ -15,53 +15,83 @@ import pandas as pd
 if __name__ == "__main__":
     
     # Baca citra dari file
-    image = Input_image("Picts/Clean")
     
+    folder = "Output/Rembg"
+    image_paths = [os.path.join(folder, f) for f in os.listdir(folder)
+                   if f.lower().endswith((".jpg", ".png", ".jpeg"))]
+    
+    for idx, img in enumerate(image_paths):
+        
+        image = cv2.imread(img, cv2.IMREAD_GRAYSCALE)
+        
+        filename = os.path.basename(img)
+        
     #Preproses citra
-    #preprocessed_images = [preprocess_image(x) for x in image]
-    preprocessed_images = [preprocess_image(img) for img in image]
-    preprocessed_images = np.array(preprocessed_images)
+        preprocessed_images = [preprocess_image(image)]
+        preprocessed_images = np.array(preprocessed_images)
     
     # Terapkan Gradient
-    Gradient_X = Compute_Gradient_X(preprocessed_images)
-    Gradient_Y = Compute_Gradient_Y(preprocessed_images)
+        Gradient_X = Compute_Gradient_X(preprocessed_images)
+        Gradient_Y = Compute_Gradient_Y(preprocessed_images)
     
     # Terapkan Convolusi
-    Ixx = AutoCorrelation_Ixx(Gradient_X)
-    Ixy = AutoCorrelation_Ixy(Gradient_X, Gradient_Y)
-    Iyy = AutoCorrelation_Iyy(Gradient_Y)
+        Ixx = AutoCorrelation_Ixx(Gradient_X)
+        Ixy = AutoCorrelation_Ixy(Gradient_X, Gradient_Y)
+        Iyy = AutoCorrelation_Iyy(Gradient_Y)
 
     # Respon Harris
-    Harris_respon = Harris(Ixx, Ixy, Iyy)
+        Harris_respon = Harris(Ixx, Ixy, Iyy)
     
     # Thresholding dan Non-Maximum Suppression
-    all_corners = thresholding(preprocessed_images, Harris_respon)
-    pca_angle = PCA_rotate(all_corners[0])
-    rotated_pca_image = PCa_rotate_image(preprocessed_images[0], pca_angle)
-    save_path = os.path.join("Output", f"PCA.png")
-    cv2.imwrite(save_path, rotated_pca_image)
-    
-    #Max Min Coordinate
-    for idx, corners in enumerate(all_corners):
-        corners = rotate_point(corners, pca_angle, get_center_from_corners(corners))
+        all_corners = thresholding(preprocessed_images, Harris_respon)
+        pca_angle = PCA_rotate(all_corners[0])
+        rotated_pca_image = PCa_rotate_image(preprocessed_images[0], pca_angle)
         
-        points = get_min_max_points_direct(corners)
+        save_path = os.path.join("Output/Rotated", filename)
+        cv2.imwrite(save_path, rotated_pca_image)
+
+
+    #Max Min Coordinate
+    
+    Fls = "Output/Rotated"
+    imps = [os.path.join(Fls, f) for f in os.listdir(Fls)
+                   if f.lower().endswith((".jpg", ".png", ".jpeg"))]
+    
+    for idx, img in enumerate(imps):
+        
+        image = cv2.imread(img, cv2.IMREAD_GRAYSCALE)
+        filename = os.path.basename(img)
+        
+        pre = [preprocess_image(image)]
+        pre = np.array(pre)
+        
+        Gradient_X = Compute_Gradient_X(pre)
+        Gradient_Y = Compute_Gradient_Y(pre)
+        
+        Ixx = AutoCorrelation_Ixx(Gradient_X)
+        Ixy = AutoCorrelation_Ixy(Gradient_X, Gradient_Y)
+        Iyy = AutoCorrelation_Iyy(Gradient_Y)
+        
+        Harris_respon = Harris(Ixx, Ixy, Iyy)
+        all_corners = thresholding(pre, Harris_respon)
+    
+        points = get_min_max_points_direct(all_corners[0])
         print(f"Gambar {idx}: {points}")
     
         center = get_center_from_bounds(points)
         print(f"Center: {center}")
     
-        cc = get_center_from_corners(corners)
+        cc = get_center_from_corners(all_corners[0])
         print(f"Center from corners: {cc}")
 
-        xmin = int(np.min(corners[:, 0]))
-        xmax = int(np.max(corners[:, 0]))
-        ymin = int(np.min(corners[:, 1]))
-        ymax = int(np.max(corners[:, 1]))
+        xmin = int(np.min(all_corners[0][:, 0]))
+        xmax = int(np.max(all_corners[0][:, 0]))
+        ymin = int(np.min(all_corners[0][:, 1]))
+        ymax = int(np.max(all_corners[0][:, 1]))
 
         
-        save_path = os.path.join("Output", f"Box_{idx}.png")
-        box = cv2.rectangle(rotated_pca_image, (ymin, xmin), (ymax, xmax), (0, 0, 0), 2)
+        save_path = os.path.join("Output/Box", filename)
+        box = cv2.rectangle(image, (ymin, xmin), (ymax, xmax), (0, 0, 0), 2)
         cv2.imwrite(save_path, box)
 
 

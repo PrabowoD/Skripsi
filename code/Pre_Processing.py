@@ -14,7 +14,7 @@ def Input_image(image_path):
                 
                 save_filename = os.path.join("Output", filename)
                 cv2.imwrite(save_filename, image)
-    return np.array(images)
+    return images
 
 
 def preprocess_image(image):

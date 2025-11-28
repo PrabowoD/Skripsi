@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import cv2 as cv2
 
@@ -17,13 +18,13 @@ def PCA_rotate(corners):
         return pca_angle
     
 def PCa_rotate_image(image, angle):
-    h, w = image.shape
-    center_img = (w // 2, h // 2)
+        h, w = image.shape
+        center_img = (w // 2, h // 2)
 
-    rotation_matrix_pca = cv2.getRotationMatrix2D(center_img, angle, 1.0)
-    rotated_img_pca = cv2.warpAffine(image, rotation_matrix_pca, (w, h))
-    
-    return rotated_img_pca
+        rotation_matrix_pca = cv2.getRotationMatrix2D(center_img, angle, 1.0)
+        rotated_img_pca = cv2.warpAffine(image, rotation_matrix_pca, (w, h), borderValue=(255, 255, 255))
+        
+        return rotated_img_pca
 
 def Hough_rotate(image):
     gray = image.astype(np.uint8)
@@ -44,7 +45,7 @@ def Hough_rotate_image(image, angle):
     center_img = (w // 2, h // 2)
 
     rotation_matrix_hough = cv2.getRotationMatrix2D(center_img, angle, 1.0)
-    rotated_img_hough = cv2.warpAffine(image, rotation_matrix_hough, (w, h))
+    rotated_img_hough = cv2.warpAffine(image, rotation_matrix_hough, (w, h), borderValue=(255, 255, 255))
     
     return rotated_img_hough
 
