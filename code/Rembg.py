@@ -7,7 +7,7 @@ import os
 path = "Picts"
 
 for filename in os.listdir(path):
-    if filename.endswith(".jpg") or filename.endswith(".png"):
+    if filename.endswith(".jpg") or filename.endswith(".png") or filename.endswith(".jpeg"):
         full_path = os.path.join(path, filename)
         image = cv2.imread(full_path)
     # Menghapus latar belakang menggunakan rembg

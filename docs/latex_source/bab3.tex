@@ -39,7 +39,7 @@ Tahapan dalam penghitungan panjang dan berat ikan menggunakan \emph{Harris-Corne
     Pada tahap ini, citra ikan yang akan digunakan sebagai input sistem akan melalui beberapa tahapan pra-processing.
 Pra-processing bertujuan untuk mempersiapkan citra agar siap untuk diproses lebih lanjut. Langkah-langkah pra-processing yang dilakukan adalah sebagai berikut:
 \begin{enumerate}
-    \item Gambar yang akan digunakan berformat jpg atau png, dengan latar belakang yang telah dihilangkan dan digantikan dengan warna solid hitam menggunakan aplikasi pengolah gambar seperti photoshop atau gimp. Jenis dataset dapat dilihat pada Gambar~\ref{fig:dataset}.
+    \item Gambar yang akan digunakan berformat jpg atau png, dengan latar belakang yang telah dihilangkan dan digantikan dengan warna solid putih menggunakan library \textbf{rembg}. Jenis dataset dapat dilihat pada Gambar~\ref{fig:dataset}.
     \item Proses input citra ke dalam sistem dilakukan menggunakan library \emph{scikit-image (skimage)} pada bahasa pemrograman Python.~\emph{Scikit-image} merupakan library open-source yang digunakan untuk pemrosesan citra digital, menyediakan berbagai fungsi seperti pembacaan, konversi, filtering, segmentasi, dan analisis citra secara efisien. Dengan \emph{skimage.io.imread}, citra dapat dibaca dan diproses lebih lanjut secara efisien.
     \item Setelah citra berhasil diinput, langkah selanjutnya adalah konversi ke \emph{grayscale} untuk mempermudah proses pendeteksian sudut agar lebih akurat.
     \item Setelah citra dikonversi ke \emph{grayscale}, langkah selanjutnya adalah menerapkan \emph{Gaussian smoothing} untuk mengurangi \emph{noise} pada gambar.
@@ -63,6 +63,26 @@ Pra-processing bertujuan untuk mempersiapkan citra agar siap untuk diproses lebi
 		\caption{Ikan Nila Merah}
 	\end{subfigure}
 	\caption{Contoh Gambar dan Jenis Ikan yang Digunakan}\label{fig:dataset}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{.3\textwidth}
+		\centering
+        \includegraphics[keepaspectratio, width=3cm]{C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_131125.jpg}
+		\caption{Ikan Mas}
+	\end{subfigure}
+	\begin{subfigure}{.3\textwidth}
+		\centering
+		\includegraphics[keepaspectratio, width=3cm]{C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_132544.jpg}
+		\caption{Ikan lele}
+	\end{subfigure} 
+	\begin{subfigure}{.3\textwidth}
+		\centering
+		\includegraphics[keepaspectratio, width=3cm]{C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_140044.jpg}
+		\caption{Ikan Nila Merah}
+	\end{subfigure}
+	\caption{Contoh hasil gambar yang telah dihilangkan backgroundnya}\label{fig:rembg}
 \end{figure}
 
 \section{Smoothing Gaussian}

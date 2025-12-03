@@ -88,11 +88,14 @@ if __name__ == "__main__":
         xmax = int(np.max(all_corners[0][:, 0]))
         ymin = int(np.min(all_corners[0][:, 1]))
         ymax = int(np.max(all_corners[0][:, 1]))
-
         
+        Dx =  abs(xmax - xmin)
+        Dy = abs(ymax - ymin)
+
         save_path = os.path.join("Output/Box", filename)
         box = cv2.rectangle(image, (ymin, xmin), (ymax, xmax), (0, 0, 0), 2)
         cv2.imwrite(save_path, box)
+        print(Dx, Dy)
 
 
     
