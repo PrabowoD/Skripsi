@@ -20,47 +20,46 @@ dan terakhir adalah mengasosiasikan data.
     Pada bagian ini akan menbahas tentang proses yang akan dilakukan untuk mengetahui tahapan yang ditempuh
 dalam membangun sistem penghitungan berat dan panjang ikan. Tahapan pertama yang dilakukan adalah melakukan \emph{input} gambar
 yang akan dibaca sistem, setelah itu citra akan diproses menggunakan \emph{Smoothing gaussian} untuk mengurangi \emph{noise}. Kemudian perhitungan gradien dilakukan bertujuan untuk menghitung setiap perubahan intensitas yang berada di sekitar titik, 
-hasil tersebut akan diolah kembali menggunakan autokorelasi matriks gradien, dan dilanjutkan dengan menjalakan \emph{Harris respons}. \emph{Harris respons} bertujuan untuk mengetahui bahwa titik tersebut adalah sebuah sudut, atau sisi berdasarkan pada hasil respon harris. 
+hasil tersebut akan diolah kembali menggunakan autokorelasi matriks gradien, dan dilanjutkan dengan menjalakan \emph{Harris respons}.~\emph{Harris respons} bertujuan untuk mengetahui bahwa titik tersebut adalah sebuah sudut, atau sisi berdasarkan pada hasil respon harris. 
 Hasil dari harris akan memasuki tahapan thresholding dan \emph{non-maximum suppression} untuk memilih sudut maximum pada area tertentu. Setelah mendapatkan titik yang merupakan sebuah sisi, titik-titik tersebut akan dipilih. 
-Dimana hasil dari pemilihan tersebut akan menjadi cara untuk dapat menghitung panjang, lebar dan berat ikan. Gambaran perancangan sistem yang sederhana terdapat pada gambar \ref*{Alur Penelitian}
+Dimana hasil dari pemilihan tersebut akan menjadi cara untuk dapat menghitung panjang, lebar dan berat ikan. Gambaran perancangan sistem yang sederhana terdapat pada gambar~\ref*{Alur Penelitian}
 
 \begin{figure}
     \centering
     \includegraphics[scale= 0.6]{gambar/Flowchar Penetianv2.png}
-    \caption{Alur Penelitian}
-    \label{Alur Penelitian}
+    \caption{Alur Penelitian}\label{Alur Penelitian}
 \end{figure}
 
 \section{Pemrosesan Citra}
-    Gambar yang akan digunakan berformat .jpg atau .png, dengan latar belakang yang telah dihilangkan dan digantikan dengan warna solid. 
+    Gambar yang akan digunakan berformat jpg atau png, dengan latar belakang yang telah dihilangkan dan digantikan dengan warna solid. 
 Gambar tersebut akan diubah dari format RGB menjadi citra \emph{grayscale}. Perubahan ini diperlukan untuk mempermudah proses pendeteksian sudut. 
 
 
 \subsection{Smoothing Gaussian}
     Metode \emph{Smoothing Gaussian} digunakan untuk mengurangi \emph{noise} pada gambar sebelum melanjutkan ke perhitungan lebih lanjut.
-\emph{Noise} adalah gangguan yang muncul dalam gambar digital yang dapat mengaburkan detail atau informasi penting. \emph{noise} dapat disebabkan oleh berbagai faktor, seperti kualitas sensor kamera yang rendah, pencahayaan yang buruk, atau kesalahan dalam proses pemindahan data.
+\emph{Noise} adalah gangguan yang muncul dalam gambar digital yang dapat mengaburkan detail atau informasi penting.~\emph{noise} dapat disebabkan oleh berbagai faktor, seperti kualitas sensor kamera yang rendah, pencahayaan yang buruk, atau kesalahan dalam proses pemindahan data.
 Dalam gambar, \emph{noise} biasanya terlihat sebagai bintik-bintik acak atau intensitas piksel yang tidak diinginkan. Keberadaan \emph{noise} ini dapat menjadi masalah dalam proses pendeteksian sudut, karena \emph{noise} dapat menyebabkan munculnya sudut palsu yang tidak sesuai dengan gambar asli.
     
     Langkah pertama dalam \emph{smoothing Gaussian} adalah membentuk \emph{Gaussian kernel}. Pemilihan ukuran kernel sangat berpengaruh terhadap hasil \emph{smoothing}, khususnya pada tingkat kehalusan gambar dan jumlah \emph{noise} yang berkurang.
 Semakin besar kernel yang digunakan, semakin banyak \emph{noise} yang dihilangkan, tetapi hal ini dapat menyebabkan detail gambar ikut terhapus. Sebaliknya, jika kernel yang digunakan berukuran kecil, detail gambar akan lebih terjaga, tetapi \emph{noise} mungkin masih tetap ada.
-Setelah menentukan ukuran kernel yang akan digunakan kernel dapat dihitung dengan menggunakan persamaan \eqref{eq:gaussian kernel}.
+Setelah menentukan ukuran kernel yang akan digunakan kernel dapat dihitung dengan menggunakan persamaan~\eqref{eq:gaussian kernel}.
 
     Langkah selanjutnya adalah mengaplikasikan kernel pada gambar. Proses ini dilakukan dengan menerapkan kernel secara berulang pada setiap piksel di seluruh gambar.
-Namun, sebelum langkah tersebut, gambar perlu di-\emph{padding} terlebih dahulu. \emph{Padding} adalah proses menambahkan piksel pada tepi gambar sebelum pemrosesan dengan kernel atau model dimulai.
+Namun, sebelum langkah tersebut, gambar perlu di-\emph{padding} terlebih dahulu.~\emph{Padding} adalah proses menambahkan piksel pada tepi gambar sebelum pemrosesan dengan kernel atau model dimulai.
 Tujuan dari \emph{padding} adalah untuk mempertahankan ukuran gambar setelah diterapkannya operasi tertentu, seperti konvolusi. 
-Setelah \emph{padding} diterapkan, konvolusi akan dilakukan dengan menggunakan persamaan \eqref{eq:konvolusi} . 
+Setelah \emph{padding} diterapkan, konvolusi akan dilakukan dengan menggunakan persamaan~\eqref{eq:konvolusi}. 
 
 \subsection{Perhitungan Gradien}
     Gambar yang telah diperhalus akan dilanjutkan dengan menghitung gradien pada setiap \emph{pixel}-nya. Tujuan dari penghitungan gradien adalah untuk mengetahui perubahan intensitas pada setiap piksel, yang pada umumnya akan menujukan tepi atau kontur dalam sebuah gambar.
 Penghitungan gradien juga memerlukan kernel untuk dapat bekerja, terdapat banyak kernel yang dapat digunakan untuk menghitung gradien, contohnya kernel sobel. 
 
     Kernel Sobel digunakan untuk menghitung estimasi gradien dengan memberikan bobot yang lebih besar pada piksel tetangga terdekat di sekitar piksel pusat.
-Kernel sobel terdiri dari dua matriks \(3 x 3\), yang bertujuan untuk menghitung gradien pada dua arah yaitu:
+Kernel sobel terdiri dari dua matriks \(3*3\), yang bertujuan untuk menghitung gradien pada dua arah yaitu:
  \begin{itemize}
     \item \textbf{Gradien Horizontal} \((G_{x})\): Mengukur perubahan intensitas sepanjang sumbu x.
     \item \textbf{Gradien Vertical} \((G_{y})\): Mengukur perubahan intensitas sepanjang sumbu y.
 \end{itemize}
-    Berikut adalah kernel yang akan digunakan dalam operator sobel :
+    Berikut adalah kernel yang akan digunakan dalam operator sobel:
 \begin{enumerate}
     \item Kernel Sobel Horizontal
     \begin{equation*}
@@ -83,8 +82,8 @@ Kernel sobel terdiri dari dua matriks \(3 x 3\), yang bertujuan untuk menghitung
     \end{equation*}
 
 \end{enumerate}
-Perhitungan gradien juga akan menggunakan rumus \eqref{eq:konvolusi} tetapi gaussian filter akan diganti dengan kernel sobel horizontal (Gx) dan kernel sobel vertical (Gy).
-Maka rumusannya akan seperti berikut :
+Perhitungan gradien juga akan menggunakan rumus~\eqref{eq:konvolusi} tetapi gaussian filter akan diganti dengan kernel sobel horizontal (Gx) dan kernel sobel vertical (Gy).
+Maka rumusannya akan seperti berikut:
 \begin{equation}
     \begin{aligned}
         G_{x} = Sx * I(x)\\ G_{y} = Sy * I(x)
@@ -93,8 +92,8 @@ Maka rumusannya akan seperti berikut :
 
 
 \subsection{Menghitung Second Moment Matriks}
-    Setelah hasil dari perhitungan gradien didapatkan, hasil tersebut akan dibuat menjadi matriks kembali dengan rumus \eqref{eq:SecondMomentMatrix}. Nilai gradien dihitung untuk mendapatkan koefisien matriks autokorelasi. Setelah koefisien didapatkan, koefisien tersebut akan dikonvolusi dengan filter gaussian.
-Hasil dari konvolusi digunakan untuk membentuk matriks \(M\) yang akan digunakan untuk perhitungan selanjutnya. Bentuk dari matriks \(M\) sebagai berikut :
+    Setelah hasil dari perhitungan gradien didapatkan, hasil tersebut akan dibuat menjadi matriks kembali dengan rumus~\eqref{eq:SecondMomentMatrix}. Nilai gradien dihitung untuk mendapatkan koefisien matriks autokorelasi. Setelah koefisien didapatkan, koefisien tersebut akan dikonvolusi dengan filter gaussian.
+Hasil dari konvolusi digunakan untuk membentuk matriks \(M\) yang akan digunakan untuk perhitungan selanjutnya. Bentuk dari matriks \(M\) sebagai berikut:
 
 \begin{equation*}
     \begin{aligned}
@@ -115,9 +114,9 @@ Hasil dari konvolusi digunakan untuk membentuk matriks \(M\) yang akan digunakan
 \subsection{Harris Respon}
     Matriks \(M\) digunakan untuk menghitung respon harris, menggunakan rumus harris yaitu:
 \begin{equation}
-    R(x,y) = Det(M) - k * (trace(M))^2
+    R(x,y) = Det(M) - k * {(trace(M))}^2
 \end{equation}
-Dimana \(Det(M)\) :
+Dimana \(Det(M)\):
 \begin{equation*}
     Det(M) = \Sigma I_{x} * \Sigma I_{y} - \Sigma I_{x}I_{y}^2
 \end{equation*}
@@ -142,7 +141,7 @@ Tujuannya supaya mengurangi piksel yang perlu menjadi diproses lebih lanjut.
     \end{cases}
 \end{equation}
 
-    Setelah melewatin Thresholding, setiap piksel yang telah lolos akan diperiksa kembali dengan \emph{Non-Maximum Suppression} atau NMS.
+    Setelah melewatin Thresholding, setiap piksel yang telah lolos akan diperiksa kembali dengan \emph{Non-Maximum Suppression} atau NMS.\@
 NMS bertujuan untuk mengelolah kembali piksel yang saling berdekatan satu sama lain. NMS akan memilih piksel pada \emph{range} tertentu, piksel dengan nilai \(R\) terbesar akan terpilih sebagai puncak lokan dan dipertahankan sebagai sudut, dan yang lainnya akan diabaikan.
 \begin{equation*}
     NMS(x,y) =
@@ -162,8 +161,8 @@ Dimana \emph{MaxLocal} \(R(i,j)\) adalah nilai maksimum yang berada disekitar pi
     \item titik bawah pada bagian bawah atau perut.
 \end{enumerate}
 
-Pemilihan empat kriteria tersebut untuk mepermudah dalam mencari panjang dan lebar dari ikan. penghitungan panjang akan menggunakan sudut pada mulut dan ekor ikan, sedangkan lebar akan mengguanakan sirip atas dan bagian bawah perut ikan. 
-namun kriteria tersebut berubah jika jenis ikan yang digunakan seperti ikan lele, maka :
+Pemilihan empat kriteria tersebut untuk mepermudah dalam mencari panjang dan lebar dari ikan.~penghitungan panjang akan menggunakan sudut pada mulut dan ekor ikan, sedangkan lebar akan mengguanakan sirip atas dan bagian bawah perut ikan. 
+namun kriteria tersebut berubah jika jenis ikan yang digunakan seperti ikan lele, maka:
 \begin{enumerate}
     \item Titik kanan pada bagian ekor.
     \item Titik kiri pada bagian mulut.
@@ -174,9 +173,9 @@ namun kriteria tersebut berubah jika jenis ikan yang digunakan seperti ikan lele
 
 
 \subsection{Menghitung Panjang dan Berat}
-    Setelah menentukan titik Rumus untuk menghitung panjang dan lebar dengan menggunakan koordinat yang telah dipilih adalah sebagai berikut :
+    Setelah menentukan titik Rumus untuk menghitung panjang dan lebar dengan menggunakan koordinat yang telah dipilih adalah sebagai berikut:
 \begin{equation}
-    d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+    d = \sqrt{{(x_2 - x_1)}^2 + {(y_2 - y_1)}^2}
 \end{equation}    
     
     Nilai \((x_1, y_1)\) dan \((x_2, y_2)\) adalah dua titik \emph{corner} terjauh. Hasil perhitungan panjang ikan tersebut masih berada pada satuan pixel, untuk menghitung panjang dan lebar asli sebuah benda dalam gambar dibutuhkan dua hal, yaitu skala dan panjang benda pada gambar.

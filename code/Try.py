@@ -16,7 +16,7 @@ if __name__ == "__main__":
     
     # Baca citra dari file
     
-    folder = "Output/Rembg"
+    folder = "Picts/Koin"
     image_paths = [os.path.join(folder, f) for f in os.listdir(folder)
                    if f.lower().endswith((".jpg", ".png", ".jpeg"))]
     
@@ -61,6 +61,7 @@ if __name__ == "__main__":
         
         image = cv2.imread(img, cv2.IMREAD_GRAYSCALE)
         filename = os.path.basename(img)
+#        image = cv2.rotate(image, cv2.ROTATE_90_CLOCKWISE)
         
         pre = [preprocess_image(image)]
         pre = np.array(pre)

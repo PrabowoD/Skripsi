@@ -4,7 +4,7 @@ import os
 
 
 
-path = "Picts"
+path = "Picts/Koin"
 
 for filename in os.listdir(path):
     if filename.endswith(".jpg") or filename.endswith(".png") or filename.endswith(".jpeg"):
