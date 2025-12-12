@@ -56,6 +56,7 @@ if __name__ == "__main__":
     Fls = "Output/Rotated"
     imps = [os.path.join(Fls, f) for f in os.listdir(Fls)
                    if f.lower().endswith((".jpg", ".png", ".jpeg"))]
+    df = pd.ExcelFile("Size_ikan.xlsx")
     
     for idx, img in enumerate(imps):
         
@@ -98,6 +99,43 @@ if __name__ == "__main__":
         cv2.imwrite(save_path, box)
         print(Dx, Dy)
 
+        P = Dx * 0.0138
+        L = Dy * 0.0138
+        
+        keliling_x = 2 * (P + L)
+        
+        Sd = pd.read_excel(df, sheet_name="Nila")
+        Sd = Sd.sort_values(by="keliling").reset_index(drop=True)
+        Kdbawah = Sd[Sd["keliling"] <= keliling_x]
+        Kdatas = Sd[Sd["keliling"] >= keliling_x]
+
+        if not Kdbawah.empty:
+            titik_bawah = Kdbawah.iloc[-1]    # nilai keliling terbesar yang <= keliling_x
+        else:
+                titik_bawah = None
+
+        if not Kdatas.empty:
+            titik_atas = Kdatas.iloc[0]       # nilai keliling terkecil yang >= keliling_x
+        else:
+            titik_atas = None
+        
+        print(f"panjang (P) : {P} cm")
+        print(f"lebar (L) : {L} cm")
+        print(f"Keliling ikan (Kx) : {keliling_x} cm")
+        print(f"Keliling Data Bawah (Kdb) : {Kdbawah.values} cm")
+        print(f"Keliling Data Atas (Kda) : {Kdatas.values} cm")
+
+        # if idx == "Nila":
+        #     Sd = pd.read_excel("Size_ikan.xlsx", sheet_name="Nila")
+        #     Kd = Sd["keliling"]
+        # elif idx == "Lele":
+        #     Sd = pd.read_excel("Size_ikan.xlsx", sheet_name="Lele")
+        #     Kd = Sd["keliling"]
+        # elif idx == "Mas":
+        #     Sd = pd.read_excel("Size_ikan.xlsx", sheet_name="Mas")
+        #     Kd = Sd["keliling"]
+        # else:
+        #     Sd = None
 
     
 #for i, R in enumerate(Harris_respon):
