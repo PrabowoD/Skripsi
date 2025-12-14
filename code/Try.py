@@ -56,13 +56,14 @@ if __name__ == "__main__":
     Fls = "Output/Rotated"
     imps = [os.path.join(Fls, f) for f in os.listdir(Fls)
                    if f.lower().endswith((".jpg", ".png", ".jpeg"))]
-    df = pd.ExcelFile("Size_ikan.xlsx")
+    #df = pd.ExcelFile("Size_ikan.xlsx")
+    sk = 0.0138
     
     for idx, img in enumerate(imps):
         
         image = cv2.imread(img, cv2.IMREAD_GRAYSCALE)
         filename = os.path.basename(img)
-#        image = cv2.rotate(image, cv2.ROTATE_90_CLOCKWISE)
+        #image = cv2.rotate(image, cv2.ROTATE_90_CLOCKWISE)
         
         pre = [preprocess_image(image)]
         pre = np.array(pre)
@@ -86,44 +87,48 @@ if __name__ == "__main__":
         cc = get_center_from_corners(all_corners[0])
         print(f"Center from corners: {cc}")
 
-        xmin = int(np.min(all_corners[0][:, 0]))
-        xmax = int(np.max(all_corners[0][:, 0]))
-        ymin = int(np.min(all_corners[0][:, 1]))
-        ymax = int(np.max(all_corners[0][:, 1]))
+        ymin = int(np.min(all_corners[0][:, 0]))
+        ymax = int(np.max(all_corners[0][:, 0]))
+        xmin = int(np.min(all_corners[0][:, 1]))
+        xmax = int(np.max(all_corners[0][:, 1]))
         
+        print(np.min(all_corners[0], axis=0))
+        print(np.max(all_corners[0], axis=0))
         Dx =  abs(xmax - xmin)
         Dy = abs(ymax - ymin)
 
         save_path = os.path.join("Output/Box", filename)
-        box = cv2.rectangle(image, (ymin, xmin), (ymax, xmax), (0, 0, 0), 2)
+        box = cv2.rectangle(image, (xmin, ymin), (xmax, ymax), (0, 0, 0), 2)
         cv2.imwrite(save_path, box)
         print(Dx, Dy)
 
-        P = Dx * 0.0138
-        L = Dy * 0.0138
+        P = Dx * sk
+        L = Dy * sk
         
         keliling_x = 2 * (P + L)
-        
-        Sd = pd.read_excel(df, sheet_name="Nila")
-        Sd = Sd.sort_values(by="keliling").reset_index(drop=True)
-        Kdbawah = Sd[Sd["keliling"] <= keliling_x]
-        Kdatas = Sd[Sd["keliling"] >= keliling_x]
-
-        if not Kdbawah.empty:
-            titik_bawah = Kdbawah.iloc[-1]    # nilai keliling terbesar yang <= keliling_x
-        else:
-                titik_bawah = None
-
-        if not Kdatas.empty:
-            titik_atas = Kdatas.iloc[0]       # nilai keliling terkecil yang >= keliling_x
-        else:
-            titik_atas = None
         
         print(f"panjang (P) : {P} cm")
         print(f"lebar (L) : {L} cm")
         print(f"Keliling ikan (Kx) : {keliling_x} cm")
-        print(f"Keliling Data Bawah (Kdb) : {Kdbawah.values} cm")
-        print(f"Keliling Data Atas (Kda) : {Kdatas.values} cm")
+        
+        # Sd = pd.read_excel(df, sheet_name="Nila")
+        # Sd = Sd.sort_values(by="keliling").reset_index(drop=True)
+        # Kdbawah = Sd[Sd["keliling"] <= keliling_x]
+        # Kdatas = Sd[Sd["keliling"] >= keliling_x]
+
+        # if not Kdbawah.empty:
+        #     titik_bawah = Kdbawah.iloc[-1]    # nilai keliling terbesar yang <= keliling_x
+        # else:
+        #         titik_bawah = None
+
+        # if not Kdatas.empty:
+        #     titik_atas = Kdatas.iloc[0]       # nilai keliling terkecil yang >= keliling_x
+        # else:
+        #     titik_atas = None
+        
+
+        # print(f"Keliling Data Bawah (Kdb) : {Kdbawah.values} cm")
+        # print(f"Keliling Data Atas (Kda) : {Kdatas.values} cm")
 
         # if idx == "Nila":
         #     Sd = pd.read_excel("Size_ikan.xlsx", sheet_name="Nila")
