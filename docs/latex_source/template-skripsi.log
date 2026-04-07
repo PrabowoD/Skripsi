@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.17)  7 APR 2026 06:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.17)  7 APR 2026 08:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -997,7 +997,7 @@ BAB I.
 
  (bab2dif1.tex
 BAB II.
-<gambar/representing-digital-image-n.jpg, id=308, 194.22563pt x 170.88844pt>
+<gambar/representing-digital-image-n.jpg, id=310, 194.22563pt x 170.88844pt>
 File: gambar/representing-digital-image-n.jpg Graphic file (type jpg)
 <use gambar/representing-digital-image-n.jpg>
 Package pdftex.def Info: gambar/representing-digital-image-n.jpg  used on input line 14.
@@ -1010,12 +1010,12 @@ Package pdftex.def Info: gambar/representing-digital-image-n.jpg  used on input 
 
 
 ]
-<gambar/IMG_20240121_131125.jpg, id=325, 4175.6pt x 1879.02pt>
+<gambar/IMG_20240121_131125.jpg, id=327, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_131125.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_131125.jpg>
 Package pdftex.def Info: gambar/IMG_20240121_131125.jpg  used on input line 32.
 (pdftex.def)             Requested size: 113.81102pt x 51.20729pt.
-<gambar/IMG_20240121_131125 copy.jpg, id=326, 4175.6pt x 1879.02pt>
+<gambar/IMG_20240121_131125 copy.jpg, id=328, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_131125 copy.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_131125 copy.jpg>
 Package pdftex.def Info: gambar/IMG_20240121_131125 copy.jpg  used on input line 38.
@@ -1025,7 +1025,7 @@ Package pdftex.def Info: gambar/IMG_20240121_131125 copy.jpg  used on input line
 [5 <./gambar/representing-digital-image-n.jpg>]
 
 [6 <./gambar/IMG_20240121_131125.jpg> <./gambar/IMG_20240121_131125 copy.jpg>]
-<gambar/Uniform Gaussian kernel.jpg, id=349, 290.88675pt x 78.2925pt>
+<gambar/Uniform Gaussian kernel.jpg, id=351, 290.88675pt x 78.2925pt>
 File: gambar/Uniform Gaussian kernel.jpg Graphic file (type jpg)
 <use gambar/Uniform Gaussian kernel.jpg>
 Package pdftex.def Info: gambar/Uniform Gaussian kernel.jpg  used on input line 98.
@@ -1043,7 +1043,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 [9]
 
 [10]
-<gambar/Bounding B Car.jpg, id=383, 478.78876pt x 352.31625pt>
+<gambar/Bounding B Car.jpg, id=385, 478.78876pt x 352.31625pt>
 File: gambar/Bounding B Car.jpg Graphic file (type jpg)
 <use gambar/Bounding B Car.jpg>
 Package pdftex.def Info: gambar/Bounding B Car.jpg  used on input line 206.
@@ -1057,7 +1057,7 @@ Package pdftex.def Info: gambar/Bounding B Car.jpg  used on input line 206.
 
  (bab3.tex
 BAB III.
-<gambar/Alur Penelitian.png, id=397, 462.72874pt x 412.54124pt>
+<gambar/Alur Penelitian.png, id=399, 462.72874pt x 412.54124pt>
 File: gambar/Alur Penelitian.png Graphic file (type png)
 <use gambar/Alur Penelitian.png>
 Package pdftex.def Info: gambar/Alur Penelitian.png  used on input line 13.
@@ -1076,37 +1076,37 @@ File: gambar/IMG_20240121_131125.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_131125.jpg>
 Package pdftex.def Info: gambar/IMG_20240121_131125.jpg  used on input line 41.
 (pdftex.def)             Requested size: 85.35826pt x 38.39113pt.
-<gambar/IMG_20240121_132544.jpg, id=407, 4175.6pt x 1879.02pt>
+<gambar/IMG_20240121_132544.jpg, id=409, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_132544.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_132544.jpg>
 Package pdftex.def Info: gambar/IMG_20240121_132544.jpg  used on input line 46.
 (pdftex.def)             Requested size: 85.35826pt x 38.39113pt.
-<gambar/IMG_20240121_140044.jpg, id=408, 4175.6pt x 1879.02pt>
+<gambar/IMG_20240121_140044.jpg, id=410, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_140044.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_140044.jpg>
 Package pdftex.def Info: gambar/IMG_20240121_140044.jpg  used on input line 51.
 (pdftex.def)             Requested size: 85.35826pt x 38.39113pt.
-<C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_131125.jpg, id=409, 4175.6pt x 1879.02pt>
+<C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_131125.jpg, id=411, 4175.6pt x 1879.02pt>
 File: C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_131125.jpg Graphic file (type jpg)
 <use C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_131125.jpg>
 Package pdftex.def Info: C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_131125.jpg  used on input line 63.
 (pdftex.def)             Requested size: 85.35826pt x 38.39113pt.
-<C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_132544.jpg, id=410, 4175.6pt x 1879.02pt>
+<C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_132544.jpg, id=412, 4175.6pt x 1879.02pt>
 File: C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_132544.jpg Graphic file (type jpg)
 <use C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_132544.jpg>
 Package pdftex.def Info: C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_132544.jpg  used on input line 68.
 (pdftex.def)             Requested size: 85.35826pt x 38.39113pt.
-<C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_140044.jpg, id=411, 4175.6pt x 1879.02pt>
+<C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_140044.jpg, id=413, 4175.6pt x 1879.02pt>
 File: C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_140044.jpg Graphic file (type jpg)
 <use C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_140044.jpg>
 Package pdftex.def Info: C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_140044.jpg  used on input line 73.
 (pdftex.def)             Requested size: 85.35826pt x 38.39113pt.
-<C:/Users/USER/Documents/GitHub/Skripsi/Output/IMG_20240121_131125.jpg, id=412, 4175.6pt x 1879.02pt>
+<C:/Users/USER/Documents/GitHub/Skripsi/Output/IMG_20240121_131125.jpg, id=414, 4175.6pt x 1879.02pt>
 File: C:/Users/USER/Documents/GitHub/Skripsi/Output/IMG_20240121_131125.jpg Graphic file (type jpg)
 <use C:/Users/USER/Documents/GitHub/Skripsi/Output/IMG_20240121_131125.jpg>
 Package pdftex.def Info: C:/Users/USER/Documents/GitHub/Skripsi/Output/IMG_20240121_131125.jpg  used on input line 104.
 (pdftex.def)             Requested size: 113.81102pt x 51.20729pt.
-<C:/Users/USER/Documents/GitHub/Skripsi/Output/Rotated/IMG_20240121_131125.jpg, id=413, 4175.6pt x 1879.02pt>
+<C:/Users/USER/Documents/GitHub/Skripsi/Output/Rotated/IMG_20240121_131125.jpg, id=415, 4175.6pt x 1879.02pt>
 File: C:/Users/USER/Documents/GitHub/Skripsi/Output/Rotated/IMG_20240121_131125.jpg Graphic file (type jpg)
 <use C:/Users/USER/Documents/GitHub/Skripsi/Output/Rotated/IMG_20240121_131125.jpg>
 Package pdftex.def Info: C:/Users/USER/Documents/GitHub/Skripsi/Output/Rotated/IMG_20240121_131125.jpg  used on input line 109.
@@ -1121,14 +1121,30 @@ Package pdftex.def Info: C:/Users/USER/Documents/GitHub/Skripsi/Output/Rotated/I
 
 [18]
 
-[19])
+[19]
+<C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_131125.jpg, id=450, 4175.6pt x 1879.02pt>
+File: C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_131125.jpg Graphic file (type jpg)
+<use C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_131125.jpg>
+Package pdftex.def Info: C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_131125.jpg  used on input line 234.
+(pdftex.def)             Requested size: 119.50148pt x 53.75905pt.
+<C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_132544.jpg, id=451, 4175.6pt x 1879.02pt>
+File: C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_132544.jpg Graphic file (type jpg)
+<use C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_132544.jpg>
+Package pdftex.def Info: C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_132544.jpg  used on input line 239.
+(pdftex.def)             Requested size: 119.50148pt x 53.75905pt.
+<C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_140044.jpg, id=452, 4175.6pt x 1879.02pt>
+File: C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_140044.jpg Graphic file (type jpg)
+<use C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_140044.jpg>
+Package pdftex.def Info: C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_140044.jpg  used on input line 244.
+(pdftex.def)             Requested size: 119.50148pt x 53.75905pt.
+)
 
-[20]
+[20 <C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_131125.jpg> <C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_132544.jpg> <C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_140044.jpg>]
 \openout2 = `bab4.aux'.
 
  (bab4.tex
 BAB IV.
-<gambar/Gambar data.png, id=453, 1291.82625pt x 655.69969pt>
+<gambar/Gambar data.png, id=458, 1291.82625pt x 655.69969pt>
 File: gambar/Gambar data.png Graphic file (type png)
 <use gambar/Gambar data.png>
 Package pdftex.def Info: gambar/Gambar data.png  used on input line 14.
@@ -1152,23 +1168,23 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
 Package rerunfilecheck Info: File `template-skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 485B7D78116702AC3B93E97C625F0000;6077.
+(rerunfilecheck)             Checksum: D4541F14509A4FE867920525AD154DC8;6011.
 Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 \openout1 = `template-skripsi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25234 strings out of 468133
- 444660 string characters out of 5431196
- 1309482 words of memory out of 5000000
- 53358 multiletter control sequences out of 15000+600000
+ 25257 strings out of 468133
+ 446363 string characters out of 5431196
+ 1309566 words of memory out of 5000000
+ 53380 multiletter control sequences out of 15000+600000
  662916 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,17n,84p,2726b,2263s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template-skripsi.pdf (30 pages, 20881604 bytes).
+Output written on template-skripsi.pdf (30 pages, 21750452 bytes).
 PDF statistics:
- 539 PDF objects out of 1000 (max. 8388607)
- 122 named destinations out of 1000 (max. 500000)
- 411 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 544 PDF objects out of 1000 (max. 8388607)
+ 123 named destinations out of 1000 (max. 500000)
+ 426 words of extra memory for PDF output out of 10000 (max. 10000000)
 

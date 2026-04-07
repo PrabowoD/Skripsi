@@ -108,7 +108,7 @@ if __name__ == "__main__":
         Dy = abs(ymax - ymin)
 
         save_path = os.path.join("Output/Box", filename)
-        box = cv2.rectangle(image, (xmin, ymin), (xmax, ymax), (0, 0, 0), 2)
+        box = cv2.rectangle(image, (xmin, ymin), (xmax, ymax), (0, 0, 0), 5)
         cv2.imwrite(save_path, box)
         print(Dx, Dy)
 

@@ -115,8 +115,8 @@ Tahapan dalam penghitungan panjang dan berat ikan menggunakan \emph{Harris-Corne
 
 
 \subsection{Smoothing Gaussian}
-   \emph{Smoothing Gaussian} digunakan untuk mengurangi \emph{noise} pada gambar sebelum melanjutkan ke perhitungan lebih lanjut.
-\emph{Noise} adalah gangguan yang muncul dalam gambar digital yang dapat mengaburkan detail atau informasi penting.~\emph{noise} dapat disebabkan oleh berbagai faktor, seperti kualitas sensor kamera yang rendah, pencahayaan yang buruk, atau kesalahan dalam proses pemindahan data.
+   \emph{Smoothing Gaussian} bertujuan untuk mengurangi \emph{noise} pada gambar sebelum melanjutkan ke perhitungan lebih lanjut.
+\emph{Noise} merupakan sebuah gangguan yang muncul dalam gambar digital yang dapat mengaburkan detail atau informasi penting.~\emph{noise} dapat disebabkan oleh berbagai faktor, seperti kualitas sensor kamera yang rendah, pencahayaan yang buruk, atau kesalahan dalam proses pemindahan data.
 Dalam gambar, \emph{noise} biasanya terlihat sebagai bintik-bintik acak atau intensitas piksel yang tidak diinginkan. Keberadaan \emph{noise} ini dapat menjadi masalah dalam proses pendeteksian sudut, karena \emph{noise} dapat menyebabkan munculnya sudut palsu yang tidak sesuai dengan gambar asli.
     
     Langkah pertama dalam \emph{smoothing Gaussian} adalah membentuk \emph{Gaussian kernel}. Pemilihan ukuran kernel sangat berpengaruh terhadap hasil \emph{smoothing}, khususnya pada tingkat kehalusan gambar dan jumlah \emph{noise} yang berkurang.
@@ -209,7 +209,7 @@ NMS bertujuan untuk mengelola kembali piksel yang saling berdekatan satu sama la
 \end{equation*}
 Dimana \emph{MaxLocal} \(R(i,j)\) adalah nilai maksimum yang berada di sekitar piksel \((x,y)\).
 
-\section{Penghitangan panjang dan berat}
+\section{Penghitungan panjang dan berat}
     Setelah sudut-sudut hasil Thresholding dan NMS diperoleh, langkah selanjutnya adalah memilih piksel-piksel yang akan digunakan sebagai acuan pengukuran panjang dan lebar ikan. Pemilihan titik-titik sudut ini didasarkan pada jarak maksimum antar titik, sehingga diperoleh titik-titik yang mewakili bagian-bagian utama tubuh ikan, seperti ujung kepala (mulut), ujung ekor, sirip atas, dan bagian bawah perut.
 
     Proses pemilihan dilakukan dengan cara mencari pasangan titik sudut yang memiliki jarak Euclidean terjauh satu sama lain. Rumus jarak Euclidean antara dua titik \((x_1, y_1)\) dan \((x_2, y_2)\) adalah:
@@ -227,9 +227,27 @@ Dimana \emph{MaxLocal} \(R(i,j)\) adalah nilai maksimum yang berada di sekitar p
     Dengan pendekatan ini, pemilihan titik menjadi lebih objektif dan akurat karena didasarkan pada distribusi spasial sudut-sudut hasil deteksi, bukan hanya pada posisi relatif secara manual. Jika jenis ikan memiliki morfologi khusus (misal ikan lele), penyesuaian dapat dilakukan dengan memilih titik-titik yang relevan sesuai bentuk tubuh ikan.
 \subsection{Bounding Box}
 
+\begin{figure}[H]
+        \centering
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[keepaspectratio, width=4.2cm]{C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_131125.jpg}
+        \caption{Ikan Mas}
+    \end{subfigure}
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[keepaspectratio, width=4.2cm]{C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_132544.jpg}
+        \caption{Ikan lele}
+    \end{subfigure} 
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[keepaspectratio, width=4.2cm]{C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_140044.jpg}
+        \caption{Ikan Nila}
+    \end{subfigure}
+    \caption{Contoh hasil gambar yang telah diberi bounding box}\label{fig:box}
+\end{figure}
 
-\subsection{Menghitung Panjang dan Berat}
-
+%\section{Menghitung Panjang}
 %     Setelah titik-titik sudut utama dan jarak antar titik diperoleh dari proses sebelumnya, langkah selanjutnya adalah menghitng panjang ikan dengan mengkonversi jarak pixel ke satuan nyata (cm), diperlukan data skala untuk mengkonversi jarak piksel ke satuan nyata. Skala dapat diperoleh dengan dua cara, yaitu menggunakan objek referensi yang diketahui ukurannya dalam gambar, atau berdasarkan resolusi gambar.
 % \begin{equation*}
 %     Skala = \frac{\text{Ukuran nyata (cm)}}{\text{Ukuran pada gambar (piksel)}}
@@ -237,6 +255,8 @@ Dimana \emph{MaxLocal} \(R(i,j)\) adalah nilai maksimum yang berada di sekitar p
 % \begin{equation}
 %     Panjang\ Nyata = d \times Skala
 % \end{equation}
+
+\subsection{Menghitung Berat}
 
     Setelah panjang ikan dalam satuan nyata diketahui, estimasi berat ikan dapat dilakukan menggunakan rumus interpolasi linier berdasarkan data panjang dan berat ikan yang telah diketahui sebelumnya. Rumus interpolasi linier yang digunakan adalah:
 \begin{equation}
