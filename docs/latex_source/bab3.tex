@@ -210,22 +210,30 @@ NMS bertujuan untuk mengelola kembali piksel yang saling berdekatan satu sama la
 Dimana \emph{MaxLocal} \(R(i,j)\) adalah nilai maksimum yang berada di sekitar piksel \((x,y)\).
 
 \section{Penghitungan panjang dan berat}
-    Setelah sudut-sudut hasil Thresholding dan NMS diperoleh, langkah selanjutnya adalah memilih piksel-piksel yang akan digunakan sebagai acuan pengukuran panjang dan lebar ikan. Pemilihan titik-titik sudut ini didasarkan pada jarak maksimum antar titik, sehingga diperoleh titik-titik yang mewakili bagian-bagian utama tubuh ikan, seperti ujung kepala (mulut), ujung ekor, sirip atas, dan bagian bawah perut.
+    Setelah sudut-sudut hasil Thresholding dan NMS diperoleh, langkah selanjutnya adalah memilih piksel-piksel yang akan digunakan sebagai acuan pengukuran panjang dan lebar ikan. 
+Pemilihan titik sudut didasarkan pada titik maksimum dan minimum pada setiap sumbu, sehingga diperoleh titik yang mewakili bagian-bagian utama tubuh ikan, seperti ujung kepala (mulut), ujung ekor, sirip atas, dan bagian bawah perut.
 
-    Proses pemilihan dilakukan dengan cara mencari pasangan titik sudut yang memiliki jarak Euclidean terjauh satu sama lain. Rumus jarak Euclidean antara dua titik \((x_1, y_1)\) dan \((x_2, y_2)\) adalah:
-\begin{equation}
-    d = \sqrt({x_2 - x_1}^2 + {y_2 - y_1}^2)
-\end{equation}
+    Proses pemilihan dilakukan dengan cara mencari titik maksimum dan minimum pada sumbu (x) dan sumbu (y) dengan menggunakan library \emph{numpy}.
 
-    Langkah-langkah pemilihan titik adalah sebagai berikut:
-\begin{enumerate}
-    \item Hitung jarak Euclidean untuk setiap pasangan titik sudut yang terdeteksi.
-    \item Pilih dua titik dengan jarak maksimum sebagai titik ujung (biasanya mewakili mulut dan ekor ikan).
-    \item Untuk menentukan titik sirip atas dan bawah, cari dua titik lain yang memiliki jarak maksimum secara vertikal terhadap garis yang menghubungkan dua titik utama (mulut dan ekor).
-\end{enumerate}
+    %     Proses pemilihan dilakukan dengan cara mencari pasangan titik sudut yang memiliki jarak Euclidean terjauh satu sama lain. Rumus jarak Euclidean antara dua titik \((x_1, y_1)\) dan \((x_2, y_2)\) adalah:
+% \begin{equation}
+%     d = \sqrt({x_2 - x_1}^2 + {y_2 - y_1}^2)
+% \end{equation}
 
-    Dengan pendekatan ini, pemilihan titik menjadi lebih objektif dan akurat karena didasarkan pada distribusi spasial sudut-sudut hasil deteksi, bukan hanya pada posisi relatif secara manual. Jika jenis ikan memiliki morfologi khusus (misal ikan lele), penyesuaian dapat dilakukan dengan memilih titik-titik yang relevan sesuai bentuk tubuh ikan.
+%     Langkah-langkah pemilihan titik adalah sebagai berikut:
+% \begin{enumerate}
+%     \item Hitung jarak Euclidean untuk setiap pasangan titik sudut yang terdeteksi.
+%     \item Pilih dua titik dengan jarak maksimum sebagai titik ujung (biasanya mewakili mulut dan ekor ikan).
+%     \item Untuk menentukan titik sirip atas dan bawah, cari dua titik lain yang memiliki jarak maksimum secara vertikal terhadap garis yang menghubungkan dua titik utama (mulut dan ekor).
+% \end{enumerate}
+
+%     Dengan pendekatan ini, pemilihan titik menjadi lebih objektif dan akurat karena didasarkan pada distribusi spasial sudut-sudut hasil deteksi, bukan hanya pada posisi relatif secara manual. Jika jenis ikan memiliki morfologi khusus (misal ikan lele), penyesuaian dapat dilakukan dengan memilih titik-titik yang relevan sesuai bentuk tubuh ikan.
 \subsection{Bounding Box}
+    Penggunaan \emph{bounding box} untuk mempermudah penghitungan panajang dan lebar ikan. Hasil dari pemilihan titik masih berbentuk koordinat pada sumbunya, 
+jika keempat titik tersebut digunakan untuk menghitung panjang dan lebar, maka hasilnya akan tidak akurat karena titik-titik tersebut tidak sejajar satu sama lain pada sumbu masing-masing.
+
+    \emph{Bounding box} digunakan untuk membuat titik  sejajar dengan menggunakan nilai x dan y dari titik maksimum dan minimun. Hasil titik tersebut akan menghasil sebuah persegi panjang yang mengelilingi gambar ikan, 
+sehingga panjang dan lebar ikan dapat dihitung dengan lebih akurat, seperti pada gambar \ref{fig:box}.
 
 \begin{figure}[H]
         \centering

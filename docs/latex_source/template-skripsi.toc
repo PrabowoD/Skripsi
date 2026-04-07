@@ -36,7 +36,7 @@
 \contentsline {section}{\numberline {3.5}Harris Respon}{18}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Thresholding dan \emph {Non-Maximum suppression}}{18}{section.3.6}%
 \contentsline {section}{\numberline {3.7}Penghitungan panjang dan berat}{19}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Bounding Box}{20}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.1}Bounding Box}{19}{subsection.3.7.1}%
 \contentsline {subsection}{\numberline {3.7.2}Menghitung Berat}{20}{subsection.3.7.2}%
 \contentsline {chapter}{\numberline {IV}HASIL DAN PEMBAHASAN}{21}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Pra-Processing Citra}{21}{section.4.1}%
