@@ -8,6 +8,7 @@ from AutoCorrelation import *
 from Harris_Respon import *
 from Max_Min_coordinate import *
 from Rorate import *
+from rembg import remove
 import os
 import pandas as pd
 
@@ -16,7 +17,7 @@ if __name__ == "__main__":
     
     # Baca citra dari file
     
-    folder = "Picts/Koin"
+    folder = "Picts"
     image_paths = [os.path.join(folder, f) for f in os.listdir(folder)
                    if f.lower().endswith((".jpg", ".png", ".jpeg"))]
     
@@ -25,6 +26,8 @@ if __name__ == "__main__":
         image = cv2.imread(img, cv2.IMREAD_GRAYSCALE)
         
         filename = os.path.basename(img)
+        
+        image = remove(image, bgcolor=(255, 255, 255, 255))
         
     #Preproses citra
         preprocessed_images = [preprocess_image(image)]
@@ -35,9 +38,10 @@ if __name__ == "__main__":
         Gradient_Y = Compute_Gradient_Y(preprocessed_images)
     
     # Terapkan Convolusi
-        Ixx = AutoCorrelation_Ixx(Gradient_X)
-        Ixy = AutoCorrelation_Ixy(Gradient_X, Gradient_Y)
-        Iyy = AutoCorrelation_Iyy(Gradient_Y)
+        # Ixx = AutoCorrelation_Ixx(Gradient_X)
+        # Ixy = AutoCorrelation_Ixy(Gradient_X, Gradient_Y)
+        # Iyy = AutoCorrelation_Iyy(Gradient_Y)
+        Ixx, Ixy, Iyy = AutoCorrelation(Gradient_X, Gradient_Y)
 
     # Respon Harris
         Harris_respon = Harris(Ixx, Ixy, Iyy)
@@ -63,7 +67,11 @@ if __name__ == "__main__":
         
         image = cv2.imread(img, cv2.IMREAD_GRAYSCALE)
         filename = os.path.basename(img)
-        #image = cv2.rotate(image, cv2.ROTATE_90_CLOCKWISE)
+        # image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        # blurred_image = cv2.GaussianBlur(image, (3, 3), sigmaX=1)
+        # blurred_image = cv2.normalize(blurred_image, None, 0, 255, cv2.NORM_MINMAX)
+        # image = np.array(blurred_image)
+        # image = cv2.rotate(image, cv2.ROTATE_90_CLOCKWISE)
         
         pre = [preprocess_image(image)]
         pre = np.array(pre)
@@ -71,21 +79,23 @@ if __name__ == "__main__":
         Gradient_X = Compute_Gradient_X(pre)
         Gradient_Y = Compute_Gradient_Y(pre)
         
-        Ixx = AutoCorrelation_Ixx(Gradient_X)
-        Ixy = AutoCorrelation_Ixy(Gradient_X, Gradient_Y)
-        Iyy = AutoCorrelation_Iyy(Gradient_Y)
+        # Ixx = AutoCorrelation_Ixx(Gradient_X)
+        # Ixy = AutoCorrelation_Ixy(Gradient_X, Gradient_Y)
+        # Iyy = AutoCorrelation_Iyy(Gradient_Y)
+        
+        Ixx, Ixy, Iyy = AutoCorrelation(Gradient_X, Gradient_Y)
         
         Harris_respon = Harris(Ixx, Ixy, Iyy)
         all_corners = thresholding(pre, Harris_respon)
     
-        points = get_min_max_points_direct(all_corners[0])
-        print(f"Gambar {idx}: {points}")
+        # points = get_min_max_points_direct(all_corners[0])
+        # print(f"Gambar {idx}: {points}")
     
-        center = get_center_from_bounds(points)
-        print(f"Center: {center}")
+        # center = get_center_from_bounds(points)
+        # print(f"Center: {center}")
     
-        cc = get_center_from_corners(all_corners[0])
-        print(f"Center from corners: {cc}")
+        # cc = get_center_from_corners(all_corners[0])
+        # print(f"Center from corners: {cc}")
 
         ymin = int(np.min(all_corners[0][:, 0]))
         ymax = int(np.max(all_corners[0][:, 0]))
@@ -107,6 +117,7 @@ if __name__ == "__main__":
         
         keliling_x = 2 * (P + L)
         
+        print(f"Gambar {idx} : {filename}")
         print(f"panjang (P) : {P} cm")
         print(f"lebar (L) : {L} cm")
         print(f"Keliling ikan (Kx) : {keliling_x} cm")

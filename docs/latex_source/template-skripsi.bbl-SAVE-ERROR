@@ -178,6 +178,45 @@
       \verb 10.5244/c.2.23
       \endverb
     \endentry
+    \entry{ITJolliffe2002}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=52e21501d20cb537e349fb16dca2c1f2}{%
+           family={Jolliffe},
+           familyi={J\bibinitperiod},
+           given={I.T.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{52e21501d20cb537e349fb16dca2c1f2}
+      \strng{fullhash}{52e21501d20cb537e349fb16dca2c1f2}
+      \strng{fullhashraw}{52e21501d20cb537e349fb16dca2c1f2}
+      \strng{bibnamehash}{52e21501d20cb537e349fb16dca2c1f2}
+      \strng{authorbibnamehash}{52e21501d20cb537e349fb16dca2c1f2}
+      \strng{authornamehash}{52e21501d20cb537e349fb16dca2c1f2}
+      \strng{authorfullhash}{52e21501d20cb537e349fb16dca2c1f2}
+      \strng{authorfullhashraw}{52e21501d20cb537e349fb16dca2c1f2}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-387-95442-2}
+      \field{title}{Principal Component Analysis}
+      \field{year}{2002}
+      \verb{doi}
+      \verb 10.1007/b98835
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/b98835
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/b98835
+      \endverb
+    \endentry
     \entry{Lowe2004}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=83f4643381c1cc2c483b4210498fedb0}{%

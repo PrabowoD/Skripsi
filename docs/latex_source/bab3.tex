@@ -7,6 +7,13 @@
 \chapter{METODE PENELITIAN}
 
 \section{Deskripsi Sistem}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale= 0.7]{gambar/Alur Penelitian.png}
+    \caption{Alur Penelitian}\label{Alur Penelitian}
+\end{figure}
+
     Implementasi algoritma bertujuan untuk melakukan penghitungan panjang serta berat objek ikan yang menggunakan
 metode \emph{Harris-Corner Detection}. Penelitian berfokus dalam menghasilkan berupa data hasil panjang dan berat objek ikan. Penggunaan conveyor belt dalam penangkaran ikan bertujuan untuk memudahkan dalam pengambilan citra ikan. Citra ikan diambil menggunakan \emph{Smartphone} pada sebuah penangkaran ikan.
 Setelah itu citra akan melalui tahapan \emph{pra-processing} untuk mengoptimalkan dalam pendeteksian sudut.
@@ -19,33 +26,15 @@ Tahapan selanjutnya adalah \(thresholding\) dan \(non-maximum~suppression\) untu
 
 Tahapan dalam penghitungan panjang dan berat ikan menggunakan \emph{Harris-Corner Detection} adalah Pemrosesan Citra, Perhitungan gradien, autokorelasi matriks gradien, \emph{Harris Respons}, melakukan threshold-ing dan \emph{Non-Maximum Suppression}, menentukan koordinat sudut, perhitungan panjang dan lebar, Penghitungan berat, dan terakhir adalah mengasosiasikan data.
 
-\section{Tahap Pengambilan Gambar}
-    Pengambilan gambar dilakukan pada sebuah penangkaran ikan menggunakan kamera \emph{smartphone} dengan resolusi 12 MP.\@ Gambar diambil pada siang hari dengan pencahayaan alami yang cukup untuk memastikan kualitas gambar yang baik. Ikan diletakkan di atas conveyor belt. Setiap gambar diambil dari sudut pandang yang konsisten, yaitu \emph{TopDown} dengan jarak 45 centimeter dari Ikan, untuk memastikan bahwa seluruh bagian ikan terlihat jelas dalam gambar. Gambar-gambar ini kemudian disimpan dalam format JPEG atau PNG untuk digunakan sebagai input dalam sistem penghitungan panjang dan berat ikan.
+\section{Pre-Processing Citra}
+    Pada tahap ini citra ikan akan melalui tiga tahapan penghapusan background, rotasi gambar, dan \emph{smoothing gaussian} untuk memperhalus \emph{feature}.~Tahapan ini bertujuan untuk mempersiapkan citra untuk diproses lebih lanjut.
 
-%\section{Perancangan Sistem}
-%   Pada bagian ini akan membahas tentang proses yang akan dilakukan untuk mengetahui tahapan yang ditempuh dalam membangun sistem penghitungan berat dan panjang ikan. Tahapan pertama yang dilakukan adalah melakukan \emph{input} gambar
-%yang akan dibaca sistem, setelah itu citra akan diproses menggunakan \emph{Smoothing Gaussian} untuk mengurangi \emph{noise}. Kemudian perhitungan gradien dilakukan bertujuan untuk menghitung setiap perubahan intensitas yang berada di sekitar titik,
-%hasil tersebut akan diolah kembali menggunakan autokorelasi matriks gradien, dan dilanjutkan dengan menjalankan \emph{Harris Respons}.\emph{Harris Respons} bertujuan untuk mengetahui bahwa titik tersebut adalah sebuah sudut, atau sisi berdasarkan pada hasil respon Harris.
-%Hasil dari Harris akan memasuki tahapan thresholding dan \emph{non-maximum suppression} untuk memilih sudut maksimum pada area tertentu. Setelah mendapatkan titik yang merupakan sebuah sudut, titik-titik tersebut akan dipilih.
-%Hasil dari pemilihan tersebut akan digunakan untuk menghitung panjang, lebar, dan berat ikan. Gambaran perancangan sistem yang sederhana terdapat pada gambar~\ref*{Alur Penelitian}
+% \subsection{Tahap Pengambilan Gambar}
+\subsection{Penghapusan Background}
+    \emph{Dataset} diambil sebuah penangkaran ikan menggunakan kamera \emph{smartphone} dengan resolusi 12 MP.\@ Gambar diambil pada siang hari dengan pencahayaan alami yang cukup untuk memastikan kualitas gambar yang baik. 
+    Ikan diletakkan di atas conveyor belt. Setiap gambar diambil dari sudut pandang yang konsisten, yaitu \emph{TopDown} dengan jarak 45 centimeter dari Ikan, untuk memastikan bahwa seluruh bagian ikan terlihat jelas dalam gambar. Gambar-gambar ini kemudian disimpan dalam format JPEG atau PNG untuk digunakan sebagai input dalam sistem penghitungan panjang dan berat ikan.
 
-\begin{figure}
-    \centering
-    \includegraphics[scale= 0.7]{gambar/Alur Penelitian.png}
-    \caption{Alur Penelitian}\label{Alur Penelitian}
-\end{figure}
-
-\section{Pra-Processing Citra}
-    Pada tahap ini, citra ikan yang akan digunakan sebagai input sistem akan melalui beberapa tahapan pra-processing.
-Pra-processing bertujuan untuk mempersiapkan citra agar siap untuk diproses lebih lanjut. Langkah-langkah pra-processing yang dilakukan adalah sebagai berikut:
-\begin{enumerate}
-    \item Gambar yang akan digunakan berformat jpg atau png, dengan latar belakang yang telah dihilangkan dan digantikan dengan warna solid putih menggunakan library \textbf{rembg}. Jenis dataset dapat dilihat pada Gambar~\ref{fig:dataset}.
-    \item Proses input citra ke dalam sistem dilakukan menggunakan library \emph{scikit-image (skimage)} pada bahasa pemrograman Python.~\emph{Scikit-image} merupakan library open-source yang digunakan untuk pemrosesan citra digital, menyediakan berbagai fungsi seperti pembacaan, konversi, filtering, segmentasi, dan analisis citra secara efisien. Dengan \emph{skimage.io.imread}, citra dapat dibaca dan diproses lebih lanjut secara efisien.
-    \item Setelah citra berhasil diinput, langkah selanjutnya adalah konversi ke \emph{grayscale} untuk mempermudah proses pendeteksian sudut agar lebih akurat.
-    \item Setelah citra dikonversi ke \emph{grayscale}, langkah selanjutnya adalah menerapkan \emph{Gaussian smoothing} untuk mengurangi \emph{noise} pada gambar.
-\end{enumerate}
-
-\begin{figure}
+    \begin{figure}[H]
 	\centering
 	\begin{subfigure}{.3\textwidth}
 		\centering
@@ -65,7 +54,9 @@ Pra-processing bertujuan untuk mempersiapkan citra agar siap untuk diproses lebi
 	\caption{Contoh Gambar dan Jenis Ikan yang Digunakan}\label{fig:dataset}
 \end{figure}
 
-\begin{figure}
+% \subsection{Penghapusan Background}
+    Penghapusan background akan menggunakan library \emph{\textbf{rembg}}. Proses penghapusan background dilakukan dengan cara menginput gambar yang akan diproses ke dalam library \emph{rembg}, hasil outputnya berupa gambar yang telah dihilangkan latar belakangnya dan digantikan dengan warna solid putih sebagai latar belakang penggantinya.
+    \begin{figure}[H]
 	\centering
 	\begin{subfigure}{.3\textwidth}
 		\centering
@@ -85,9 +76,47 @@ Pra-processing bertujuan untuk mempersiapkan citra agar siap untuk diproses lebi
 	\caption{Contoh hasil gambar yang telah dihilangkan backgroundnya}\label{fig:rembg}
 \end{figure}
 
-\section{Smoothing Gaussian}
+%\section{Perancangan Sistem}
+%   Pada bagian ini akan membahas tentang proses yang akan dilakukan untuk mengetahui tahapan yang ditempuh dalam membangun sistem penghitungan berat dan panjang ikan. Tahapan pertama yang dilakukan adalah melakukan \emph{input} gambar
+%yang akan dibaca sistem, setelah itu citra akan diproses menggunakan \emph{Smoothing Gaussian} untuk mengurangi \emph{noise}. Kemudian perhitungan gradien dilakukan bertujuan untuk menghitung setiap perubahan intensitas yang berada di sekitar titik,
+%hasil tersebut akan diolah kembali menggunakan autokorelasi matriks gradien, dan dilanjutkan dengan menjalankan \emph{Harris Respons}.\emph{Harris Respons} bertujuan untuk mengetahui bahwa titik tersebut adalah sebuah sudut, atau sisi berdasarkan pada hasil respon Harris.
+%Hasil dari Harris akan memasuki tahapan thresholding dan \emph{non-maximum suppression} untuk memilih sudut maksimum pada area tertentu. Setelah mendapatkan titik yang merupakan sebuah sudut, titik-titik tersebut akan dipilih.
+%Hasil dari pemilihan tersebut akan digunakan untuk menghitung panjang, lebar, dan berat ikan. Gambaran perancangan sistem yang sederhana terdapat pada gambar~\ref*{Alur Penelitian}
+
+
+%     Pada tahap ini, citra ikan yang akan digunakan sebagai input sistem akan melalui beberapa tahapan pra-processing.
+% Pra-processing bertujuan untuk mempersiapkan citra agar siap untuk diproses lebih lanjut. Langkah-langkah pra-processing yang dilakukan adalah sebagai berikut:
+% \begin{enumerate}
+%     \item Gambar yang akan digunakan berformat jpg atau png, dengan latar belakang yang telah dihilangkan dan digantikan dengan warna solid putih menggunakan library \textbf{rembg}. Jenis dataset dapat dilihat pada Gambar~\ref{fig:dataset}.
+%     \item Proses input citra ke dalam sistem dilakukan menggunakan library \emph{cv2} pada bahasa pemrograman Python.~\emph{cv2} merupakan library open-source yang digunakan untuk pemrosesan citra digital, menyediakan berbagai fungsi seperti pembacaan, konversi, filtering, segmentasi, dan analisis citra secara efisien. Dengan \emph{cv2.imread}, citra dapat dibaca dan diproses lebih lanjut secara efisien.
+%     \item Setelah citra berhasil diinput, langkah selanjutnya adalah konversi ke \emph{grayscale} untuk mempermudah proses pendeteksian sudut agar lebih akurat.
+%     \item Setelah citra dikonversi ke \emph{grayscale}, langkah selanjutnya adalah menerapkan \emph{Gaussian smoothing} untuk mengurangi \emph{noise} pada gambar.
+%     \item Seletah \emph{Gaussian smoothing} diterapkan, citra akan dilakukan rotasi menggunakan 
+% \end{enumerate}
+
+\subsection{Rotasi}
+    Rotasi dilakukan untuk menyesuaikan orientasi gambar agar sesuai dengan posisi ikan yang diinginkan. Proses rotasi ini penting untuk memastikan bahwa titik-titik sudut yang akan dideteksi berada dalam posisi yang optimal untuk penghitungan panjang dan berat ikan. Rotasi dilakukan dengan menggunakan PCA (Principal Component Analysis) untuk menentukan arah utama dari objek ikan dalam gambar, sehingga gambar dapat diputar agar sumbu utama objek sejajar dengan sumbu horizontal atau vertikal. 
+    Dengan demikian, proses deteksi sudut dan penghitungan panjang serta berat ikan dapat dilakukan dengan lebih akurat dan konsisten.
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[keepaspectratio, width=4cm]{C:/Users/USER/Documents/GitHub/Skripsi/Output/IMG_20240121_131125.jpg}
+            \caption{Sebelum Rotasi}
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[keepaspectratio, width=4cm]{C:/Users/USER/Documents/GitHub/Skripsi/Output/Rotated/IMG_20240121_131125.jpg}
+            \caption{Setelah Rotasi}
+        \end{subfigure}
+        \caption{Contoh hasil gambar yang telah dirotasi}\label{fig:rotasi}
+    \end{figure}
+
+
+
+\subsection{Smoothing Gaussian}
    \emph{Smoothing Gaussian} digunakan untuk mengurangi \emph{noise} pada gambar sebelum melanjutkan ke perhitungan lebih lanjut.
-\emph{Noise} adalah gangguan yang muncul dalam gambar digital yang dapat mengaburkan detail atau informasi penting.\emph{noise} dapat disebabkan oleh berbagai faktor, seperti kualitas sensor kamera yang rendah, pencahayaan yang buruk, atau kesalahan dalam proses pemindahan data.
+\emph{Noise} adalah gangguan yang muncul dalam gambar digital yang dapat mengaburkan detail atau informasi penting.~\emph{noise} dapat disebabkan oleh berbagai faktor, seperti kualitas sensor kamera yang rendah, pencahayaan yang buruk, atau kesalahan dalam proses pemindahan data.
 Dalam gambar, \emph{noise} biasanya terlihat sebagai bintik-bintik acak atau intensitas piksel yang tidak diinginkan. Keberadaan \emph{noise} ini dapat menjadi masalah dalam proses pendeteksian sudut, karena \emph{noise} dapat menyebabkan munculnya sudut palsu yang tidak sesuai dengan gambar asli.
     
     Langkah pertama dalam \emph{smoothing Gaussian} adalah membentuk \emph{Gaussian kernel}. Pemilihan ukuran kernel sangat berpengaruh terhadap hasil \emph{smoothing}, khususnya pada tingkat kehalusan gambar dan jumlah \emph{noise} yang berkurang.
@@ -95,7 +124,7 @@ Semakin besar kernel yang digunakan, semakin banyak \emph{noise} yang dihilangka
 Setelah menentukan ukuran kernel yang akan digunakan kernel dapat dihitung dengan menggunakan persamaan~\eqref{eq:gaussian kernel}.
 
     Langkah selanjutnya adalah mengaplikasikan kernel pada gambar. Proses ini dilakukan dengan menerapkan kernel secara berulang pada setiap piksel di seluruh gambar.
-Namun, sebelum langkah tersebut, gambar perlu di-\emph{padding} terlebih dahulu.\emph{Padding} adalah proses menambahkan piksel pada tepi gambar sebelum pemrosesan dengan kernel atau model dimulai.
+Namun, sebelum langkah tersebut, gambar perlu di-\emph{padding} terlebih dahulu.~\emph{Padding} adalah proses menambahkan piksel pada tepi gambar sebelum pemrosesan dengan kernel atau model dimulai.
 Tujuan dari \emph{padding} adalah untuk mempertahankan ukuran gambar setelah diterapkannya operasi tertentu, seperti konvolusi. 
 Setelah \emph{padding} diterapkan, konvolusi akan dilakukan dengan menggunakan persamaan~\eqref{eq:konvolusi}. 
 
@@ -180,7 +209,7 @@ NMS bertujuan untuk mengelola kembali piksel yang saling berdekatan satu sama la
 \end{equation*}
 Dimana \emph{MaxLocal} \(R(i,j)\) adalah nilai maksimum yang berada di sekitar piksel \((x,y)\).
 
-\section{Pemilihan Piksel}
+\section{Penghitangan panjang dan berat}
     Setelah sudut-sudut hasil Thresholding dan NMS diperoleh, langkah selanjutnya adalah memilih piksel-piksel yang akan digunakan sebagai acuan pengukuran panjang dan lebar ikan. Pemilihan titik-titik sudut ini didasarkan pada jarak maksimum antar titik, sehingga diperoleh titik-titik yang mewakili bagian-bagian utama tubuh ikan, seperti ujung kepala (mulut), ujung ekor, sirip atas, dan bagian bawah perut.
 
     Proses pemilihan dilakukan dengan cara mencari pasangan titik sudut yang memiliki jarak Euclidean terjauh satu sama lain. Rumus jarak Euclidean antara dua titik \((x_1, y_1)\) dan \((x_2, y_2)\) adalah:
@@ -196,14 +225,18 @@ Dimana \emph{MaxLocal} \(R(i,j)\) adalah nilai maksimum yang berada di sekitar p
 \end{enumerate}
 
     Dengan pendekatan ini, pemilihan titik menjadi lebih objektif dan akurat karena didasarkan pada distribusi spasial sudut-sudut hasil deteksi, bukan hanya pada posisi relatif secara manual. Jika jenis ikan memiliki morfologi khusus (misal ikan lele), penyesuaian dapat dilakukan dengan memilih titik-titik yang relevan sesuai bentuk tubuh ikan.
+\subsection{Bounding Box}
+
+
 \subsection{Menghitung Panjang dan Berat}
-    Setelah titik-titik sudut utama dan jarak antar titik diperoleh dari proses sebelumnya, langkah selanjutnya adalah menghitng panjang ikan dengan mengkonversi jarak pixel ke satuan nyata (cm), diperlukan data skala untuk mengkonversi jarak piksel ke satuan nyata. Skala dapat diperoleh dengan dua cara, yaitu menggunakan objek referensi yang diketahui ukurannya dalam gambar, atau berdasarkan resolusi gambar.
-\begin{equation*}
-    Skala = \frac{\text{Ukuran nyata (cm)}}{\text{Ukuran pada gambar (piksel)}}
-\end{equation*}
-\begin{equation}
-    Panjang\ Nyata = d \times Skala
-\end{equation}
+
+%     Setelah titik-titik sudut utama dan jarak antar titik diperoleh dari proses sebelumnya, langkah selanjutnya adalah menghitng panjang ikan dengan mengkonversi jarak pixel ke satuan nyata (cm), diperlukan data skala untuk mengkonversi jarak piksel ke satuan nyata. Skala dapat diperoleh dengan dua cara, yaitu menggunakan objek referensi yang diketahui ukurannya dalam gambar, atau berdasarkan resolusi gambar.
+% \begin{equation*}
+%     Skala = \frac{\text{Ukuran nyata (cm)}}{\text{Ukuran pada gambar (piksel)}}
+% \end{equation*}
+% \begin{equation}
+%     Panjang\ Nyata = d \times Skala
+% \end{equation}
 
     Setelah panjang ikan dalam satuan nyata diketahui, estimasi berat ikan dapat dilakukan menggunakan rumus interpolasi linier berdasarkan data panjang dan berat ikan yang telah diketahui sebelumnya. Rumus interpolasi linier yang digunakan adalah:
 \begin{equation}
@@ -219,10 +252,10 @@ Dimana \emph{MaxLocal} \(R(i,j)\) adalah nilai maksimum yang berada di sekitar p
 
     Dengan metode ini, sistem dapat menghitung panjang ikan secara otomatis dari citra digital dan mengestimasi berat ikan berdasarkan data referensi, sehingga proses pengukuran menjadi lebih efisien, akurat, dan minim kontak langsung dengan ikan.
 
-\section{Evaluasi Akurasi}
-    Setelah sistem selesai melakukan pengukuran panjang dan berat ikan, langkah terakhir adalah mengevaluasi akurasi hasil pengukuran. Evaluasi dilakukan dengan membandingkan hasil pengukuran sistem dengan data referensi yang telah diketahui sebelumnya. 
-    Akurasi dihitung menggunakan rumus:
-\begin{equation}
-    Akurasi = \frac{1}{n} \sum_{i=1}^{n} \frac{1}{1 + |E_i|} \cdot 100\%
-\end{equation}
-    di mana \(E_i\) adalah selisih antara hasil pengukuran sistem dan data referensi, dan \(n\) adalah jumlah sampel yang diuji. Hasil evaluasi akan memberikan gambaran tentang seberapa baik sistem dalam mengukur panjang dan berat ikan.
+% \section{Evaluasi Akurasi}
+%     Setelah sistem selesai melakukan pengukuran panjang dan berat ikan, langkah terakhir adalah mengevaluasi akurasi hasil pengukuran. Evaluasi dilakukan dengan membandingkan hasil pengukuran sistem dengan data referensi yang telah diketahui sebelumnya. 
+%     Akurasi dihitung menggunakan rumus:
+% \begin{equation}
+%     Akurasi = \frac{1}{n} \sum_{i=1}^{n} \frac{1}{1 + |E_i|} \cdot 100\%
+% \end{equation}
+%     di mana \(E_i\) adalah selisih antara hasil pengukuran sistem dan data referensi, dan \(n\) adalah jumlah sampel yang diuji. Hasil evaluasi akan memberikan gambaran tentang seberapa baik sistem dalam mengukur panjang dan berat ikan.

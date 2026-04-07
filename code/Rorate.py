@@ -14,7 +14,7 @@ def PCA_rotate(corners):
         # Sudut tubuh ikan (dalam derajat)
         pca_angle = np.degrees(np.arctan2(vy, vx))
 
-        print(f"Sudut PCA: {pca_angle:.2f} derajat")
+        # print(f"Sudut PCA: {pca_angle:.2f} derajat")
         return pca_angle
     
 def PCa_rotate_image(image, angle):

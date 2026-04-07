@@ -174,8 +174,42 @@ Dengan melibatkan matriks momen kedua (\emph{second moment matrix}) untuk menghi
   Nilai \(R\) akan menunjukkan keberadaan sudut pada area tersebut. 
 Jika nilai \(R\) yang besar akan menunjukkan keberadaan sudut di area tersebut, sebaliknya nilai \(R\) yang kecil menunjukkan daerah tersebut merupakan tepi.
 
+\section{Rotasi}
+  Rotasi adalah proses transformasi geometris yang memutar posisi piksel citra terhadap titik pusat dengan sudut tertentu tanpa mengubah bentuk asli objek. Dalam konteks pengolahan citra digital, rotasi sering digunakan untuk menyesuaikan orientasi citra agar sesuai dengan kebutuhan analisis atau presentasi visual. Proses rotasi melibatkan perhitungan koordinat baru untuk setiap piksel berdasarkan sudut rotasi yang diinginkan, biasanya menggunakan matriks rotasi.
+ada banyak metode yang dapat dilakukan untuk rotasi citra, salah satungan dengan menggunakan PCA (\emph{Principal Component Analysis}). PCA adalah teknik statistik yang digunakan untuk mereduksi dimensi data dengan mempertahankan sebanyak mungkin variasi dalam data tersebut. Dalam konteks pengolahan citra, PCA dapat digunakan untuk menentukan arah utama dari fitur-fitur dalam citra, yang kemudian dapat digunakan untuk menentukan sudut rotasi yang optimal. 
+Dengan menganalisis kovarians dari piksel-piksel dalam citra, PCA mengidentifikasi sumbu utama yang mewakili arah dengan variansi terbesar. Sudut antara sumbu utama ini dan sumbu referensi (misalnya sumbu x) dapat dihitung untuk menentukan sudut rotasi yang diperlukan agar fitur-fitur dalam citra sejajar dengan orientasi yang diinginkan (\cite[hlm. 5--7]{ITJolliffe2002}).
+rotasi dihitung dengan rumus berikut:
+
+\begin{equation}
+  \begin{bmatrix}
+    x' \\
+    y'
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    \cos\theta & -\sin\theta \\
+    \sin\theta & \cos\theta
+  \end{bmatrix}
+  \begin{bmatrix}
+    x \\
+    y
+  \end{bmatrix}
+  \label{eq:rotasi}
+\end{equation}
+  
+Di mana \((x, y)\) adalah koordinat asli piksel, \((x', y')\) adalah koordinat piksel setelah rotasi, dan \(\theta\) adalah sudut rotasi dalam radian. Proses ini memastikan bahwa citra dapat diputar sesuai kebutuhan tanpa kehilangan informasi penting yang terkandung di dalamnya (\cite[hlm. 45--47]{Gonzalez2018}).
+
+\section{Bounding Box}
+  Bounding box adalah sebuah kotak persegi panjang yang digunakan untuk membatasi atau mengelilingi objek dalam citra. Dalam konteks pengolahan citra digital, bounding box sering digunakan untuk mendeteksi dan mengukur objek, seperti dalam aplikasi pengenalan pola, deteksi objek, dan analisis citra medis. Bounding box biasanya didefinisikan oleh koordinat titik sudut kiri atas dan kanan bawah, atau oleh koordinat pusat dan ukuran (lebar dan tinggi) dari kotak tersebut.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{gambar/Bounding B Car.jpg}
+  \caption{Contoh bounding box pada citra digital}
+\end{figure}
+
+
 \section{Euclidean dan Interpolasi}
-  Pada pengolahan citra digital, perhitungan jarak atau panjang antara dua titik sangat penting untuk berbagai aplikasi, seperti pengukuran objek, deteksi fitur, dan transformasi citra. Beberapa contoh metode yang digunakan adalah Euclidean dan atau Manhattan sebagai metode untuk menghitung gambar , dan Interpolasi sebagai metode untuk menghitung berat
+  Pada pengolahan citra digital, perhitungan jarak atau panjang antara dua titik sangat penting untuk berbagai aplikasi, seperti pengukuran objek, deteksi fitur, dan transformasi citra. Beberapa contoh metode yang digunakan adalah Euclidean dan atau Manhattan sebagai metode untuk menghitung gambar, dan Interpolasi sebagai metode untuk menghitung berat
 
   \textbf{Euclidean} merupakan salah satu cara untuk mengukur jarak lurus antara dua titik dalam ruang dua dimensi. Rumus ini didasarkan pada teorema Pythagoras, di mana jarak antara dua titik \(P_1(x_1, y_1)\) dan \(P_2(x_2, y_2)\) dihitung sebagai:
 \begin{equation}
@@ -184,7 +218,7 @@ Jika nilai \(R\) yang besar akan menunjukkan keberadaan sudut di area tersebut, 
 \end{equation}
   Dengan \(d\) adalah jarak Euclidean antara dua titik. Rumus ini juga dapat diperluas ke dimensi yang lebih tinggi dan digunakan secara luas untuk mengukur kedekatan atau kemiripan antara dua piksel atau fitur pada citra (\cite[hlm. 34]{Gonzalez2018}).
 
-  \textbf{Manhattan}
+  % \textbf{Manhattan}
 
   \textbf{Interpolasi} adalah metode untuk memperkirakan nilai di antara dua atau lebih titik data yang diketahui. Dalam konteks citra digital, interpolasi digunakan untuk menentukan nilai intensitas piksel pada posisi yang tidak tepat berada pada grid piksel, misalnya saat melakukan rotasi, penskalaan, atau transformasi citra. Selain itu, interpolasi juga dapat digunakan untuk menghitung nilai berat (weight) pada titik-titik tertentu, seperti dalam operasi filter atau penyesuaian nilai piksel hasil transformasi. Salah satu contoh rumus interpolasi linier untuk dua titik adalah:
 \begin{equation}
