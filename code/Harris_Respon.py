@@ -10,7 +10,7 @@ def Compute_Gradient_X(images):
     for img in images:
         Ix = cv2.filter2D(img.astype(np.float32), cv2.CV_32F, Kx)
         gradient_images.append(Ix)
-    return np.stack(gradient_images, axis=0)
+    return np.stack(gradient_images)
 
 def Compute_Gradient_Y(images):
     Ky = np.array([[1, 2, 1],

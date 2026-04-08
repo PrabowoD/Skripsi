@@ -13,7 +13,7 @@ if __name__ == "__main__":
     
     # Baca citra dari file
     
-    folder = "Picts/ikan_Nila"
+    folder = "Picts"
     image_paths = [os.path.join(folder, f) for f in os.listdir(folder)
                    if f.lower().endswith((".jpg", ".png", ".jpeg"))]
     
@@ -25,12 +25,12 @@ if __name__ == "__main__":
         image = remove(image, bgcolor=(255, 255, 255, 255))
         
     #Preproses citra
-        GaussianSmooth = [GaussianSmooth(image)]
-        GaussianSmooth = np.array(GaussianSmooth)
+        GaussianSmooths = [GaussianSmooth(image)]
+        GaussianSmooths = np.array(GaussianSmooths)
     
     # Terapkan Gradient
-        Gradient_X = Compute_Gradient_X(GaussianSmooth)
-        Gradient_Y = Compute_Gradient_Y(GaussianSmooth)
+        Gradient_X = Compute_Gradient_X(GaussianSmooths)
+        Gradient_Y = Compute_Gradient_Y(GaussianSmooths)
     
     # Terapkan Convolusi
         # Ixx = AutoCorrelation_Ixx(Gradient_X)
@@ -42,9 +42,9 @@ if __name__ == "__main__":
         Harris_respon = Harris(Ixx, Ixy, Iyy)
     
     # Thresholding dan Non-Maximum Suppression
-        all_corners = thresholding(GaussianSmooth, Harris_respon)
+        all_corners = thresholding(GaussianSmooths, Harris_respon)
         pca_angle = PCA_rotate(all_corners[0])
-        rotated_pca_image = PCa_rotate_image(GaussianSmooth[0], pca_angle)
+        rotated_pca_image = PCa_rotate_image(GaussianSmooths[0], pca_angle)
         
         # os.makedirs(output_folder, exist_ok=True)
         save_path = os.path.join("Output/Rotated/UjiCoba", filename)
@@ -67,7 +67,9 @@ if __name__ == "__main__":
         
         image = cv2.imread(img, cv2.IMREAD_GRAYSCALE)
         filename = os.path.basename(img)
-        folder_name = os.path.basename(os.path.dirname(img))
+        filename = filename.lower()
+        # folder_name = os.path.basename(os.path.dirname(img))
+        # folder_name = folder_name.lower()
         # image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         # blurred_image = cv2.GaussianBlur(image, (3, 3), sigmaX=1)
         # blurred_image = cv2.normalize(blurred_image, None, 0, 255, cv2.NORM_MINMAX)
@@ -117,18 +119,27 @@ if __name__ == "__main__":
         L = Dy * sk
         
         keliling_x = 2 * (P + L)
-        Berat = akn * keliling_x
-        
-        # if folder_name in berat_dict:
-        #     berat = berat_dict[folder_name] * keliling_x
-        # else:
-        #     berat = 0
-            
-
+        # Berat = akn * keliling_x
+        # for Berat in filename:
         print(f"Gambar {idx} : {filename}")
         print(f"panjang (P) : {P} cm")
         print(f"lebar (L) : {L} cm")
         print(f"Keliling ikan (Kx) : {keliling_x} cm")
+        
+        
+        Berat = 0
+        if "mas" in filename:
+                Berat = akm * keliling_x
+        elif "lele" in filename:
+                Berat = akl * keliling_x
+        elif "nila" in filename:
+                Berat = akn * keliling_x
+        else:
+                break
+
+            
+
+
         print(f"Berat ikan : {Berat} gram")
         
         # Sd = pd.read_excel(df, sheet_name="Nila")

@@ -8,8 +8,8 @@ from Harris_Respon import *
 
 
 
-directory = "Picts"
-output_base = "Output"
+directory = "UjiCoba/Input"
+output_base = "UjiCoba/Output"
 sk = 0.0267
 akn = 3.67
 akl = 4.15
@@ -32,16 +32,31 @@ for root, dirs, files in os.walk(directory):
         
         pca = PCA_rotate(thresholded_image)
         rotated_image = PCa_rotate_image(thresholded_image, pca)
-    
-        # blurred_image = cv2.GaussianBlur(rotated_image, (3, 3), sigmaX=1)
-        # blurred_image = cv2.normalize(blurred_image, None, 0, 255, cv2.NORM_MINMAX)
+
+        gray = cv2.cvtColor(rotated_image, cv2.COLOR_BGR2GRAY)
+        blurred_images = cv2.GaussianBlur(gray, (3, 3), sigmaX=1)
+        blurred_images = cv2.normalize(blurred_images, None, 0, 255, cv2.NORM_MINMAX)
         
-        Gx = Compute_Gradient_X(rotated_image)
-        Gy = Compute_Gradient_Y(rotated_image)
+        
+        Gx = Compute_Gradient_X(blurred_images)
+        Gy = Compute_Gradient_Y(blurred_images)
+        
+        # if Gx.ndim == 3:
+        #     Gx = Gx[:,:, 0]
+        # if Gy.ndim == 3:
+        #     Gy = Gy[:,:, 0]
         
         Ixx, Ixy, Iyy = AutoCorrelation(Gx, Gy)
+        
+        # if Ixx.ndim == 3:
+        #     Ixx = Ixx[:,:, 0]
+        # if Ixy.ndim == 3:
+        #     Ixy = Ixy[:,:, 0]
+        # if Iyy.ndim == 3:
+        #     Iyy = Iyy[:,:, 0]
+        
         Harris_respon = Harris(Ixx, Ixy, Iyy)
-        all_corners = thresholding(rotated_image, Harris_respon)
+        all_corners = thresholding(blurred_images, Harris_respon)
         
         ymin = int(np.min(all_corners[0][:, 0]))
         ymax = int(np.max(all_corners[0][:, 0]))
