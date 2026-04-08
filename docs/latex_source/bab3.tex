@@ -233,7 +233,7 @@ Pemilihan titik sudut didasarkan pada titik maksimum dan minimum pada setiap sum
 jika keempat titik tersebut digunakan untuk menghitung panjang dan lebar, maka hasilnya akan tidak akurat karena titik-titik tersebut tidak sejajar satu sama lain pada sumbu masing-masing.
 
     \emph{Bounding box} digunakan untuk membuat titik  sejajar dengan menggunakan nilai x dan y dari titik maksimum dan minimun. Hasil titik tersebut akan menghasil sebuah persegi panjang yang mengelilingi gambar ikan, 
-sehingga panjang dan lebar ikan dapat dihitung dengan lebih akurat, seperti pada gambar \ref{fig:box}.
+sehingga panjang dan lebar ikan dapat dihitung dengan lebih akurat, seperti pada gambar~\ref{fig:box}.
 
 \begin{figure}[H]
         \centering
@@ -255,14 +255,15 @@ sehingga panjang dan lebar ikan dapat dihitung dengan lebih akurat, seperti pada
     \caption{Contoh hasil gambar yang telah diberi bounding box}\label{fig:box}
 \end{figure}
 
-%\section{Menghitung Panjang}
-%     Setelah titik-titik sudut utama dan jarak antar titik diperoleh dari proses sebelumnya, langkah selanjutnya adalah menghitng panjang ikan dengan mengkonversi jarak pixel ke satuan nyata (cm), diperlukan data skala untuk mengkonversi jarak piksel ke satuan nyata. Skala dapat diperoleh dengan dua cara, yaitu menggunakan objek referensi yang diketahui ukurannya dalam gambar, atau berdasarkan resolusi gambar.
-% \begin{equation*}
-%     Skala = \frac{\text{Ukuran nyata (cm)}}{\text{Ukuran pada gambar (piksel)}}
-% \end{equation*}
-% \begin{equation}
-%     Panjang\ Nyata = d \times Skala
-% \end{equation}
+\subsection{Menghitung Panjang}
+    Setelah titik-titik sudut utama dan jarak antar titik diperoleh dari proses sebelumnya, langkah selanjutnya adalah menghitng panjang ikan dengan mengkonversi jarak pixel ke satuan nyata (cm), diperlukan data skala untuk mengkonversi jarak piksel ke satuan nyata. Skala dapat diperoleh dengan dua cara, yaitu menggunakan objek referensi yang diketahui ukurannya dalam gambar, atau berdasarkan resolusi gambar.
+\begin{equation*}
+    Skala = \frac{\text{Ukuran nyata (cm)}}{\text{Ukuran pada gambar (piksel)}}
+\end{equation*}
+\begin{equation}
+    Panjang\ Nyata = d \times Skala
+\end{equation}
+    Dimana \(d\) adalah jarak antar titik pada gambar. 
 
 \subsection{Menghitung Berat}
 
@@ -280,10 +281,10 @@ sehingga panjang dan lebar ikan dapat dihitung dengan lebih akurat, seperti pada
 
     Dengan metode ini, sistem dapat menghitung panjang ikan secara otomatis dari citra digital dan mengestimasi berat ikan berdasarkan data referensi, sehingga proses pengukuran menjadi lebih efisien, akurat, dan minim kontak langsung dengan ikan.
 
-% \section{Evaluasi Akurasi}
-%     Setelah sistem selesai melakukan pengukuran panjang dan berat ikan, langkah terakhir adalah mengevaluasi akurasi hasil pengukuran. Evaluasi dilakukan dengan membandingkan hasil pengukuran sistem dengan data referensi yang telah diketahui sebelumnya. 
-%     Akurasi dihitung menggunakan rumus:
-% \begin{equation}
-%     Akurasi = \frac{1}{n} \sum_{i=1}^{n} \frac{1}{1 + |E_i|} \cdot 100\%
-% \end{equation}
-%     di mana \(E_i\) adalah selisih antara hasil pengukuran sistem dan data referensi, dan \(n\) adalah jumlah sampel yang diuji. Hasil evaluasi akan memberikan gambaran tentang seberapa baik sistem dalam mengukur panjang dan berat ikan.
+\section{Evaluasi Akurasi}
+    Setelah sistem selesai melakukan pengukuran panjang dan berat ikan, langkah terakhir adalah mengevaluasi akurasi hasil pengukuran. Evaluasi dilakukan dengan membandingkan hasil pengukuran sistem dengan data referensi yang telah diketahui sebelumnya. 
+    Akurasi dihitung menggunakan rumus:
+\begin{equation}
+    Akurasi = \frac{1}{n} \sum_{i=1}^{n} \frac{1}{1 + |E_i|} \cdot 100\%
+\end{equation}
+    di mana \(E_i\) adalah selisih antara hasil pengukuran sistem dan data referensi, dan \(n\) adalah jumlah sampel yang diuji. Hasil evaluasi akan memberikan gambaran tentang seberapa baik sistem dalam mengukur panjang dan berat ikan.

@@ -2,9 +2,6 @@ import numpy as np
 import cv2 as cv2
 from scipy import ndimage
 from Pre_Processing import *
-from Thresholding import *
-from Gradient import *
-from AutoCorrelation import *
 from Harris_Respon import *
 from Max_Min_coordinate import *
 from Rorate import *
@@ -22,7 +19,7 @@ if __name__ == "__main__":
                    if f.lower().endswith((".jpg", ".png", ".jpeg"))]
     
     for idx, img in enumerate(image_paths):
-        
+        folder_name = os.path.basename(os.path.dirname(img))
         image = cv2.imread(img, cv2.IMREAD_GRAYSCALE)
         
         filename = os.path.basename(img)
@@ -62,6 +59,8 @@ if __name__ == "__main__":
                    if f.lower().endswith((".jpg", ".png", ".jpeg"))]
     #df = pd.ExcelFile("Size_ikan.xlsx")
     sk = 0.0138
+    berat_dict = {"Mas": 5.93, "Lele": 4.15, "Nila": 3.67}
+    
     
     for idx, img in enumerate(imps):
         
@@ -116,11 +115,18 @@ if __name__ == "__main__":
         L = Dy * sk
         
         keliling_x = 2 * (P + L)
-        
+     
+        if folder_name in berat_dict:
+            berat = berat_dict[folder_name] * keliling_x
+        else:
+            berat = 0
+            
+
         print(f"Gambar {idx} : {filename}")
         print(f"panjang (P) : {P} cm")
         print(f"lebar (L) : {L} cm")
         print(f"Keliling ikan (Kx) : {keliling_x} cm")
+        print(f"Berat ikan : {berat} gram")
         
         # Sd = pd.read_excel(df, sheet_name="Nila")
         # Sd = Sd.sort_values(by="keliling").reset_index(drop=True)

@@ -37,8 +37,10 @@
 \contentsline {section}{\numberline {3.6}Thresholding dan \emph {Non-Maximum suppression}}{18}{section.3.6}%
 \contentsline {section}{\numberline {3.7}Penghitungan panjang dan berat}{19}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}Bounding Box}{19}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Menghitung Berat}{20}{subsection.3.7.2}%
-\contentsline {chapter}{\numberline {IV}HASIL DAN PEMBAHASAN}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Pra-Processing Citra}{21}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Input Gambar dan Penghilangan Background}{21}{subsection.4.1.1}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{22}{figure.caption.14}%
+\contentsline {subsection}{\numberline {3.7.2}Menghitung Panjang}{20}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Menghitung Berat}{20}{subsection.3.7.3}%
+\contentsline {section}{\numberline {3.8}Evaluasi Akurasi}{21}{section.3.8}%
+\contentsline {chapter}{\numberline {IV}HASIL DAN PEMBAHASAN}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Pra-Processing Citra}{22}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Input Gambar dan Penghilangan Background}{22}{subsection.4.1.1}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{23}{figure.caption.14}%
