@@ -1,7 +1,7 @@
 %!TEX root = ./template-skripsi.tex
 %-------------------------------------------------------------------------------
 %                            	BAB IV
-%               		KESIMPULAN DAN SARAN
+%               		HASIL DAN PEMBAHASAN
 %-------------------------------------------------------------------------------
 
 \chapter{HASIL DAN PEMBAHASAN}
@@ -15,9 +15,184 @@
     \caption{Gambar yang akan digunakan dalam penelitian}\label{fig:folder-ikan}
 \end{figure}
 
-Langkah pertama yang dilakukan dalam penelitian adalah dengan memasukan \emph{dataset} untuk menghilangkan backgroundnya. 
-Pra-processing dilakukan untuk memudahkan proses ektraksi sudut pada citra.
-Dalam hal ini,  %gambar masih memiliki background yang cukup komplesks, sehingga perlu dilakukan 
+Langkah pertama yang dilakukan dalam penelitian adalah dengan memasukan \emph{dataset} untuk dilakukan Pra-processing. Dalam hal ini, gambar akan diberikan nama sesuai dengan jenis ikan, yaitu Ikan Mas, Ikan Lele, dan Ikan Nila.
+Pra-processing dilakukan untuk memudahkan proses ektraksi sudut pada citra. Pra-processing terbagi menjadi beberapa tahapan, yaitu penghilangan background, rotasi citra berdasarkan sudut PCA, dan smoothing citra dengan Gaussian blur.
+Berikut \emph{Source Code} yang digunakan dalam proses Pra-Processing : %gambar masih memiliki background yang cukup komplesks, sehingga perlu dilakukan 
+
+\begin{figure}[H]
+    \begin{lstlisting}[language=Python, basicstyle=\tiny]
+        remove(image, bgcolor=(255, 255, 255))    
+    \end{lstlisting}
+    \caption{\emph{source code}: Untuk menghapus background dari library rembg}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{lstlisting}[language=Python, basicstyle=\tiny]
+        def PCA_rotate(corners):
+            if corners is not None and len(corners) > 0:
+                
+                pts = corners[:, [1, 0]].astype(np.float32)
+
+                mean, eigenvectors, eigenvalues = cv2.PCACompute2(pts, mean=None)
+                vx, vy = eigenvectors[0]
+
+                pca_angle = np.degrees(np.arctan2(vy, vx))
+                return pca_angle
+        
+        def PCa_rotate_image(image, angle):
+                h, w = image.shape
+                center_img = (w // 2, h // 2)
+
+                rotation_matrix_pca = cv2.getRotationMatrix2D(center_img, angle, 1.0)
+                rotated_img_pca = cv2.warpAffine(image, rotation_matrix_pca, (w, h), borderValue=(255, 255, 255))
+                
+                return rotated_img_pca
+    \end{lstlisting}
+    \caption{\emph{source code}: Untuk melakukan rotasi citra berdasarkan sudut PCA}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \begin{lstlisting}[language=Python, basicstyle=\tiny]
+        def GaussianSmooth(image):
+            if len(image.shape) == 3:  
+                image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            elif len(image.shape) == 2: 
+                pass
+
+            blurred_image = cv2.GaussianBlur(image, (3, 3), sigmaX=1)
+            # Normalize the image to the range [0, 255]
+            blurred_image = cv2.normalize(blurred_image, None, 0, 255, cv2.NORM_MINMAX)
+
+            return blurred_image
+    \end{lstlisting}
+\end{figure}
+
+Setelah semua tahapan pra-processing telah selesai dilakukan, gambar akan disave kedalam folder terpisah dan akan digunakan untuk proses selanjutnya.
+
+\section{Penghitungan Harris Respon}
+\subsection{Menghitung Gradien}
+    Sebelum menjalankan fungsi \emph{Harris Respons}, beberapa fungsi perlu dijalankan terlebih dahulu, yaitu menghitung Gradien pada sumbu X dan Y. Berikut \emph{Source Code} yang digunakan untuk menghitung Gradien pada sumbu X dan Y:
+
+\begin{figure}[H]
+    \begin{lstlisting}[language=Python, basicstyle=\tiny]
+        def Compute_Gradient_X(image):
+            kernel_x = np.array([[-1, 0, 1],
+                                 [-2, 0, 2],
+                                 [-1, 0, 1]], dtype=np.float32)
+            gradient_x = cv2.filter2D(image, -1, kernel_x)
+            return gradient_x
+
+        def Compute_Gradient_Y(image):
+            kernel_y = np.array([[1, 2, 1],
+                                 [0, 0, 0],
+                                 [-1, -2, -1]], dtype=np.float32)
+            gradient_y = cv2.filter2D(image, -1, kernel_y)
+            return gradient_y
+    \end{lstlisting}
+    \caption{\emph{source code}: Untuk menghitung Gradien pada sumbu X dan Y}
+\end{figure}
+
+    Fungsi \emph{Compute\_Gradient\_X} dan \emph{Compute\_Gradient\_Y} menggunakan kernel Sobel untuk menghitung gradien pada sumbu X dan Y. Hasil dari fungsi ini akan digunakan dalam proses penghitungan Harris Respon.
+
+\subsection{AutoKorelasi}
+    Melakukan proses autokorelasi diperlukan untuk menghitung Harris respon. Proses  autokorelasi dilakukan dengan mengkalikan hasil dari gradien dengan gaussian blur. berikut \emph{Source Code} yang digunakan untuk menghitung autokorelasi:
+\begin{figure}[H]
+    \begin{lstlisting}[language=Python, basicstyle=\tiny]
+        def AutoCorrelation(gradient_x, gradient_y):
+            Ixx = cv2.GaussianBlur(gradient_x ** 2, (3, 3), sigmaX=1)
+            Ixy = cv2.GaussianBlur(gradient_x * gradient_y, (3, 3), sigmaX=1)
+            Iyy = cv2.GaussianBlur(gradient_y ** 2, (3, 3), sigmaX=1)
+            return Ixx, Ixy, Iyy
+    \end{lstlisting}
+    \caption{\emph{source code}: Untuk menghitung autokorelasi}
+\end{figure}
+
+\subsection{Harris-Respons}
+    Setelah nilai Ixx, Ixy, dan Iyy didapatkan, langkah selanjutnya adalah menghitung Harris Respon dengan menggunakan fungsi \emph{Harris}. Berikut \emph{Source Code} yang digunakan untuk menghitung Harris Respon:
+
+\begin{figure}[H]
+    \begin{lstlisting}[language=Python, basicstyle=\tiny]
+        def Harris(Ixx, Ixy, Iyy, k=0.04):
+            det = Ixx * Iyy - Ixy ** 2
+            trace = Ixx + Iyy
+            R = det - k * (trace ** 2)
+            return R
+    \end{lstlisting}
+    \caption{\emph{source code}: Untuk menghitung Harris Respon}
+\end{figure}
+
+\subsection{NMS dan thresholding}
+ Nilai Harris yang didapatkan dari fungsi \emph{Harris} masih terlalu banyak jika langsung digunakan untuk mengekstraksi sudut. Oleh karena itu, perlu dilakukan proses thresholding dan non-maximum suppression untuk mendapatkan titik-titik sudut yang signifikan. Berikut \emph{Source Code} yang digunakan untuk melakukan thresholding dan non-maximum suppression:
+\begin{figure}[H]
+    \begin{lstlisting}[language=Python, basicstyle=\tiny]
+        def thresholding(preprocessed_images, Harris_respon, output_dir="Output"):
+            os.makedirs(output_dir, exist_ok=True)
+            all_corners = []
+
+            for idx, (img, r) in enumerate(zip(preprocessed_images, Harris_respon)):
+                R_norm = cv2.normalize(r, None, 0, 255, cv2.NORM_MINMAX)
+                R_norm = np.uint8(R_norm)
+
+                thresh = 0.01 * r.max()
+                dilated = cv2.dilate(r, None)
+                nms_mask = (r == dilated) & (r > thresh)
+                corners = np.argwhere(nms_mask)
+                all_corners.append(corners)
+            return all_corners
+    \end{lstlisting}
+    \caption{\emph{source code}: Untuk melakukan thresholding dan non-maximum suppression}
+\end{figure}
+
+\section{Menghitung Panjang dan Berat}
+\subsection{Bounding Box}
+    Titik sudut yang telah didapatkan dari hasil proses penghitungan Harris Respon akan melalui tahap pemilihan titik sudut untuk menentukan nilai maksimal dan minimal pada sumbu x dan y pada seluruh titik yang telah didapatkan.
+Pemilihan titik sudut dilakukan dengan menggunakan \emph{Source Code} berikut:
+\begin{figure}[H]
+    \begin{lstlisting}[language=Python, basicstyle=\tiny]
+        def bounding_box(corners):
+            if len(corners) == 0:
+                return None
+
+            x_min = np.min(corners[:, 1])
+            x_max = np.max(corners[:, 1])
+            y_min = np.min(corners[:, 0])
+            y_max = np.max(corners[:, 0])
+
+            return (x_min, y_min), (x_max, y_max)
+    \end{lstlisting}
+    \caption{\emph{source code}: Untuk menentukan nilai maksimal dan minimal sumbu x dan y dari titik sudut yang telah didapatkan}
+\end{figure}
+
+\subsection{Menghitung Ukuran Ikan}
+    Nilai yang didapatkan dari hasil bounding box akan digunakan untuk menghitung panjang, lebar, dan keliling ikan. Berikut \emph{Source Code} yang digunakan untuk menghitung ukuran ikan:
+\begin{figure}[H]
+    \begin{lstlisting}[language=Python, basicstyle=\tiny]
+        def calculate_size(corners):
+            sk = 0.0138  # Skala konversi piksel ke sentimeter
+            if corners is None:
+                return None
+
+            (x_min, y_min), (x_max, y_max) = bounding_box(corners)
+            length_px = abs(x_max - x_min)
+            width_px = abs(y_max - y_min)
+            
+            length = length_px * sk
+            width = width_px * sk
+            perimeter = 2 * (length + width)
+
+            return length, width, perimeter
+    \end{lstlisting}
+    \caption{\emph{source code}: Untuk menghitung panjang, lebar, dan keliling ikan}
+\end{figure}
+
+Nilai \emph{sk} merupakan skala konversi dari piksel ke sentimeter yang didapatkan dengan membandingkan ukuran sebuah koin dengan ukuran koin pada gambar.
+Gambar koin tersebut diambil dengan menggunakan kamera dan tinggi pengambilan gambar yang sama dengan saat pengambilan gambar ikan.
+
+\subsection{Mengitung Berat}
+    Nilai keliling hasil dari fungsi \emph{calculate\_size} akan digunakan untuk menghitung berat ikan. Namun sebelum itu, ikan perlu melalui proses pengecekan jenis ikan, karena berat ikan akan berbeda tergantung jenis ikan. Berikut \emph{Source Code} yang digunakan untuk menghitung berat ikan:
+
 
 
 % Baris ini digunakan untuk membantu dalam melakukan sitasi

@@ -4,7 +4,6 @@ from scipy import ndimage
 from Pre_Processing import *
 from Harris_Respon import *
 from Max_Min_coordinate import *
-from Rorate import *
 from rembg import remove
 import os
 import pandas as pd
@@ -14,12 +13,11 @@ if __name__ == "__main__":
     
     # Baca citra dari file
     
-    folder = "Picts"
+    folder = "Picts/ikan_Nila"
     image_paths = [os.path.join(folder, f) for f in os.listdir(folder)
                    if f.lower().endswith((".jpg", ".png", ".jpeg"))]
     
     for idx, img in enumerate(image_paths):
-        folder_name = os.path.basename(os.path.dirname(img))
         image = cv2.imread(img, cv2.IMREAD_GRAYSCALE)
         
         filename = os.path.basename(img)
@@ -27,12 +25,12 @@ if __name__ == "__main__":
         image = remove(image, bgcolor=(255, 255, 255, 255))
         
     #Preproses citra
-        preprocessed_images = [preprocess_image(image)]
-        preprocessed_images = np.array(preprocessed_images)
+        GaussianSmooth = [GaussianSmooth(image)]
+        GaussianSmooth = np.array(GaussianSmooth)
     
     # Terapkan Gradient
-        Gradient_X = Compute_Gradient_X(preprocessed_images)
-        Gradient_Y = Compute_Gradient_Y(preprocessed_images)
+        Gradient_X = Compute_Gradient_X(GaussianSmooth)
+        Gradient_Y = Compute_Gradient_Y(GaussianSmooth)
     
     # Terapkan Convolusi
         # Ixx = AutoCorrelation_Ixx(Gradient_X)
@@ -44,48 +42,52 @@ if __name__ == "__main__":
         Harris_respon = Harris(Ixx, Ixy, Iyy)
     
     # Thresholding dan Non-Maximum Suppression
-        all_corners = thresholding(preprocessed_images, Harris_respon)
+        all_corners = thresholding(GaussianSmooth, Harris_respon)
         pca_angle = PCA_rotate(all_corners[0])
-        rotated_pca_image = PCa_rotate_image(preprocessed_images[0], pca_angle)
+        rotated_pca_image = PCa_rotate_image(GaussianSmooth[0], pca_angle)
         
-        save_path = os.path.join("Output/Rotated", filename)
+        # os.makedirs(output_folder, exist_ok=True)
+        save_path = os.path.join("Output/Rotated/UjiCoba", filename)
         cv2.imwrite(save_path, rotated_pca_image)
 
 
     #Max Min Coordinate
     
-    Fls = "Output/Rotated"
+    Fls = "Output/Rotated/UjiCoba"
     imps = [os.path.join(Fls, f) for f in os.listdir(Fls)
                    if f.lower().endswith((".jpg", ".png", ".jpeg"))]
     #df = pd.ExcelFile("Size_ikan.xlsx")
     sk = 0.0138
-    berat_dict = {"Mas": 5.93, "Lele": 4.15, "Nila": 3.67}
-    
+    # berat_dict = {"Mas": 5.93, "Lele": 4.15, "Nila": 3.67}
+    akm = 5.93
+    akl = 4.15
+    akn = 3.06
     
     for idx, img in enumerate(imps):
         
         image = cv2.imread(img, cv2.IMREAD_GRAYSCALE)
         filename = os.path.basename(img)
+        folder_name = os.path.basename(os.path.dirname(img))
         # image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         # blurred_image = cv2.GaussianBlur(image, (3, 3), sigmaX=1)
         # blurred_image = cv2.normalize(blurred_image, None, 0, 255, cv2.NORM_MINMAX)
         # image = np.array(blurred_image)
         # image = cv2.rotate(image, cv2.ROTATE_90_CLOCKWISE)
         
-        pre = [preprocess_image(image)]
-        pre = np.array(pre)
+        GaussianSmooths = [GaussianSmooth(image)]
+        GaussianSmooths = np.array(GaussianSmooths)
         
-        Gradient_X = Compute_Gradient_X(pre)
-        Gradient_Y = Compute_Gradient_Y(pre)
+        Grad_X = Compute_Gradient_X(GaussianSmooths)
+        Grad_Y = Compute_Gradient_Y(GaussianSmooths)
         
         # Ixx = AutoCorrelation_Ixx(Gradient_X)
         # Ixy = AutoCorrelation_Ixy(Gradient_X, Gradient_Y)
         # Iyy = AutoCorrelation_Iyy(Gradient_Y)
         
-        Ixx, Ixy, Iyy = AutoCorrelation(Gradient_X, Gradient_Y)
+        xx, xy, yy = AutoCorrelation(Grad_X, Grad_Y)
         
-        Harris_respon = Harris(Ixx, Ixy, Iyy)
-        all_corners = thresholding(pre, Harris_respon)
+        Harespon = Harris(xx, xy, yy)
+        all_corners = thresholding(GaussianSmooths, Harespon)
     
         # points = get_min_max_points_direct(all_corners[0])
         # print(f"Gambar {idx}: {points}")
@@ -103,7 +105,7 @@ if __name__ == "__main__":
         
         print(np.min(all_corners[0], axis=0))
         print(np.max(all_corners[0], axis=0))
-        Dx =  abs(xmax - xmin)
+        Dx = abs(xmax - xmin)
         Dy = abs(ymax - ymin)
 
         save_path = os.path.join("Output/Box", filename)
@@ -115,18 +117,19 @@ if __name__ == "__main__":
         L = Dy * sk
         
         keliling_x = 2 * (P + L)
-     
-        if folder_name in berat_dict:
-            berat = berat_dict[folder_name] * keliling_x
-        else:
-            berat = 0
+        Berat = akn * keliling_x
+        
+        # if folder_name in berat_dict:
+        #     berat = berat_dict[folder_name] * keliling_x
+        # else:
+        #     berat = 0
             
 
         print(f"Gambar {idx} : {filename}")
         print(f"panjang (P) : {P} cm")
         print(f"lebar (L) : {L} cm")
         print(f"Keliling ikan (Kx) : {keliling_x} cm")
-        print(f"Berat ikan : {berat} gram")
+        print(f"Berat ikan : {Berat} gram")
         
         # Sd = pd.read_excel(df, sheet_name="Nila")
         # Sd = Sd.sort_values(by="keliling").reset_index(drop=True)

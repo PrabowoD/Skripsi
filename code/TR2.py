@@ -9,6 +9,7 @@ from Harris_Respon import *
 
 
 directory = "Picts"
+output_base = "Output"
 sk = 0.0267
 akn = 3.67
 akl = 4.15
@@ -19,7 +20,9 @@ for root, dirs, files in os.walk(directory):
         if filename.lower().endswith((".jpg", ".png", ".jpeg")):
             image_path = os.path.join(root, filename)
             image_name = filename
+            
             folder_name = os.path.basename(root)
+            output_folder = os.path.join(output_base, folder_name)
         
         image = remove(cv2.imread(image_path), bgcolor=(255, 255, 255, 255))
         image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -30,22 +33,22 @@ for root, dirs, files in os.walk(directory):
         pca = PCA_rotate(thresholded_image)
         rotated_image = PCa_rotate_image(thresholded_image, pca)
     
-        blurred_image = cv2.GaussianBlur(rotated_image, (3, 3), sigmaX=1)
-        blurred_image = cv2.normalize(blurred_image, None, 0, 255, cv2.NORM_MINMAX)
+        # blurred_image = cv2.GaussianBlur(rotated_image, (3, 3), sigmaX=1)
+        # blurred_image = cv2.normalize(blurred_image, None, 0, 255, cv2.NORM_MINMAX)
         
-        Gx = Compute_Gradient_X(blurred_image)
-        Gy = Compute_Gradient_Y(blurred_image)
+        Gx = Compute_Gradient_X(rotated_image)
+        Gy = Compute_Gradient_Y(rotated_image)
         
         Ixx, Ixy, Iyy = AutoCorrelation(Gx, Gy)
         Harris_respon = Harris(Ixx, Ixy, Iyy)
-        all_corners = thresholding(blurred_image, Harris_respon)
+        all_corners = thresholding(rotated_image, Harris_respon)
         
         ymin = int(np.min(all_corners[0][:, 0]))
         ymax = int(np.max(all_corners[0][:, 0]))
         xmin = int(np.min(all_corners[0][:, 1]))
         xmax = int(np.max(all_corners[0][:, 1]))
 
-        Dx =  abs(xmax - xmin)
+        Dx = abs(xmax - xmin)
         Dy = abs(ymax - ymin)
         
         P = Dx * sk

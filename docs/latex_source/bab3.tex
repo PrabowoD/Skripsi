@@ -263,23 +263,32 @@ sehingga panjang dan lebar ikan dapat dihitung dengan lebih akurat, seperti pada
 \begin{equation}
     Panjang\ Nyata = d \times Skala
 \end{equation}
-    Dimana \(d\) adalah jarak antar titik pada gambar. 
+    Dimana \(d\) adalah jarak antar titik pada gambar.
 
 \subsection{Menghitung Berat}
 
-    Setelah panjang ikan dalam satuan nyata diketahui, estimasi berat ikan dapat dilakukan menggunakan rumus interpolasi linier berdasarkan data panjang dan berat ikan yang telah diketahui sebelumnya. Rumus interpolasi linier yang digunakan adalah:
-\begin{equation}
-    W_n = W_x + \frac{(L_n - L_x)}{(L_y - L_x)} \times (W_y - W_x)
-\end{equation}
-    di mana:
-\begin{itemize}
-    \item \(W_n\) = berat ikan yang dicari,
-    \item \(L_n\) = panjang ikan hasil pengukuran,
-    \item \(L_x\) dan \(L_y\) = panjang ikan pada data referensi sebelum dan sesudah,
-    \item \(W_x\) dan \(W_y\) = berat ikan pada data referensi sebelum dan sesudah.
-\end{itemize}
+     Setelah panjang ikan dalam satuan nyata diketahui, estimasi berat ikan dilakukan dengan cara melakukan perkalian antara keliling ikan dengan berat rata per keliling ikan.
+rata-rata berat per keliling ikan diperoleh dari data referensi yang telah diambil sebelumnya. Data referensi tersebut berisi informasi panjang, lebar, dan berat ikan. 
+\begin{equation*}
+    Keliling\ Ikan = 2 \times (Panjang\ Ikan + Lebar\ Ikan)
+\end{equation*}
+\begin{equation*}
+    Berat\ Ikan = Keliling\ Ikan \times Berat\ Rata\ per\ Keliling\ Ikan
+\end{equation*}
 
-    Dengan metode ini, sistem dapat menghitung panjang ikan secara otomatis dari citra digital dan mengestimasi berat ikan berdasarkan data referensi, sehingga proses pengukuran menjadi lebih efisien, akurat, dan minim kontak langsung dengan ikan.
+% dapat dilakukan menggunakan rumus interpolasi linier berdasarkan data panjang dan berat ikan yang telah diketahui sebelumnya. Rumus interpolasi linier yang digunakan adalah:
+% % \begin{equation}
+%     W_n = W_x + \frac{(L_n - L_x)}{(L_y - L_x)} \times (W_y - W_x)
+% \end{equation}
+%     di mana:
+% \begin{itemize}
+%     \item \(W_n\) = berat ikan yang dicari,
+%     \item \(L_n\) = panjang ikan hasil pengukuran,
+%     \item \(L_x\) dan \(L_y\) = panjang ikan pada data referensi sebelum dan sesudah,
+%     \item \(W_x\) dan \(W_y\) = berat ikan pada data referensi sebelum dan sesudah.
+% \end{itemize}
+
+    Dengan metode ini, sistem dapat menghitung panjang dan mengestimasi berat ikan secara otomatis dari citra digital, sehingga proses pengukuran menjadi lebih efisien, dan minim kontak langsung dengan ikan.
 
 \section{Evaluasi Akurasi}
     Setelah sistem selesai melakukan pengukuran panjang dan berat ikan, langkah terakhir adalah mengevaluasi akurasi hasil pengukuran. Evaluasi dilakukan dengan membandingkan hasil pengukuran sistem dengan data referensi yang telah diketahui sebelumnya. 

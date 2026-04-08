@@ -205,32 +205,33 @@ Di mana \((x, y)\) adalah koordinat asli piksel, \((x', y')\) adalah koordinat p
   \centering
   \includegraphics[width=0.8\textwidth]{gambar/Bounding B Car.jpg}
   \caption{Contoh bounding box pada citra digital}
+
 \end{figure}
 
 
-\section{Euclidean dan Interpolasi}
-  Pada pengolahan citra digital, perhitungan jarak atau panjang antara dua titik sangat penting untuk berbagai aplikasi, seperti pengukuran objek, deteksi fitur, dan transformasi citra. Beberapa contoh metode yang digunakan adalah Euclidean dan atau Manhattan sebagai metode untuk menghitung gambar, dan Interpolasi sebagai metode untuk menghitung berat
+% \section{Euclidean dan Interpolasi}
+%   Pada pengolahan citra digital, perhitungan jarak atau panjang antara dua titik sangat penting untuk berbagai aplikasi, seperti pengukuran objek, deteksi fitur, dan transformasi citra. Beberapa contoh metode yang digunakan adalah Euclidean dan atau Manhattan sebagai metode untuk menghitung gambar, dan Interpolasi sebagai metode untuk menghitung berat
 
-  \textbf{Euclidean} merupakan salah satu cara untuk mengukur jarak lurus antara dua titik dalam ruang dua dimensi. Rumus ini didasarkan pada teorema Pythagoras, di mana jarak antara dua titik \(P_1(x_1, y_1)\) dan \(P_2(x_2, y_2)\) dihitung sebagai:
-\begin{equation}
-  d = \sqrt({x_2 - x_1}^2 + {y_2 - y_1}^2)
-  \label{eq:euclidean}
-\end{equation}
-  Dengan \(d\) adalah jarak Euclidean antara dua titik. Rumus ini juga dapat diperluas ke dimensi yang lebih tinggi dan digunakan secara luas untuk mengukur kedekatan atau kemiripan antara dua piksel atau fitur pada citra (\cite[hlm. 34]{Gonzalez2018}).
+%   \textbf{Euclidean} merupakan salah satu cara untuk mengukur jarak lurus antara dua titik dalam ruang dua dimensi. Rumus ini didasarkan pada teorema Pythagoras, di mana jarak antara dua titik \(P_1(x_1, y_1)\) dan \(P_2(x_2, y_2)\) dihitung sebagai:
+% \begin{equation}
+%   d = \sqrt({x_2 - x_1}^2 + {y_2 - y_1}^2)
+%   \label{eq:euclidean}
+% \end{equation}
+%   Dengan \(d\) adalah jarak Euclidean antara dua titik. Rumus ini juga dapat diperluas ke dimensi yang lebih tinggi dan digunakan secara luas untuk mengukur kedekatan atau kemiripan antara dua piksel atau fitur pada citra (\cite[hlm. 34]{Gonzalez2018}).
 
   % \textbf{Manhattan}
 
-  \textbf{Interpolasi} adalah metode untuk memperkirakan nilai di antara dua atau lebih titik data yang diketahui. Dalam konteks citra digital, interpolasi digunakan untuk menentukan nilai intensitas piksel pada posisi yang tidak tepat berada pada grid piksel, misalnya saat melakukan rotasi, penskalaan, atau transformasi citra. Selain itu, interpolasi juga dapat digunakan untuk menghitung nilai berat (weight) pada titik-titik tertentu, seperti dalam operasi filter atau penyesuaian nilai piksel hasil transformasi. Salah satu contoh rumus interpolasi linier untuk dua titik adalah:
-\begin{equation}
-  f(x) = f(x_0) + \frac{(x - x_0)}{(x_1 - x_0)} \left[ f(x_1) - f(x_0) \right]
-  \label{eq:interpolasi-linier}
-\end{equation}
-  Untuk interpolasi bilinear pada citra dua dimensi, nilai pada titik \((x, y)\) di antara empat piksel tetangga dapat dihitung dengan:
-\begin{equation*}
-  f(x, y) = a_0 + a_1x + a_2y + a_3xy
-  \label{eq:interpolasi-bilinear}
-\end{equation*}
-  di mana koefisien \(a_0, a_1, a_2, a_3\) ditentukan berdasarkan nilai intensitas keempat piksel tetangga. Metode interpolasi ini sangat penting dalam proses resampling, rotasi, transformasi citra, maupun dalam perhitungan bobot piksel pada berbagai algoritma pengolahan citra (\cite[hlm. 89--91]{Gonzalez2018}).
+%   \textbf{Interpolasi} adalah metode untuk memperkirakan nilai di antara dua atau lebih titik data yang diketahui. Dalam konteks citra digital, interpolasi digunakan untuk menentukan nilai intensitas piksel pada posisi yang tidak tepat berada pada grid piksel, misalnya saat melakukan rotasi, penskalaan, atau transformasi citra. Selain itu, interpolasi juga dapat digunakan untuk menghitung nilai berat (weight) pada titik-titik tertentu, seperti dalam operasi filter atau penyesuaian nilai piksel hasil transformasi. Salah satu contoh rumus interpolasi linier untuk dua titik adalah:
+% \begin{equation}
+%   f(x) = f(x_0) + \frac{(x - x_0)}{(x_1 - x_0)} \left[ f(x_1) - f(x_0) \right]
+%   \label{eq:interpolasi-linier}
+% \end{equation}
+%   Untuk interpolasi bilinear pada citra dua dimensi, nilai pada titik \((x, y)\) di antara empat piksel tetangga dapat dihitung dengan:
+% \begin{equation*}
+%   f(x, y) = a_0 + a_1x + a_2y + a_3xy
+%   \label{eq:interpolasi-bilinear}
+% \end{equation*}
+%   di mana koefisien \(a_0, a_1, a_2, a_3\) ditentukan berdasarkan nilai intensitas keempat piksel tetangga. Metode interpolasi ini sangat penting dalam proses resampling, rotasi, transformasi citra, maupun dalam perhitungan bobot piksel pada berbagai algoritma pengolahan citra (\cite[hlm. 89--91]{Gonzalez2018}).
 
 
 

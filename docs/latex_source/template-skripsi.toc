@@ -24,23 +24,31 @@
 \contentsline {section}{\numberline {2.7}\emph {Harris-Corner Detection}}{9}{section.2.7}%
 \contentsline {section}{\numberline {2.8}Rotasi}{10}{section.2.8}%
 \contentsline {section}{\numberline {2.9}Bounding Box}{11}{section.2.9}%
-\contentsline {section}{\numberline {2.10}Euclidean dan Interpolasi}{11}{section.2.10}%
-\contentsline {chapter}{\numberline {III}METODE PENELITIAN}{13}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Deskripsi Sistem}{13}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Pre-Processing Citra}{14}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Penghapusan Background}{14}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Rotasi}{15}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Smoothing Gaussian}{16}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Perhitungan Gradien}{17}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Menghitung Second Moment Matriks}{17}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Harris Respon}{18}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Thresholding dan \emph {Non-Maximum suppression}}{18}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Penghitungan panjang dan berat}{19}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Bounding Box}{19}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Menghitung Panjang}{20}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.7.3}Menghitung Berat}{20}{subsection.3.7.3}%
-\contentsline {section}{\numberline {3.8}Evaluasi Akurasi}{21}{section.3.8}%
-\contentsline {chapter}{\numberline {IV}HASIL DAN PEMBAHASAN}{22}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Pra-Processing Citra}{22}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Input Gambar dan Penghilangan Background}{22}{subsection.4.1.1}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{23}{figure.caption.14}%
+\contentsline {chapter}{\numberline {III}METODE PENELITIAN}{12}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Deskripsi Sistem}{12}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Pre-Processing Citra}{13}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Penghapusan Background}{13}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Rotasi}{14}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Smoothing Gaussian}{15}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Perhitungan Gradien}{16}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Menghitung Second Moment Matriks}{16}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Harris Respon}{17}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Thresholding dan \emph {Non-Maximum suppression}}{17}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Penghitungan panjang dan berat}{18}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Bounding Box}{18}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Menghitung Panjang}{19}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Menghitung Berat}{19}{subsection.3.7.3}%
+\contentsline {section}{\numberline {3.8}Evaluasi Akurasi}{20}{section.3.8}%
+\contentsline {chapter}{\numberline {IV}HASIL DAN PEMBAHASAN}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Pra-Processing Citra}{21}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Input Gambar dan Penghilangan Background}{21}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Penghitungan Harris Respon}{22}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Menghitung Gradien}{22}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}AutoKorelasi}{23}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Harris-Respons}{23}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}NMS dan thresholding}{24}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Menghitung Panjang dan Berat}{24}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Bounding Box}{24}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Menghitung Ukuran Ikan}{25}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Mengitung Berat}{25}{subsection.4.3.3}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{26}{subsection.4.3.3}%
