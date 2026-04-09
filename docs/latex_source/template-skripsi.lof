@@ -4,24 +4,24 @@
 \addvspace {10\p@ }
 \babel@toc {bahasa}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Representasi gambar digital\relax }}{4}{figure.caption.5}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Berikut adalah hasil dari citra Grayscale\relax }}{5}{figure.caption.6}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Uniform gaussian Kernel\relax }}{7}{figure.caption.7}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Contoh bounding box pada citra digital\relax }}{11}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Konvensi koordinat yang digunakan untuk merepresentasi gambar digital}}{4}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Berikut adalah hasil dari citra Grayscale}}{5}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Uniform gaussian Kernel}}{7}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Contoh bounding box pada citra digital}}{11}{figure.caption.8}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Alur Penelitian\relax }}{12}{figure.caption.9}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Contoh Gambar dan Jenis Ikan yang Digunakan\relax }}{14}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Contoh hasil gambar yang telah dihilangkan backgroundnya\relax }}{14}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Contoh hasil gambar yang telah dirotasi\relax }}{15}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Contoh hasil gambar yang telah diberi bounding box\relax }}{19}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Alur Penelitian}}{12}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Contoh Gambar dan Jenis Ikan yang Digunakan}}{14}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Contoh hasil gambar yang telah dihilangkan backgroundnya}}{14}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Contoh hasil gambar yang telah dirotasi}}{15}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Contoh hasil gambar yang telah diberi bounding box}}{19}{figure.caption.13}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Gambar yang akan digunakan dalam penelitian\relax }}{21}{figure.caption.14}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces \emph {source code}: Untuk menghapus background dari library rembg\relax }}{21}{figure.caption.15}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces \emph {source code}: Untuk melakukan rotasi citra berdasarkan sudut PCA\relax }}{22}{figure.caption.16}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces \emph {source code}: Untuk menghitung Gradien pada sumbu X dan Y\relax }}{23}{figure.caption.18}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces \emph {source code}: Untuk menghitung autokorelasi\relax }}{23}{figure.caption.19}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces \emph {source code}: Untuk menghitung Harris Respon\relax }}{24}{figure.caption.20}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces \emph {source code}: Untuk melakukan thresholding dan non-maximum suppression\relax }}{24}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces \emph {source code}: Untuk menentukan nilai maksimal dan minimal sumbu x dan y dari titik sudut yang telah didapatkan\relax }}{25}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces \emph {source code}: Untuk menghitung panjang, lebar, dan keliling ikan\relax }}{25}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces \emph {source code}: Untuk menghitung berat ikan berdasarkan jenis ikan dan keliling ikan\relax }}{26}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Gambar yang akan digunakan dalam penelitian}}{21}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \emph {source code}: Untuk menghapus background dari library rembg}}{21}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \emph {source code}: Untuk melakukan rotasi citra berdasarkan sudut PCA}}{22}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \emph {source code}: Untuk menghitung Gradien pada sumbu X dan Y}}{23}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces \emph {source code}: Untuk menghitung autokorelasi}}{23}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \emph {source code}: Untuk menghitung Harris Respon}}{24}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces \emph {source code}: Untuk melakukan thresholding dan non-maximum suppression}}{24}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \emph {source code}: Untuk menentukan nilai maksimal dan minimal sumbu x dan y dari titik sudut yang telah didapatkan}}{25}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces \emph {source code}: Untuk menghitung panjang, lebar, dan keliling ikan}}{25}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces \emph {source code}: Untuk menghitung berat ikan berdasarkan jenis ikan dan keliling ikan}}{26}{figure.caption.24}%
