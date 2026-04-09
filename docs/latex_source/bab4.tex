@@ -17,7 +17,7 @@
 
 Langkah pertama yang dilakukan dalam penelitian adalah dengan memasukan \emph{dataset} untuk dilakukan Pra-processing. Dalam hal ini, gambar akan diberikan nama sesuai dengan jenis ikan, yaitu Ikan Mas, Ikan Lele, dan Ikan Nila.
 Pra-processing dilakukan untuk memudahkan proses ektraksi sudut pada citra. Pra-processing terbagi menjadi beberapa tahapan, yaitu penghilangan background, rotasi citra berdasarkan sudut PCA, dan smoothing citra dengan Gaussian blur.
-Berikut \emph{Source Code} yang digunakan dalam proses Pra-Processing : %gambar masih memiliki background yang cukup komplesks, sehingga perlu dilakukan 
+Berikut \emph{Source Code} yang digunakan dalam proses Pra-Processing:
 
 \begin{figure}[H]
     \begin{lstlisting}[language=Python, basicstyle=\tiny]
@@ -25,6 +25,8 @@ Berikut \emph{Source Code} yang digunakan dalam proses Pra-Processing : %gambar 
     \end{lstlisting}
     \caption{\emph{source code}: Untuk menghapus background dari library rembg}
 \end{figure}
+
+\subsection{Rotasi}
 
 \begin{figure}[H]
     \begin{lstlisting}[language=Python, basicstyle=\tiny]
@@ -39,7 +41,8 @@ Berikut \emph{Source Code} yang digunakan dalam proses Pra-Processing : %gambar 
                 pca_angle = np.degrees(np.arctan2(vy, vx))
                 return pca_angle
         
-        def PCa_rotate_image(image, angle):
+        def PCa_rotate_image(image, corners):
+                angle = PCA_rotate(corners)
                 h, w = image.shape
                 center_img = (w // 2, h // 2)
 
@@ -51,7 +54,11 @@ Berikut \emph{Source Code} yang digunakan dalam proses Pra-Processing : %gambar 
     \caption{\emph{source code}: Untuk melakukan rotasi citra berdasarkan sudut PCA}
 \end{figure}
 
+    Sebelum fungsi rotasi dijalankan, gambar akan melalui proses penghitungan sudut dengan menggunakan harris respon. 
+Sudut hasil dar proses tersebut akan digunakan untuk mencari \emph{angle} yang lalu digunakan untuk melakukan rotasi pada gambar.
+Setelah rotasi dilakukan, gambar akan memiliki bagian hitam hasil dari rotasi. Maka dari itu, bagian hitam akan di-isi dengan warna putih dengan menambahkan parameter \emph{borderValue} pada fungsi \emph{cv2.warpAffine}.
 
+\subsection{Smoothing Gaussian}
 
 \begin{figure}[H]
     \begin{lstlisting}[language=Python, basicstyle=\tiny]
@@ -71,8 +78,8 @@ Berikut \emph{Source Code} yang digunakan dalam proses Pra-Processing : %gambar 
 
 Setelah semua tahapan pra-processing telah selesai dilakukan, gambar akan disave kedalam folder terpisah dan akan digunakan untuk proses selanjutnya.
 
-\section{Penghitungan Harris Respon}
-\subsection{Menghitung Gradien}
+% \section{Penghitungan Harris Respon}
+\section{Menghitung Gradien}
     Sebelum menjalankan fungsi \emph{Harris Respons}, beberapa fungsi perlu dijalankan terlebih dahulu, yaitu menghitung Gradien pada sumbu X dan Y. Berikut \emph{Source Code} yang digunakan untuk menghitung Gradien pada sumbu X dan Y:
 
 \begin{figure}[H]
@@ -96,7 +103,7 @@ Setelah semua tahapan pra-processing telah selesai dilakukan, gambar akan disave
 
     Fungsi \emph{Compute\_Gradient\_X} dan \emph{Compute\_Gradient\_Y} menggunakan kernel Sobel untuk menghitung gradien pada sumbu X dan Y. Hasil dari fungsi ini akan digunakan dalam proses penghitungan Harris Respon.
 
-\subsection{AutoKorelasi}
+\section{AutoKorelasi}
     Melakukan proses autokorelasi diperlukan untuk menghitung Harris respon. Proses  autokorelasi dilakukan dengan mengkalikan hasil dari gradien dengan gaussian blur. berikut \emph{Source Code} yang digunakan untuk menghitung autokorelasi:
 \begin{figure}[H]
     \begin{lstlisting}[language=Python, basicstyle=\tiny]
@@ -109,7 +116,7 @@ Setelah semua tahapan pra-processing telah selesai dilakukan, gambar akan disave
     \caption{\emph{source code}: Untuk menghitung autokorelasi}
 \end{figure}
 
-\subsection{Harris-Respons}
+\section{Harris-Respons}
     Setelah nilai Ixx, Ixy, dan Iyy didapatkan, langkah selanjutnya adalah menghitung Harris Respon dengan menggunakan fungsi \emph{Harris}. Berikut \emph{Source Code} yang digunakan untuk menghitung Harris Respon:
 
 \begin{figure}[H]
@@ -123,7 +130,7 @@ Setelah semua tahapan pra-processing telah selesai dilakukan, gambar akan disave
     \caption{\emph{source code}: Untuk menghitung Harris Respon}
 \end{figure}
 
-\subsection{NMS dan thresholding}
+\section{NMS dan thresholding}
  Nilai Harris yang didapatkan dari fungsi \emph{Harris} masih terlalu banyak jika langsung digunakan untuk mengekstraksi sudut. Oleh karena itu, perlu dilakukan proses thresholding dan non-maximum suppression untuk mendapatkan titik-titik sudut yang signifikan. Berikut \emph{Source Code} yang digunakan untuk melakukan thresholding dan non-maximum suppression:
 \begin{figure}[H]
     \begin{lstlisting}[language=Python, basicstyle=\tiny]
@@ -180,9 +187,9 @@ Pemilihan titik sudut dilakukan dengan menggunakan \emph{Source Code} berikut:
             
             length = length_px * sk
             width = width_px * sk
-            perimeter = 2 * (length + width)
+            keliling = 2 * (length + width)
 
-            return length, width, perimeter
+            return length, width, keliling
     \end{lstlisting}
     \caption{\emph{source code}: Untuk menghitung panjang, lebar, dan keliling ikan}
 \end{figure}
@@ -192,8 +199,34 @@ Gambar koin tersebut diambil dengan menggunakan kamera dan tinggi pengambilan ga
 
 \subsection{Mengitung Berat}
     Nilai keliling hasil dari fungsi \emph{calculate\_size} akan digunakan untuk menghitung berat ikan. Namun sebelum itu, ikan perlu melalui proses pengecekan jenis ikan, karena berat ikan akan berbeda tergantung jenis ikan. Berikut \emph{Source Code} yang digunakan untuk menghitung berat ikan:
+\begin{figure}[H]
+    \begin{lstlisting}[language=Python, basicstyle=\tiny]
+        def calculate_weight(keliling, filename):
+            akm = 5.93
+            akl = 4.15
+            akn = 3.67
+            if keliling is None:
+                return None
 
+            if "mas" in filename.lower():
+                weight = akm * (keliling)
+            elif "lele" in filename.lower():
+                weight = akl * (keliling)
+            elif "nila" in filename.lower():
+                weight = akn * (keliling)
+            else:
+                weight = None
 
+            return weight
+    \end{lstlisting}
+    \caption{\emph{source code}: Untuk menghitung berat ikan berdasarkan jenis ikan dan keliling ikan}
+    
+\end{figure}
+
+     \emph{akm}, \emph{akl}, dan \emph{akn} merupakan nilai hasil dari rata-rata berat dengan keliling ikan nyata pada setiap jenis ikan. 
+Nilai tersebut didapatkan dengan melakukan pengukuran langsung pada ikan nyata dengan menggunakan pita ukur untuk mendapatkan keliling ikan dan timbangan untuk mendapatkan berat ikan. Setelah itu, dilakukan perhitungan rata-rata berat dengan keliling ikan nyata untuk mendapatkan nilai \emph{akm}, \emph{akl}, dan \emph{akn}.
+
+\section{Evaluasi Akurasi}
 
 % Baris ini digunakan untuk membantu dalam melakukan sitasi
 % Karena diapit dengan comment, maka baris ini akan diabaikan

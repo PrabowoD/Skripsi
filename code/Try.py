@@ -43,8 +43,8 @@ if __name__ == "__main__":
     
     # Thresholding dan Non-Maximum Suppression
         all_corners = thresholding(GaussianSmooths, Harris_respon)
-        pca_angle = PCA_rotate(all_corners[0])
-        rotated_pca_image = PCa_rotate_image(GaussianSmooths[0], pca_angle)
+        # pca_angle = PCA_rotate(all_corners[0])
+        rotated_pca_image = PCa_rotate_image(GaussianSmooths[0], all_corners[0])
         
         # os.makedirs(output_folder, exist_ok=True)
         save_path = os.path.join("Output/Rotated/UjiCoba", filename)
@@ -61,7 +61,7 @@ if __name__ == "__main__":
     # berat_dict = {"Mas": 5.93, "Lele": 4.15, "Nila": 3.67}
     akm = 5.93
     akl = 4.15
-    akn = 3.06
+    akn = 3.67
     
     for idx, img in enumerate(imps):
         

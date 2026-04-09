@@ -31,7 +31,8 @@ def PCA_rotate(corners):
         # print(f"Sudut PCA: {pca_angle:.2f} derajat")
         return pca_angle
     
-def PCa_rotate_image(image, angle):
+def PCa_rotate_image(image, corners):
+        angle = PCA_rotate(corners)
         h, w = image.shape
         center_img = (w // 2, h // 2)
 
