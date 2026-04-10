@@ -7,24 +7,39 @@
 \chapter{KAJIAN PUSTAKA}
 
 \section{Pengertian Citra Digital}
-  Citra digital adalah representasi visual dari objek atau pemandangan yang diwakili dalam bentuk data numerik.
-Sebuah citra dapat didefinisikan sebagai fungsi dua dimensi, \(f(x, y)\), di mana \(x\) dan \(y\) adalah koordinat spasial (bidang), dan amplitudo \(f\) pada setiap pasangan koordinat \((x, y)\) disebut intensitas atau tingkat keabuan citra pada titik tersebut. Ketika \(x\), \(y\), dan nilai intensitas \(f\) semuanya merupakan besaran yang terbatas dan diskret, maka citra tersebut disebut citra digital, seperti pada gambar~\ref{fig:spasial}. Bidang pengolahan citra digital mengacu pada pemrosesan citra digital dengan menggunakan komputer digital (\cite{Gonzalez2018}).
+  Citra digital adalah representasi visual dari objek atau pemandangan yang diwakili dalam diskret tersusun atas element-element kecil bernama \emph{pixel}.
+Setiap piksel memiliki nilai numerik yang menunjukan tingkat kecerahan atau warna pada posisi tertentu dalam citra, seperti pada gambar~\ref{fig:Colour_pixel}.
+
 \begin{figure}[H]
   \centering
-  \begin{subfigure}{.4\textwidth}
-    \centering
-    \includegraphics[keepaspectratio, width=5cm]{gambar/representing-digital-image-n.jpg}
-  \end{subfigure}
+  \includegraphics[keepaspectratio, width=10cm]{gambar/Colour_pixel.jpg}
+  \caption{Warna pixel pada citra}\label{fig:Colour_pixel}
+\end{figure}
 
-  \begin{subfigure}{.4\textwidth}
-    \centering
-    \includegraphics[keepaspectratio, width=5cm]{gambar/Screenshot_1.jpg}
-  \end{subfigure}
+  Sebuah citra dapat didefinisikan sebagai fungsi dua dimensi, \(f(x, y)\), di mana \(x\) dan \(y\) adalah koordinat spasial (bidang), dan amplitudo \(f\) pada setiap pasangan koordinat \((x, y)\) disebut intensitas atau tingkat keabuan citra pada titik tersebut.  
+Ketika \(x\), \(y\), dan nilai intensitas \(f\) semuanya merupakan besaran yang terbatas dan diskret, maka citra tersebut disebut citra digital. 
+Bidang pengolahan citra digital mengacu pada pemrosesan citra digital dengan menggunakan komputer digital (\cite{Gonzalez2018}).
+Konsep ini menjadi dasar dalam pengolahan citra digital karena setiap piksel pada citra memiliki nilai numerik yang merepresentasikan informasi visual tertentu.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[keepaspectratio, width=10cm]{gambar/Slide2.jpg}
+  % \begin{subfigure}{.4\textwidth}
+  %   \centering
+  %   \includegraphics[keepaspectratio, width=5cm]{gambar/representing-digital-image-n.jpg}
+  % \end{subfigure}
+
+  % \begin{subfigure}{.4\textwidth}
+  %   \centering
+  %   \includegraphics[keepaspectratio, width=5cm]{gambar/Screenshot_1.jpg}
+  % \end{subfigure}
   \caption{Konvensi koordinat yang digunakan untuk merepresentasi gambar digital}\label{fig:spasial}
 \end{figure}
 
 \section{Pengolahan Citra Digital}
   Pengolahan citra digital adalah proses manipulasi citra digital untuk meningkatkan kualitas, mengubah representasi, atau mengekstrak informasi yang berguna. Proses ini melibatkan berbagai teknik dan algoritma yang dapat digunakan untuk mengolah citra, seperti penghalusan, peningkatan kontras, deteksi tepi, dan segmentasi. Pengolahan citra digital memiliki aplikasi luas dalam berbagai bidang, termasuk pengenalan pola, visi komputer, dan analisis citra medis (\cite{Gonzalez2018}). 
+
+
   Salah satu tahapan penting dalam pengolahan citra adalah konversi citra ke dalam bentuk grayscale sebelum dilakukan ekstraksi fitur atau deteksi tepi (\cite{Sanchez2018}).
 
 % \begin{figure}[H]
@@ -109,7 +124,7 @@ Dengan \(I\) adalah gambar dan \(x = (x,y)\) adalah lokasi poin.
 
 \begin{figure}[H]
   \centering{}
-  \includegraphics[width=0.8\textwidth]{gambar/Uniform Gaussian kernel.jpg}
+  \includegraphics[keepaspectratio, width=10cm]{gambar/Uniform Gaussian kernel.jpg}
   \caption{Uniform gaussian Kernel}
 \end{figure}
 
@@ -122,27 +137,61 @@ Wilayah dengan nilai eigen tinggi di semua arah menunjukkan sudut, sedangkan wil
 Operator Sobel, sebagai salah satu metode yang paling umum, menggunakan kernel konvolusi untuk menghitung gradien dalam arah horizontal (x) dan vertikal (y), menghasilkan peta gradien yang mengidentifikasi tepi dan perubahan penting dalam struktur gambar.
 \subsection{Operator Sobel}
   Operator Sobel adalah salah satu metode yang paling umum digunakan untuk menghitung gradien dalam citra digital. Metode ini menggunakan dua kernel konvolusi, satu untuk mendeteksi perubahan horizontal dan satu lagi untuk perubahan vertikal. Kernel ini dirancang untuk memberikan bobot lebih pada piksel yang berada di tengah, sehingga lebih sensitif terhadap perubahan intensitas yang tajam.
-\begin{equation}
-  S_x = \begin{bmatrix}
-    -1 & 0 & 1 \\
-    -2 & 0 & 2 \\
-    -1 & 0 & 1
+  \begin{equation}
+      S_x = \begin{bmatrix}
+        -1 & 0 & 1 \\
+        -2 & 0 & 2 \\
+        -1 & 0 & 1
   \end{bmatrix}, \quad
-  S_y = \begin{bmatrix}
-    1 & 2 & 1 \\
-    0 & 0 & 0 \\
-    -1 & -2 & -1
+      S_y = \begin{bmatrix}
+        1 & 2 & 1 \\
+        0 & 0 & 0 \\
+        -1 & -2 & -1
   \end{bmatrix}
-  \label{eq:sobel-kernel}
+      \label{eq:sobel-kernel}
 \end{equation}
 
-  Dengan menggunakan kernel ini, gradien dalam arah x dan y dapat dihitung dengan mengkonvolusi citra dengan masing-masing kernel. Hasilnya adalah dua peta gradien yang menunjukkan perubahan intensitas dalam arah horizontal (\(Sx\)) dan vertikal (\(Sy\)). Magnitudo gradien dapat dihitung dengan rumus berikut:
+  \subsection{Prewitt Filter}
+    Prewitt Filter merupakan salah satu metode lain untuk menghitung gradien dalam citra digital.
+  Mirip dengan operator Sobel, Prewitt filter juga menggunakan kernel dua dimensi. Kernel yang digunakan lebih sederhana dibandingkan dengan Sobel, sehingga menghasilkan tepi yang lebih sederhana namun cenderung kurang tajam.
+
+\begin{equation*}
+  P_x = \begin{bmatrix}
+    -1 & 0 & 1 \\
+    -1 & 0 & 1 \\
+    -1 & 0 & 1
+  \end{bmatrix}, \quad
+  P_y = \begin{bmatrix}
+    1 & 1 & 1 \\
+    0 & 0 & 0 \\
+    -1 & -1 & -1
+  \end{bmatrix}
+\end{equation*}
+
+\subsection{Scharr Filter}
+  Scharr juga merupakan metode lain untuk menghitung gradien. Scharr filter merupakan modifikasi atau pengembangan dari operator sobel, yang bertujuan untuk meningkatkan akurasi deteksi tepi terutama pada citra dengan resoluis tinggi.
+
+\begin{equation*}
+  S_x = \begin{bmatrix}
+     -3 & 0 & 3 \\
+     -10 & 0 & 10 \\
+      -3 & 0 & 3
+  \end{bmatrix}, \quad
+    S_y = \begin{bmatrix}
+      3 & 10 & 3 \\
+      0 & 0 & 0 \\
+     -3 & -10 & -3
+  \end{bmatrix}  
+\end{equation*}
+
+Dengan menggunakan salah satu kernel, gradien dalam arah x dan y dapat dihitung dengan mengkonvolusi citra dengan masing-masing kernel. Hasilnya adalah dua peta gradien yang menunjukkan perubahan intensitas dalam arah horizontal (\(Sx\)) dan vertikal (\(Sy\)). Magnitudo gradien dapat dihitung dengan rumus berikut:
 
 \begin{equation}
   G = \sqrt{G_x^2 + G_y^2}
 \end{equation}
 
-  Di mana \(G_x\) dan \(G_y\) adalah hasil konvolusi citra dengan kernel Sobel untuk arah x dan y. Peta gradien ini sangat berguna dalam deteksi tepi, segmentasi citra, dan ekstraksi fitur, karena membantu mengidentifikasi area dengan perubahan intensitas yang signifikan (\cite{Sanchez2018}).
+Di mana \(G_x\) dan \(G_y\) adalah hasil konvolusi citra dengan kernel Sobel untuk arah x dan y. Peta gradien ini sangat berguna dalam deteksi tepi, segmentasi citra, dan ekstraksi fitur, karena membantu mengidentifikasi area dengan perubahan intensitas yang signifikan (\cite{Sanchez2018}).
+
 
 \section{\emph{Second moment matrix}}
   Matriks momen kedua (\emph{second moment matrix}) adalah matriks simetris \(2 \times 2\) yang mencerminkan variasi intensitas di sekitar piksel dalam sebuah citra. Matriks ini seringkali digunakan untuk mendeteksi fitur, atau mendeskripsikan struktur dari \emph{local image}.
@@ -176,8 +225,16 @@ Dengan menggunakan sifat tersebut, respon sudut dapat dihitung menggunakan anali
 
 \section{\emph{Harris-Corner Detection}}
   \emph{Harris-Corner Detection} merupakan salah satu dari sekian banyak algoritma untuk mendeteksi fitur (\emph{feature}), algoritma ini pertama kali diperkenalkan oleh Chris Harris dan Mike Stephens pada tahun 1988 (\cite{Harris2013}). 
-Ide dibalik metode Harris adalah untuk mendeteksi titik sudut berdasarkan variasi intensitas di area sekitar: wilayah yang kecil di sekitar fitur menunjukkan perubahan intensitas yang besar dibandingkan dengan pergeseran jendela ke segala arah (\cite{Sanchez2018}).
-Sudut adalah salah satu fitur di mana terdapat perubahan arah yang tajam pada tepi. Keunggulan penting dari metode Harris adalah sifatnya yang invarian terhadap rotasi, Rotasi adalah proses transformasi geometris yang memutar posisi piksel citra terhadap titik pusat dengan sudut tertentu tanpa mengubah bentuk asli objek. Dengan kata lain titik sudut tetap dapat terdeteksi dengan akurat meskipun citra mengalami perputaran orientasi. Hal ini menjadikan algoritma ini andal untuk aplikasi seperti pelacakan objek, pengenalan pola, dan pencocokan citra yang memerlukan konsistensi fitur meskipun terjadi perubahan sudut pandang. 
+Ide dibalik metode Harris adalah untuk mendeteksi titik sudut berdasarkan variasi intensitas di area sekitar: wilayah yang kecil di sekitar fitur menunjukkan perubahan intensitas yang besar dibandingkan dengan pergeseran jendela ke segala arah (\cite{Sanchez2018}) seperti pada gambar~\ref{fig:harris-corner-detection}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{gambar/harris_corner_detection_example.jpg}
+  \caption{Contoh hasil deteksi sudut menggunakan metode Harris-Corner Detection}
+  \label{fig:harris-corner-detection}
+\end{figure}
+
+  Sudut adalah salah satu fitur di mana terdapat perubahan arah yang tajam pada tepi. Keunggulan penting dari metode Harris adalah sifatnya yang invarian terhadap rotasi, Rotasi adalah proses transformasi geometris yang memutar posisi piksel citra terhadap titik pusat dengan sudut tertentu tanpa mengubah bentuk asli objek. Dengan kata lain titik sudut tetap dapat terdeteksi dengan akurat meskipun citra mengalami perputaran orientasi. Hal ini menjadikan algoritma ini andal untuk aplikasi seperti pelacakan objek, pengenalan pola, dan pencocokan citra yang memerlukan konsistensi fitur meskipun terjadi perubahan sudut pandang. 
 Dengan melibatkan matriks momen kedua (\emph{second moment matrix}) untuk menghitung variasi perubahan intensitas dalam dua arah utama.
 
 \begin{equation}
@@ -191,7 +248,8 @@ Jika nilai \(R\) yang besar akan menunjukkan keberadaan sudut di area tersebut, 
 \section{Rotasi}
   Rotasi adalah proses transformasi geometris yang memutar posisi piksel citra terhadap titik pusat dengan sudut tertentu tanpa mengubah bentuk asli objek. Dalam konteks pengolahan citra digital, rotasi sering digunakan untuk menyesuaikan orientasi citra agar sesuai dengan kebutuhan analisis atau presentasi visual. Proses rotasi melibatkan perhitungan koordinat baru untuk setiap piksel berdasarkan sudut rotasi yang diinginkan, biasanya menggunakan matriks rotasi.
 ada banyak metode yang dapat dilakukan untuk rotasi citra, salah satungan dengan menggunakan PCA (\emph{Principal Component Analysis}). PCA adalah teknik statistik yang digunakan untuk mereduksi dimensi data dengan mempertahankan sebanyak mungkin variasi dalam data tersebut. Dalam konteks pengolahan citra, PCA dapat digunakan untuk menentukan arah utama dari fitur-fitur dalam citra, yang kemudian dapat digunakan untuk menentukan sudut rotasi yang optimal. 
-Dengan menganalisis kovarians dari piksel-piksel dalam citra, PCA mengidentifikasi sumbu utama yang mewakili arah dengan variansi terbesar. Sudut antara sumbu utama ini dan sumbu referensi (misalnya sumbu x) dapat dihitung untuk menentukan sudut rotasi yang diperlukan agar fitur-fitur dalam citra sejajar dengan orientasi yang diinginkan (\cite{ITJolliffe2002}).
+
+  Dengan menganalisis kovarians dari piksel-piksel dalam citra, PCA mengidentifikasi sumbu utama yang mewakili arah dengan variansi terbesar. Sudut antara sumbu utama ini dan sumbu referensi (misalnya sumbu x) dapat dihitung untuk menentukan sudut rotasi yang diperlukan agar fitur-fitur dalam citra sejajar dengan orientasi yang diinginkan (\cite{ITJolliffe2002}).
 rotasi dihitung dengan rumus berikut:
 
 \begin{equation}
@@ -210,6 +268,12 @@ rotasi dihitung dengan rumus berikut:
   \end{bmatrix}
   \label{eq:rotasi}
 \end{equation}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{gambar/opencv_rotate_header.png}
+  \caption{Contoh rotasi citra digital}
+\end{figure}
   
 Di mana \((x, y)\) adalah koordinat asli piksel, \((x', y')\) adalah koordinat piksel setelah rotasi, dan \(\theta\) adalah sudut rotasi dalam radian. Proses ini memastikan bahwa citra dapat diputar sesuai kebutuhan tanpa kehilangan informasi penting yang terkandung di dalamnya (\cite{Gonzalez2018}).
 
