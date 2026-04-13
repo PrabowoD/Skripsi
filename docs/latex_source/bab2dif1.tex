@@ -12,7 +12,7 @@ Setiap piksel memiliki nilai numerik yang menunjukan tingkat kecerahan atau warn
 
 \begin{figure}[H]
   \centering
-  \includegraphics[keepaspectratio, width=10cm]{gambar/Colour_pixel.jpg}
+  \includegraphics[keepaspectratio, width=13cm]{gambar/Colour_pixel.jpg}
   \caption{Warna pixel pada citra}\label{fig:Colour_pixel}
 \end{figure}
 
@@ -39,8 +39,9 @@ Konsep ini menjadi dasar dalam pengolahan citra digital karena setiap piksel pad
 \section{Pengolahan Citra Digital}
   Pengolahan citra digital adalah proses manipulasi citra digital untuk meningkatkan kualitas, mengubah representasi, atau mengekstrak informasi yang berguna. Proses ini melibatkan berbagai teknik dan algoritma yang dapat digunakan untuk mengolah citra, seperti penghalusan, peningkatan kontras, deteksi tepi, dan segmentasi. Pengolahan citra digital memiliki aplikasi luas dalam berbagai bidang, termasuk pengenalan pola, visi komputer, dan analisis citra medis (\cite{Gonzalez2018}). 
 
+%   Salah satu tahapan penting dalam pengolahan citra adalah konversi citra ke dalam bentuk grayscale sebelum dilakukan ekstraksi fitur atau deteksi tepi (\cite{Sanchez2018}).
+% Setelahnya dilakukan \emph{image enhancement} atau peningkatan kualitas citra, seperti penghalusan dengan filter Gaussian untuk mengurangi noise, atau peningkatan kontras untuk memperjelas fitur-fitur penting dalam citra.
 
-  Salah satu tahapan penting dalam pengolahan citra adalah konversi citra ke dalam bentuk grayscale sebelum dilakukan ekstraksi fitur atau deteksi tepi (\cite{Sanchez2018}).
 
 % \begin{figure}[H]
 %   \centering
@@ -65,13 +66,14 @@ Konsep ini menjadi dasar dalam pengolahan citra digital karena setiap piksel pad
 		\caption{Grayscale image}
 	\end{subfigure} 
 
-\caption{Berikut adalah hasil dari citra Grayscale}\label{fig:grayscale}
+\caption{Citra Grayscale}\label{fig:grayscale}
 \end{figure}
 
-\section{Multi-Scale Feature Detection}
-  Deteksi fitur multi-skala adalah pendekatan yang digunakan untuk mendeteksi fitur pada berbagai skala dalam citra. Pendekatan ini penting karena objek dalam citra dapat muncul pada berbagai ukuran, dan deteksi fitur yang efektif harus mampu mengenali objek tersebut terlepas dari skala yang digunakan. Salah satu metode yang umum digunakan dalam deteksi fitur multi-skala adalah \emph{Gaussian Pyramid}, di mana citra asli dihaluskan dan diperkecil untuk membuat serangkaian citra dengan resolusi yang berbeda. Dengan cara ini, fitur dapat diekstraksi dari setiap tingkat piramida, memungkinkan deteksi yang lebih robust terhadap perubahan skala (\cite{Lowe2004}).
+% \section{Multi-Scale Feature Detection}
+%   Deteksi fitur multi-skala adalah pendekatan yang digunakan untuk mendeteksi fitur pada berbagai skala dalam citra. Pendekatan ini penting karena objek dalam citra dapat muncul pada berbagai ukuran, dan deteksi fitur yang efektif harus mampu mengenali objek tersebut terlepas dari skala yang digunakan. Salah satu metode yang umum digunakan dalam deteksi fitur multi-skala adalah \emph{Gaussian Pyramid}, di mana citra asli dihaluskan dan diperkecil untuk membuat serangkaian citra dengan resolusi yang berbeda. Dengan cara ini, fitur dapat diekstraksi dari setiap tingkat piramida, memungkinkan deteksi yang lebih robust terhadap perubahan skala (\cite{Lowe2004}).
 
-\subsection{Gaussian scale-space}
+\section{Gaussian Smoothing}
+% \subsection{Gaussian scale-space}
 
 Dalam domain diskrit citra digital, parameter skala juga direpresentasikan secara diskrit. 
 Dengan demikian, representasi ruang-skala merupakan kumpulan gambar yang direpresentasikan oleh perbedaan tingkat resolusi diskrit. 
@@ -98,7 +100,7 @@ atau \emph{separability} memungkinan \emph{multi-dimensional Gaussian kernel} di
   g(x,y) = g(x)g(y)
 \end{equation*}
 
-Sifat ini sangat berguna dalam praktik karena penghalusan sinyal dua dimensi dapat digantikan oleh dua penghalusan satu dimensi, satu untuk setiap dimensi (\cite{Lowe2004}). 
+Sifat ini sangat berguna dalam praktik karena penghalusan citra dua dimensi dapat digantikan oleh dua penghalusan satu dimensi, satu untuk setiap dimensi (\cite{Lowe2004}). 
 Filter Gaussian satu dimensi dapat diimplementasikan sebagai filter rekursif, yang secara signifikan mempercepat proses 
 komputasi pada kasus kernel Gaussian yang lebih besar (yaitu > \( \sqrt{2}\)). 
 Kondisi kausalitas menyatakan bahwa tidak ada struktur tambahan atau buatan yang dibuat saat menghitung citra pada skala kasar, 
@@ -112,7 +114,7 @@ g(\sigma_{1}) * \cdots * g(\sigma_{n}) * I(x) = g(\sigma_{1} + \cdots + \sigma_{
 
 Biasanya, ruang-skala yang seragam digunakan, tetapi representasi ruang-skala yang lebih umum dihitung menggunakan filter afine (\cite{mikolajczyk:tel-00584096}).
 
-\textbf{Uniform scale-space}. Perbedaan tingkat pada representasi ruang-skala secara umum, terbuat dari konvolusi dengan \emph{gaussian kernel}:
+\textbf{Uniform scale-space}. Perbedaan tingkat pada representasi ruang-skala secara umum, terbuat dari konvolusi dengan \emph{gaussian kernel} contohnya seperti pada gambar \ref{fig:Uniform Gaussian kernel}.
 
 \begin{equation}
 G(x,\sigma) = g(\sigma) * I(x)
@@ -125,8 +127,10 @@ Dengan \(I\) adalah gambar dan \(x = (x,y)\) adalah lokasi poin.
 \begin{figure}[H]
   \centering{}
   \includegraphics[keepaspectratio, width=10cm]{gambar/Uniform Gaussian kernel.jpg}
-  \caption{Uniform gaussian Kernel}
+  \caption{Uniform gaussian Kernel} 
+  \label{fig:Uniform Gaussian kernel}
 \end{figure}
+
 
 \section{\emph{Gradient}}
   Gradien dalam matematika dan pemrosesan citra adalah sebuah konsep yang menunjukkan arah perubahan sebuah nilai intensitas pada suatu titik pada gambar 2-Dimensi atau 3-Dimensi. 
@@ -279,7 +283,9 @@ Di mana \((x, y)\) adalah koordinat asli piksel, \((x', y')\) adalah koordinat p
 
 \section{Bounding Box}
   Bounding box adalah sebuah kotak persegi panjang yang digunakan untuk membatasi atau mengelilingi objek dalam citra. Dalam konteks pengolahan citra digital, bounding box sering digunakan untuk mendeteksi dan mengukur objek, seperti dalam aplikasi pengenalan pola, deteksi objek, dan analisis citra medis. Bounding box biasanya didefinisikan oleh koordinat titik sudut kiri atas dan kanan bawah, atau oleh koordinat pusat dan ukuran (lebar dan tinggi) dari kotak tersebut.
-\begin{figure}[H]
+
+
+  \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{gambar/Bounding B Car.jpg}
   \caption{Contoh bounding box pada citra digital}
