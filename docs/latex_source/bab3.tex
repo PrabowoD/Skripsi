@@ -60,17 +60,17 @@ Tahapan dalam penghitungan panjang dan berat ikan menggunakan \emph{Harris-Corne
 	\centering
 	\begin{subfigure}{.3\textwidth}
 		\centering
-        \includegraphics[keepaspectratio, width=3cm]{C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_131125.jpg}
+        \includegraphics[keepaspectratio, width=3cm]{gambar/IMG_20240121_131125 - Copy.jpg}
 		\caption{Ikan Mas}
 	\end{subfigure}
 	\begin{subfigure}{.3\textwidth}
 		\centering
-		\includegraphics[keepaspectratio, width=3cm]{C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_132544.jpg}
+		\includegraphics[keepaspectratio, width=3cm]{gambar/IMG_20240121_132544 - Copy.jpg}
 		\caption{Ikan lele}
 	\end{subfigure} 
 	\begin{subfigure}{.3\textwidth}
 		\centering
-		\includegraphics[keepaspectratio, width=3cm]{C:/Users/USER/Documents/GitHub/Skripsi/Output/Rembg/IMG_20240121_140044.jpg}
+		\includegraphics[keepaspectratio, width=3cm]{gambar/IMG_20240121_135842 - Copy.jpg}
 		\caption{Ikan Nila Merah}
 	\end{subfigure}
 	\caption{Contoh hasil gambar yang telah dihilangkan backgroundnya}\label{fig:rembg}
@@ -101,12 +101,12 @@ Tahapan dalam penghitungan panjang dan berat ikan menggunakan \emph{Harris-Corne
         \centering
         \begin{subfigure}{.3\textwidth}
             \centering
-            \includegraphics[keepaspectratio, width=4cm]{C:/Users/USER/Documents/GitHub/Skripsi/Output/IMG_20240121_131125.jpg}
+            \includegraphics[keepaspectratio, width=4cm]{gambar/IMG_20240121_131125 - Output.jpg}
             \caption{Sebelum Rotasi}
         \end{subfigure}
         \begin{subfigure}{.3\textwidth}
             \centering
-            \includegraphics[keepaspectratio, width=4cm]{C:/Users/USER/Documents/GitHub/Skripsi/Output/Rotated/IMG_20240121_131125.jpg}
+            \includegraphics[keepaspectratio, width=4cm]{gambar/IMG_20240121_131125 - rotate.jpg}
             \caption{Setelah Rotasi}
         \end{subfigure}
         \caption{Contoh hasil gambar yang telah dirotasi}\label{fig:rotasi}
@@ -239,17 +239,17 @@ sehingga panjang dan lebar ikan dapat dihitung dengan lebih akurat, seperti pada
         \centering
     \begin{subfigure}{.3\textwidth}
         \centering
-        \includegraphics[keepaspectratio, width=4.2cm]{C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_131125.jpg}
+        \includegraphics[keepaspectratio, width=4.2cm]{gambar/ikan_mas_1 - Box.jpg}
         \caption{Ikan Mas}
     \end{subfigure}
     \begin{subfigure}{.3\textwidth}
         \centering
-        \includegraphics[keepaspectratio, width=4.2cm]{C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_132544.jpg}
+        \includegraphics[keepaspectratio, width=4.2cm]{gambar/ikan_lele_1 - Box.jpg}
         \caption{Ikan lele}
     \end{subfigure} 
     \begin{subfigure}{.3\textwidth}
         \centering
-        \includegraphics[keepaspectratio, width=4.2cm]{C:/Users/USER/Documents/GitHub/Skripsi/Output/Box/IMG_20240121_140044.jpg}
+        \includegraphics[keepaspectratio, width=4.2cm]{gambar/ikan_nila_1 - Box.jpg}
         \caption{Ikan Nila}
     \end{subfigure}
     \caption{Contoh hasil gambar yang telah diberi bounding box}\label{fig:box}
@@ -267,7 +267,8 @@ sehingga panjang dan lebar ikan dapat dihitung dengan lebih akurat, seperti pada
 
 \subsection{Menghitung Berat}
 
-     Setelah panjang ikan dalam satuan nyata diketahui, estimasi berat ikan dilakukan dengan cara melakukan perkalian antara keliling ikan dengan berat rata per keliling ikan.
+ 
+Setelah panjang ikan dalam satuan nyata diketahui, estimasi berat ikan dilakukan dengan cara melakukan perkalian antara keliling ikan dengan berat rata per keliling ikan.
 rata-rata berat per keliling ikan diperoleh dari data referensi yang telah diambil sebelumnya. Data referensi tersebut berisi informasi panjang, lebar, dan berat ikan. 
 \begin{equation*}
     Keliling\ Ikan = 2 \times (Panjang\ Ikan + Lebar\ Ikan)
@@ -276,8 +277,8 @@ rata-rata berat per keliling ikan diperoleh dari data referensi yang telah diamb
     Berat\ Ikan = Keliling\ Ikan \times Berat\ Rata\ per\ Keliling\ Ikan
 \end{equation*}
 
-% dapat dilakukan menggunakan rumus interpolasi linier berdasarkan data panjang dan berat ikan yang telah diketahui sebelumnya. Rumus interpolasi linier yang digunakan adalah:
-% % \begin{equation}
+%      Setelah panjang ikan dalam satuan nyata diketahui, estimasi berat ikan dapat dilakukan menggunakan rumus interpolasi linier berdasarkan data panjang dan berat ikan yang telah diketahui sebelumnya. Rumus interpolasi linier yang digunakan adalah:
+% \begin{equation}
 %     W_n = W_x + \frac{(L_n - L_x)}{(L_y - L_x)} \times (W_y - W_x)
 % \end{equation}
 %     di mana:
@@ -294,6 +295,7 @@ rata-rata berat per keliling ikan diperoleh dari data referensi yang telah diamb
     Setelah sistem selesai melakukan pengukuran panjang dan berat ikan, langkah terakhir adalah mengevaluasi akurasi hasil pengukuran. Evaluasi dilakukan dengan membandingkan hasil pengukuran sistem dengan data referensi yang telah diketahui sebelumnya. 
     Akurasi dihitung menggunakan rumus:
 \begin{equation}
-    Akurasi = \frac{1}{n} \sum_{i=1}^{n} \frac{1}{1 + |E_i|} \cdot 100\%
+    % Akurasi = \frac{1}{n} \sum_{i=1}^{n} \frac{1}{1 + |E_i|} \cdot 100\%
+    Akurasi = (1 - (\frac{Predict - GroudTruth}{GroundTruth})) \cdot 100\%
 \end{equation}
     di mana \(E_i\) adalah selisih antara hasil pengukuran sistem dan data referensi, dan \(n\) adalah jumlah sampel yang diuji. Hasil evaluasi akan memberikan gambaran tentang seberapa baik sistem dalam mengukur panjang dan berat ikan.

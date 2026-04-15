@@ -14,6 +14,7 @@ Setiap piksel memiliki nilai numerik yang menunjukan tingkat kecerahan atau warn
   \centering
   \includegraphics[keepaspectratio, width=13cm]{gambar/Colour_pixel.jpg}
   \caption{Warna pixel pada citra}\label{fig:Colour_pixel}
+  \caption*{Sumber : \cite{RohanNair}}
 \end{figure}
 
   Sebuah citra dapat didefinisikan sebagai fungsi dua dimensi, \(f(x, y)\), di mana \(x\) dan \(y\) adalah koordinat spasial (bidang), dan amplitudo \(f\) pada setiap pasangan koordinat \((x, y)\) disebut intensitas atau tingkat keabuan citra pada titik tersebut.  
@@ -33,7 +34,8 @@ Konsep ini menjadi dasar dalam pengolahan citra digital karena setiap piksel pad
   %   \centering
   %   \includegraphics[keepaspectratio, width=5cm]{gambar/Screenshot_1.jpg}
   % \end{subfigure}
-  \caption{Konvensi koordinat yang digunakan untuk merepresentasi gambar digital}\label{fig:spasial}
+  \caption{Konvensi koordinat gambar digital}\label{fig:spasial}
+  \caption*{Sumber : \cite{Gonzalez2018}}
 \end{figure}
 
 \section{Pengolahan Citra Digital}
@@ -48,6 +50,10 @@ Konsep ini menjadi dasar dalam pengolahan citra digital karena setiap piksel pad
 %   \includegraphics[width=0.8\textwidth]{gambar/Proses Pengolahan Citra Digital.jpg}
 %   \caption{Proses pengolahan citra digital}\label{fig:proses-pengolahan-citra}
 % \end{figure}
+
+\section{Citra Berwarna}
+
+
 
 \section{Citra Grayscale}
   Citra grayscale adalah representasi citra yang hanya menggunakan satu saluran warna, yaitu tingkat keabuan. Citra ini dihasilkan dengan mengubah citra berwarna menjadi skala abu-abu, di mana setiap piksel dalam citra hanya memiliki nilai intensitas yang mewakili tingkat keabuan, seperti pada gambar~\ref{fig:grayscale}. Proses ini sering dilakukan untuk menyederhanakan analisis citra, karena mengurangi kompleksitas data yang harus diproses (\cite{Gonzalez2018}). 
@@ -303,8 +309,7 @@ Di mana \((x, y)\) adalah koordinat asli piksel, \((x', y')\) adalah koordinat p
 % \end{equation}
 %   Dengan \(d\) adalah jarak Euclidean antara dua titik. Rumus ini juga dapat diperluas ke dimensi yang lebih tinggi dan digunakan secara luas untuk mengukur kedekatan atau kemiripan antara dua piksel atau fitur pada citra (\cite[hlm. 34]{Gonzalez2018}).
 
-  % \textbf{Manhattan}
-
+% \section{Interpolasi}
 %   \textbf{Interpolasi} adalah metode untuk memperkirakan nilai di antara dua atau lebih titik data yang diketahui. Dalam konteks citra digital, interpolasi digunakan untuk menentukan nilai intensitas piksel pada posisi yang tidak tepat berada pada grid piksel, misalnya saat melakukan rotasi, penskalaan, atau transformasi citra. Selain itu, interpolasi juga dapat digunakan untuk menghitung nilai berat (weight) pada titik-titik tertentu, seperti dalam operasi filter atau penyesuaian nilai piksel hasil transformasi. Salah satu contoh rumus interpolasi linier untuk dua titik adalah:
 % \begin{equation}
 %   f(x) = f(x_0) + \frac{(x - x_0)}{(x_1 - x_0)} \left[ f(x_1) - f(x_0) \right]

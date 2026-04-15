@@ -60,8 +60,12 @@ if __name__ == "__main__":
     sk = 0.0138
     # berat_dict = {"Mas": 5.93, "Lele": 4.15, "Nila": 3.67}
     akm = 5.93
-    akl = 4.15
-    akn = 3.67
+    akl_induk = 7.20
+    akl_pembesar = 4.41
+    akl_pedaging = 2.46
+    akn_induk = 5.70
+    akn_kdua  = 3.38
+    akn_kbawah = 2.73
     
     for idx, img in enumerate(imps):
         
@@ -118,6 +122,7 @@ if __name__ == "__main__":
         P = Dx * sk
         L = Dy * sk
         
+        luas = P * L
         keliling_x = 2 * (P + L)
         # Berat = akn * keliling_x
         # for Berat in filename:
@@ -125,17 +130,34 @@ if __name__ == "__main__":
         print(f"panjang (P) : {P} cm")
         print(f"lebar (L) : {L} cm")
         print(f"Keliling ikan (Kx) : {keliling_x} cm")
+        print(f"Luas ikan : {luas} cm^2")
         
         
         Berat = 0
         if "mas" in filename:
                 Berat = akm * keliling_x
-        elif "lele" in filename:
-                Berat = akl * keliling_x
-        elif "nila" in filename:
-                Berat = akn * keliling_x
+        elif "lele" in filename and "induk" in filename:
+                Berat = akl_induk * keliling_x
+        elif "lele" in filename and "pembesaran" in filename:
+            Berat = akl_pembesar * keliling_x
+        elif "lele" in filename and "pedaging" in filename:
+            Berat = akl_pedaging * keliling_x
+        elif "nila" in filename and "induk" in filename:
+                Berat = akn_induk * keliling_x
+        elif "nila" and "kdua" in filename:
+            Berat = akn_kdua * keliling_x
+        elif "nila" and "kbawah" in filename:
+            Berat = akn_kbawah * keliling_x
         else:
                 break
+        # if "mas" in filename:
+        #         Berat = akm * luas
+        # elif "lele" in filename:
+        #         Berat = akl * luas
+        # elif "nila" in filename:
+        #         Berat = akn * luas
+        # else:
+        #         break
 
             
 
