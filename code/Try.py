@@ -5,6 +5,7 @@ from Pre_Processing import *
 from Harris_Respon import *
 from Max_Min_coordinate import *
 from rembg import remove
+from pands import transform_size
 import os
 import pandas as pd
 
@@ -119,16 +120,27 @@ if __name__ == "__main__":
         cv2.imwrite(save_path, box)
         print(Dx, Dy)
 
-        P = Dx * sk
+        P = Dx * sk        
         L = Dy * sk
         
+        if "nila" in filename:
+            Pt, Lt = transform_size("Size_ikan.xlsx", "Nila", Fls, P, L)
+        elif "lele" in filename:
+            Pt, Lt = transform_size("Size_ikan.xlsx", "Lele", Fls, P, L)
+        elif "mas" in filename:
+            Pt, Lt = transform_size("Size_ikan.xlsx", "Mas", Fls, P, L)
+        
+        else:
+            break
+
+
         luas = P * L
-        keliling_x = 2 * (P + L)
+        keliling_x = 2 * (Pt + Lt)
         # Berat = akn * keliling_x
         # for Berat in filename:
         print(f"Gambar {idx} : {filename}")
-        print(f"panjang (P) : {P} cm")
-        print(f"lebar (L) : {L} cm")
+        print(f"panjang (P) : {Pt} cm")
+        print(f"lebar (L) : {Lt} cm")
         print(f"Keliling ikan (Kx) : {keliling_x} cm")
         print(f"Luas ikan : {luas} cm^2")
         
@@ -143,6 +155,7 @@ if __name__ == "__main__":
         elif "lele" in filename and "pedaging" in filename:
             Berat = akl_pedaging * keliling_x
         elif "nila" in filename and "induk" in filename:
+        #if "nila" in filename and "induk" in filename:
                 Berat = akn_induk * keliling_x
         elif "nila" and "kdua" in filename:
             Berat = akn_kdua * keliling_x
