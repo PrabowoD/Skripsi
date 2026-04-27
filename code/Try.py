@@ -139,6 +139,8 @@ if __name__ == "__main__":
         # Berat = akn * keliling_x
         # for Berat in filename:
         print(f"Gambar {idx} : {filename}")
+        print(f"panjang deteksi (Pd) : {P} cm")
+        print(f"lebar deteksi (Ld) : {L} cm")
         print(f"panjang (P) : {Pt} cm")
         print(f"lebar (L) : {Lt} cm")
         print(f"Keliling ikan (Kx) : {keliling_x} cm")

@@ -256,7 +256,26 @@ Dengan melibatkan matriks momen kedua (\emph{second moment matrix}) untuk menghi
 Jika nilai \(R\) yang besar akan menunjukkan keberadaan sudut di area tersebut, sebaliknya nilai \(R\) yang kecil menunjukkan daerah tersebut merupakan tepi.
 
 \section{Proyeksi Perspectif}
-  
+    Proyeksi perspektif adalah metode dalam komputer grafik yang digunakan untuk memetakan objek tiga dimensi (3D) ke dalam bidang dua dimensi (2D) dengan mempertimbangkan efek perspektif seperti yang terlihat oleh mata manusia. Dalam proyeksi ini, objek yang lebih jauh dari kamera akan terlihat lebih kecil dibandingkan objek yang lebih dekat~\cite{Gonzalez2018}.
+
+Proyeksi perspektif didasarkan pada model kamera lubang jarum (pinhole camera), di mana semua titik pada objek diproyeksikan melalui satu titik pusat (center of projection) menuju bidang proyeksi (image plane). Hal ini menyebabkan garis-garis sejajar pada dunia nyata tampak bertemu pada satu titik yang disebut vanishing point~\cite{Gonzalez2018}.
+
+Menurut Digital Image Processing, pembentukan citra digital dapat dijelaskan melalui model geometrik kamera, di mana hubungan antara koordinat dunia nyata (3D) dan citra (2D) bergantung pada proses proyeksi perspektif. Model ini menjelaskan bagaimana ukuran objek pada citra dipengaruhi oleh jaraknya terhadap kamera, sehingga objek yang lebih jauh akan memiliki ukuran yang lebih kecil pada bidang citra.
+
+Metode ini banyak digunakan dalam bidang komputer grafik, visi komputer, dan simulasi visual karena mampu menghasilkan tampilan yang realistis serta menjelaskan hubungan antara dunia nyata dan citra digital.
+\subsection{Pinhole Camera}
+  Pinhole camera adalah model kamera yang paling sederhana, di mana cahaya dari objek melewati sebuah lubang kecil (pinhole) dan membentuk citra terbalik pada bidang proyeksi di belakangnya. Model ini digunakan untuk menjelaskan dasar-dasar proyeksi perspektif, di mana semua titik pada objek diproyeksikan melalui satu titik pusat (center of projection) menuju bidang proyeksi (image plane)~\cite{Marschner2021}.
+Berbeda dengan kamera yang menggunakan lensa, pinhole camera tidak mengalami distorsi optik, sehingga sering digunakan sebagai model ideal dalam analisis geometri citra. Meskipun demikian, model ini tetap mampu menjelaskan hubungan antara ukuran objek pada citra dengan jaraknya terhadap kamera, di mana objek yang lebih jauh akan tampak lebih kecil dibandingkan objek yang lebih dekat~\cite{Marschner2021}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{gambar/pinhole camera.jpg}
+  \caption{Model pinhole camera dalam proyeksi perspektif}
+  \label{fig:pinhole-camera}
+
+\end{figure}
+
+
 
 \section{Rotasi}
   Rotasi adalah proses transformasi geometris yang memutar posisi piksel citra terhadap titik pusat dengan sudut tertentu tanpa mengubah bentuk asli objek. Dalam konteks pengolahan citra digital, rotasi sering digunakan untuk menyesuaikan orientasi citra agar sesuai dengan kebutuhan analisis atau presentasi visual. Proses rotasi melibatkan perhitungan koordinat baru untuk setiap piksel berdasarkan sudut rotasi yang diinginkan, biasanya menggunakan matriks rotasi.

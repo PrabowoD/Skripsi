@@ -274,6 +274,106 @@
       \verb http://link.springer.com/10.1023/B:VISI.0000029664.99615.94
       \endverb
     \endentry
+    \entry{Marschner2021}{book}{}{}
+      \name{author}{11}{}{%
+        {{un=0,uniquepart=base,hash=0da3e81a99db5b11351a274c385d0250}{%
+           family={Marschner},
+           familyi={M\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a5f91b214ec249b3087ff09da26168a4}{%
+           family={Shirley},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b9cc593a0e3b80d3afb50f1cc77a37df}{%
+           family={Ashikhmin},
+           familyi={A\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0a3ad5a9638eaabc69b2be7afc0773f8}{%
+           family={Gleicher},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eed616961e0274036a96489be8cd147e}{%
+           family={Hoffman},
+           familyi={H\bibinitperiod},
+           given={Naty},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3cf75d8c47cf05b03386f0234822b18c}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Garrett},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f49068235c8a94e721f5ac15b17aed2c}{%
+           family={Munzner},
+           familyi={M\bibinitperiod},
+           given={Tamara},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d94de9c586c8272dc142f2455092d4d3}{%
+           family={Reinhard},
+           familyi={R\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c2155dd531293499a59070341ff31dab}{%
+           family={Thompson},
+           familyi={T\bibinitperiod},
+           given={William\bibnamedelima B.},
+           giveni={W\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6a392d115a7929a4737091164d45a71e}{%
+           family={Willemsen},
+           familyi={W\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73ded8db1c0510ef8c851b9e458d6fad}{%
+           family={Wyvill},
+           familyi={W\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {A K Peters/CRC Press}%
+      }
+      \strng{namehash}{e424cd63bcb1ee4f581861bc6cb0d9ee}
+      \strng{fullhash}{e8404f0f79433af76bbb28f9e75f462b}
+      \strng{fullhashraw}{e8404f0f79433af76bbb28f9e75f462b}
+      \strng{bibnamehash}{e424cd63bcb1ee4f581861bc6cb0d9ee}
+      \strng{authorbibnamehash}{e424cd63bcb1ee4f581861bc6cb0d9ee}
+      \strng{authornamehash}{e424cd63bcb1ee4f581861bc6cb0d9ee}
+      \strng{authorfullhash}{e8404f0f79433af76bbb28f9e75f462b}
+      \strng{authorfullhashraw}{e8404f0f79433af76bbb28f9e75f462b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781003050339}
+      \field{month}{7}
+      \field{title}{Fundamentals of Computer Graphics}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.1201/9781003050339
+      \endverb
+      \verb{urlraw}
+      \verb https://www.taylorfrancis.com/books/9781003050339
+      \endverb
+      \verb{url}
+      \verb https://www.taylorfrancis.com/books/9781003050339
+      \endverb
+    \endentry
     \entry{mikolajczyk:tel-00584096}{thesis}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=15ba95a5d65938b99eaf1f46dd4c25b8}{%
