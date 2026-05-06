@@ -256,9 +256,9 @@ Dengan melibatkan matriks momen kedua (\emph{second moment matrix}) untuk menghi
 Jika nilai \(R\) yang besar akan menunjukkan keberadaan sudut di area tersebut, sebaliknya nilai \(R\) yang kecil menunjukkan daerah tersebut merupakan tepi.
 
 \section{Proyeksi Perspectif}
-    Proyeksi perspektif adalah metode dalam komputer grafik yang digunakan untuk memetakan objek tiga dimensi (3D) ke dalam bidang dua dimensi (2D) dengan mempertimbangkan efek perspektif seperti yang terlihat oleh mata manusia. Dalam proyeksi ini, objek yang lebih jauh dari kamera akan terlihat lebih kecil dibandingkan objek yang lebih dekat~\cite{Gonzalez2018}.
+    Proyeksi perspektif adalah metode dalam komputer grafik yang digunakan untuk memetakan objek tiga dimensi (3D) ke dalam bidang dua dimensi (2D) dengan mempertimbangkan efek perspektif seperti yang terlihat oleh mata manusia. Dalam proyeksi ini, objek yang lebih jauh dari kamera akan terlihat lebih kecil dibandingkan objek yang lebih dekat~(\cite{Gonzalez2018}).
 
-Proyeksi perspektif didasarkan pada model kamera lubang jarum (pinhole camera), di mana semua titik pada objek diproyeksikan melalui satu titik pusat (center of projection) menuju bidang proyeksi (image plane). Hal ini menyebabkan garis-garis sejajar pada dunia nyata tampak bertemu pada satu titik yang disebut vanishing point~\cite{Gonzalez2018}.
+Proyeksi perspektif didasarkan pada model kamera lubang jarum (pinhole camera), di mana semua titik pada objek diproyeksikan melalui satu titik pusat (center of projection) menuju bidang proyeksi (image plane). Hal ini menyebabkan garis-garis sejajar pada dunia nyata tampak bertemu pada satu titik yang disebut vanishing point~(\cite{Gonzalez2018}).
 
 Menurut Digital Image Processing, pembentukan citra digital dapat dijelaskan melalui model geometrik kamera, di mana hubungan antara koordinat dunia nyata (3D) dan citra (2D) bergantung pada proses proyeksi perspektif. Model ini menjelaskan bagaimana ukuran objek pada citra dipengaruhi oleh jaraknya terhadap kamera, sehingga objek yang lebih jauh akan memiliki ukuran yang lebih kecil pada bidang citra.
 
@@ -275,6 +275,9 @@ Berbeda dengan kamera yang menggunakan lensa, pinhole camera tidak mengalami dis
 
 \end{figure}
 
+ Dimana \(f\) adalah jarak fokus, \(P\) adalah titik pada objek, \(P'\) adalah titik pada bidang proyeksi, \((X,Y,Z)\) adalah koordinat dalam sistem koordinat 3D, dan \((x,y)\) adalah koordinat pada bidang proyeksi. 
+ Hubungan ini menunjukkan bahwa ukuran objek pada citra dipengaruhi oleh jaraknya terhadap kamera, sehingga objek yang lebih jauh akan memiliki ukuran yang lebih kecil pada bidang citra~(\cite{Marschner2021}). 
+Model pinhole camera ini menjadi dasar dalam pemahaman proyeksi perspektif dan digunakan secara luas dalam berbagai aplikasi seperti komputer grafik, visi komputer, dan simulasi visual untuk menghasilkan tampilan yang realistis serta menjelaskan hubungan antara dunia nyata dan citra digital.
 
 
 \section{Rotasi}

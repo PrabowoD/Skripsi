@@ -60,13 +60,13 @@ if __name__ == "__main__":
     #df = pd.ExcelFile("Size_ikan.xlsx")
     sk = 0.0138
     # berat_dict = {"Mas": 5.93, "Lele": 4.15, "Nila": 3.67}
-    akm = 5.93
-    akl_induk = 7.20
-    akl_pembesar = 4.41
-    akl_pedaging = 2.46
-    akn_induk = 5.70
-    akn_kdua  = 3.38
-    akn_kbawah = 2.73
+    alm = 2.00
+    all_induk = 2.00
+    all_pembesar = 1.59
+    all_pedaging = 1.07
+    aln_induk = 1.29
+    aln_kdua  = 1.13
+    aln_kbawah = 1.08
     
     for idx, img in enumerate(imps):
         
@@ -110,35 +110,38 @@ if __name__ == "__main__":
         xmin = int(np.min(all_corners[0][:, 1]))
         xmax = int(np.max(all_corners[0][:, 1]))
         
-        print(np.min(all_corners[0], axis=0))
-        print(np.max(all_corners[0], axis=0))
+        print(f"Gambar {idx} : {filename}")
+        # print(np.min(all_corners[0], axis=0))
+        # print(np.max(all_corners[0], axis=0))
         Dx = abs(xmax - xmin)
         Dy = abs(ymax - ymin)
 
         save_path = os.path.join("Output/Box", filename)
         box = cv2.rectangle(image, (xmin, ymin), (xmax, ymax), (0, 0, 0), 5)
         cv2.imwrite(save_path, box)
-        print(Dx, Dy)
+        # print(Dx, Dy)
 
         P = Dx * sk        
         L = Dy * sk
         
-        if "nila" in filename:
-            Pt, Lt = transform_size("Size_ikan.xlsx", "Nila", Fls, P, L)
-        elif "lele" in filename:
-            Pt, Lt = transform_size("Size_ikan.xlsx", "Lele", Fls, P, L)
-        elif "mas" in filename:
-            Pt, Lt = transform_size("Size_ikan.xlsx", "Mas", Fls, P, L)
+        Pt, Lt = transform_size("Size_ikan.xlsx", P, L, Fls)
         
-        else:
-            break
+        # if "nila" in filename:
+        #     Pt, Lt = transform_size("Size_ikan.xlsx", "Nila", Fls, P, L)
+        # elif "lele" in filename:
+        #     Pt, Lt = transform_size("Size_ikan.xlsx", "Lele", Fls, P, L)
+        # elif "mas" in filename:
+        #     Pt, Lt = transform_size("Size_ikan.xlsx", "Mas", Fls, P, L)
+        
+        # else:
+        #     break
 
 
-        luas = P * L
+        luas = Pt * Lt
         keliling_x = 2 * (Pt + Lt)
         # Berat = akn * keliling_x
         # for Berat in filename:
-        print(f"Gambar {idx} : {filename}")
+        # print(f"Gambar {idx} : {filename}")
         print(f"panjang deteksi (Pd) : {P} cm")
         print(f"lebar deteksi (Ld) : {L} cm")
         print(f"panjang (P) : {Pt} cm")
@@ -149,20 +152,20 @@ if __name__ == "__main__":
         
         Berat = 0
         if "mas" in filename:
-                Berat = akm * keliling_x
+                Berat = alm * luas
         elif "lele" in filename and "induk" in filename:
-                Berat = akl_induk * keliling_x
+                Berat = all_induk * luas
         elif "lele" in filename and "pembesaran" in filename:
-            Berat = akl_pembesar * keliling_x
+            Berat = all_pembesar * luas
         elif "lele" in filename and "pedaging" in filename:
-            Berat = akl_pedaging * keliling_x
+            Berat = all_pedaging * luas
         elif "nila" in filename and "induk" in filename:
         #if "nila" in filename and "induk" in filename:
-                Berat = akn_induk * keliling_x
+                Berat = aln_induk * luas
         elif "nila" and "kdua" in filename:
-            Berat = akn_kdua * keliling_x
+            Berat = aln_kdua * luas
         elif "nila" and "kbawah" in filename:
-            Berat = akn_kbawah * keliling_x
+            Berat = aln_kbawah * luas
         else:
                 break
         # if "mas" in filename:

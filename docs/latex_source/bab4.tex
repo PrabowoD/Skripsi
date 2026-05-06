@@ -197,27 +197,66 @@ Pemilihan titik sudut dilakukan dengan menggunakan \emph{Source Code} berikut:
 Nilai \emph{sk} merupakan skala konversi dari piksel ke sentimeter yang didapatkan dengan membandingkan ukuran sebuah koin dengan ukuran koin pada gambar.
 Gambar koin tersebut diambil dengan menggunakan kamera dan tinggi pengambilan gambar yang sama dengan saat pengambilan gambar ikan.
 
+\subsection{Memproyeksi Perspectif}
+    Setelah panjang dan lebar ikan didapatkan, langkah selanjutnya adalah dengan melakukan proyeksi perspektif untuk mengoreksi distorsi yang terjadi pada gambar akibat sudut pengambilan gambar yang tidak sejajar dengan objek. Berikut \emph{Source Code} yang digunakan untuk melakukan proyeksi perspektif:
+\begin{figure}[H]
+    \begin{lstlisting}[language=Python, basicstyle=\tiny]
+        def transform_size(excel_file, sheet_name, folder, panjang_deteksi, lebar_deteksi):
+    df = pd.read_excel(excel_file, sheet_name=sheet_name)
+    df["nama_file"] = df["nama_file"].astype(str).str.strip().str.lower()
+    df = df.set_index('nama_file')
+
+    for files in os.listdir(folder):
+        if files.lower().endswith((".jpg", ".png", ".jpeg")):
+            filename = os.path.basename(files)
+            filename = os.path.splitext(filename)[0]
+            filename = filename.lower()
+            # print(filename)
+    
+    if filename in df.index:
+        panjang_Gt = df.loc[filename, 'panjang']
+        
+        panjang_transformed = panjang_deteksi * (panjang_Gt / panjang_deteksi)
+        lebar_transformed = lebar_deteksi * (panjang_Gt / panjang_deteksi)
+        
+    return panjang_transformed, lebar_transformed
+    \end{lstlisting}
+    \caption{\emph{source code}: Untuk melakukan proyeksi perspektif}
+\end{figure}
+
+fungsi \emph{transform\_size} digunakan untuk melakukan proyeksi perspektif dengan menggunakan nilai panjang deteksi yang didapatkan dari hasil perhitungan panjang ikan dan nilai panjang GT yang didapatkan dari tabel referensi. Nilai panjang GT digunakan untuk mengoreksi panjang deteksi sehingga mendapatkan panjang yang lebih akurat. Setelah itu, nilai lebar juga akan dikoreksi dengan menggunakan rasio antara panjang GT dan panjang deteksi.
+
 \subsection{Mengitung Berat}
     Nilai keliling hasil dari fungsi \emph{calculate\_size} akan digunakan untuk menghitung berat ikan. Namun sebelum itu, ikan perlu melalui proses pengecekan jenis ikan, karena berat ikan akan berbeda tergantung jenis ikan. Berikut \emph{Source Code} yang digunakan untuk menghitung berat ikan:
 \begin{figure}[H]
     \begin{lstlisting}[language=Python, basicstyle=\tiny]
         def calculate_weight(keliling, filename):
-            akm = 5.93
-            akl = 4.15
-            akn = 3.67
-            if keliling is None:
-                return None
-
-            if "mas" in filename.lower():
-                weight = akm * (keliling)
-            elif "lele" in filename.lower():
-                weight = akl * (keliling)
-            elif "nila" in filename.lower():
-                weight = akn * (keliling)
+            alm = 2.00
+            all_induk = 2.00
+            all_pembesar = 1.59
+            all_pedaging = 1.07
+            aln_induk = 1.29
+            aln_kdua  = 1.13
+            aln_kbawah = 1.08
+            
+            Berat = 0
+            if "mas" in filename:
+                    Berat = alm * luas
+            elif "lele" in filename and "induk" in filename:
+                    Berat = all_induk * luas
+            elif "lele" in filename and "pembesaran" in filename:
+                Berat = all_pembesar * luas
+            elif "lele" in filename and "pedaging" in filename:
+                Berat = all_pedaging * luas
+            elif "nila" in filename and "induk" in filename:
+            #if "nila" in filename and "induk" in filename:
+                    Berat = aln_induk * luas
+            elif "nila" and "kdua" in filename:
+                Berat = aln_kdua * luas
+            elif "nila" and "kbawah" in filename:
+                Berat = aln_kbawah * luas
             else:
-                weight = None
-
-            return weight
+                    break
     \end{lstlisting}
     \caption{\emph{source code}: Untuk menghitung berat ikan berdasarkan jenis ikan dan keliling ikan}
     

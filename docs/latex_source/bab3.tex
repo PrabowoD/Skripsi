@@ -265,16 +265,26 @@ sehingga panjang dan lebar ikan dapat dihitung dengan lebih akurat, seperti pada
 \end{equation}
     Dimana \(d\) adalah jarak antar titik pada gambar.
 
-\subsection{Menghitung Berat}
+\subsection{Melakukan Proyeksi Perspektif}
+    Proyeksi perspektif digunakan untuk mengoreksi distorsi yang terjadi pada gambar akibat sudut pengambilan gambar yang tidak sejajar dengan objek. Proyeksi perspektif bertujuan untuk mengubah citra sehingga tampak seolah-olah diambil dari sudut pandang yang lebih langsung, sehingga panjang dan lebar ikan dapat dihitung dengan lebih akurat. Berikut adalah rumus-nya:
 
- 
+    \begin{equation*}
+        x' = \frac{panjang\ nyata}{panjang\ deteksi} \times panjang\ nyata
+    \end{equation*}
+    \begin{equation*}
+        y' = \frac{panjang\ nyata}{panjang\ deteksi} \times lebar\ nyata
+    \end{equation*}
+
+    Dimana \(x'\) dan \(y'\) adalah panjang dan lebar ikan yang telah dikoreksi dengan proyeksi perspektif dan akan digunakan untuk menghitung berat ikan pada tahap selanjutnya. 
+
+\subsection{Menghitung Berat}
 Setelah panjang ikan dalam satuan nyata diketahui, estimasi berat ikan dilakukan dengan cara melakukan perkalian antara keliling ikan dengan berat rata per keliling ikan.
 rata-rata berat per keliling ikan diperoleh dari data referensi yang telah diambil sebelumnya. Data referensi tersebut berisi informasi panjang, lebar, dan berat ikan. 
 \begin{equation*}
-    Keliling\ Ikan = 2 \times (Panjang\ Ikan + Lebar\ Ikan)
+    Luas\ Ikan = Panjang\ Ikan * Lebar\ Ikan
 \end{equation*}
 \begin{equation*}
-    Berat\ Ikan = Keliling\ Ikan \times Berat\ Rata\ per\ Keliling\ Ikan
+    Berat\ Ikan = Luas\ Ikan \times Berat\ rata-rata\ per\ Luas\ Ikan
 \end{equation*}
 
 %      Setelah panjang ikan dalam satuan nyata diketahui, estimasi berat ikan dapat dilakukan menggunakan rumus interpolasi linier berdasarkan data panjang dan berat ikan yang telah diketahui sebelumnya. Rumus interpolasi linier yang digunakan adalah:
@@ -298,4 +308,6 @@ rata-rata berat per keliling ikan diperoleh dari data referensi yang telah diamb
     % Akurasi = \frac{1}{n} \sum_{i=1}^{n} \frac{1}{1 + |E_i|} \cdot 100\%
     Akurasi = (1 - (\frac{Predict - GroudTruth}{GroundTruth})) \cdot 100\%
 \end{equation}
-    di mana \(E_i\) adalah selisih antara hasil pengukuran sistem dan data referensi, dan \(n\) adalah jumlah sampel yang diuji. Hasil evaluasi akan memberikan gambaran tentang seberapa baik sistem dalam mengukur panjang dan berat ikan.
+    Rumus berasal dari MAE (Mean Absolute Error) yang digunakan untuk mengukur seberapa dekat hasil prediksi dengan nilai sebenarnya.
+Setelah itu nilai dinormalisasikan dengan menjadikan bentuk persentase menggunakan MAPE (Mean Absolute Percentage Error), lalu hasil MAPE mengurangi 100\% untuk mendapatkan nilai akurasi. 
+ 
