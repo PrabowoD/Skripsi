@@ -8,13 +8,13 @@
 
 \section{Pengertian Citra Digital}
   Citra digital adalah representasi visual dari objek atau pemandangan yang diwakili dalam diskret tersusun atas element-element kecil bernama \emph{pixel}.
-Setiap piksel memiliki nilai numerik yang menunjukan tingkat kecerahan atau warna pada posisi tertentu dalam citra, seperti pada gambar~\ref{fig:Colour_pixel}.
+Setiap piksel memiliki nilai numerik yang menunjukan tingkat kecerahan atau warna pada posisi tertentu dalam citra, seperti pada gambar\ref{fig:Colour_pixel}.
 
 \begin{figure}[H]
   \centering
   \includegraphics[keepaspectratio, width=13cm]{gambar/Colour_pixel.jpg}
   \caption{Warna pixel pada citra}\label{fig:Colour_pixel}
-  \caption*{Sumber : \cite{RohanNair}}
+  \caption*{Sumber:~\cite{RohanNair}}
 \end{figure}
 
   Sebuah citra dapat didefinisikan sebagai fungsi dua dimensi, \(f(x, y)\), di mana \(x\) dan \(y\) adalah koordinat spasial (bidang), dan amplitudo \(f\) pada setiap pasangan koordinat \((x, y)\) disebut intensitas atau tingkat keabuan citra pada titik tersebut.  
@@ -35,7 +35,7 @@ Konsep ini menjadi dasar dalam pengolahan citra digital karena setiap piksel pad
   %   \includegraphics[keepaspectratio, width=5cm]{gambar/Screenshot_1.jpg}
   % \end{subfigure}
   \caption{Konvensi koordinat gambar digital}\label{fig:spasial}
-  \caption*{Sumber : \cite{Gonzalez2018}}
+  \caption*{Sumber:~\cite{Gonzalez2018}}
 \end{figure}
 
 \section{Pengolahan Citra Digital}
@@ -56,7 +56,7 @@ Konsep ini menjadi dasar dalam pengolahan citra digital karena setiap piksel pad
 
 
 \section{Citra Grayscale}
-  Citra grayscale adalah representasi citra yang hanya menggunakan satu saluran warna, yaitu tingkat keabuan. Citra ini dihasilkan dengan mengubah citra berwarna menjadi skala abu-abu, di mana setiap piksel dalam citra hanya memiliki nilai intensitas yang mewakili tingkat keabuan, seperti pada gambar~\ref{fig:grayscale}. Proses ini sering dilakukan untuk menyederhanakan analisis citra, karena mengurangi kompleksitas data yang harus diproses (\cite{Gonzalez2018}). 
+  Citra grayscale adalah representasi citra yang hanya menggunakan satu saluran warna, yaitu tingkat keabuan. Citra ini dihasilkan dengan mengubah citra berwarna menjadi skala abu-abu, di mana setiap piksel dalam citra hanya memiliki nilai intensitas yang mewakili tingkat keabuan, seperti pada gambar\ref{fig:grayscale}. Proses ini sering dilakukan untuk menyederhanakan analisis citra, karena mengurangi kompleksitas data yang harus diproses (\cite{Gonzalez2018}). 
   Penggunaan citra grayscale sangat umum dalam proses deteksi fitur multi-skala dan algoritma deteksi sudut seperti Harris-Corner Detection, karena memudahkan perhitungan gradien dan matriks momen kedua (\cite{Sanchez2018}).
 \begin{figure}[H]
 	\centering
@@ -85,21 +85,21 @@ Dalam domain diskrit citra digital, parameter skala juga direpresentasikan secar
 Dengan demikian, representasi ruang-skala merupakan kumpulan gambar yang direpresentasikan oleh perbedaan tingkat resolusi diskrit. 
 Sebuah penelitian menunjukkan bahwa ruang-skala harus memenuhi persamaan yang dapat dicapai melalui konvolusi dengan kernel Gaussian. 
 Selanjutnya, penelitian tersebut memperlihatkan bahwa kernel Gaussian adalah satu-satunya kernel unik yang dapat menghasilkan representasi skala-ruang. 
-Keunikan kernel Gaussian ini telah dikonfirmasi melalui berbagai formulasi dalam sejumlah penelitian lain (\cite{Lowe2004};~\cite{mikolajczyk:tel-00584096}). 
+Keunikan kernel Gaussian ini telah dikonfirmasi melalui berbagai formulasi dalam sejumlah penelitian lain (\cite{Lowe2004};\cite{mikolajczyk:tel-00584096}). 
 Temuan ini menyimpulkan bahwa konvolusi dengan kernel Gaussian merupakan solusi optimal untuk masalah konstruksi representasi multi-skala. Fungsi Gaussian dua dimensi didefinisikan sebagai berikut:
 
 \begin{equation*}
 g(\sigma) = \frac{1}{2\pi\sigma_{x}\sigma_{y}}\exp\left(-\frac{(x^2+\mu_{x})+(y^2+\mu_{y})}{2\sigma_{x}\sigma_{y}}\right)
 \end{equation*}
 
-Dimana \(\mu_{x}\) dan \(\mu_{y}\) adalah \(mean\) atau rata-rata dari sumbu-x dan sumbu-y, dan \(\sigma_{x}\) dan \(\sigma_{y}\) adalah \(standard~deviation\) atau deviasi standar dari sumbu-x dan sumbu-y. Jika \(\mu_{x} = \mu_{y} = 0\) dan \(\sigma_{x} = \sigma_{y}\) maka dapat disederhanakan menjadi:
+Dimana \(\mu_{x}\) dan \(\mu_{y}\) adalah \(mean\) atau rata-rata dari sumbu-x dan sumbu-y, dan \(\sigma_{x}\) dan \(\sigma_{y}\) adalah \(standarddeviation\) atau deviasi standar dari sumbu-x dan sumbu-y. Jika \(\mu_{x} = \mu_{y} = 0\) dan \(\sigma_{x} = \sigma_{y}\) maka dapat disederhanakan menjadi:
 \begin{equation}
 g(\sigma) = \frac{1}{2\pi\sigma^2}\exp\left(-\frac{x^2+y^2}{2\sigma^2}\right)
 \label{eq:gaussian kernel}
 \end{equation}
 
 Keunikan dari kernel Gaussian dapat diketahui dari beberapa sifat berikut: 
-\emph{linearity, separability, causality, and semi group property}. Pembahasan lebih lanjut mengenai properti ini dapat ditemukan dalam literatur \emph{Gaussian~Scale-Space~Theory} oleh~\cite{Sporring1997}. Keterpisahan 
+\emph{linearity, separability, causality, and semi group property}. Pembahasan lebih lanjut mengenai properti ini dapat ditemukan dalam literatur \emph{Gaussian Scale-Space Theory} oleh\cite{Sporring1997}. Keterpisahan 
 atau \emph{separability} memungkinan \emph{multi-dimensional Gaussian kernel} diperoleh sebagai hasil perkalian kernel satu dimensi:
 
 \begin{equation*}
@@ -120,7 +120,7 @@ g(\sigma_{1}) * \cdots * g(\sigma_{n}) * I(x) = g(\sigma_{1} + \cdots + \sigma_{
 
 Biasanya, ruang-skala yang seragam digunakan, tetapi representasi ruang-skala yang lebih umum dihitung menggunakan filter afine (\cite{mikolajczyk:tel-00584096}).
 
-\textbf{Uniform scale-space}. Perbedaan tingkat pada representasi ruang-skala secara umum, terbuat dari konvolusi dengan \emph{gaussian kernel} contohnya seperti pada gambar \ref{fig:Uniform Gaussian kernel}.
+\textbf{Uniform scale-space}. Perbedaan tingkat pada representasi ruang-skala secara umum, terbuat dari konvolusi dengan \emph{gaussian kernel} contohnya seperti pada gambar~\ref{fig:Uniform Gaussian kernel}.
 
 \begin{equation}
 G(x,\sigma) = g(\sigma) * I(x)
@@ -133,8 +133,7 @@ Dengan \(I\) adalah gambar dan \(x = (x,y)\) adalah lokasi poin.
 \begin{figure}[H]
   \centering{}
   \includegraphics[keepaspectratio, width=10cm]{gambar/Uniform Gaussian kernel.jpg}
-  \caption{Uniform gaussian Kernel} 
-  \label{fig:Uniform Gaussian kernel}
+  \caption{Uniform gaussian Kernel}\label{fig:Uniform Gaussian kernel}
 \end{figure}
 
 
@@ -205,7 +204,7 @@ Di mana \(G_x\) dan \(G_y\) adalah hasil konvolusi citra dengan kernel Sobel unt
 
 \section{\emph{Second moment matrix}}
   Matriks momen kedua (\emph{second moment matrix}) adalah matriks simetris \(2 \times 2\) yang mencerminkan variasi intensitas di sekitar piksel dalam sebuah citra. Matriks ini seringkali digunakan untuk mendeteksi fitur, atau mendeskripsikan struktur dari \emph{local image}.
-Matriks ini juga panggil sebagai matriks auto-korelasi, seperti pada rumus~\ref{eq:SecondMomentMatrix}
+Matriks ini juga panggil sebagai matriks auto-korelasi, seperti pada rumus\ref{eq:SecondMomentMatrix}
 
 \begin{equation}
   M = 
@@ -231,17 +230,16 @@ Matriks ini memiliki dua nilai eigen, yang memungkinkan identifikasi suatu area 
   \item Jika kedua nilai eigen besar, maka kemungkinan besar area tersebut adalah sudut (\emph{corner}).
 \end{itemize}
 
-Dengan menggunakan sifat tersebut, respon sudut dapat dihitung menggunakan analisis nilai eigen atau metode lain, salah satunya fungsi kekuatan sudut Harris \(R\) seperti yang dijelaskan pada rumus~\ref{Harris-Corner Detection}.
+Dengan menggunakan sifat tersebut, respon sudut dapat dihitung menggunakan analisis nilai eigen atau metode lain, salah satunya fungsi kekuatan sudut Harris \(R\) seperti yang dijelaskan pada rumus\ref{Harris-Corner Detection}.
 
 \section{\emph{Harris-Corner Detection}}
   \emph{Harris-Corner Detection} merupakan salah satu dari sekian banyak algoritma untuk mendeteksi fitur (\emph{feature}), algoritma ini pertama kali diperkenalkan oleh Chris Harris dan Mike Stephens pada tahun 1988 (\cite{Harris2013}). 
-Ide dibalik metode Harris adalah untuk mendeteksi titik sudut berdasarkan variasi intensitas di area sekitar: wilayah yang kecil di sekitar fitur menunjukkan perubahan intensitas yang besar dibandingkan dengan pergeseran jendela ke segala arah (\cite{Sanchez2018}) seperti pada gambar~\ref{fig:harris-corner-detection}.
+Ide dibalik metode Harris adalah untuk mendeteksi titik sudut berdasarkan variasi intensitas di area sekitar: wilayah yang kecil di sekitar fitur menunjukkan perubahan intensitas yang besar dibandingkan dengan pergeseran jendela ke segala arah (\cite{Sanchez2018}) seperti pada gambar\ref{fig:harris-corner-detection}.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{gambar/harris_corner_detection_example.jpg}
-  \caption{Contoh hasil deteksi sudut menggunakan metode Harris-Corner Detection}
-  \label{fig:harris-corner-detection}
+  \caption{Contoh hasil deteksi sudut menggunakan metode Harris-Corner Detection}\label{fig:harris-corner-detection}
 \end{figure}
 
   Sudut adalah salah satu fitur di mana terdapat perubahan arah yang tajam pada tepi. Keunggulan penting dari metode Harris adalah sifatnya yang invarian terhadap rotasi, Rotasi adalah proses transformasi geometris yang memutar posisi piksel citra terhadap titik pusat dengan sudut tertentu tanpa mengubah bentuk asli objek. Dengan kata lain titik sudut tetap dapat terdeteksi dengan akurat meskipun citra mengalami perputaran orientasi. Hal ini menjadikan algoritma ini andal untuk aplikasi seperti pelacakan objek, pengenalan pola, dan pencocokan citra yang memerlukan konsistensi fitur meskipun terjadi perubahan sudut pandang. 
@@ -256,27 +254,26 @@ Dengan melibatkan matriks momen kedua (\emph{second moment matrix}) untuk menghi
 Jika nilai \(R\) yang besar akan menunjukkan keberadaan sudut di area tersebut, sebaliknya nilai \(R\) yang kecil menunjukkan daerah tersebut merupakan tepi.
 
 \section{Proyeksi Perspectif}
-    Proyeksi perspektif adalah metode dalam komputer grafik yang digunakan untuk memetakan objek tiga dimensi (3D) ke dalam bidang dua dimensi (2D) dengan mempertimbangkan efek perspektif seperti yang terlihat oleh mata manusia. Dalam proyeksi ini, objek yang lebih jauh dari kamera akan terlihat lebih kecil dibandingkan objek yang lebih dekat~(\cite{Gonzalez2018}).
+    Proyeksi perspektif adalah metode dalam komputer grafik yang digunakan untuk memetakan objek tiga dimensi (3D) ke dalam bidang dua dimensi (2D) dengan mempertimbangkan efek perspektif seperti yang terlihat oleh mata manusia. Dalam proyeksi ini, objek yang lebih jauh dari kamera akan terlihat lebih kecil dibandingkan objek yang lebih dekat (\cite{Gonzalez2018}).
 
-Proyeksi perspektif didasarkan pada model kamera lubang jarum (pinhole camera), di mana semua titik pada objek diproyeksikan melalui satu titik pusat (center of projection) menuju bidang proyeksi (image plane). Hal ini menyebabkan garis-garis sejajar pada dunia nyata tampak bertemu pada satu titik yang disebut vanishing point~(\cite{Gonzalez2018}).
+Proyeksi perspektif didasarkan pada model kamera lubang jarum (pinhole camera), di mana semua titik pada objek diproyeksikan melalui satu titik pusat (center of projection) menuju bidang proyeksi (image plane). Hal ini menyebabkan garis-garis sejajar pada dunia nyata tampak bertemu pada satu titik yang disebut vanishing point (\cite{Gonzalez2018}).
 
 Menurut Digital Image Processing, pembentukan citra digital dapat dijelaskan melalui model geometrik kamera, di mana hubungan antara koordinat dunia nyata (3D) dan citra (2D) bergantung pada proses proyeksi perspektif. Model ini menjelaskan bagaimana ukuran objek pada citra dipengaruhi oleh jaraknya terhadap kamera, sehingga objek yang lebih jauh akan memiliki ukuran yang lebih kecil pada bidang citra.
 
 Metode ini banyak digunakan dalam bidang komputer grafik, visi komputer, dan simulasi visual karena mampu menghasilkan tampilan yang realistis serta menjelaskan hubungan antara dunia nyata dan citra digital.
 \subsection{Pinhole Camera}
   Pinhole camera adalah model kamera yang paling sederhana, di mana cahaya dari objek melewati sebuah lubang kecil (pinhole) dan membentuk citra terbalik pada bidang proyeksi di belakangnya. Model ini digunakan untuk menjelaskan dasar-dasar proyeksi perspektif, di mana semua titik pada objek diproyeksikan melalui satu titik pusat (center of projection) menuju bidang proyeksi (image plane)~\cite{Marschner2021}.
-Berbeda dengan kamera yang menggunakan lensa, pinhole camera tidak mengalami distorsi optik, sehingga sering digunakan sebagai model ideal dalam analisis geometri citra. Meskipun demikian, model ini tetap mampu menjelaskan hubungan antara ukuran objek pada citra dengan jaraknya terhadap kamera, di mana objek yang lebih jauh akan tampak lebih kecil dibandingkan objek yang lebih dekat~\cite{Marschner2021}.
+Berbeda dengan kamera yang menggunakan lensa, pinhole camera tidak mengalami distorsi optik, sehingga sering digunakan sebagai model ideal dalam analisis geometri citra. Meskipun demikian, model ini tetap mampu menjelaskan hubungan antara ukuran objek pada citra dengan jaraknya terhadap kamera, di mana objek yang lebih jauh akan tampak lebih kecil dibandingkan objek yang lebih dekat (\cite{Marschner2021}).
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{gambar/pinhole camera.jpg}
-  \caption{Model pinhole camera dalam proyeksi perspektif}
-  \label{fig:pinhole-camera}
+  \caption{Model pinhole camera dalam proyeksi perspektif}\label{fig:pinhole-camera}
 
 \end{figure}
 
  Dimana \(f\) adalah jarak fokus, \(P\) adalah titik pada objek, \(P'\) adalah titik pada bidang proyeksi, \((X,Y,Z)\) adalah koordinat dalam sistem koordinat 3D, dan \((x,y)\) adalah koordinat pada bidang proyeksi. 
- Hubungan ini menunjukkan bahwa ukuran objek pada citra dipengaruhi oleh jaraknya terhadap kamera, sehingga objek yang lebih jauh akan memiliki ukuran yang lebih kecil pada bidang citra~(\cite{Marschner2021}). 
+ Hubungan ini menunjukkan bahwa ukuran objek pada citra dipengaruhi oleh jaraknya terhadap kamera, sehingga objek yang lebih jauh akan memiliki ukuran yang lebih kecil pada bidang citra (\cite{Marschner2021}). 
 Model pinhole camera ini menjadi dasar dalam pemahaman proyeksi perspektif dan digunakan secara luas dalam berbagai aplikasi seperti komputer grafik, visi komputer, dan simulasi visual untuk menghasilkan tampilan yang realistis serta menjelaskan hubungan antara dunia nyata dan citra digital.
 
 
@@ -322,6 +319,66 @@ Di mana \((x, y)\) adalah koordinat asli piksel, \((x', y')\) adalah koordinat p
   \caption{Contoh bounding box pada citra digital}
 
 \end{figure}
+
+\section{Length-Weight Relationship}
+  Length-Weight Relationship (LWR) merupakan metode yang digunakan untuk
+menjelaskan hubungan antara panjang dan berat ikan. Hubungan ini banyak
+digunakan dalam bidang perikanan dan biologi untuk mengetahui pola
+pertumbuhan ikan, kondisi tubuh, serta memperkirakan berat ikan berdasarkan
+panjangnya. Menurut \textcite{LeCren1951}, hubungan panjang dan berat ikan
+dapat dinyatakan menggunakan persamaan allometrik sebagai berikut:
+
+\begin{equation}
+W = aL^b
+\label{eq:lwr}
+\end{equation}
+
+di mana:
+\begin{itemize}
+    \item $W$ = berat ikan,
+    \item $L$ = panjang ikan,
+    \item $a$ = konstanta atau koefisien intercept,
+    \item $b$ = koefisien pertumbuhan (growth exponent).
+\end{itemize}
+
+Nilai $b$ digunakan untuk menunjukkan pola pertumbuhan ikan. Jika nilai
+$b = 3$, maka pertumbuhan ikan bersifat isometrik, yaitu pertambahan panjang
+dan berat berlangsung secara seimbang. Jika $b > 3$, maka pertumbuhan
+bersifat allometrik positif, di mana berat ikan bertambah lebih cepat dibanding
+panjangnya. Sebaliknya, jika $b < 3$, maka pertumbuhan bersifat allometrik
+negatif, yaitu panjang ikan bertambah lebih cepat dibanding beratnya
+(\cite{LeCren1951}).
+
+\subsection{Visual-Weight Relationship}
+  Visual-weight relationship adalah sebuah konsep yang digunakan untuk menggambarkan hubungan antara penampilan visual suatu objek dan beratnya. Dalam konteks pengolahan citra digital, konsep ini dapat diterapkan untuk mengukur atau memperkirakan berat suatu objek berdasarkan penampilannya dalam citra, seperti dalam analisis citra medis atau pengenalan pola.
+Dalam pengolahan citra, penampilan visual dapat mencakup berbagai faktor seperti ukuran, bentuk, tekstur, dan warna objek dalam citra. Berat dapat diestimasi berdasarkan karakteristik visual ini, dengan menggunakan model atau algoritma yang telah dilatih untuk mengenali pola tertentu yang berkaitan dengan berat objek. Hubungan antara penampilan visual dan berat dapat digunakan untuk mengklasifikasikan objek atau untuk melakukan analisis lebih lanjut tentang karakteristik objek tersebut (\cite{Gonzalez2018}).
+
+\begin{equation}
+  W = V
+  \label{eq:visual-weight}
+\end{equation}
+
+
+\section{Mean Absolute Error (MAE)}
+  Mean Absolute Error (MAE) adalah sebuah metrik yang digunakan untuk mengukur rata-rata kesalahan absolut antara nilai yang diprediksi dan nilai aktual dalam sebuah dataset. Dalam konteks pengolahan citra digital, MAE sering digunakan untuk mengevaluasi kualitas hasil transformasi atau rotasi citra dengan membandingkan piksel-piksel pada citra hasil transformasi dengan piksel-piksel pada citra asli. MAE dihitung dengan rumus berikut:
+
+\begin{equation}
+  MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|
+  \label{eq:MAE}
+\end{equation}
+
+Di mana \(n\) adalah jumlah total piksel dalam citra, \(y_i\) adalah nilai intensitas piksel pada citra asli, dan \(\hat{y}_i\) adalah nilai intensitas piksel pada citra hasil transformasi. MAE memberikan gambaran tentang seberapa besar rata-rata kesalahan antara dua citra, dengan nilai yang lebih rendah menunjukkan kualitas transformasi yang lebih baik (\cite{Gonzalez2018}).
+
+\section{Mean Absolute Percentage Error (MAPE)}
+  Mean Absolute Percentage Error (MAPE) adalah sebuah metrik yang digunakan untuk mengukur rata-rata kesalahan persentase antara nilai yang diprediksi dan nilai aktual dalam sebuah dataset. Dalam konteks pengolahan citra digital, MAPE dapat digunakan untuk mengevaluasi kualitas hasil transformasi atau rotasi citra dengan membandingkan piksel-piksel pada citra hasil transformasi dengan piksel-piksel pada citra asli. MAPE dihitung dengan rumus berikut:
+
+\begin{equation}
+  MAPE = \frac{100\%}{n} \sum_{i=1}^{n} \left| \frac{y_i - \hat{y}_i}{y_i} \right|
+  \label{eq:MAPE}
+\end{equation}
+
+Di mana \(n\) adalah jumlah total piksel dalam citra, \(y_i\) adalah nilai intensitas piksel pada citra asli, dan \(\hat{y}_i\) adalah nilai intensitas piksel pada citra hasil transformasi. MAPE memberikan gambaran tentang seberapa besar rata-rata kesalahan persentase antara dua citra, dengan nilai yang lebih rendah menunjukkan kualitas transformasi yang lebih baik (\cite{Gonzalez2018}).
+
 
 
 % \section{Euclidean dan Interpolasi}

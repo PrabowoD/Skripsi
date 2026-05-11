@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.2 $
+% $ biblatex bbl format version 3.3 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{nyt/global//global/global}
-    \entry{Amri2020}{article}{}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{Amri2020}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=8b7f10e5198a0b6db65f8369846c2a18}{%
            family={Amri},
@@ -30,10 +30,12 @@
       }
       \strng{namehash}{8b7f10e5198a0b6db65f8369846c2a18}
       \strng{fullhash}{8b7f10e5198a0b6db65f8369846c2a18}
+      \strng{fullhashraw}{8b7f10e5198a0b6db65f8369846c2a18}
       \strng{bibnamehash}{8b7f10e5198a0b6db65f8369846c2a18}
       \strng{authorbibnamehash}{8b7f10e5198a0b6db65f8369846c2a18}
       \strng{authornamehash}{8b7f10e5198a0b6db65f8369846c2a18}
       \strng{authorfullhash}{8b7f10e5198a0b6db65f8369846c2a18}
+      \strng{authorfullhashraw}{8b7f10e5198a0b6db65f8369846c2a18}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
@@ -51,7 +53,40 @@
       \endverb
       \keyw{Arduino vii,BibitIkanLele,Counter}
     \endentry
-    \entry{Diansari2013}{article}{}
+    \entry{LeCren1951}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7db84e6eb25059c6b972882bf461694c}{%
+           family={Cren},
+           familyi={C\bibinitperiod},
+           given={E\bibnamedelima D\bibnamedelima Le},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7db84e6eb25059c6b972882bf461694c}
+      \strng{fullhash}{7db84e6eb25059c6b972882bf461694c}
+      \strng{fullhashraw}{7db84e6eb25059c6b972882bf461694c}
+      \strng{bibnamehash}{7db84e6eb25059c6b972882bf461694c}
+      \strng{authorbibnamehash}{7db84e6eb25059c6b972882bf461694c}
+      \strng{authornamehash}{7db84e6eb25059c6b972882bf461694c}
+      \strng{authorfullhash}{7db84e6eb25059c6b972882bf461694c}
+      \strng{authorfullhashraw}{7db84e6eb25059c6b972882bf461694c}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{JSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide range of content in a trusted digital archive. We use information technology and tools to increase productivity and facilitate new forms of scholarship. For more information about JSTOR, please contact support@jstor.org.. British Ecological Society is collaborating with JSTOR to digitize, preserve and extend access to Journal of Animal Ecology.}
+      \field{issue}{2}
+      \field{journaltitle}{Source: Journal of Animal Ecology}
+      \field{title}{THE LENGTH-WEIGHT RELATIONSHIP AND SEASONAL CYCLE IN GONAD WEIGHT AND CONDITION IN THE PERCH (PERCA FL UVIA TILIS)}
+      \field{type}{techreport}
+      \field{volume}{20}
+      \field{year}{1951}
+      \field{pages}{201\bibrangedash 219}
+      \range{pages}{19}
+    \endentry
+    \entry{Diansari2013}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=3b8d58b56f0f6c9f1b8be35ac3c70c9d}{%
            family={Diansari},
@@ -74,10 +109,12 @@
       }
       \strng{namehash}{1d24ef7c8b3ae03ad28810bdf657e8a7}
       \strng{fullhash}{7517529b8ed68b475cdef7cad52b85aa}
+      \strng{fullhashraw}{7517529b8ed68b475cdef7cad52b85aa}
       \strng{bibnamehash}{7517529b8ed68b475cdef7cad52b85aa}
       \strng{authorbibnamehash}{7517529b8ed68b475cdef7cad52b85aa}
       \strng{authornamehash}{1d24ef7c8b3ae03ad28810bdf657e8a7}
       \strng{authorfullhash}{7517529b8ed68b475cdef7cad52b85aa}
+      \strng{authorfullhashraw}{7517529b8ed68b475cdef7cad52b85aa}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
@@ -103,7 +140,7 @@
       \endverb
       \keyw{Tilapia,density,growth,resirculation,survival rate}
     \endentry
-    \entry{Gonzalez2018}{book}{}
+    \entry{Gonzalez2018}{book}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=07713b8c79fe78ffaf9ab728a5f3ce88}{%
            family={Gonzalez},
@@ -123,10 +160,12 @@
       }
       \strng{namehash}{b2d3f574078f3bec786a6f4bed9913c2}
       \strng{fullhash}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{fullhashraw}{629c2754a63b62c1f205866b8ab085f9}
       \strng{bibnamehash}{629c2754a63b62c1f205866b8ab085f9}
       \strng{authorbibnamehash}{629c2754a63b62c1f205866b8ab085f9}
       \strng{authornamehash}{b2d3f574078f3bec786a6f4bed9913c2}
       \strng{authorfullhash}{629c2754a63b62c1f205866b8ab085f9}
+      \strng{authorfullhashraw}{629c2754a63b62c1f205866b8ab085f9}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
@@ -147,7 +186,7 @@
       \verb https://books.google.com/books?id=0F05vgAACAAJ
       \endverb
     \endentry
-    \entry{Harris2013}{article}{}
+    \entry{Harris2013}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=aa81fda54b78d656cfed925799d9fe1e}{%
            family={Harris},
@@ -164,10 +203,12 @@
       }
       \strng{namehash}{c62c360be832fb8d2c4b6c984d3a1dc6}
       \strng{fullhash}{83060376bef95055a892b98ba8ae32c5}
+      \strng{fullhashraw}{83060376bef95055a892b98ba8ae32c5}
       \strng{bibnamehash}{83060376bef95055a892b98ba8ae32c5}
       \strng{authorbibnamehash}{83060376bef95055a892b98ba8ae32c5}
       \strng{authornamehash}{c62c360be832fb8d2c4b6c984d3a1dc6}
       \strng{authorfullhash}{83060376bef95055a892b98ba8ae32c5}
+      \strng{authorfullhashraw}{83060376bef95055a892b98ba8ae32c5}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{extradatescope}{labelyear}
@@ -186,7 +227,7 @@
       \verb :C$\backslash$:/Users/User/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Harris, Stephens - 2013 - A Combined Corner and Edge Detector(2).pdf:pdf
       \endverb
     \endentry
-    \entry{ITJolliffe2002}{book}{}
+    \entry{ITJolliffe2002}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=52e21501d20cb537e349fb16dca2c1f2}{%
            family={Jolliffe},
@@ -200,10 +241,12 @@
       }
       \strng{namehash}{52e21501d20cb537e349fb16dca2c1f2}
       \strng{fullhash}{52e21501d20cb537e349fb16dca2c1f2}
+      \strng{fullhashraw}{52e21501d20cb537e349fb16dca2c1f2}
       \strng{bibnamehash}{52e21501d20cb537e349fb16dca2c1f2}
       \strng{authorbibnamehash}{52e21501d20cb537e349fb16dca2c1f2}
       \strng{authornamehash}{52e21501d20cb537e349fb16dca2c1f2}
       \strng{authorfullhash}{52e21501d20cb537e349fb16dca2c1f2}
+      \strng{authorfullhashraw}{52e21501d20cb537e349fb16dca2c1f2}
       \field{sortinit}{J}
       \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{extradatescope}{labelyear}
@@ -223,7 +266,7 @@
       \verb http://link.springer.com/10.1007/b98835
       \endverb
     \endentry
-    \entry{Lowe2004}{article}{}
+    \entry{Lowe2004}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=83f4643381c1cc2c483b4210498fedb0}{%
            family={Lowe},
@@ -234,10 +277,12 @@
       }
       \strng{namehash}{83f4643381c1cc2c483b4210498fedb0}
       \strng{fullhash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{fullhashraw}{83f4643381c1cc2c483b4210498fedb0}
       \strng{bibnamehash}{83f4643381c1cc2c483b4210498fedb0}
       \strng{authorbibnamehash}{83f4643381c1cc2c483b4210498fedb0}
       \strng{authornamehash}{83f4643381c1cc2c483b4210498fedb0}
       \strng{authorfullhash}{83f4643381c1cc2c483b4210498fedb0}
+      \strng{authorfullhashraw}{83f4643381c1cc2c483b4210498fedb0}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{extradatescope}{labelyear}
@@ -262,7 +307,7 @@
       \verb http://link.springer.com/10.1023/B:VISI.0000029664.99615.94
       \endverb
     \endentry
-    \entry{Marschner2021}{book}{}
+    \entry{Marschner2021}{book}{}{}
       \name{author}{11}{}{%
         {{un=0,uniquepart=base,hash=0da3e81a99db5b11351a274c385d0250}{%
            family={Marschner},
@@ -336,10 +381,12 @@
       }
       \strng{namehash}{e424cd63bcb1ee4f581861bc6cb0d9ee}
       \strng{fullhash}{e8404f0f79433af76bbb28f9e75f462b}
+      \strng{fullhashraw}{e8404f0f79433af76bbb28f9e75f462b}
       \strng{bibnamehash}{e424cd63bcb1ee4f581861bc6cb0d9ee}
       \strng{authorbibnamehash}{e424cd63bcb1ee4f581861bc6cb0d9ee}
       \strng{authornamehash}{e424cd63bcb1ee4f581861bc6cb0d9ee}
       \strng{authorfullhash}{e8404f0f79433af76bbb28f9e75f462b}
+      \strng{authorfullhashraw}{e8404f0f79433af76bbb28f9e75f462b}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
@@ -360,7 +407,7 @@
       \verb https://www.taylorfrancis.com/books/9781003050339
       \endverb
     \endentry
-    \entry{mikolajczyk:tel-00584096}{thesis}{}
+    \entry{mikolajczyk:tel-00584096}{thesis}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=15ba95a5d65938b99eaf1f46dd4c25b8}{%
            family={Mikolajczyk},
@@ -374,10 +421,12 @@
       }
       \strng{namehash}{15ba95a5d65938b99eaf1f46dd4c25b8}
       \strng{fullhash}{15ba95a5d65938b99eaf1f46dd4c25b8}
+      \strng{fullhashraw}{15ba95a5d65938b99eaf1f46dd4c25b8}
       \strng{bibnamehash}{15ba95a5d65938b99eaf1f46dd4c25b8}
       \strng{authorbibnamehash}{15ba95a5d65938b99eaf1f46dd4c25b8}
       \strng{authornamehash}{15ba95a5d65938b99eaf1f46dd4c25b8}
       \strng{authorfullhash}{15ba95a5d65938b99eaf1f46dd4c25b8}
+      \strng{authorfullhashraw}{15ba95a5d65938b99eaf1f46dd4c25b8}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
@@ -395,7 +444,7 @@
       \endverb
       \keyw{Interest points ; feature detection ; affine invariance}
     \endentry
-    \entry{RohanNair}{online}{}
+    \entry{RohanNair}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9d5ce52884e58e751d80765af08fc53a}{%
            family={Nair},
@@ -406,10 +455,12 @@
       }
       \strng{namehash}{9d5ce52884e58e751d80765af08fc53a}
       \strng{fullhash}{9d5ce52884e58e751d80765af08fc53a}
+      \strng{fullhashraw}{9d5ce52884e58e751d80765af08fc53a}
       \strng{bibnamehash}{9d5ce52884e58e751d80765af08fc53a}
       \strng{authorbibnamehash}{9d5ce52884e58e751d80765af08fc53a}
       \strng{authornamehash}{9d5ce52884e58e751d80765af08fc53a}
       \strng{authorfullhash}{9d5ce52884e58e751d80765af08fc53a}
+      \strng{authorfullhashraw}{9d5ce52884e58e751d80765af08fc53a}
       \field{sortinit}{N}
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{extradatescope}{labelyear}
@@ -425,7 +476,7 @@
       \verb https://medium.com/%40nairrohan151/computer-vision-and-linear-algebra-b97f3f6132a6
       \endverb
     \endentry
-    \entry{Sanchez2018}{article}{}
+    \entry{Sanchez2018}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=54c8c27a96a1513959ac18517c5a8cfb}{%
            family={Sánchez},
@@ -448,10 +499,12 @@
       }
       \strng{namehash}{f2072da755ac29b5c786ca3cd4c836dd}
       \strng{fullhash}{a703b8c13b7e98fb7fa5b4f6e8ad3f9d}
+      \strng{fullhashraw}{a703b8c13b7e98fb7fa5b4f6e8ad3f9d}
       \strng{bibnamehash}{a703b8c13b7e98fb7fa5b4f6e8ad3f9d}
       \strng{authorbibnamehash}{a703b8c13b7e98fb7fa5b4f6e8ad3f9d}
       \strng{authornamehash}{f2072da755ac29b5c786ca3cd4c836dd}
       \strng{authorfullhash}{a703b8c13b7e98fb7fa5b4f6e8ad3f9d}
+      \strng{authorfullhashraw}{a703b8c13b7e98fb7fa5b4f6e8ad3f9d}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
@@ -472,7 +525,7 @@
       \endverb
       \keyw{Autocorrelation matrix,Feature detector,Harris corner,Interest point,Non-maximum suppression}
     \endentry
-    \entry{Sporring1997}{book}{}
+    \entry{Sporring1997}{book}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=bf5b953fbb48b34d51016e189c95c47a}{%
            family={Sporring},
@@ -526,13 +579,16 @@
       }
       \strng{namehash}{69f68f30d8b5d90016098202010a4e4d}
       \strng{fullhash}{9ddb61e9d7cb32c630dc1da765475ebf}
+      \strng{fullhashraw}{9ddb61e9d7cb32c630dc1da765475ebf}
       \strng{bibnamehash}{69f68f30d8b5d90016098202010a4e4d}
       \strng{authorbibnamehash}{69f68f30d8b5d90016098202010a4e4d}
       \strng{authornamehash}{69f68f30d8b5d90016098202010a4e4d}
       \strng{authorfullhash}{9ddb61e9d7cb32c630dc1da765475ebf}
+      \strng{authorfullhashraw}{9ddb61e9d7cb32c630dc1da765475ebf}
       \strng{editorbibnamehash}{69f68f30d8b5d90016098202010a4e4d}
       \strng{editornamehash}{69f68f30d8b5d90016098202010a4e4d}
       \strng{editorfullhash}{9ddb61e9d7cb32c630dc1da765475ebf}
+      \strng{editorfullhashraw}{9ddb61e9d7cb32c630dc1da765475ebf}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}

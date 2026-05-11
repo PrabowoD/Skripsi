@@ -8,6 +8,7 @@ from rembg import remove
 from pands import transform_size
 import os
 import pandas as pd
+from Calculated import calculate_size, calculate_weight
 
 # Contoh penggunaan dengan citra buatan
 if __name__ == "__main__":
@@ -51,7 +52,6 @@ if __name__ == "__main__":
         save_path = os.path.join("Output/Rotated/UjiCoba", filename)
         cv2.imwrite(save_path, rotated_pca_image)
 
-
     #Max Min Coordinate
     
     Fls = "Output/Rotated/UjiCoba"
@@ -72,6 +72,7 @@ if __name__ == "__main__":
         
         image = cv2.imread(img, cv2.IMREAD_GRAYSCALE)
         filename = os.path.basename(img)
+        # filename = os.path.splitext(filename)[0]
         filename = filename.lower()
         # folder_name = os.path.basename(os.path.dirname(img))
         # folder_name = folder_name.lower()
@@ -124,7 +125,8 @@ if __name__ == "__main__":
         P = Dx * sk        
         L = Dy * sk
         
-        Pt, Lt = transform_size("Size_ikan.xlsx", P, L, Fls)
+        transformed_values = transform_size("Size_ikan.xlsx", P, L, Fls)
+        # Pt, Lt = transform_size("Size_ikan.xlsx", P, L, Fls)
         
         # if "nila" in filename:
         #     Pt, Lt = transform_size("Size_ikan.xlsx", "Nila", Fls, P, L)
@@ -135,39 +137,48 @@ if __name__ == "__main__":
         
         # else:
         #     break
-
-
-        luas = Pt * Lt
-        keliling_x = 2 * (Pt + Lt)
+        # luas = 0
+        # keliling_x = 0
+        filename = os.path.splitext(filename)[0]
+        # +".jpg"
+        for img in transformed_values:
+            if img[0] == filename:       
+                luas = img[1] * img[2]
+                keliling_x = 2 * (img[1] + img[2])
+                Cw = calculate_weight(luas, img[0])
+                
+                print(f"panjang (P) : {img[1]} cm")
+                print(f"lebar (L) : {img[2]} cm")
+                print(f"Keliling ikan (Kx) : {keliling_x} cm")
+                print(f"Luas ikan : {luas} cm^2")
+                print(f"Berat ikan : {Cw} gram")
+                
         # Berat = akn * keliling_x
         # for Berat in filename:
         # print(f"Gambar {idx} : {filename}")
         print(f"panjang deteksi (Pd) : {P} cm")
         print(f"lebar deteksi (Ld) : {L} cm")
-        print(f"panjang (P) : {Pt} cm")
-        print(f"lebar (L) : {Lt} cm")
-        print(f"Keliling ikan (Kx) : {keliling_x} cm")
-        print(f"Luas ikan : {luas} cm^2")
+
         
         
-        Berat = 0
-        if "mas" in filename:
-                Berat = alm * luas
-        elif "lele" in filename and "induk" in filename:
-                Berat = all_induk * luas
-        elif "lele" in filename and "pembesaran" in filename:
-            Berat = all_pembesar * luas
-        elif "lele" in filename and "pedaging" in filename:
-            Berat = all_pedaging * luas
-        elif "nila" in filename and "induk" in filename:
-        #if "nila" in filename and "induk" in filename:
-                Berat = aln_induk * luas
-        elif "nila" and "kdua" in filename:
-            Berat = aln_kdua * luas
-        elif "nila" and "kbawah" in filename:
-            Berat = aln_kbawah * luas
-        else:
-                break
+        # Berat = 0
+        # if "mas" in filename:
+        #         Berat = alm * luas
+        # elif "lele" in filename and "induk" in filename:
+        #         Berat = all_induk * luas
+        # elif "lele" in filename and "pembesaran" in filename:
+        #     Berat = all_pembesar * luas
+        # elif "lele" in filename and "pedaging" in filename:
+        #     Berat = all_pedaging * luas
+        # elif "nila" in filename and "induk" in filename:
+        # #if "nila" in filename and "induk" in filename:
+        #         Berat = aln_induk * luas
+        # elif "nila" and "kdua" in filename:
+        #     Berat = aln_kdua * luas
+        # elif "nila" and "kbawah" in filename:
+        #     Berat = aln_kbawah * luas
+        # else:
+        #         break
         # if "mas" in filename:
         #         Berat = akm * luas
         # elif "lele" in filename:
@@ -180,7 +191,7 @@ if __name__ == "__main__":
             
 
 
-        print(f"Berat ikan : {Berat} gram")
+
         
         # Sd = pd.read_excel(df, sheet_name="Nila")
         # Sd = Sd.sort_values(by="keliling").reset_index(drop=True)

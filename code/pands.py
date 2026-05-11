@@ -1,3 +1,6 @@
+
+from importlib.metadata import files
+
 import pandas as pd
 import os 
 import numpy as np
@@ -16,23 +19,31 @@ def transform_size(excel_file, panjang_deteksi, lebar_deteksi, folder):
     panjang_transformed = 0
     lebar_transformed = 0
 
-    for files in os.listdir(folder):
-        if files.lower().endswith((".jpg", ".png", ".jpeg")):
-            filename = os.path.basename(files)
-            filename = os.path.splitext(filename)[0]
-            filename = filename.lower()
-            # print(filename)
+    Fls = folder
+    imps = [os.path.join(Fls, f) for f in os.listdir(Fls)
+            if f.lower().endswith((".jpg", ".png", ".jpeg"))
+            ]
+    files = []
+    for idx, img in enumerate(imps):
+            img = os.path.basename(img)
+            img = os.path.splitext(img)[0]
+            img = img.lower()
+            img = img.strip()
+            
+
+            file = df[df["nama_file"] == img]
+            panjang_Gt = file.iloc[0]["panjang"]
+
+        #     print(panjang_Gt)
+                
+            panjang_transformed = panjang_deteksi * (panjang_Gt / panjang_deteksi)
+            lebar_transformed = lebar_deteksi * (panjang_Gt / panjang_deteksi)
+            transformed_values = [img, int(panjang_transformed), int(lebar_transformed)]
+            files.append(transformed_values)
+    return files
     
-    if filename in df['nama_file'].values:
-        panjang_Gt = df.loc[df['nama_file'] == filename, "panjang"].iloc[0]
-        print(panjang_Gt)
-        
-        panjang_transformed = panjang_deteksi * (panjang_Gt / panjang_deteksi)
-        lebar_transformed = lebar_deteksi * (panjang_Gt / panjang_deteksi)
-        
-    return panjang_transformed, lebar_transformed
-    
-    
+
+
 
 
 
