@@ -350,34 +350,131 @@ negatif, yaitu panjang ikan bertambah lebih cepat dibanding beratnya
 (\cite{LeCren1951}).
 
 \subsection{Visual-Weight Relationship}
-  Visual-weight relationship adalah sebuah konsep yang digunakan untuk menggambarkan hubungan antara penampilan visual suatu objek dan beratnya. Dalam konteks pengolahan citra digital, konsep ini dapat diterapkan untuk mengukur atau memperkirakan berat suatu objek berdasarkan penampilannya dalam citra, seperti dalam analisis citra medis atau pengenalan pola.
-Dalam pengolahan citra, penampilan visual dapat mencakup berbagai faktor seperti ukuran, bentuk, tekstur, dan warna objek dalam citra. Berat dapat diestimasi berdasarkan karakteristik visual ini, dengan menggunakan model atau algoritma yang telah dilatih untuk mengenali pola tertentu yang berkaitan dengan berat objek. Hubungan antara penampilan visual dan berat dapat digunakan untuk mengklasifikasikan objek atau untuk melakukan analisis lebih lanjut tentang karakteristik objek tersebut (\cite{Gonzalez2018}).
+  Visual-Weight Relationship (VWR) merupakan konsep yang digunakan untuk
+menggambarkan hubungan antara karakteristik visual objek dengan beratnya.
+Dalam bidang pengolahan citra digital dan machine vision, hubungan ini
+digunakan untuk memperkirakan berat ikan berdasarkan parameter visual yang
+diperoleh dari citra, seperti luas area tampak (\textit{view area}), panjang,
+lebar, bentuk, dan karakteristik morfologi lainnya. Metode ini banyak
+digunakan pada bidang akuakultur dan industri perikanan karena mampu
+mengurangi pengukuran manual serta mempercepat proses estimasi berat ikan
+(\textcite{Balaban2010,Gm2023}).
+
+Menurut \textcite{Balaban2010}, estimasi berat ikan dapat dilakukan
+menggunakan hubungan antara berat ikan dan luas area objek hasil segmentasi
+citra. Persamaan yang umum digunakan adalah persamaan linear, polinomial,
+dan persamaan pangkat (\textit{power equation}). Persamaan pangkat yang sering
+digunakan dalam penelitian visual-weight relationship dirumuskan sebagai:
 
 \begin{equation}
-  W = V
-  \label{eq:visual-weight}
+W = aV^b
+\label{eq:vwr}
 \end{equation}
 
+di mana:
+\begin{itemize}
+    \item $W$ = berat ikan,
+    \item $V$ = luas area tampak (\textit{view area}) objek pada citra,
+    \item $a$ = konstanta regresi,
+    \item $b$ = eksponen hubungan area terhadap berat.
+\end{itemize}
+
+Penelitian yang dilakukan oleh \textcite{Gm2023} menunjukkan bahwa
+analisis citra dapat digunakan secara akurat untuk memprediksi berat ikan
+rainbow trout berdasarkan parameter visual yang diperoleh dari citra digital.
+Hasil penelitian tersebut menunjukkan bahwa luas area objek memiliki korelasi
+yang sangat kuat terhadap berat ikan, sehingga parameter visual dapat
+digunakan sebagai alternatif pengukuran non-destruktif dan otomatis.
+
+Selain itu, \textcite{Balaban2010} juga menyatakan bahwa penggunaan luas area
+(\textit{view area}) sebagai parameter utama sering kali memberikan hasil yang
+lebih baik dibandingkan kombinasi panjang dan lebar ikan, karena pengukuran
+panjang dan lebar lebih sensitif terhadap posisi dan orientasi ikan pada saat
+pengambilan citra. Oleh karena itu, pendekatan berbasis area citra banyak
+digunakan dalam sistem estimasi berat ikan berbasis computer vision.
+
+Dalam penelitian pengolahan citra digital, proses Visual-Weight Relationship
+biasanya diawali dengan segmentasi objek ikan untuk memperoleh area objek
+dalam satuan piksel atau satuan nyata setelah proses kalibrasi. Nilai area
+tersebut kemudian digunakan pada Persamaan~\ref{eq:vwr} untuk memperkirakan
+berat ikan melalui model regresi yang telah dibangun menggunakan data
+pengukuran aktual.
 
 \section{Mean Absolute Error (MAE)}
-  Mean Absolute Error (MAE) adalah sebuah metrik yang digunakan untuk mengukur rata-rata kesalahan absolut antara nilai yang diprediksi dan nilai aktual dalam sebuah dataset. Dalam konteks pengolahan citra digital, MAE sering digunakan untuk mengevaluasi kualitas hasil transformasi atau rotasi citra dengan membandingkan piksel-piksel pada citra hasil transformasi dengan piksel-piksel pada citra asli. MAE dihitung dengan rumus berikut:
+  Mean Absolute Error (MAE) merupakan salah satu metrik evaluasi yang
+digunakan untuk mengukur rata-rata besar kesalahan absolut antara nilai
+prediksi dan nilai aktual. MAE banyak digunakan pada bidang statistika,
+machine learning, dan pengolahan citra digital untuk mengevaluasi tingkat
+akurasi suatu model prediksi karena mampu memberikan interpretasi kesalahan
+secara langsung dalam satuan yang sama dengan data asli
+(\textcite{Willmott2005}).
+
+Secara matematis, Mean Absolute Error dirumuskan sebagai berikut:
 
 \begin{equation}
-  MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|
-  \label{eq:MAE}
+MAE = \frac{1}{n}\sum_{i=1}^{n} |y_i - \hat{y}_i|
+\label{eq:mae}
 \end{equation}
 
-Di mana \(n\) adalah jumlah total piksel dalam citra, \(y_i\) adalah nilai intensitas piksel pada citra asli, dan \(\hat{y}_i\) adalah nilai intensitas piksel pada citra hasil transformasi. MAE memberikan gambaran tentang seberapa besar rata-rata kesalahan antara dua citra, dengan nilai yang lebih rendah menunjukkan kualitas transformasi yang lebih baik (\cite{Gonzalez2018}).
+di mana:
+\begin{itemize}
+    \item $n$ = jumlah data,
+    \item $y_i$ = nilai aktual,
+    \item $\hat{y}_i$ = nilai prediksi,
+    \item $|y_i - \hat{y}_i|$ = selisih absolut antara nilai aktual dan prediksi.
+\end{itemize}
 
+Nilai MAE menunjukkan rata-rata kesalahan prediksi tanpa memperhatikan arah
+kesalahan. Semakin kecil nilai MAE, maka semakin baik performa model dalam
+melakukan prediksi karena perbedaan antara nilai aktual dan nilai prediksi
+semakin rendah.
+
+Dalam penelitian pengolahan citra digital dan estimasi berat ikan, MAE dapat
+digunakan untuk mengevaluasi hasil prediksi berat ikan yang diperoleh dari
+metode berbasis citra dengan membandingkan berat hasil prediksi terhadap
+berat aktual hasil pengukuran langsung. MAE dipilih karena perhitungannya
+sederhana dan tidak terlalu sensitif terhadap nilai ekstrem dibandingkan
+metrik seperti Mean Squared Error (MSE).
 \section{Mean Absolute Percentage Error (MAPE)}
-  Mean Absolute Percentage Error (MAPE) adalah sebuah metrik yang digunakan untuk mengukur rata-rata kesalahan persentase antara nilai yang diprediksi dan nilai aktual dalam sebuah dataset. Dalam konteks pengolahan citra digital, MAPE dapat digunakan untuk mengevaluasi kualitas hasil transformasi atau rotasi citra dengan membandingkan piksel-piksel pada citra hasil transformasi dengan piksel-piksel pada citra asli. MAPE dihitung dengan rumus berikut:
+  Mean Absolute Percentage Error (MAPE) merupakan metrik evaluasi yang
+digunakan untuk mengukur rata-rata persentase kesalahan antara nilai prediksi
+dan nilai aktual. MAPE banyak digunakan pada bidang statistika, forecasting,
+machine learning, dan pengolahan data karena hasil evaluasinya dinyatakan
+dalam bentuk persentase sehingga lebih mudah untuk diinterpretasikan
+(\textcite{Armstrong1992,Hyndman2006}).
+
+Secara matematis, Mean Absolute Percentage Error dirumuskan sebagai berikut:
 
 \begin{equation}
-  MAPE = \frac{100\%}{n} \sum_{i=1}^{n} \left| \frac{y_i - \hat{y}_i}{y_i} \right|
-  \label{eq:MAPE}
+MAPE = \frac{100\%}{n}\sum_{i=1}^{n}
+\left|\frac{y_i - \hat{y}_i}{y_i}\right|
+\label{eq:mape}
 \end{equation}
 
-Di mana \(n\) adalah jumlah total piksel dalam citra, \(y_i\) adalah nilai intensitas piksel pada citra asli, dan \(\hat{y}_i\) adalah nilai intensitas piksel pada citra hasil transformasi. MAPE memberikan gambaran tentang seberapa besar rata-rata kesalahan persentase antara dua citra, dengan nilai yang lebih rendah menunjukkan kualitas transformasi yang lebih baik (\cite{Gonzalez2018}).
+di mana:
+\begin{itemize}
+    \item $n$ = jumlah data,
+    \item $y_i$ = nilai aktual,
+    \item $\hat{y}_i$ = nilai prediksi,
+    \item $\left|\frac{y_i - \hat{y}_i}{y_i}\right|$ = persentase kesalahan absolut.
+\end{itemize}
+
+Nilai MAPE menunjukkan rata-rata besar kesalahan prediksi dalam bentuk
+persentase. Semakin kecil nilai MAPE, maka semakin tinggi tingkat akurasi
+model prediksi yang digunakan. Sebaliknya, nilai MAPE yang besar menunjukkan
+bahwa hasil prediksi memiliki tingkat kesalahan yang tinggi.
+
+Dalam penelitian pengolahan citra digital dan estimasi berat ikan, MAPE dapat
+digunakan untuk mengevaluasi tingkat akurasi hasil prediksi berat ikan
+berdasarkan parameter visual citra dengan membandingkan berat hasil prediksi
+terhadap berat aktual hasil pengukuran langsung. Penggunaan MAPE memudahkan
+interpretasi performa model karena kesalahan dinyatakan dalam persentase.
+
+Namun, MAPE memiliki kelemahan ketika nilai aktual mendekati nol karena dapat
+menghasilkan nilai error yang sangat besar atau tidak terdefinisi
+(\textcite{Hyndman2006}).
+
+
 
 
 

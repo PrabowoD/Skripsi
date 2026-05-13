@@ -30,37 +30,40 @@
 \contentsline {section}{\numberline {2.11}Bounding Box}{15}{section.2.11}%
 \contentsline {section}{\numberline {2.12}Length-Weight Relationship}{15}{section.2.12}%
 \contentsline {subsection}{\numberline {2.12.1}Visual-Weight Relationship}{16}{subsection.2.12.1}%
-\contentsline {section}{\numberline {2.13}Mean Absolute Error (MAE)}{16}{section.2.13}%
-\contentsline {section}{\numberline {2.14}Mean Absolute Percentage Error (MAPE)}{17}{section.2.14}%
-\contentsline {chapter}{\numberline {III}METODE PENELITIAN}{18}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Deskripsi Sistem}{18}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Pre-Processing Citra}{19}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Penghapusan Background}{19}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Rotasi}{20}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Smoothing Gaussian}{21}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Perhitungan Gradien}{22}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Menghitung Second Moment Matriks}{22}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Harris Respon}{23}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Thresholding dan \emph {Non-Maximum suppression}}{23}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Penghitungan panjang dan berat}{24}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Bounding Box}{24}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Menghitung Panjang}{25}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.7.3}Melakukan Proyeksi Perspektif}{25}{subsection.3.7.3}%
-\contentsline {subsection}{\numberline {3.7.4}Menghitung Berat}{26}{subsection.3.7.4}%
-\contentsline {section}{\numberline {3.8}Evaluasi Akurasi}{26}{section.3.8}%
-\contentsline {chapter}{\numberline {IV}HASIL DAN PEMBAHASAN}{27}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Pra-Processing Citra}{27}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Input Gambar dan Penghilangan Background}{27}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Rotasi}{28}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Smoothing Gaussian}{28}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Menghitung Gradien}{29}{section.4.2}%
-\contentsline {section}{\numberline {4.3}AutoKorelasi}{29}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Harris-Respons}{29}{section.4.4}%
-\contentsline {section}{\numberline {4.5}NMS dan thresholding}{30}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Menghitung Panjang dan Berat}{30}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Bounding Box}{30}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Menghitung Panjang}{31}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Memproyeksi Perspectif}{31}{subsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.6.4}Mengitung Berat}{32}{subsection.4.6.4}%
-\contentsline {section}{\numberline {4.7}Evaluasi Akurasi}{33}{section.4.7}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{36}{table.caption.30}%
+\contentsline {section}{\numberline {2.13}Mean Absolute Error (MAE)}{17}{section.2.13}%
+\contentsline {section}{\numberline {2.14}Mean Absolute Percentage Error (MAPE)}{18}{section.2.14}%
+\contentsline {chapter}{\numberline {III}METODE PENELITIAN}{20}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Deskripsi Sistem}{20}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Pre-Processing Citra}{21}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Penghapusan Background}{21}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Rotasi}{22}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Smoothing Gaussian}{23}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Perhitungan Gradien}{24}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Menghitung Second Moment Matriks}{24}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Harris Respon}{25}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Thresholding dan \emph {Non-Maximum suppression}}{25}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Penghitungan panjang dan berat}{26}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Bounding Box}{26}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Menghitung Panjang}{27}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Melakukan Proyeksi Perspektif}{27}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}Menghitung Berat}{28}{subsection.3.7.4}%
+\contentsline {section}{\numberline {3.8}Evaluasi Akurasi}{28}{section.3.8}%
+\contentsline {chapter}{\numberline {IV}HASIL DAN PEMBAHASAN}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Pra-Processing Citra}{29}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Input Gambar dan Penghilangan Background}{29}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Rotasi}{30}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Smoothing Gaussian}{30}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Menghitung Gradien}{31}{section.4.2}%
+\contentsline {section}{\numberline {4.3}AutoKorelasi}{31}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Harris-Respons}{32}{section.4.4}%
+\contentsline {section}{\numberline {4.5}NMS dan thresholding}{32}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Menghitung Panjang dan Berat}{33}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Bounding Box}{33}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Menghitung Panjang}{33}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Memproyeksi Perspectif}{34}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Mengitung Berat}{35}{subsection.4.6.4}%
+\contentsline {section}{\numberline {4.7}Evaluasi Akurasi}{36}{section.4.7}%
+\contentsline {chapter}{\numberline {V}KESIMPULAN DAN SARAN}{41}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kesimpulan}{41}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Saran}{41}{section.5.2}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{42}{Item.21}%

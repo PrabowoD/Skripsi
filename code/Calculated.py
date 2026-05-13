@@ -25,10 +25,22 @@ def calculate_weight(Luas, filename):
     aln_induk = 1.29
     aln_kdua  = 1.13
     aln_kbawah = 1.08
+    # alma = 0.27
+    # almb = 2.2
+    # alna = 0.2
+    # alnb = 2.25
+    # alla = 0.014
+    # allb = 2.85
     
     Berat = 0
+    # if "mas" in filename:
+    #         Berat = alma * pow(Luas, almb)
+    # elif "lele" in filename:
+    #         Berat = alla * pow(Luas, allb)
+    # elif "nila" in filename:
+    #         Berat = alna * pow(Luas, alnb)
     if "mas" in filename:
-            Berat = alm * Luas
+        Berat = alm * Luas
     elif "lele" in filename and "induk" in filename:
             Berat = all_induk * Luas
     elif "lele" in filename and "pembesaran" in filename:
@@ -36,7 +48,6 @@ def calculate_weight(Luas, filename):
     elif "lele" in filename and "pedaging" in filename:
         Berat = all_pedaging * Luas
     elif "nila" in filename and "induk" in filename:
-        #if "nila" in filename and "induk" in filename:
             Berat = aln_induk * Luas
     elif "nila" and "kdua" in filename:
         Berat = aln_kdua * Luas

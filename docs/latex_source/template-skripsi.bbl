@@ -53,6 +53,99 @@
       \endverb
       \keyw{Arduino vii,BibitIkanLele,Counter}
     \endentry
+    \entry{Armstrong1992}{report}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=98760fe8e822a8904bd8aa07a249e0e9}{%
+           family={Armstrong},
+           familyi={A\bibinitperiod},
+           given={J\bibnamedelima Scott},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4764f77d895df5185ebf446cc866f705}{%
+           family={Collopy},
+           familyi={C\bibinitperiod},
+           given={Fred},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{11754abf29c3468a7a14dba71979b092}
+      \strng{fullhash}{a91e477e305e9ee2eabf3a111efde9e3}
+      \strng{fullhashraw}{a91e477e305e9ee2eabf3a111efde9e3}
+      \strng{bibnamehash}{a91e477e305e9ee2eabf3a111efde9e3}
+      \strng{authorbibnamehash}{a91e477e305e9ee2eabf3a111efde9e3}
+      \strng{authornamehash}{11754abf29c3468a7a14dba71979b092}
+      \strng{authorfullhash}{a91e477e305e9ee2eabf3a111efde9e3}
+      \strng{authorfullhashraw}{a91e477e305e9ee2eabf3a111efde9e3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This study evaluated measures for making comparisons of errors across time series. We analyzed 90 annual and 101 quarterly economic time series. We judged error measures on reliability, construct validity, sensitivity to small changes, protection against outliers, and their relationship to decision making. The results lead us to recommend the Geometric Mean of the Relative Absolute Error (GMRAE) when the task involves calibrating a model for a set of time series. The GMRAE compares the absolute error of a given method to that from the random walk forecast. For selecting the most accurate methods, we recommend the Median RAE (MdRAE) when few series are available and the Median Absolute Percentage Error (MdAPE) otherwise. The Root Mean Square Error (RMSE) is not reliable, and is therefore inappropriate for comparing accuracy across series.}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{title}{Error measures for generalizing about forecasting methods: Empirical comparisons *}
+      \field{type}{techreport}
+      \field{volume}{08}
+      \field{year}{1992}
+      \field{pages}{69}
+      \range{pages}{1}
+      \keyw{Forecast accuracy,M-Competition,Relative absolute error,Theil's U}
+    \endentry
+    \entry{Balaban2010}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=d5a14367a115e8f11341d2da4f7d866b}{%
+           family={Balaban},
+           familyi={B\bibinitperiod},
+           given={Murat\bibnamedelima O.},
+           giveni={M\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9765881025193023f7ea5207c11c805d}{%
+           family={Şengör},
+           familyi={Ş\bibinitperiod},
+           given={Gülgün\bibnamedelimb F.\bibnamedelimi Ünal},
+           giveni={G\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim Ü\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=16cd6f765d6fee73ea976c61956b1d07}{%
+           family={Soriano},
+           familyi={S\bibinitperiod},
+           given={Mario\bibnamedelima Gil},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c3a01e27546d1383b7101f67e4d162a}{%
+           family={Ruiz},
+           familyi={R\bibinitperiod},
+           given={Elena\bibnamedelima Guillén},
+           giveni={E\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5684cf68066559a2a8970dc8efd1f078}
+      \strng{fullhash}{019615cc028dd5640469b55b86437807}
+      \strng{fullhashraw}{019615cc028dd5640469b55b86437807}
+      \strng{bibnamehash}{5684cf68066559a2a8970dc8efd1f078}
+      \strng{authorbibnamehash}{5684cf68066559a2a8970dc8efd1f078}
+      \strng{authornamehash}{5684cf68066559a2a8970dc8efd1f078}
+      \strng{authorfullhash}{019615cc028dd5640469b55b86437807}
+      \strng{authorfullhashraw}{019615cc028dd5640469b55b86437807}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{After harvesting, salmon is sorted by species, size, and quality. This is generally manually done by operators. Automation would bring repeatability, objectivity, and record-keeping capabilities to these tasks. Machine vision (MV) and image analysis have been used in sorting many agricultural products. Four salmon species were tested: pink (Oncorhynchus gorbuscha), red (Oncorhynchus nerka), silver (Oncorhynchus kisutch), and chum (Oncorhynchus keta). A total of 60 whole fish from each species were first weighed, then placed in a light box to take their picture. Weight compared with view area as well as length and width correlations were developed. In addition the effect of " hump" development (see text) of pink salmon on this correlation was investigated. It was possible to predict the weight of a salmon by view area, regardless of species, and regardless of the development of a hump for pinks. Within pink salmon there was a small but insignificant difference between predictive equations for the weight of " regular" fish and " humpy" fish. Machine vision can accurately predict the weight of whole salmon for sorting. © 2010 Institute of Food Technologists®.}
+      \field{issn}{00221147}
+      \field{issue}{3}
+      \field{journaltitle}{Journal of Food Science}
+      \field{month}{4}
+      \field{title}{Using image analysis to predict the weight of alaskan salmon of different species}
+      \field{volume}{75}
+      \field{year}{2010}
+      \verb{doi}
+      \verb 10.1111/j.1750-3841.2010.01522.x
+      \endverb
+      \keyw{Image processing,Salmon,Size,Sorting}
+    \endentry
     \entry{LeCren1951}{report}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=7db84e6eb25059c6b972882bf461694c}{%
@@ -186,6 +279,57 @@
       \verb https://books.google.com/books?id=0F05vgAACAAJ
       \endverb
     \endentry
+    \entry{Gm2023}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=b4d2e9497ec8927b47df3a28928703f8}{%
+           family={Gümüş},
+           familyi={G\bibinitperiod},
+           given={Bahar},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d02ff0ea58cabeeab54a5b0388d410ff}{%
+           family={Gümüş},
+           familyi={G\bibinitperiod},
+           given={Erkan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d5a14367a115e8f11341d2da4f7d866b}{%
+           family={Balaban},
+           familyi={B\bibinitperiod},
+           given={Murat\bibnamedelima O.},
+           giveni={M\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Central Fisheries Research Inst}%
+      }
+      \strng{namehash}{6bf0cfc211b59e46894c8d9d355939e7}
+      \strng{fullhash}{ebd72ea011a82d1e13d80423d57411c9}
+      \strng{fullhashraw}{ebd72ea011a82d1e13d80423d57411c9}
+      \strng{bibnamehash}{ebd72ea011a82d1e13d80423d57411c9}
+      \strng{authorbibnamehash}{ebd72ea011a82d1e13d80423d57411c9}
+      \strng{authornamehash}{6bf0cfc211b59e46894c8d9d355939e7}
+      \strng{authorfullhash}{ebd72ea011a82d1e13d80423d57411c9}
+      \strng{authorfullhashraw}{ebd72ea011a82d1e13d80423d57411c9}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Sixty scaled carp Cyprinus carpio and sixty mirror carp Cyprinus carpio carpio were raised in fiberglass and concrete tanks. Fish pictures were taken by a digital camera in a lightbox. Image analysis was used to determine length-weight and view area-weight relationships. Length-weight data were fitted to a power equation: (Weight W) = A (Length L)B. R2 ranged from 0.838 to 0.959. Based on the B values, scaled and mirror carps reared in the fiberglass tank showed a negative allometric growth while this was positive for the fish in the concrete tank. For the view area (V)-weight relationship, linear (W = A + BV), and second order polynomial equations were used in addition to the power equation. The R2 values for these equations ranged from 0.916 to 0.995. Skin color was measured by image analysis. Both scaled and mirror carp reared in concrete tanks had L*, a* and b* values significantly higher than those reared in fiberglass tanks (P <.05). Also, the fish reared in fiberglass tanks tended to have less weight for the same view area, compared to those reared in concrete tanks.}
+      \field{issn}{13032712}
+      \field{issue}{1}
+      \field{journaltitle}{Turkish Journal of Fisheries and Aquatic Sciences}
+      \field{month}{1}
+      \field{title}{Image Analysis to Determine Length-Weight and Area-Weight Relationships, and Color Differences in Scaled Carp and Mirror Carp Grown in Fiberglass and Concrete Tanks}
+      \field{volume}{23}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.4194/TRJFAS21260
+      \endverb
+      \keyw{Carp,Color,Image analysis,Machine vision,Size}
+    \endentry
     \entry{Harris2013}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=aa81fda54b78d656cfed925799d9fe1e}{%
@@ -226,6 +370,50 @@
       \verb{file}
       \verb :C$\backslash$:/Users/User/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Harris, Stephens - 2013 - A Combined Corner and Edge Detector(2).pdf:pdf
       \endverb
+    \endentry
+    \entry{Hyndman2006}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2f709db8a046ae1d056e75c1f3aad31c}{%
+           family={Hyndman},
+           familyi={H\bibinitperiod},
+           given={Rob\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e1d517a3ae1d7b892371ef8f37f88412}{%
+           family={Koehler},
+           familyi={K\bibinitperiod},
+           given={Anne\bibnamedelima B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ccc2789bf08f9c87acbe5bd693e108ea}
+      \strng{fullhash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{fullhashraw}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{bibnamehash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{authorbibnamehash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{authornamehash}{ccc2789bf08f9c87acbe5bd693e108ea}
+      \strng{authorfullhash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{authorfullhashraw}{5b8826bba5f702862b6f6d20f0ae0758}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We discuss and compare measures of accuracy of univariate time series forecasts. The methods used in the M-competition as well as the M3-competition, and many of the measures recommended by previous authors on this topic, are found to be degenerate in commonly occurring situations. Instead, we propose that the mean absolute scaled error become the standard measure for comparing forecast accuracy across multiple time series. © 2006 International Institute of Forecasters.}
+      \field{issn}{01692070}
+      \field{issue}{4}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{month}{10}
+      \field{title}{Another look at measures of forecast accuracy}
+      \field{volume}{22}
+      \field{year}{2006}
+      \field{pages}{679\bibrangedash 688}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.ijforecast.2006.03.001
+      \endverb
+      \keyw{Forecast accuracy,Forecast error measures,Forecast evaluation,M-competition,Mean absolute scaled error}
     \endentry
     \entry{ITJolliffe2002}{book}{}{}
       \name{author}{1}{}{%
@@ -607,6 +795,52 @@
       \endverb
       \verb{url}
       \verb http://link.springer.com/10.1007/978-94-015-8802-7
+      \endverb
+    \endentry
+    \entry{Willmott2005}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d40b1ac17e63e099cb07278509735d95}{%
+           family={Willmott},
+           familyi={W\bibinitperiod},
+           given={CJ},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b54330d1b990f0199098e31a46d7ed64}{%
+           family={Matsuura},
+           familyi={M\bibinitperiod},
+           given={K},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{01162b331df55047649e10125bb88068}
+      \strng{fullhash}{d2086b2a9b537f038dd96d5105501d93}
+      \strng{fullhashraw}{d2086b2a9b537f038dd96d5105501d93}
+      \strng{bibnamehash}{d2086b2a9b537f038dd96d5105501d93}
+      \strng{authorbibnamehash}{d2086b2a9b537f038dd96d5105501d93}
+      \strng{authornamehash}{01162b331df55047649e10125bb88068}
+      \strng{authorfullhash}{d2086b2a9b537f038dd96d5105501d93}
+      \strng{authorfullhashraw}{d2086b2a9b537f038dd96d5105501d93}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0936-577X}
+      \field{journaltitle}{Climate Research}
+      \field{title}{Advantages of the mean absolute error (MAE) over the root mean square error (RMSE) in assessing average model performance}
+      \field{volume}{30}
+      \field{year}{2005}
+      \field{pages}{79\bibrangedash 82}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.3354/cr030079
+      \endverb
+      \verb{urlraw}
+      \verb http://www.int-res.com/abstracts/cr/v30/n1/p79-82/
+      \endverb
+      \verb{url}
+      \verb http://www.int-res.com/abstracts/cr/v30/n1/p79-82/
       \endverb
     \endentry
   \enddatalist

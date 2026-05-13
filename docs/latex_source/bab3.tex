@@ -283,9 +283,18 @@ rata-rata berat per keliling ikan diperoleh dari data referensi yang telah diamb
 % \begin{equation*}
 %     Luas\ Ikan = Panjang\ Ikan * Lebar\ Ikan
 % \end{equation*}
-\begin{equation*}
-    Berat\ Ikan = Luas\ Ikan \times Berat\ rata-rata\ per\ Luas\ Ikan
-\end{equation*}
+\begin{equation}
+    W = k \times A
+\end{equation}
+
+Dimana:
+\begin{itemize}
+    \item $W$ = berat ikan,
+    \item $k$ = koefisien regresi (berat per satuan luas),
+    \item $A$ = luas ikan.
+\end{itemize}
+
+Rumus ini merupakan turunan sederhana dari konsep biologis \emph{lenght-weight Relationship} atau disingkat LWR, yang menyatakan bahwa berat ikan berbanding lurus dengan pangkat tertentu dari panjangnya. 
 
 %      Setelah panjang ikan dalam satuan nyata diketahui, estimasi berat ikan dapat dilakukan menggunakan rumus interpolasi linier berdasarkan data panjang dan berat ikan yang telah diketahui sebelumnya. Rumus interpolasi linier yang digunakan adalah:
 % \begin{equation}
@@ -299,7 +308,7 @@ rata-rata berat per keliling ikan diperoleh dari data referensi yang telah diamb
 %     \item \(W_x\) dan \(W_y\) = berat ikan pada data referensi sebelum dan sesudah.
 % \end{itemize}
 
-    Dengan metode ini, sistem dapat menghitung panjang dan mengestimasi berat ikan secara otomatis dari citra digital, sehingga proses pengukuran menjadi lebih efisien, dan minim kontak langsung dengan ikan.
+    % Dengan metode ini, sistem dapat menghitung panjang dan mengestimasi berat ikan secara otomatis dari citra digital, sehingga proses pengukuran menjadi lebih efisien, dan minim kontak langsung dengan ikan.
 
 \section{Evaluasi Akurasi}
     Setelah sistem selesai melakukan pengukuran panjang dan berat ikan, langkah terakhir adalah mengevaluasi akurasi hasil pengukuran. Evaluasi dilakukan dengan membandingkan hasil pengukuran sistem dengan data referensi yang telah diketahui sebelumnya. 

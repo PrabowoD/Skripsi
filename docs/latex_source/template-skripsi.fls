@@ -254,6 +254,9 @@ INPUT bab3.aux
 INPUT .\bab4.aux
 INPUT .\bab4.aux
 INPUT bab4.aux
+INPUT .\bab5.aux
+INPUT .\bab5.aux
+INPUT bab5.aux
 OUTPUT template-skripsi.aux
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -560,6 +563,12 @@ INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8c.tfm
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8c.vf
+INPUT .\bab5.tex
+INPUT .\bab5.tex
+OUTPUT bab5.aux
+INPUT .\bab5.tex
+INPUT .\bab5.tex
+INPUT bab5.tex
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmrc8t.tfm
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\t1pcr.fd
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\t1pcr.fd
@@ -585,6 +594,9 @@ INPUT bab3.aux
 INPUT .\bab4.aux
 INPUT .\bab4.aux
 INPUT bab4.aux
+INPUT .\bab5.aux
+INPUT .\bab5.aux
+INPUT bab5.aux
 INPUT .\template-skripsi.out
 INPUT .\template-skripsi.out
 INPUT template-skripsi.run.xml
@@ -593,6 +605,8 @@ INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
