@@ -87,55 +87,72 @@ Namun, banyak algoritma pengolahan citra, termasuk deteksi tepi dan deteksi sudu
 
 \section{Gaussian Smoothing}
 % \subsection{Gaussian scale-space}
+Gaussian smoothing merupakan teknik image smoothing yang digunakan untuk mengurangi noise dan detail kecil pada citra digital sebelum dilakukan proses analisis lebih lanjut.
+Metode ini bekerja dengan cara melakukan konvolusi citra menggunakan kernel Gaussian sehingga perubahan intensitas piksel menjadi lebih halus.
+Dalam pengolahan citra digital, Gaussian smoothing banyak digunakan sebagai tahap pre-processing karena mampu mengurangi gangguan (noise) tanpa menghilangkan struktur utama objek secara signifikan (\cite{Gonzalez2018}).
 
-Dalam domain diskrit citra digital, parameter skala juga direpresentasikan secara diskrit. 
-Dengan demikian, representasi ruang-skala merupakan kumpulan gambar yang direpresentasikan oleh perbedaan tingkat resolusi diskrit. 
-Sebuah penelitian menunjukkan bahwa ruang-skala harus memenuhi persamaan yang dapat dicapai melalui konvolusi dengan kernel Gaussian. 
-Selanjutnya, penelitian tersebut memperlihatkan bahwa kernel Gaussian adalah satu-satunya kernel unik yang dapat menghasilkan representasi skala-ruang. 
-Keunikan kernel Gaussian ini telah dikonfirmasi melalui berbagai formulasi dalam sejumlah penelitian lain (\cite{Lowe2004};\cite{mikolajczyk:tel-00584096}). 
-Temuan ini menyimpulkan bahwa konvolusi dengan kernel Gaussian merupakan solusi optimal untuk masalah konstruksi representasi multi-skala. Fungsi Gaussian dua dimensi didefinisikan sebagai berikut:
+Proses Smoothing sangat penting karena deteksi fitur sangat sensitif terhadap noise, terlebih lagi pada deteksi sudut. Noise pada citra dapat menghasilkan perubahan intensitas yang dapat menyebabkan munculnya sudut palsu (\emph{false corner}). Oleh karena itu, Gaussian smoothing sering digunakan untuk memperhalus citra sebelum memasuki tahapan perhitungan.
+Filter Gaussian dibentuk berdasarkan distribusi Gaussian dua dimensi yang dirumuskan sebagai berikut :
+
+% Dalam domain diskrit citra digital, parameter skala juga direpresentasikan secara diskrit. 
+% Dengan demikian, representasi ruang-skala merupakan kumpulan gambar yang direpresentasikan oleh perbedaan tingkat resolusi diskrit. 
+% Sebuah penelitian menunjukkan bahwa ruang-skala harus memenuhi persamaan yang dapat dicapai melalui konvolusi dengan kernel Gaussian. 
+% Selanjutnya, penelitian tersebut memperlihatkan bahwa kernel Gaussian adalah satu-satunya kernel unik yang dapat menghasilkan representasi skala-ruang. 
+% Keunikan kernel Gaussian ini telah dikonfirmasi melalui berbagai formulasi dalam sejumlah penelitian lain (\cite{Lowe2004};\cite{mikolajczyk:tel-00584096}). 
+% Temuan ini menyimpulkan bahwa konvolusi dengan kernel Gaussian merupakan solusi optimal untuk masalah konstruksi representasi multi-skala. Fungsi Gaussian dua dimensi didefinisikan sebagai berikut:
 
 \begin{equation*}
-g(\sigma) = \frac{1}{2\pi\sigma_{x}\sigma_{y}}\exp\left(-\frac{(x^2+\mu_{x})+(y^2+\mu_{y})}{2\sigma_{x}\sigma_{y}}\right)
+g(\sigma) = \frac{1}{2\pi\sigma_{x}\sigma_{y}}\exp\left(-\frac{(x - \mu_{x})^2 +(y - \mu_{y})^2}{2\sigma_{x}\sigma_{y}}\right)
 \end{equation*}
 
-Dimana \(\mu_{x}\) dan \(\mu_{y}\) adalah \(mean\) atau rata-rata dari sumbu-x dan sumbu-y, dan \(\sigma_{x}\) dan \(\sigma_{y}\) adalah \(standarddeviation\) atau deviasi standar dari sumbu-x dan sumbu-y. Jika \(\mu_{x} = \mu_{y} = 0\) dan \(\sigma_{x} = \sigma_{y}\) maka dapat disederhanakan menjadi:
+Dimana \(\mu_{x}\) dan \(\mu_{y}\) adalah \(mean\) atau rata-rata dari sumbu-x dan sumbu-y, dan \(\sigma_{x}\) dan \(\sigma_{y}\) adalah \emph{standard deviation} atau deviasi standar dari sumbu-x dan sumbu-y. Jika \(\mu_{x} = \mu_{y} = 0\) dan \(\sigma_{x} = \sigma_{y}\) maka dapat disederhanakan menjadi:
 \begin{equation}
 g(\sigma) = \frac{1}{2\pi\sigma^2}\exp\left(-\frac{x^2+y^2}{2\sigma^2}\right)
 \label{eq:gaussian kernel}
 \end{equation}
 
-Keunikan dari kernel Gaussian dapat diketahui dari beberapa sifat berikut: 
-\emph{linearity, separability, causality, and semi group property}. Pembahasan lebih lanjut mengenai properti ini dapat ditemukan dalam literatur \emph{Gaussian Scale-Space Theory} oleh\cite{Sporring1997}. Keterpisahan 
-atau \emph{separability} memungkinan \emph{multi-dimensional Gaussian kernel} diperoleh sebagai hasil perkalian kernel satu dimensi:
+Nilai \(\sigma\) mempengaruhi tingkat blur pada citra. Semakin besar nilai \(\sigma\) maka citra akan menjadi semakin halus karena lebih banyak detail dan noise yang dikurangi, begitupun sebaliknya.
+Proses \emph{Gaussian Smoothing} dilakukan melalui operasi konvolusi antara kernel Gaussian dan citra input. Operasi konvolusi dituliskan pada rumus~\ref(eq:konvolusi) berikut:
 
-\begin{equation*}
-  g(x,y) = g(x)g(y)
-\end{equation*}
+% Keunikan dari kernel Gaussian dapat diketahui dari beberapa sifat berikut: 
+% \emph{linearity, separability, causality, and semi group property}. Pembahasan lebih lanjut mengenai properti ini dapat ditemukan dalam literatur \emph{Gaussian Scale-Space Theory} oleh\cite{Sporring1997}. Keterpisahan 
+% atau \emph{separability} memungkinan \emph{multi-dimensional Gaussian kernel} diperoleh sebagai hasil perkalian kernel satu dimensi:
 
-Sifat ini sangat berguna dalam praktik karena penghalusan citra dua dimensi dapat digantikan oleh dua penghalusan satu dimensi, satu untuk setiap dimensi (\cite{Lowe2004}). 
-Filter Gaussian satu dimensi dapat diimplementasikan sebagai filter rekursif, yang secara signifikan mempercepat proses 
-komputasi pada kasus kernel Gaussian yang lebih besar (yaitu > \( \sqrt{2}\)). 
-Kondisi kausalitas menyatakan bahwa tidak ada struktur tambahan atau buatan yang dibuat saat menghitung citra pada skala kasar, 
-yaitu citra pada skala yang lebih kasar merupakan representasi yang disederhanakan dari citra pada skala yang lebih halus (\cite{mikolajczyk:tel-00584096}). 
-Sifat semi-grup komutatif menyatakan bahwa \(n\) kali penghalusan berturut-turut pada sebuah citra akan memberikan hasil yang sama dengan satu kali penghalusan menggunakan ukuran kernel yang sama dengan jumlah seluruh \(n\) kernel tersebut. 
-Selain itu, operasi \(n\) tersebut dapat dilakukan dalam urutan apa pun:
+% \begin{equation*}
+%   g(x,y) = g(x)g(y)
+% \end{equation*}
 
-\begin{equation*}
-g(\sigma_{1}) * \cdots * g(\sigma_{n}) * I(x) = g(\sigma_{1} + \cdots + \sigma_{n}) * I(x)
-\end{equation*}
+% Sifat ini sangat berguna dalam praktik karena penghalusan citra dua dimensi dapat digantikan oleh dua penghalusan satu dimensi, satu untuk setiap dimensi (\cite{Lowe2004}). 
+% Filter Gaussian satu dimensi dapat diimplementasikan sebagai filter rekursif, yang secara signifikan mempercepat proses 
+% komputasi pada kasus kernel Gaussian yang lebih besar (yaitu > \( \sqrt{2}\)). 
+% Kondisi kausalitas menyatakan bahwa tidak ada struktur tambahan atau buatan yang dibuat saat menghitung citra pada skala kasar, 
+% yaitu citra pada skala yang lebih kasar merupakan representasi yang disederhanakan dari citra pada skala yang lebih halus (\cite{mikolajczyk:tel-00584096}). 
+% Sifat semi-grup komutatif menyatakan bahwa \(n\) kali penghalusan berturut-turut pada sebuah citra akan memberikan hasil yang sama dengan satu kali penghalusan menggunakan ukuran kernel yang sama dengan jumlah seluruh \(n\) kernel tersebut. 
+% Selain itu, operasi \(n\) tersebut dapat dilakukan dalam urutan apa pun:
 
-Biasanya, ruang-skala yang seragam digunakan, tetapi representasi ruang-skala yang lebih umum dihitung menggunakan filter afine (\cite{mikolajczyk:tel-00584096}).
+% \begin{equation*}
+% g(\sigma_{1}) * \cdots * g(\sigma_{n}) * I(x) = g(\sigma_{1} + \cdots + \sigma_{n}) * I(x)
+% \end{equation*}
 
-\textbf{Uniform scale-space}. Perbedaan tingkat pada representasi ruang-skala secara umum, terbuat dari konvolusi dengan \emph{gaussian kernel} contohnya seperti pada gambar~\ref{fig:Uniform Gaussian kernel}.
+% Biasanya, ruang-skala yang seragam digunakan, tetapi representasi ruang-skala yang lebih umum dihitung menggunakan filter afine (\cite{mikolajczyk:tel-00584096}).
+
+% \textbf{Uniform scale-space}. Perbedaan tingkat pada representasi ruang-skala secara umum, terbuat dari konvolusi dengan \emph{gaussian kernel} contohnya seperti pada gambar~\ref{fig:Uniform Gaussian kernel}.
 
 \begin{equation}
 G(x,\sigma) = g(\sigma) * I(x)
 \label{eq:konvolusi}
 \end{equation}
 
-Dengan \(I\) adalah gambar dan \(x = (x,y)\) adalah lokasi poin.
-\emph{Kernel} adalah simetris sirkular dan diparameterisasi dari satu skala faktor \(\sigma \).
+di mana :
+\begin{enumerate}
+  \item \(G(x,\sigma)\) adalah citra hasil konvolusi pada skala \(\sigma\).
+  \item \(g(\sigma)\) adalah kernel Gaussian dengan parameter \(\sigma\).
+  \item \(I(x)\) adalah citra input yang akan dihaluskan.
+  \item simbol \(*\) menyatakan operasi konvolusi
+\end{enumerate}
+
+% Dengan \(I\) adalah gambar, \(x = (x,y)\) adalah lokasi poin, \(g(\sigma)\) adalah kernel gaussian.
+% \emph{Kernel} adalah simetris sirkular dan diparameterisasi dari satu skala faktor \(\sigma \).
 
 \begin{figure}[H]
   \centering{}

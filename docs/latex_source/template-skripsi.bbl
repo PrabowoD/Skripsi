@@ -541,43 +541,6 @@
       \verb https://www.taylorfrancis.com/books/9781003050339
       \endverb
     \endentry
-    \entry{mikolajczyk:tel-00584096}{thesis}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=15ba95a5d65938b99eaf1f46dd4c25b8}{%
-           family={Mikolajczyk},
-           familyi={M\bibinitperiod},
-           given={Krystian},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{institution}{1}{%
-        {Institut National Polytechnique de Grenoble - INPG}%
-      }
-      \strng{namehash}{15ba95a5d65938b99eaf1f46dd4c25b8}
-      \strng{fullhash}{15ba95a5d65938b99eaf1f46dd4c25b8}
-      \strng{fullhashraw}{15ba95a5d65938b99eaf1f46dd4c25b8}
-      \strng{bibnamehash}{15ba95a5d65938b99eaf1f46dd4c25b8}
-      \strng{authorbibnamehash}{15ba95a5d65938b99eaf1f46dd4c25b8}
-      \strng{authornamehash}{15ba95a5d65938b99eaf1f46dd4c25b8}
-      \strng{authorfullhash}{15ba95a5d65938b99eaf1f46dd4c25b8}
-      \strng{authorfullhashraw}{15ba95a5d65938b99eaf1f46dd4c25b8}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{Detection of local features invariant to affines transformations}}
-      \field{type}{Theses}
-      \field{year}{2002}
-      \verb{urlraw}
-      \verb https://theses.hal.science/tel-00584096
-      \endverb
-      \verb{url}
-      \verb https://theses.hal.science/tel-00584096
-      \endverb
-      \keyw{Interest points ; feature detection ; affine invariance}
-    \endentry
     \entry{RohanNair}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9d5ce52884e58e751d80765af08fc53a}{%
@@ -693,90 +656,6 @@
       \verb 10.5201/ipol.2018.229
       \endverb
       \keyw{Autocorrelation matrix,Feature detector,Harris corner,Interest point,Non-maximum suppression}
-    \endentry
-    \entry{Sporring1997}{book}{}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=bf5b953fbb48b34d51016e189c95c47a}{%
-           family={Sporring},
-           familyi={S\bibinitperiod},
-           given={Jon},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=c9b6d63ce136a49b628e2f47ddd7df25}{%
-           family={Nielsen},
-           familyi={N\bibinitperiod},
-           given={Mads},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=78c640a01477f0fa1988c75d8614d4cc}{%
-           family={Florack},
-           familyi={F\bibinitperiod},
-           given={Luc},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=afced39a1a76e7f344f58b7f0f270307}{%
-           family={Johansen},
-           familyi={J\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-      }
-      \name{editor}{4}{}{%
-        {{hash=bf5b953fbb48b34d51016e189c95c47a}{%
-           family={Sporring},
-           familyi={S\bibinitperiod},
-           given={Jon},
-           giveni={J\bibinitperiod}}}%
-        {{hash=c9b6d63ce136a49b628e2f47ddd7df25}{%
-           family={Nielsen},
-           familyi={N\bibinitperiod},
-           given={Mads},
-           giveni={M\bibinitperiod}}}%
-        {{hash=78c640a01477f0fa1988c75d8614d4cc}{%
-           family={Florack},
-           familyi={F\bibinitperiod},
-           given={Luc},
-           giveni={L\bibinitperiod}}}%
-        {{hash=afced39a1a76e7f344f58b7f0f270307}{%
-           family={Johansen},
-           familyi={J\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer Netherlands}%
-      }
-      \strng{namehash}{69f68f30d8b5d90016098202010a4e4d}
-      \strng{fullhash}{9ddb61e9d7cb32c630dc1da765475ebf}
-      \strng{fullhashraw}{9ddb61e9d7cb32c630dc1da765475ebf}
-      \strng{bibnamehash}{69f68f30d8b5d90016098202010a4e4d}
-      \strng{authorbibnamehash}{69f68f30d8b5d90016098202010a4e4d}
-      \strng{authornamehash}{69f68f30d8b5d90016098202010a4e4d}
-      \strng{authorfullhash}{9ddb61e9d7cb32c630dc1da765475ebf}
-      \strng{authorfullhashraw}{9ddb61e9d7cb32c630dc1da765475ebf}
-      \strng{editorbibnamehash}{69f68f30d8b5d90016098202010a4e4d}
-      \strng{editornamehash}{69f68f30d8b5d90016098202010a4e4d}
-      \strng{editorfullhash}{9ddb61e9d7cb32c630dc1da765475ebf}
-      \strng{editorfullhashraw}{9ddb61e9d7cb32c630dc1da765475ebf}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-90-481-4852-3}
-      \field{title}{Gaussian Scale-Space Theory}
-      \field{volume}{8}
-      \field{year}{1997}
-      \verb{doi}
-      \verb 10.1007/978-94-015-8802-7
-      \endverb
-      \verb{urlraw}
-      \verb http://link.springer.com/10.1007/978-94-015-8802-7
-      \endverb
-      \verb{url}
-      \verb http://link.springer.com/10.1007/978-94-015-8802-7
-      \endverb
     \endentry
     \entry{Willmott2005}{article}{}{}
       \name{author}{2}{}{%
