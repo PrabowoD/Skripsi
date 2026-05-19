@@ -179,60 +179,6 @@
       \field{pages}{201\bibrangedash 219}
       \range{pages}{19}
     \endentry
-    \entry{Diansari2013}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=3b8d58b56f0f6c9f1b8be35ac3c70c9d}{%
-           family={Diansari},
-           familyi={D\bibinitperiod},
-           given={RR.Vanya\bibnamedelima Rhossitha},
-           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=366ffbc32d22feb46be20e5dab16a48c}{%
-           family={Endang},
-           familyi={E\bibinitperiod},
-           given={Arini},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9a1fceea1f4bbd82fbbd9d5d3d22badf}{%
-           family={Tita},
-           familyi={T\bibinitperiod},
-           given={Elfitasari},
-           giveni={E\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{1d24ef7c8b3ae03ad28810bdf657e8a7}
-      \strng{fullhash}{7517529b8ed68b475cdef7cad52b85aa}
-      \strng{fullhashraw}{7517529b8ed68b475cdef7cad52b85aa}
-      \strng{bibnamehash}{7517529b8ed68b475cdef7cad52b85aa}
-      \strng{authorbibnamehash}{7517529b8ed68b475cdef7cad52b85aa}
-      \strng{authornamehash}{1d24ef7c8b3ae03ad28810bdf657e8a7}
-      \strng{authorfullhash}{7517529b8ed68b475cdef7cad52b85aa}
-      \strng{authorfullhashraw}{7517529b8ed68b475cdef7cad52b85aa}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Ikan nila (Oreochromis niloticus) di Indonesia merupakan salah satu ikan air tawar yang memiliki nilai ekonomis tinggi dan merupakan komoditas penting dalam bisnis ikan air tawar dunia, cara budidaya yang relatif mudah, rasa yang disukai banyak orang, harga yang relatif terjangkau dan toleransi terhadap lingkungan yang lebih tinggi. Peningkatan padat tebar hingga mencapai daya dukung maksimum akan menyebabkan pertumbuhan ikan menurun. Peningkatan padat penebaran akan diikuti dengan peningkatan jumlah pakan, buangan metabolisme tubuh, konsumsi oksigen, dan dapat menurunkan kualitas air. Penurunan kualitas air akan mengakibatkan ikan menjadi stres sehingga pertumbuhan menurun dan ikan rentan mengalami kematian. Tujuan dari penelitian ini adalah untuk mengetahui pengaruh kepadatan yang berbeda terhadap kelulushidupan dan pertumbuhan ikan nila (O.niloticus) pada sistem resirkulasi dengan filter zeolit, mengetahui jumlah kepadatan ikan terbaik yang menghasilkan kelulushidupan dan pertumbuhan benih ikan nila (O. niloticus) dan mengetahui efektifitas filter zeolit. Materi yang digunakan adalah berupa kepadatan ikan nila yang berbeda dalam sistem resirkulasi dengan filter zeolit serta hewan uji berupa benih ikan nila ukuran 4-6 cm dengan padat tebar 10, 15, dan 20 ekor . Metode yang digunakan dalam penelitian ini adalah metode eksperimental, menggunakan rancangan acak lengkap (RAL) dengan menggunakan 3 perlakuan dan 3 kali ulangan, yaitu perlakuan A (kepadatan 10 ekor), perlakuan B (kepadatan 15 ekor), dan perlakuan C (kepadatan 20 ekor). Data yang dikumpulkan meliputi pertumbuhan panjang mutlak, laju pertumbuhan spesifik, kadar ammonia, kelulushidupan, dan kualitas air. Hasil penelitian menunjukkan bahwa pengaruh padat penebaran yang berbeda memberikan pengaruh yang sangat nyata (P{<}0,01) terhadap pertumbuhan ikan nila, tetapi tidak berpengaruh nyata (P{>}0,05) terhadap kelulushidupan. Kelulushidupan dari setiap perlakuan adalah perlakuan A sebesar 86,67±5,77 {\%}, perlakuan B sebesar 84,44±3,85 {\%}, dan perlakuan C sebesar 78,33±2,89 {\%}. Rata-rata pertumbuhan panjang ikan nila tertinggi pada perlakuan A sebesar 3,53±0,06 cm, yang terendah pada perlakuan C sebesar 2,57±0,06 cm. Rata-rata laju pertumbuhan spesifik ikan nila tertinggi pada perlakuan A sebesar 2,45±0,07 {\%}/hari, yang terendah adalah perlakuan C yaitu sebesar 1,76±0,05 {\%}/hari. Efektifitas filter zeolit pada perlakuan A dapat bekerja hingga batas akhir penelitian, dibandingkan dengan perlakuan B dan C yang hanya mencapai hari ke 20.}
-      \field{journaltitle}{Jurnal Aquakultur Manajemen dan Teknologi}
-      \field{number}{3}
-      \field{title}{{PENGARUH KEPADATAN YANG BERBEDA TERHADAP KELULUSHIDUPAN DAN PERTUMBUHAN IKAN NILA (Oreochromis niloticus) PADA SISTEM RESIRKULASI DENGAN FILTER ZEOLIT}}
-      \field{volume}{2}
-      \field{year}{2013}
-      \field{pages}{37\bibrangedash 45}
-      \range{pages}{9}
-      \verb{file}
-      \verb :C$\backslash$:/Users/User/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Diansari, Endang, Tita - 2013 - PENGARUH KEPADATAN YANG BERBEDA TERHADAP KELULUSHIDUPAN DAN PERTUMBUHAN IKAN NILA (Oreochromis niloti(2).pdf:pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://ejournal3.undip.ac.id/index.php/jamt/article/view/4791
-      \endverb
-      \verb{url}
-      \verb https://ejournal3.undip.ac.id/index.php/jamt/article/view/4791
-      \endverb
-      \keyw{Tilapia,density,growth,resirculation,survival rate}
-    \endentry
     \entry{Gonzalez2018}{book}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=07713b8c79fe78ffaf9ab728a5f3ce88}{%
@@ -662,6 +608,41 @@
       \endverb
       \verb{url}
       \verb https://medium.com/%40nairrohan151/computer-vision-and-linear-algebra-b97f3f6132a6
+      \endverb
+    \endentry
+    \entry{KKP2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=61ced1101f9891427f2c2712ec963d3e}{%
+           family={Perikanan},
+           familyi={P\bibinitperiod},
+           given={Kementerian\bibnamedelima Kelautan},
+           giveni={K\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0,
+           prefix={dan},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \strng{namehash}{61ced1101f9891427f2c2712ec963d3e}
+      \strng{fullhash}{61ced1101f9891427f2c2712ec963d3e}
+      \strng{fullhashraw}{61ced1101f9891427f2c2712ec963d3e}
+      \strng{bibnamehash}{61ced1101f9891427f2c2712ec963d3e}
+      \strng{authorbibnamehash}{61ced1101f9891427f2c2712ec963d3e}
+      \strng{authornamehash}{61ced1101f9891427f2c2712ec963d3e}
+      \strng{authorfullhash}{61ced1101f9891427f2c2712ec963d3e}
+      \strng{authorfullhashraw}{61ced1101f9891427f2c2712ec963d3e}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Statistik Perikanan Budidaya Indonesia 2024}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://portaldata.kkp.go.id/portals/data-statistik/prod-ikan/summary
+      \endverb
+      \verb{url}
+      \verb https://portaldata.kkp.go.id/portals/data-statistik/prod-ikan/summary
       \endverb
     \endentry
     \entry{Sanchez2018}{article}{}{}

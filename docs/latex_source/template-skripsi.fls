@@ -242,6 +242,12 @@ INPUT template-skripsi.aux
 INPUT .\kata-pengantar.aux
 INPUT .\kata-pengantar.aux
 INPUT kata-pengantar.aux
+INPUT .\abstrak.aux
+INPUT .\abstrak.aux
+INPUT abstrak.aux
+INPUT .\abstract.aux
+INPUT .\abstract.aux
+INPUT abstract.aux
 INPUT .\bab1.aux
 INPUT .\bab1.aux
 INPUT bab1.aux
@@ -257,6 +263,9 @@ INPUT bab4.aux
 INPUT .\bab5.aux
 INPUT .\bab5.aux
 INPUT bab5.aux
+INPUT .\lampiran.aux
+INPUT .\lampiran.aux
+INPUT lampiran.aux
 OUTPUT template-skripsi.aux
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -298,26 +307,12 @@ INPUT .\gambar\logounj.png
 INPUT .\gambar\logounj.png
 INPUT .\gambar\logounj.png
 INPUT .\gambar\logounj.png
-INPUT .\sps\Lembar Pengesahan.pdf
-INPUT .\sps\Lembar Pengesahan.pdf
-INPUT .\sps\Lembar Pengesahan.pdf
-INPUT .\sps\Lembar Pengesahan.pdf
-INPUT .\sps\Lembar Pengesahan.pdf
-INPUT .\sps\Lembar Pengesahan.pdf
-INPUT .\sps\Lembar Pengesahan.pdf
-INPUT .\sps\Lembar Pengesahan.pdf
-INPUT .\sps\Lembar Pengesahan.pdf
-INPUT .\sps\Lembar Pengesahan.pdf
-INPUT .\sps\Lembar Pengesahan.pdf
+INPUT .\kata-pengantar.tex
+INPUT .\kata-pengantar.tex
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Users\USER\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\base\8r.enc
-INPUT .\sps\Lembar Pengesahan.pdf
-INPUT .\sps\Lembar Pengesahan.pdf
-INPUT .\sps\Lembar Pengesahan.pdf
-INPUT .\kata-pengantar.tex
-INPUT .\kata-pengantar.tex
 OUTPUT kata-pengantar.aux
 INPUT .\kata-pengantar.tex
 INPUT .\kata-pengantar.tex
@@ -350,12 +345,27 @@ INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.t
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmri8t.vf
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmro8t.tfm
-INPUT .\template-skripsi.toc
-INPUT .\template-skripsi.toc
-INPUT template-skripsi.toc
+INPUT .\abstrak.tex
+INPUT .\abstrak.tex
+OUTPUT abstrak.aux
+INPUT .\abstrak.tex
+INPUT .\abstrak.tex
+INPUT abstrak.tex
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
+INPUT .\abstract.tex
+INPUT .\abstract.tex
+OUTPUT abstract.aux
+INPUT .\abstract.tex
+INPUT .\abstract.tex
+INPUT abstract.tex
+INPUT .\template-skripsi.toc
+INPUT .\template-skripsi.toc
+INPUT template-skripsi.toc
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmbi8t.vf
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi8r.tfm
 OUTPUT template-skripsi.toc
 INPUT .\template-skripsi.lof
 INPUT .\template-skripsi.lof
@@ -371,9 +381,6 @@ OUTPUT bab1.aux
 INPUT .\bab1.tex
 INPUT .\bab1.tex
 INPUT bab1.tex
-INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
-INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmbi8t.vf
-INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi8r.tfm
 INPUT .\bab2dif1.tex
 INPUT .\bab2dif1.tex
 OUTPUT bab2dif1.aux
@@ -425,14 +432,14 @@ INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1ptm.fd
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1ptm.fd
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1ptm.fd
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8c.tfm
-INPUT .\gambar\harris_corner_detection_example.jpg
-INPUT .\gambar\harris_corner_detection_example.jpg
-INPUT .\gambar\harris_corner_detection_example.jpg
-INPUT .\gambar\harris_corner_detection_example.jpg
-INPUT .\gambar\harris_corner_detection_example.jpg
-INPUT .\gambar\harris_corner_detection_example.jpg
-INPUT .\gambar\harris_corner_detection_example.jpg
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8c.vf
+INPUT .\gambar\harris_corner_detection_example.jpg
+INPUT .\gambar\harris_corner_detection_example.jpg
+INPUT .\gambar\harris_corner_detection_example.jpg
+INPUT .\gambar\harris_corner_detection_example.jpg
+INPUT .\gambar\harris_corner_detection_example.jpg
+INPUT .\gambar\harris_corner_detection_example.jpg
+INPUT .\gambar\harris_corner_detection_example.jpg
 INPUT .\gambar\pinhole camera.jpg
 INPUT .\gambar\pinhole camera.jpg
 INPUT .\gambar\pinhole camera.jpg
@@ -578,10 +585,25 @@ INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmrc8t.v
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\courier\pcrr8t.vf
 INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrr8r.tfm
+INPUT .\lampiran.tex
+INPUT .\lampiran.tex
+OUTPUT lampiran.aux
+INPUT .\lampiran.tex
+INPUT .\lampiran.tex
+INPUT lampiran.tex
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmbi8t.vf
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmbi8r.tfm
 INPUT template-skripsi.aux
 INPUT .\kata-pengantar.aux
 INPUT .\kata-pengantar.aux
 INPUT kata-pengantar.aux
+INPUT .\abstrak.aux
+INPUT .\abstrak.aux
+INPUT abstrak.aux
+INPUT .\abstract.aux
+INPUT .\abstract.aux
+INPUT abstract.aux
 INPUT .\bab1.aux
 INPUT .\bab1.aux
 INPUT bab1.aux
@@ -597,6 +619,9 @@ INPUT bab4.aux
 INPUT .\bab5.aux
 INPUT .\bab5.aux
 INPUT bab5.aux
+INPUT .\lampiran.aux
+INPUT .\lampiran.aux
+INPUT lampiran.aux
 INPUT .\template-skripsi.out
 INPUT .\template-skripsi.out
 INPUT template-skripsi.run.xml

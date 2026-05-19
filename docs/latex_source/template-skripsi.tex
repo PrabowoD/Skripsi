@@ -177,9 +177,14 @@
 %-----------------------------------------------------------------
 
 %\include{pengesahan}
-\includepdf[pages=-]{sps/Lembar Pengesahan.pdf}
-\addcontentsline{toc}{chapter}{Lembar Pengesahan}
+% \includepdf[pages=-]{sps/Lembar Pengesahan.pdf}
+% \addcontentsline{toc}{chapter}{Lembar Pengesahan}
 \include{kata-pengantar}
+\addcontentsline{toc}{chapter}{KATA PENGANTAR}
+\include{abstrak}
+\addcontentsline{toc}{chapter}{ABSTRAK}
+\include{abstract}
+\addcontentsline{toc}{chapter}{\emph{ABSTRACT}}
 \singlespacing{}
 \tableofcontents{}
 \addcontentsline{toc}{chapter}{DAFTAR ISI}
@@ -223,5 +228,6 @@
 %Disini akhir masukan Daftar Pustaka
 %-----------------------------------------------------------------
 
+\include{lampiran}
 
 \end{document}

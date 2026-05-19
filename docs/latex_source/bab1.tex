@@ -8,27 +8,46 @@
 
 \section{Latar Belakang Masalah}
 
-Indonesia merupakan negara kepulauan dengan kekayaan hayati yang melimpah, salah satunya adalah ikan yang menjadi sumber pangan utama masyarakat. Budidaya ikan di Indonesia terus berkembang untuk memenuhi kebutuhan konsumsi dan permintaan pasar, baik sebagai bahan pangan maupun ikan hias. Salah satu aspek penting dalam budidaya ikan adalah pengukuran panjang dan berat ikan, yang berperan dalam pemantauan pertumbuhan, penentuan dosis pakan, serta penentuan harga jual.
+Indonesia merupakan salah satu negara dengan sektor perikanan yang berperan penting dalam memenuhi kebutuhan pangan dan perekonomian masyarakat. 
+Budidaya perikanan di Indonesia berkembang pesat, menurut data dari Kementerian Kelautan dan Perikanan, hasil tangkap ikan mencapai 7,8 juta ton dan hasil budidaya mencapai 2.1 juta ton pada tahun 2024 (\cite{KKP2024}). 
+Produksi ikan dari kedua sektor terus meningkat setiap tahunnya seiring dengan meningkatnya kebutuhan konsumsi ikan. Oleh karena itu, menjaga kualitas produksi ikan menjadi sangat penting. Salah satu aspek penting dalam menjaga kualitas produksi ikan adalah dengan melakukan monitoring pertumbuhan ikan secara rutin.
+Dalam kegiatan budidaya ikan, pengukutan panjang dan berat ikan merupakan salah satu proses penting karena digunakan untuk memantau pertumbuhan, kebutuhan pakan, serta melakukan proses grading untuk menentukan kualitas dan harga jual ikan.
 
-Namun, proses pengukuran panjang dan berat ikan di lapangan umumnya masih dilakukan secara manual, yaitu dengan menimbang dan mengukur satu per satu menggunakan alat ukur konvensional (\cite{Amri2020}). Cara ini tidak efisien, memakan waktu lama, dan dapat mempengaruhi kualitas ikan.
+Namun, proses pengukuran panjang dan berat ikan di lapangan saat ini masih dilakukan secara manual menggunakan alat ukur konvensional, seperti penggaris dan timbangan (\cite{Amri2020}).
+Proses tersebut memakan waktu yang cukup lama, terutama jika jumlah ikan yang diukur cukup banyak. Selain itu, kontak langsung dengan ikan selama proses pengukuran dapat menyebabkan menurunnya kualitas ikan akibat kerusakan fisik selama proses grading.
 
-Seiring perkembangan teknologi, mesin digunakan untuk membantu dalam budidaya ikan. Salah satunya dalam proses grading ikan, conveyor belt sering digunakan untuk memindahkan ikan secara otomatis. Namun, pengukuran panjang dan berat ikan masih dilakukan secara manual, yang dapat menyebabkan ketidakakuratan, ketidakefisienan, dan rusaknya ikan dalam proses grading. Oleh karena itu, diperlukan metode yang dapat mengotomatisasi proses pengukuran panjang dan berat ikan secara cepat, akurat, dan minim kontak langsung dengan ikan.
-Pengolahan citra digital menawarkan solusi otomatis untuk mengukur panjang dan berat ikan secara cepat, akurat dan minim kontak dengan ikan, salah satu metode yang dapat digunakan adalah deteksi titik sudut (\emph{corner detection}). Titik sudut pada tubuh ikan, seperti ujung kepala dan ekor, dapat digunakan sebagai acuan untuk mengukur panjang ikan secara otomatis dari citra (\cite{Harris2013}). Dengan mengetahui panjang ikan, berat ikan juga dapat diestimasi menggunakan rumus atau model regresi yang sesuai (\cite{Diansari2013}).
+Seiring perkembangan teknologi, pengolahan citra digital (\emph{digital image processing}) memberikan peluang untuk mengotomatisasi proses pengukuran ikan.
+Pengolahan citra memungkinan untuk menganalisis objek ikan melalui citra digital, sehingga didapatkan informasi geometris seperti panjang dan luas tubuh ikan, tanpa ada-nya kontak langsung terhadap objek.
+Salah satu pendeketan dalam pengolahan citra yang dapat digunakan adalah metode deteksi titik sudut (\emph{corner detection}). Metode ini memanfaatkan perubahan intensitas pada citra untuk mendeteksi titik-titik penting yang dapat menjadi acuan pengukuran objek. 
+% mesin digunakan untuk membantu dalam budidaya ikan. Salah satunya dalam proses grading ikan, conveyor belt sering digunakan untuk memindahkan ikan secara otomatis. Namun, pengukuran panjang dan berat ikan masih dilakukan secara manual, yang dapat menyebabkan ketidakakuratan, ketidakefisienan, dan rusaknya ikan dalam proses grading. Oleh karena itu, diperlukan metode yang dapat mengotomatisasi proses pengukuran panjang dan berat ikan secara cepat, akurat, dan minim kontak langsung dengan ikan.
+% Pengolahan citra digital menawarkan solusi otomatis untuk mengukur panjang dan berat ikan secara cepat, akurat dan minim kontak dengan ikan, salah satu metode yang dapat digunakan adalah deteksi titik sudut (\emph{corner detection}). Titik sudut pada tubuh ikan, seperti ujung kepala dan ekor, dapat digunakan sebagai acuan untuk mengukur panjang ikan secara otomatis dari citra (\cite{Harris2013}). Dengan mengetahui panjang ikan, berat ikan juga dapat diestimasi menggunakan rumus atau model regresi yang sesuai (\cite{Diansari2013}).
 
-Metode \emph{Harris-Corner Detection} merupakan salah satu algoritma deteksi sudut yang banyak digunakan karena kestabilannya terhadap rotasi, noise, dan efisiensi komputasi (\cite{Harris2013}). Dengan menerapkan metode ini pada citra ikan, sistem dapat secara otomatis mendeteksi titik-titik sudut penting, sehingga proses pengukuran panjang dan estimasi berat ikan dapat dilakukan secara digital, cepat, dan minim kontak langsung dengan ikan.
+Metode \emph{Harris-Corner Detection} yang diperkenalkan oleh Chris Harris dan Mike Stephens (1988) merupakan salah satu algoritma deteksi sudut yang banyak digunakan dalam pengolahan citra digital.
+Metode ini bekerja dengan cara menganalisis perubahan intensitas pada citra menggunakan matriks autokorelasi untuk menentukan titik-titik sudut pada objek citra.
+Harris-Corner memiliki keunggulan dalam kestabilan terhadap rotasi, sensitivitas yang baik terhadap perubahan intensitas, serta komputasi yang relatif lebih ringan dibandikan dengan metode deteksi fitur yang lebih kompleks seperti SIFT (\emph{Scale Invariant Feature Transform}) (\cite{Lowe2004}). Dengan Karakteristik tersebut, \emph{Harris-Corner Detection} sesuai untuk digunakan pada sistem pengukuran berbasis citra yang membutuhkan proses komputasi yang cepat dan effisien.
+% merupakan salah satu algoritma deteksi sudut yang banyak digunakan karena kestabilannya terhadap rotasi, noise, dan efisiensi komputasi (\cite{Harris2013}). Dengan menerapkan metode ini pada citra ikan, sistem dapat secara otomatis mendeteksi titik-titik sudut penting, sehingga proses pengukuran panjang dan estimasi berat ikan dapat dilakukan secara digital, cepat, dan minim kontak langsung dengan ikan.
 
-Berbagai penelitian sebelumnya telah mengembangkan metode untuk mendeteksi atau melacak ikan, seperti penggunaan metode GMM dan Kalman Filter untuk pelacakan gerakan (Alim, 2021), serta GrabCut untuk pemisahan objek dari latar belakang (Nugraha, 2022). Namun, metode-metode tersebut umumnya hanya fokus pada deteksi keberadaan ikan atau pelacakan pergerakan, dan belum secara langsung mengekstraksi fitur geometris seperti panjang dan berat ikan.
+Pada bagian tertentu dari citra ikan seperti bagian kepala dan ekor, memiliki perubahan intensitas yang sangat signifikan,
+sehingga dapat digunakan sebagai titik acuan dalam pengukuran panjang ikan. Dengan mengetahui panjang ikan, mengestimasi berat ikan akan sangat mudah dengan menggunnakan hubungan panjang den berat ikan (\emph{Length-Weight Relationship}) atau disingkat dengan LWR\@.
+Adapun metode \emph{Visual-Weight Relationship} (VWR) yang juga dapat digunakan untuk mengestimasi berat ikan berdasarkan fitur visual seperti luas permukaan tubuh ikan pada citra (\cite{Gm2023}). 
+% Berbagai penelitian sebelumnya telah mengembangkan metode untuk mendeteksi atau melacak ikan, seperti penggunaan metode GMM dan Kalman Filter untuk pelacakan gerakan (Alim, 2021), serta GrabCut untuk pemisahan objek dari latar belakang (Nugraha, 2022). Namun, metode-metode tersebut umumnya hanya fokus pada deteksi keberadaan ikan atau pelacakan pergerakan, dan belum secara langsung mengekstraksi fitur geometris seperti panjang dan berat ikan.
 
-Di sisi lain, metode seperti SIFT (\emph{Scale Invariant Feature Transform}) (\cite{Lowe2004}) memang kuat terhadap perubahan skala dan rotasi, namun proses perhitungannya relatif kompleks dan memerlukan waktu komputasi lebih tinggi. Untuk kasus estimasi bentuk linear seperti panjang dan lebar, pendekatan berbasis deteksi sudut seperti \emph{Harris-Corner Detection} terbukti lebih efisien dan akurat dalam mendeteksi titik-titik sudut penting pada citra (\cite{Harris2013}).\emph{Harris-Corner Detection} memberikan kestabilan terhadap rotasi dan noise lokal serta memiliki struktur komputasi yang lebih ringan dibanding SIFT, sehingga cocok untuk diterapkan dalam sistem real-time atau perangkat keras terbatas.
+Beberapa penelitian sebelumnya telah menerapkan pengolahan citra dalam bidang perikanan, seperti penggunaan metode \emph{Gaussian Mixture Model} (GMM) dan \emph{Kalman Filter} untuk pelacakan gerakan ikan (Alim,2021), 
+serta metode \emph{GrabCut} untuk pemisahan objek ikan dari latar belakang (Nugraha, 2022). Namun, penelitian tersebut umumnya hanya berfokus pada deteksi keberadaan atau pelacakan ikan, dan belum secara khusus melakukan pengukuran panjang dan estimasi berat ikan.
 
-Oleh karena itu, penelitian ini bertujuan untuk membangun sistem pengukuran panjang dan estimasi berat ikan berbasis citra digital menggunakan metode \emph{Harris-Corner Detection}. Diharapkan sistem ini dapat membantu pembudidaya ikan dalam melakukan monitoring pertumbuhan ikan secara efisien dan akurat, serta mendukung pengambilan keputusan dalam manajemen budidaya.
+Berdasarkan permasalahan tersebut, diusulkan metode \emph{Harris-Corner Detection} dan \emph{Visual-Weight Relationship} untuk mengukur panjang dan mengestimasi berat ikan secara otomatis dari citra digital.
+Penelitian ini diharapkan mampu untuk mendeteksi titik-titik sudut penting pada citra ikan, sehingga dapat mengukur panjang serta mengestimasi berat ikan secara otomatis.
+
+% Di sisi lain, metode seperti SIFT (\emph{Scale Invariant Feature Transform}) (\cite{Lowe2004}) memang kuat terhadap perubahan skala dan rotasi, namun proses perhitungannya relatif kompleks dan memerlukan waktu komputasi lebih tinggi. Untuk kasus estimasi bentuk linear seperti panjang dan lebar, pendekatan berbasis deteksi sudut seperti \emph{Harris-Corner Detection} terbukti lebih efisien dan akurat dalam mendeteksi titik-titik sudut penting pada citra (\cite{Harris2013}).\emph{Harris-Corner Detection} memberikan kestabilan terhadap rotasi dan noise lokal serta memiliki struktur komputasi yang lebih ringan dibanding SIFT, sehingga cocok untuk diterapkan dalam sistem real-time atau perangkat keras terbatas.
+
+% Oleh karena itu, penelitian ini bertujuan untuk membangun sistem pengukuran panjang dan estimasi berat ikan berbasis citra digital menggunakan metode \emph{Harris-Corner Detection}. Diharapkan sistem ini dapat membantu pembudidaya ikan dalam melakukan monitoring pertumbuhan ikan secara efisien dan akurat, serta mendukung pengambilan keputusan dalam manajemen budidaya.
 
 \section{Rumusan Masalah}
-Berdasarkan pemaparan masalah di atas, perumusan masalah dalam penelitian ini adalah \textbf{“Bagaimana cara mengukur panjang serta menghitung berat ikan menggunakan metode \emph{Harris-Corner Detection}?”}
+Berdasarkan pemaparan masalah di atas, perumusan masalah dalam penelitian ini adalah \textbf{“Bagaimana cara mengukur panjang serta mengestimasi berat ikan menggunakan metode \emph{Harris-Corner Detection} dan \emph{Visual-Weight Relationship}?”}
 
 \section{Batasan Masalah}
 \begin{enumerate}
-	\item Implementasi algoritma \emph{Harris-Corners Detection} untuk menghitung panjang dan berat ikan. 
+	\item Implementasi algoritma \emph{Harris-Corners Detection} untuk menghitung panjang dan \emph{Visual-Weight Relationship} untuk mengestimasi berat ikan. 
 	\item Jenis Ikan yang digunakan adalah ikan lele, ikan mas, dan ikan nila.
 	\item Dataset telah dihilangkan latar belakangnya dan digantikan dengan warna solid putih.
 	\item Citra diambil Top down pada jarak tertentu. 
@@ -38,7 +57,7 @@ Berdasarkan pemaparan masalah di atas, perumusan masalah dalam penelitian ini ad
 \end{enumerate}
 	
 \section{Tujuan Penelitian}
-Tujuan dari penelitian ini adalah untuk implemntasi algoritma \emph{Harris-Corner} untuk menghitung panjang dan berat Ikan.
+Tujuan dari penelitian ini adalah untuk implemntasi algoritma \emph{Harris-Corner} dan \emph{Visual-Weight Relationship} untuk menghitung panjang dan berat Ikan.
 
 \section{Manfaat Penelitian}
 \begin{enumerate}

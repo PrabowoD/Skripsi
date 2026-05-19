@@ -52,18 +52,25 @@ Konsep ini menjadi dasar dalam pengolahan citra digital karena setiap piksel pad
 % \end{figure}
 
 \section{Citra Berwarna}
+Citra berwarna adalah citra digital yang merepresentasikan informasi warna menggunakan kombinasi beberapa kanal warna. 
+Model warna yang paling umum digunakan dalam pengolahan citra digital adalah RGB (\emph{Red, Green, Blue}), di mana setiap piksel terdiri dari tiga komponen warna, yaitu merah (R), hijau (G), dan biru (B). 
+Kombinasi ketiga komponen tersebut menghasilkan berbagai variasi warna pada citra digital (\cite{Gonzalez2018}).
 
+Pada model RGB, setiap kanal warna biasanya direpresentasikan dalam rentang nilai 0 hingga 255 pada citra 8-bit.
+Nilai (0,0,0) merepresentasikan warna hitam, sedangkan nilai (255,255,255) merepresentasikan warna putih. Dengan kombinasi intensitas dari ketiga kanal tersebut, citra berwarna mampu menyimpan informasi visual yang lebih kaya dibandingkan citra grayscale.
 
+Dalam pengolahan citra digital, citra berwarna sering digunakan sebagai citra masukan (\emph{input image}) karena mampu mempertahankan informasi visual objek secara lengkap.
+Namun, banyak algoritma pengolahan citra, termasuk deteksi tepi dan deteksi sudut, lebih efektif diterapkan pada citra grayscale karena kompleksitas komputasinya lebih rendah serta hanya memerlukan satu kanal intensitas untuk menghitung perubahan nilai piksel (\cite{Sanchez2018}).
 
 \section{Citra Grayscale}
-  Citra grayscale adalah representasi citra yang hanya menggunakan satu saluran warna, yaitu tingkat keabuan. Citra ini dihasilkan dengan mengubah citra berwarna menjadi skala abu-abu, di mana setiap piksel dalam citra hanya memiliki nilai intensitas yang mewakili tingkat keabuan, seperti pada gambar\ref{fig:grayscale}. Proses ini sering dilakukan untuk menyederhanakan analisis citra, karena mengurangi kompleksitas data yang harus diproses (\cite{Gonzalez2018}). 
+  Citra grayscale adalah representasi citra yang hanya menggunakan satu saluran warna, yaitu tingkat keabuan. Citra ini dihasilkan dengan mengubah citra berwarna menjadi skala abu-abu, di mana setiap piksel dalam citra hanya memiliki nilai intensitas yang mewakili tingkat keabuan, seperti pada gambar~\ref{fig:Citra}. Proses ini sering dilakukan untuk menyederhanakan analisis citra, karena mengurangi kompleksitas data yang harus diproses (\cite{Gonzalez2018}). 
   Penggunaan citra grayscale sangat umum dalam proses deteksi fitur multi-skala dan algoritma deteksi sudut seperti Harris-Corner Detection, karena memudahkan perhitungan gradien dan matriks momen kedua (\cite{Sanchez2018}).
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}{.3\textwidth}
 	
         \includegraphics[keepaspectratio, width=4cm]{gambar/IMG_20240121_131125.jpg}
-		\caption{Input Image}
+		\caption{RGB image}
     \end{subfigure}
 
 	\begin{subfigure}{.3\textwidth}
@@ -72,7 +79,7 @@ Konsep ini menjadi dasar dalam pengolahan citra digital karena setiap piksel pad
 		\caption{Grayscale image}
 	\end{subfigure} 
 
-\caption{Citra Grayscale}\label{fig:grayscale}
+\caption{Citra RGB dan \emph{Grayscale}}\label{fig:Citra}
 \end{figure}
 
 % \section{Multi-Scale Feature Detection}
