@@ -25,6 +25,8 @@ Salah satu pendeketan dalam pengolahan citra yang dapat digunakan adalah metode 
 Metode \emph{Harris-Corner Detection} yang diperkenalkan oleh Chris Harris dan Mike Stephens (1988) merupakan salah satu algoritma deteksi sudut yang banyak digunakan dalam pengolahan citra digital.
 Metode ini bekerja dengan cara menganalisis perubahan intensitas pada citra menggunakan matriks autokorelasi untuk menentukan titik-titik sudut pada objek citra.
 Harris-Corner memiliki keunggulan dalam kestabilan terhadap rotasi, sensitivitas yang baik terhadap perubahan intensitas, serta komputasi yang relatif lebih ringan dibandingkan dengan metode deteksi fitur yang lebih kompleks seperti SIFT (\emph{Scale Invariant Feature Transform}) (\cite{Lowe2004}). Dengan Karakteristik tersebut, \emph{Harris-Corner Detection} sesuai untuk digunakan pada sistem pengukuran berbasis citra yang membutuhkan proses komputasi yang cepat dan efisien.
+Meskipun objek ikan memiliki bentuk tubuh yang cenderung organik dan melengkung, beberapa bagian tubuh ikan seperti kepala dan ekor tetap menghasilkan perubahan intensitas yang cukup signifikan pada citra digital. 
+Perubahan intensitas tersebut dapat membentuk titik sudut lokal (\emph{local corner}) yang masih dapat dideteksi menggunakan metode Harris-Corner Detection. Oleh karena itu, metode Harris-Corner Detection dinilai masih relevan untuk digunakan sebagai pendekatan dalam menentukan titik acuan pengukuran panjang ikan.
 % merupakan salah satu algoritma deteksi sudut yang banyak digunakan karena kestabilannya terhadap rotasi, noise, dan efisiensi komputasi (\cite{Harris2013}). Dengan menerapkan metode ini pada citra ikan, sistem dapat secara otomatis mendeteksi titik-titik sudut penting, sehingga proses pengukuran panjang dan estimasi berat ikan dapat dilakukan secara digital, cepat, dan minim kontak langsung dengan ikan.
 
 Pada bagian tertentu dari citra ikan seperti bagian kepala dan ekor, memiliki perubahan intensitas yang sangat signifikan,
@@ -47,7 +49,8 @@ Berdasarkan pemaparan masalah di atas, perumusan masalah dalam penelitian ini ad
 
 \section{Batasan Masalah}
 \begin{enumerate}
-	\item Implementasi algoritma \emph{Harris-Corners Detection} untuk menghitung panjang dan mengestimasi berat ikan. 
+	\item Implementasi algoritma \emph{Harris-Corners Detection} untuk menghitung panjang.
+    \item Implementasi algoritma \emph{Length-Weight Relationship} untuk mengestimasi berat ikan. 
 	\item Jenis Ikan yang digunakan adalah ikan lele, ikan mas, dan ikan nila.
 	\item Dataset telah dihilangkan latar belakangnya dan digantikan dengan warna solid putih.
 	\item Citra diambil Top down pada jarak tertentu. 
@@ -57,7 +60,7 @@ Berdasarkan pemaparan masalah di atas, perumusan masalah dalam penelitian ini ad
 \end{enumerate}
 	
 \section{Tujuan Penelitian}
-Tujuan dari penelitian ini adalah untuk implemntasi algoritma \emph{Harris-Corner} dan \emph{Visual-Weight Relationship} untuk menghitung panjang dan berat Ikan.
+Tujuan dari penelitian ini adalah untuk implemntasi algoritma \emph{Harris-Corner} dan \emph{Length-Weight Relationship} untuk menghitung panjang dan estimasi berat Ikan.
 
 \section{Manfaat Penelitian}
 \begin{enumerate}

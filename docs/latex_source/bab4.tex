@@ -104,10 +104,15 @@ Setelah semua tahapan pra-processing telah selesai dilakukan, gambar akan disave
     \caption{\emph{source code}: Untuk menghitung Gradien pada sumbu X dan Y}
 \end{figure}
 
-    Fungsi \emph{Compute\_Gradient\_X} dan \emph{Compute\_Gradient\_Y} menggunakan kernel Sobel untuk menghitung gradien pada sumbu X dan Y.
+    Fungsi \emph{Compute\_Gradient\_X} dan \emph{Compute\_Gradient\_Y} menggunakan kernel Sobel untuk menghitung gradien pada sumbu X (Horizontal) dan Y (Vertical).
+Hasil dari proses gradien menunjukkan bahwa bagian tepi tubuh ikan memiliki perubahan intensitas yang cukup tinggi dibandingkan area lainnya. 
+Nilai gradien terbesar umumnya muncul pada bagian kepala, ekor, dan sirip ikan karena area tersebut memiliki perubahan bentuk dan kontras yang lebih signifikan terhadap latar belakang citra.
 
-\section{AutoKorelasi}
-  Proses autokorelasi dilakukan dengan mengkalikan hasil dari gradien dengan gaussian blur. Proses ini bertujuan untuk mengukur seberapa besarnya perubahan intensitas,~berikut \emph{Source Code} yang digunakan untuk menghitung autokorelasi:
+Selain itu, penggunaan Gaussian smoothing pada tahap sebelumnya membantu mengurangi noise sehingga hasil gradien menjadi lebih stabil. 
+Tanpa proses smoothing, noise kecil pada citra dapat menghasilkan perubahan intensitas palsu yang berpotensi menyebabkan munculnya titik sudut yang tidak sesuai pada proses Harris-Corner Detection.
+
+\section{Auto Korelasi}
+  Proses auto korelasi dilakukan dengan mengkalikan hasil dari gradien dengan gaussian blur. Proses ini bertujuan untuk mengukur seberapa besarnya perubahan intensitas,~berikut \emph{Source Code} yang digunakan untuk menghitung auto korelasi:
 \begin{figure}[H]
     \begin{lstlisting}[language=Python, basicstyle=\tiny]
         def AutoCorrelation(gradient_x, gradient_y):
@@ -116,11 +121,23 @@ Setelah semua tahapan pra-processing telah selesai dilakukan, gambar akan disave
             Iyy = cv2.GaussianBlur(gradient_y ** 2, (3, 3), sigmaX=1)
             return Ixx, Ixy, Iyy
     \end{lstlisting}
-    \caption{\emph{source code}: Untuk menghitung autokorelasi}
+    \caption{\emph{source code}: Untuk menghitung auto korelasi}
 \end{figure}
 
-\section{Harris-Respons}
-    Setelah nilai Ixx, Ixy, dan Iyy didapatkan, langkah selanjutnya adalah menghitung Harris Respon dengan menggunakan fungsi \emph{Harris}. Berikut \emph{Source Code} yang digunakan untuk menghitung Harris Respon:
+Pada tahap ini dihasilkan tiga komponen utama, yaitu:
+\begin{itemize}
+    \item \emph{Ixx} yang representasi dari perubahan intensitas pada sumbu X\@.
+    \item \emph{Ixy} yang representasi dari korelasi perubahan intensitas antara sumbu X dan Y\@.
+    \item \emph{Iyy} yang representasi dari perubahan intensitas pada sumbu Y\@.
+\end{itemize}
+
+Nilai-nilai tersebut kemudian digunakan untuk membentuk matriks auto korelasi $M$ pada setiap piksel citra. Matriks ini digunakan sebagai dasar dalam menghitung nilai respon Harris pada tahap berikutnya.
+Area yang memiliki perubahan intensitas tinggi pada dua arah sekaligus akan menghasilkan nilai auto korelasi yang besar. Kondisi ini umumnya terjadi pada bagian sudut objek ikan, seperti ujung kepala dan ekor. 
+Sebaliknya, area tubuh ikan yang relatif datar akan menghasilkan perubahan intensitas yang lebih kecil sehingga nilai auto korelasi juga menjadi lebih rendah.
+
+\section{Harris Respon}
+    Setelah matriks auto korelasi (\emph{second moment matrix}) diperoleh, tahap selanjutnya adalah menghitung nilai Harris response. 
+Tahapan ini bertujuan untuk menentukan apakah suatu piksel pada citra merupakan titik sudut (\emph{corner}), tepi (\emph{edge}), atau area datar (\emph{flat area}).
 
 \begin{figure}[H]
     \begin{lstlisting}[language=Python, basicstyle=\tiny]
@@ -133,9 +150,31 @@ Setelah semua tahapan pra-processing telah selesai dilakukan, gambar akan disave
     \caption{\emph{source code}: Untuk menghitung Harris Respon}
 \end{figure}
 
+Pada penelitian ini, nilai konstanta empiris $k$ yang digunakan adalah sebesar 0.04. 
+Nilai tersebut digunakan untuk mengontrol sensitivitas deteksi sudut pada citra. 
+Nilai $k$ yang terlalu kecil dapat menyebabkan banyak titik tepi terdeteksi sebagai sudut, sedangkan nilai yang terlalu besar dapat menyebabkan beberapa sudut penting tidak terdeteksi.
+
+Hasil perhitungan Harris response menghasilkan nilai respon pada setiap piksel citra. Nilai respon yang besar dan positif menunjukkan bahwa piksel tersebut memiliki perubahan intensitas yang signifikan pada dua arah sekaligus, sehingga berpotensi menjadi titik sudut (\emph{corner}). 
+Sebaliknya, nilai respon yang kecil atau bernilai negatif menunjukkan bahwa area tersebut cenderung merupakan tepi (\emph{edge}) atau area datar (\emph{flat area}).
+
+Pada objek ikan, nilai respon Harris terbesar umumnya muncul pada bagian kepala, ekor, dan beberapa bagian sirip ikan. 
+Hal ini terjadi karena area tersebut memiliki perubahan bentuk yang cukup tajam dibandingkan bagian tubuh ikan lainnya. 
+Sementara itu, bagian tengah tubuh ikan cenderung menghasilkan nilai respon yang lebih rendah karena perubahan intensitasnya relatif lebih stabil.
+
+Hasil Harris response pada tahap ini masih mengandung cukup banyak kandidat titik sudut, termasuk beberapa titik yang muncul akibat noise atau perubahan intensitas kecil pada tubuh ikan. 
+Oleh karena itu, diperlukan proses thresholding dan \emph{Non-Maximum Suppression} (NMS) pada tahap berikutnya untuk menyaring titik sudut sehingga hanya titik sudut paling signifikan yang dipertahankan.
+
 \section{NMS dan thresholding}
- Nilai Harris yang didapatkan dari fungsi \emph{Harris} masih terlalu banyak jika langsung digunakan untuk mengekstraksi sudut. Perlu dilakukan proses thresholding dan non-maximum suppression untuk mendapatkan titik-titik sudut yang Akurat. Berikut \emph{Source Code} yang digunakan untuk melakukan thresholding dan non-maximum suppression:
-\begin{figure}[H]
+Setelah nilai Harris response diperoleh, tahap selanjutnya adalah melakukan proses thresholding dan \emph{Non-Maximum Suppression} (NMS). 
+Tahapan ini bertujuan untuk menyaring kandidat titik sudut sehingga hanya titik sudut paling signifikan yang dipertahankan untuk proses selanjutnya.
+
+Pada hasil awal Harris response, masih terdapat banyak piksel yang memiliki nilai respon tinggi, termasuk beberapa titik yang muncul akibat noise, tekstur kecil, atau perubahan intensitas yang tidak terlalu penting. 
+Oleh karena itu, diperlukan proses penyaringan agar sistem hanya memilih titik sudut yang benar-benar merepresentasikan bentuk objek ikan.
+
+Tahap pertama adalah thresholding. Proses ini dilakukan dengan menggunakan fungsi \emph{thresholding} terhadap nilai Harris response. 
+Piksel dengan nilai respon lebih besar dari nilai ambang akan dipertahankan sebagai kandidat sudut, sedangkan piksel dengan nilai respon di bawah ambang akan diabaikan.
+
+ \begin{figure}[H]
     \begin{lstlisting}[language=Python, basicstyle=\tiny]
         def thresholding(preprocessed_images, Harris_respon, output_dir="Output"):
             os.makedirs(output_dir, exist_ok=True)
@@ -155,10 +194,19 @@ Setelah semua tahapan pra-processing telah selesai dilakukan, gambar akan disave
     \caption{\emph{source code}: Untuk melakukan thresholding dan non-maximum suppression}
 \end{figure}
 
+Penggunaan threshold membantu mengurangi jumlah piksel yang diproses lebih lanjut sehingga sistem dapat lebih fokus pada area dengan perubahan intensitas yang signifikan. 
+Nilai threshold yang terlalu kecil dapat menyebabkan banyak titik sudut palsu (\emph{false corner}) ikut terdeteksi, sedangkan nilai threshold yang terlalu besar dapat menyebabkan beberapa titik sudut penting pada objek ikan tidak terdeteksi.
+
+Setelah proses thresholding, tahap berikutnya adalah \emph{Non-Maximum Suppression} (NMS). Proses NMS dilakukan untuk menghilangkan titik-titik sudut yang saling berdekatan dan hanya mempertahankan titik dengan nilai respon terbesar pada suatu area lokal.
+
+Pada proses ini, nilai \emph{Harris response} akan didilatasi menggunakan fungsi \emph{cv2.dilate} untuk menemukan nilai maksimum dalam suatu area lokal.
+kemudian, dibuat sebuah mask yang menunjukan piksel-piksel yang memiliki nilai respon yang sama dengan hasil thresholding. Hasil piksel-piksel tersebulah yang akan digunakan untuk menghitung panjang dan estimasi berat ikan pada tahap selanjutnya.  
+
 \section{Menghitung Panjang dan Berat}
 \subsection{Bounding Box}
-    Titik sudut yang telah didapatkan dari hasil proses penghitungan Harris Respon akan melalui tahap pemilihan titik sudut untuk menentukan nilai maksimal dan minimal pada sumbu x dan y pada seluruh titik yang telah didapatkan.
-Pemilihan titik sudut dilakukan dengan menggunakan \emph{Source Code} berikut:
+    Setelah proses thresholding dan Non-Maximum Suppression (NMS) selesai dilakukan, sistem memperoleh kumpulan titik sudut utama (\emph{corner points}) pada objek ikan. 
+Titik-titik sudut tersebut kemudian digunakan untuk membentuk bounding box sebagai dasar dalam proses pengukuran panjang dan lebar ikan.
+Pemilihan titik sudut untuk bounding box dilakukan dengan menggunakan \emph{Source Code} berikut:
 \begin{figure}[H]
     \begin{lstlisting}[language=Python, basicstyle=\tiny]
         def bounding_box(corners):
@@ -174,6 +222,32 @@ Pemilihan titik sudut dilakukan dengan menggunakan \emph{Source Code} berikut:
     \end{lstlisting}
     \caption{\emph{source code}: Untuk menentukan nilai maksimal dan minimal sumbu x dan y dari titik sudut yang telah didapatkan}
 \end{figure}
+
+Pada penelitian ini, bounding box dibentuk menggunakan titik sudut hasil Harris-Corner Detection yang telah melalui proses penyaringan menggunakan thresholding dan NMS\@.
+Proses pembentukan bounding box dilakukan dengan mencari:
+\begin{itemize}
+    \item nilai minimum sumbu-$x$
+    \item nilai maksimum sumbu-$x$
+    \item nilai minimum sumbu-$y$
+    \item nilai maksimum sumbu-$y$
+\end{itemize}
+
+Koordinat tersebut digunakan untuk membentuk kotak yang mencakup seluruh tubuh ikan pada citra. 
+Panjang dan lebar objek kemudian diperoleh berdasarkan selisih koordinat maksimum dan minimum pada masing-masing sumbu.
+Hasil bounding box umumnya mampu mengikuti bentuk tubuh ikan dengan cukup baik, terutama pada citra yang memiliki orientasi horizontal dan hasil segmentasi yang bersih. 
+Titik sudut pada bagian kepala dan ekor ikan menjadi acuan utama dalam menentukan panjang objek.
+Namun, terdapat beberapa kondisi yang dapat mempengaruhi akurasi bounding box, seperti:
+\begin{itemize}
+    \item Posisi tubuh ikan yang melengkung.
+    \item Titik sudut palsu (\emph{false corner}) akibat noise.
+    \item Bagian tubuh ikan yang tidak terdeteksi dengan sempurna.
+    \item Bentuk tubuh ikan yang tidak simetris.
+\end{itemize}
+
+Kondisi tersebut dapat menyebabkan ukuran bounding box menjadi terlalu besar atau terlalu kecil sehingga mempengaruhi hasil pengukuran panjang ikan pada tahap berikutnya.
+
+Meskipun demikian, penggunaan bounding box pada penelitian ini cukup efektif untuk merepresentasikan dimensi utama tubuh ikan dan digunakan sebagai dasar dalam proses penghitungan panjang serta estimasi berat ikan.
+
 
 \subsection{Menghitung Panjang}
     Nilai yang didapatkan dari hasil bounding box akan digunakan untuk menghitung panjang, lebar, dan keliling ikan. Berikut \emph{Source Code} yang digunakan untuk menghitung ukuran ikan:
@@ -260,7 +334,7 @@ fungsi \emph{transform\_size} digunakan untuk melakukan proyeksi perspektif deng
             else:
                     break
     \end{lstlisting}
-    \caption{\emph{source code}: Untuk menghitung berat ikan berdasarkan jenis ikan dan keliling ikan}
+    \caption{\emph{source code}: Untuk mengEstimasi berat ikan berdasarkan Rumus turunan \emph{Lenght-Weight Relationship}}
     
 \end{figure}
 
@@ -448,7 +522,7 @@ Setelah dilakukan evaluasi akurasi terhadap hasil deteksi panjang, lebar, dan es
     \caption{Hasil Deteksi}\label{tab:Hasil Deteksi}
 \end{table}
 
-Dengan Menggunakan rumus \emph{Mean Absolute Percentace Error} atau MAPE, didapatkan hasil evaluasi akurasi pada table~\ref{tab:MAPE} berikut:
+Dengan Menggunakan rumus \emph{Mean Absolute Percentage Error} atau MAPE, didapatkan hasil evaluasi akurasi pada table~\ref{tab:MAPE} berikut:
 
 \begin{table}[H]
     \centering
@@ -551,6 +625,18 @@ Dan pada table~\ref{tab:allEval} adalah hasil keseluruhan evaluasi akurasi :
     \caption{Hasil Evaluasi Akurasi}\label{tab:allEval}
 \end{table}
 
+Berdasarkan hasil evaluasi akurasi pada tabel~\ref{tab:MAPE} dan tabel~\ref{tab:allEval}, dapat disimpulkan sistem juga masih menghasilkan kesalahan dalam pengukuran pada beberapa citra ikan.
+Kesalahan tersebut umumnya disebabkan oleh bentuk tubuh ikan yang tidak sepenuhnya lurus sehingga bounding box tidak selalu mampu merepresentasikan panjang tubuh ikan secara akurat.
+Selain itu, beberapa citra menghasilkan titik sudut palsu (\emph{false corner}) akibat perubahan intensitas kecil pada bagian sirip dan ekor ikan. 
+Kondisi ini menyebabkan koordinat minimum dan maksimum objek menjadi kurang stabil sehingga mempengaruhi hasil pengukuran panjang. 
+
+Error estimasi berat cenderung lebih besar dibandingkan error pengukuran panjang. 
+Hal ini terjadi karena estimasi berat menggunakan pendekatan \emph{Length-Weight Relationship} (LWR) yang bersifat eksponensial, sehingga kesalahan kecil pada pengukuran panjang dapat menghasilkan perubahan yang cukup besar pada hasil estimasi berat.
+
+Keterbatasan jumlah dataset yang digunakan juga menjadi penyebab kesalahan. Dataset yang digunakan hanya terdiri dari 32 citra ikan dari tiga jenis ikan. 
+Jumlah dataset yang terbatas ini menyebabkan implementasi belum sepenuhnya mampu merepresentasikan variasi bentuk dan ukuran ikan pada kondisi nyata.
+
+Kesalahan lainnya adalah pada saat melakukan pengambilan dataset yang tidak konsisten, seperti jarak pengambilan gambar yang berbeda-beda, dan sudut pengambilan gambar yang tidak selalu sejajar dengan objek ikan.
 
 % Baris ini digunakan untuk membantu dalam melakukan sitasi
 % Karena diapit dengan comment, maka baris ini akan diabaikan

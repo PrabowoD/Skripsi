@@ -307,6 +307,9 @@ Nilai respon Harris digunakan untuk menentukan karakteristik suatu piksel pada c
 Keunggulan utama metode Harris-Corner Detection adalah kemampuannya dalam mendeteksi sudut secara stabil terhadap perubahan rotasi dan gangguan noise lokal.
 Selain itu, metode ini memiliki kompleksitas komputasi yang relatif ringan dibandingkan metode ekstraksi fitur lain seperti SIFT (\emph{Scale Invariant Feature Transform}) sehingga lebih sesuai digunakan pada sistem pengolahan citra dengan kebutuhan komputasi yang lebih efisien (\cite{Lowe2004})
 
+Pada penelitian ini, metode Harris-Corner Detection digunakan untuk mendeteksi titik sudut lokal pada bagian tubuh ikan, khususnya pada area kepala dan ekor. 
+Walaupun tubuh ikan tidak memiliki struktur geometris yang kaku seperti objek buatan manusia, perubahan bentuk dan intensitas pada bagian tertentu masih dapat menghasilkan respon sudut yang cukup signifikan untuk digunakan sebagai acuan pengukuran panjang objek.
+
 %   Nilai \(R\) akan menunjukkan keberadaan sudut pada area tersebut. 
 % Jika nilai \(R\) yang besar akan menunjukkan keberadaan sudut di area tersebut, sebaliknya nilai \(R\) yang kecil menunjukkan daerah tersebut merupakan tepi.
 

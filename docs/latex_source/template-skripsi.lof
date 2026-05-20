@@ -22,12 +22,12 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces \emph {source code}: Untuk menghapus background dari library rembg}}{32}{figure.caption.20}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces \emph {source code}: Untuk melakukan rotasi citra berdasarkan sudut PCA}}{33}{figure.caption.21}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces \emph {source code}: Untuk menghitung Gradien pada sumbu X dan Y}}{34}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces \emph {source code}: Untuk menghitung autokorelasi}}{35}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces \emph {source code}: Untuk menghitung Harris Respon}}{35}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces \emph {source code}: Untuk melakukan thresholding dan non-maximum suppression}}{36}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces \emph {source code}: Untuk menentukan nilai maksimal dan minimal sumbu x dan y dari titik sudut yang telah didapatkan}}{36}{figure.caption.27}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces \emph {source code}: Untuk menghitung panjang, lebar, dan keliling ikan}}{37}{figure.caption.28}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces \emph {source code}: Untuk melakukan proyeksi perspektif}}{37}{figure.caption.29}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces \emph {source code}: Untuk menghitung berat ikan berdasarkan jenis ikan dan keliling ikan}}{38}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces \emph {source code}: Untuk menghitung auto korelasi}}{35}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \emph {source code}: Untuk menghitung Harris Respon}}{36}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces \emph {source code}: Untuk melakukan thresholding dan non-maximum suppression}}{37}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \emph {source code}: Untuk menentukan nilai maksimal dan minimal sumbu x dan y dari titik sudut yang telah didapatkan}}{38}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces \emph {source code}: Untuk menghitung panjang, lebar, dan keliling ikan}}{39}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces \emph {source code}: Untuk melakukan proyeksi perspektif}}{40}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces \emph {source code}: Untuk mengEstimasi berat ikan berdasarkan Rumus turunan \emph {Lenght-Weight Relationship}}}{41}{figure.caption.30}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
