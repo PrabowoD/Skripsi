@@ -276,7 +276,7 @@
       \endverb
       \keyw{Carp,Color,Image analysis,Machine vision,Size}
     \endentry
-    \entry{Harris2013}{article}{}{}
+    \entry{Harris1988}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=aa81fda54b78d656cfed925799d9fe1e}{%
            family={Harris},
@@ -290,6 +290,9 @@
            given={M.},
            giveni={M\bibinitperiod},
            givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Alvey Vision Club}%
       }
       \strng{namehash}{c62c360be832fb8d2c4b6c984d3a1dc6}
       \strng{fullhash}{83060376bef95055a892b98ba8ae32c5}
@@ -306,15 +309,19 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Consistency of image edge filtering is of prime importance for 3D interpretation of image sequences using feature tracking algorithms. To cater for image regions containing texture and isolated features, a combined corner and edge detector based on the local auto-correlation function is utilised, and it is shown to perform with good consistency on natural imagery.}
-      \field{title}{{A Combined Corner and Edge Detector}}
-      \field{year}{2013}
+      \field{booktitle}{Procedings of the Alvey Vision Conference 1988}
+      \field{title}{A Combined Corner and Edge Detector}
+      \field{year}{1988}
       \field{pages}{23.1\bibrangedash 23.6}
       \range{pages}{-1}
       \verb{doi}
-      \verb 10.5244/c.2.23
+      \verb 10.5244/C.2.23
       \endverb
-      \verb{file}
-      \verb :C$\backslash$:/Users/User/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Harris, Stephens - 2013 - A Combined Corner and Edge Detector(2).pdf:pdf
+      \verb{urlraw}
+      \verb http://www.bmva.org/bmvc/1988/avc-88-023.html
+      \endverb
+      \verb{url}
+      \verb http://www.bmva.org/bmvc/1988/avc-88-023.html
       \endverb
     \endentry
     \entry{Hyndman2006}{article}{}{}

@@ -62,6 +62,9 @@ Nilai (0,0,0) merepresentasikan warna hitam, sedangkan nilai (255,255,255) merep
 Dalam pengolahan citra digital, citra berwarna sering digunakan sebagai citra masukan (\emph{input image}) karena mampu mempertahankan informasi visual objek secara lengkap.
 Namun, banyak algoritma pengolahan citra, termasuk deteksi tepi dan deteksi sudut, lebih efektif diterapkan pada citra grayscale karena kompleksitas komputasinya lebih rendah serta hanya memerlukan satu kanal intensitas untuk menghitung perubahan nilai piksel (\cite{Sanchez2018}).
 
+Gambar yang telah diambil dengan kamera \emph{Smartphone} awalnya berupa citra berwarna dalam format RGB, gambar akan melalui beberapa tahapan sebelum dilakukannya deteksi sudut dengan \emph{Harris-Corner Detection}.
+Mengkonversi citra menjadi grayscale, melakukan smoothing dengan filter gaussian, menghitung gradien, lalu setelah itu mendeteksi sudut dengan metode \emph{Harris-Corner Detection}.
+
 \section{Citra Grayscale}
   Citra grayscale adalah representasi citra yang hanya menggunakan satu saluran warna, yaitu tingkat keabuan. Citra ini dihasilkan dengan mengubah citra berwarna menjadi skala abu-abu, di mana setiap piksel dalam citra hanya memiliki nilai intensitas yang mewakili tingkat keabuan, seperti pada gambar~\ref{fig:Citra}. Proses ini sering dilakukan untuk menyederhanakan analisis citra, karena mengurangi kompleksitas data yang harus diproses (\cite{Gonzalez2018}). 
   Penggunaan citra grayscale sangat umum dalam proses deteksi fitur multi-skala dan algoritma deteksi sudut seperti Harris-Corner Detection, karena memudahkan perhitungan gradien dan matriks momen kedua (\cite{Sanchez2018}).
@@ -91,8 +94,11 @@ Gaussian smoothing merupakan teknik image smoothing yang digunakan untuk mengura
 Metode ini bekerja dengan cara melakukan konvolusi citra menggunakan kernel Gaussian sehingga perubahan intensitas piksel menjadi lebih halus.
 Dalam pengolahan citra digital, Gaussian smoothing banyak digunakan sebagai tahap pre-processing karena mampu mengurangi gangguan (noise) tanpa menghilangkan struktur utama objek secara signifikan (\cite{Gonzalez2018}).
 
+Pada metode \emph{Harris-Corner Detection}, proses smoothing sangat penting karena deteksi sudut sangat sensitif terhadap noise. Noise pada citra dapat menghasilkan perubahan intensitas yang tidak diinginkan sehingga menyebabkan munculnya titik sudut palsu (\emph{false corner}). 
+Oleh karena itu, Gaussian smoothing digunakan untuk memperhalus citra sebelum dilakukan perhitungan gradien dan matriks momen kedua (\emph{second moment matrix}) (\cite{Sanchez2018}).
+
 Proses Smoothing sangat penting karena deteksi fitur sangat sensitif terhadap noise, terlebih lagi pada deteksi sudut. Noise pada citra dapat menghasilkan perubahan intensitas yang dapat menyebabkan munculnya sudut palsu (\emph{false corner}). Oleh karena itu, Gaussian smoothing sering digunakan untuk memperhalus citra sebelum memasuki tahapan perhitungan.
-Filter Gaussian dibentuk berdasarkan distribusi Gaussian dua dimensi yang dirumuskan sebagai berikut :
+Filter Gaussian dibentuk berdasarkan distribusi Gaussian dua dimensi yang dirumuskan sebagai berikut:
 
 % Dalam domain diskrit citra digital, parameter skala juga direpresentasikan secara diskrit. 
 % Dengan demikian, representasi ruang-skala merupakan kumpulan gambar yang direpresentasikan oleh perbedaan tingkat resolusi diskrit. 
@@ -102,7 +108,7 @@ Filter Gaussian dibentuk berdasarkan distribusi Gaussian dua dimensi yang dirumu
 % Temuan ini menyimpulkan bahwa konvolusi dengan kernel Gaussian merupakan solusi optimal untuk masalah konstruksi representasi multi-skala. Fungsi Gaussian dua dimensi didefinisikan sebagai berikut:
 
 \begin{equation*}
-g(\sigma) = \frac{1}{2\pi\sigma_{x}\sigma_{y}}\exp\left(-\frac{(x - \mu_{x})^2 +(y - \mu_{y})^2}{2\sigma_{x}\sigma_{y}}\right)
+g(\sigma) = \frac{1}{2\pi\sigma_{x}\sigma_{y}}\exp\left(-\left[\frac{(x - \mu_{x})^{2}}{2\sigma_{x}^2} + \frac{(y - \mu_{y})^{2}}{2\sigma_{y}^2}\right]\right)
 \end{equation*}
 
 Dimana \(\mu_{x}\) dan \(\mu_{y}\) adalah \(mean\) atau rata-rata dari sumbu-x dan sumbu-y, dan \(\sigma_{x}\) dan \(\sigma_{y}\) adalah \emph{standard deviation} atau deviasi standar dari sumbu-x dan sumbu-y. Jika \(\mu_{x} = \mu_{y} = 0\) dan \(\sigma_{x} = \sigma_{y}\) maka dapat disederhanakan menjadi:
@@ -112,7 +118,7 @@ g(\sigma) = \frac{1}{2\pi\sigma^2}\exp\left(-\frac{x^2+y^2}{2\sigma^2}\right)
 \end{equation}
 
 Nilai \(\sigma\) mempengaruhi tingkat blur pada citra. Semakin besar nilai \(\sigma\) maka citra akan menjadi semakin halus karena lebih banyak detail dan noise yang dikurangi, begitupun sebaliknya.
-Proses \emph{Gaussian Smoothing} dilakukan melalui operasi konvolusi antara kernel Gaussian dan citra input. Operasi konvolusi dituliskan pada rumus~\ref(eq:konvolusi) berikut:
+Proses \emph{Gaussian Smoothing} dilakukan melalui operasi konvolusi antara kernel Gaussian dan citra input. Operasi konvolusi dituliskan pada rumus~\ref{eq:konvolusi} berikut:
 
 % Keunikan dari kernel Gaussian dapat diketahui dari beberapa sifat berikut: 
 % \emph{linearity, separability, causality, and semi group property}. Pembahasan lebih lanjut mengenai properti ini dapat ditemukan dalam literatur \emph{Gaussian Scale-Space Theory} oleh\cite{Sporring1997}. Keterpisahan 
@@ -143,13 +149,16 @@ G(x,\sigma) = g(\sigma) * I(x)
 \label{eq:konvolusi}
 \end{equation}
 
-di mana :
+di mana:
 \begin{enumerate}
   \item \(G(x,\sigma)\) adalah citra hasil konvolusi pada skala \(\sigma\).
   \item \(g(\sigma)\) adalah kernel Gaussian dengan parameter \(\sigma\).
   \item \(I(x)\) adalah citra input yang akan dihaluskan.
   \item simbol \(*\) menyatakan operasi konvolusi
 \end{enumerate}
+
+Dalam penelitian ini, Gaussian smoothing digunakan pada tahap \emph{pre-processing} untuk mengurangi noise pada citra ikan sebelum dilakukan proses perhitungan gradien dan deteksi sudut menggunakan metode \emph{Harris-Corner Detection}.
+Dengan berkurangnya noise, titik sudut yang dihasilkan menjadi lebih stabil dan akurat dalam merepresentasikan bentuk tubuh ikan.
 
 % Dengan \(I\) adalah gambar, \(x = (x,y)\) adalah lokasi poin, \(g(\sigma)\) adalah kernel gaussian.
 % \emph{Kernel} adalah simetris sirkular dan diparameterisasi dari satu skala faktor \(\sigma \).
@@ -202,15 +211,15 @@ Operator Sobel, sebagai salah satu metode yang paling umum, menggunakan kernel k
 \end{equation*}
 
 \subsection{Scharr Filter}
-  Scharr juga merupakan metode lain untuk menghitung gradien. Scharr filter merupakan modifikasi atau pengembangan dari operator sobel, yang bertujuan untuk meningkatkan akurasi deteksi tepi terutama pada citra dengan resoluis tinggi.
+  Scharr juga merupakan metode lain untuk menghitung gradien. Scharr filter merupakan modifikasi atau pengembangan dari operator sobel, yang bertujuan untuk meningkatkan akurasi deteksi tepi terutama pada citra dengan resolusi tinggi.
 
 \begin{equation*}
-  S_x = \begin{bmatrix}
+  SC_x = \begin{bmatrix}
      -3 & 0 & 3 \\
      -10 & 0 & 10 \\
       -3 & 0 & 3
   \end{bmatrix}, \quad
-    S_y = \begin{bmatrix}
+    SC_y = \begin{bmatrix}
       3 & 10 & 3 \\
       0 & 0 & 0 \\
      -3 & -10 & -3
@@ -244,7 +253,7 @@ Matriks ini juga panggil sebagai matriks auto-korelasi, seperti pada rumus\ref{e
   \label{eq:SecondMomentMatrix}
 \end{equation}
 
-Hasil dari turunan dihitung pada setiap posisi dan koefisien dari matriks dikonvolusi dengan fungsi gaussian. Langkah ini merupakan langkah paling lama karena menggunakan tiga konvolusi Gaussian (\cite{Sanchez2018}). 
+Hasil dari turunan dihitung pada setiap posisi dan koefisien dari matriks dikonvolusi dengan fungsi gaussian (\cite{Sanchez2018}). 
 
 Matriks ini memiliki dua nilai eigen, yang memungkinkan identifikasi suatu area sebagai berikut:
 
@@ -257,8 +266,13 @@ Matriks ini memiliki dua nilai eigen, yang memungkinkan identifikasi suatu area 
 Dengan menggunakan sifat tersebut, respon sudut dapat dihitung menggunakan analisis nilai eigen atau metode lain, salah satunya fungsi kekuatan sudut Harris \(R\) seperti yang dijelaskan pada rumus\ref{Harris-Corner Detection}.
 
 \section{\emph{Harris-Corner Detection}}
-  \emph{Harris-Corner Detection} merupakan salah satu dari sekian banyak algoritma untuk mendeteksi fitur (\emph{feature}), algoritma ini pertama kali diperkenalkan oleh Chris Harris dan Mike Stephens pada tahun 1988 (\cite{Harris2013}). 
-Ide dibalik metode Harris adalah untuk mendeteksi titik sudut berdasarkan variasi intensitas di area sekitar: wilayah yang kecil di sekitar fitur menunjukkan perubahan intensitas yang besar dibandingkan dengan pergeseran jendela ke segala arah (\cite{Sanchez2018}) seperti pada gambar\ref{fig:harris-corner-detection}.
+  \emph{Harris-Corner Detection} merupakan salah satu dari sekian banyak algoritma untuk mendeteksi fitur (\emph{feature}), algoritma ini pertama kali diperkenalkan oleh Chris Harris dan Mike Stephens pada tahun 1988 (\cite{Harris1988}). 
+Metode ini digunakan untuk mendeteksi titik-titik sudut pada citra berdasarkan perubahan intensitas piksel pada area lokal citra.
+Titik sudut (\emph{corner}) merupakan area yang memiliki perubahan intensitas signifikan pada dua arah sekaligus, sehingga dapat digunakan sebagai fitur penting dalam analisis citra dan visi komputer (\cite{Harris1988}).
+%Ide dibalik metode Harris adalah untuk mendeteksi titik sudut berdasarkan variasi intensitas di area sekitar: wilayah yang kecil di sekitar fitur menunjukkan perubahan intensitas yang besar dibandingkan dengan pergeseran jendela ke segala arah (\cite{Sanchez2018}) seperti pada gambar\ref{fig:harris-corner-detection}.
+
+Dalam pengolahan citra digital, titik sudut memiliki karakteristik yang lebih stabil dibandingkan titik tepi biasa karena perubahan intensitas terjadi pada arah horizontal dan vertikal secara bersamaan.
+Oleh karena itu, metode Harris banyak digunakan pada aplikasi seperti deteksi objek, pelacakan gerakan, pencocokan citra (\emph{image matching}), dan pengenalan pola (\cite{Sanchez2018}).
 
 \begin{figure}[H]
   \centering
@@ -266,39 +280,80 @@ Ide dibalik metode Harris adalah untuk mendeteksi titik sudut berdasarkan varias
   \caption{Contoh hasil deteksi sudut menggunakan metode Harris-Corner Detection}\label{fig:harris-corner-detection}
 \end{figure}
 
-  Sudut adalah salah satu fitur di mana terdapat perubahan arah yang tajam pada tepi. Keunggulan penting dari metode Harris adalah sifatnya yang invarian terhadap rotasi, Rotasi adalah proses transformasi geometris yang memutar posisi piksel citra terhadap titik pusat dengan sudut tertentu tanpa mengubah bentuk asli objek. Dengan kata lain titik sudut tetap dapat terdeteksi dengan akurat meskipun citra mengalami perputaran orientasi. Hal ini menjadikan algoritma ini andal untuk aplikasi seperti pelacakan objek, pengenalan pola, dan pencocokan citra yang memerlukan konsistensi fitur meskipun terjadi perubahan sudut pandang. 
-Dengan melibatkan matriks momen kedua (\emph{second moment matrix}) untuk menghitung variasi perubahan intensitas dalam dua arah utama.
+Prinsip dasar Harris-Corner Detection adalah menganalisis perubahan intensitas pada suatu jendela kecil (\emph{window}) ketika digeser ke berbagai arah. Jika perubahan intensitas kecil pada semua arah, maka area tersebut merupakan area datar (\emph{flat area}).
+Jika perubahan intensitas besar hanya pada satu arah, maka area tersebut merupakan tepi (\emph{edge}). Sebaliknya, jika perubahan intensitas besar pada seluruh arah, maka area tersebut dikategorikan sebagai sudut (\emph{corner}).
+
+Metode Harris menggunakan matriks momen kedua (\emph{second moment matrix}) atau matriks autokorelasi untuk merepresentasikan distribusi gradien lokal pada citra. Berdasarkan matriks tersebut, nilai respon Harris dihitung menggunakan persamaan berikut:
 
 \begin{equation}
   R = \det(M) - k * {trace(M)}^2
   \label{Harris-Corner Detection}
 \end{equation}
+di mana:
+\begin{itemize}
+  \item \(R\) adalah nilai respon Harris yang menunjukkan kekuatan sudut pada suatu titik.
+  \item \(\det(M)\) adalah determinan dari matriks momen kedua \(M\).
+  \item \(trace(M)\) adalah jejak dari matriks momen kedua \(M\), yaitu jumlah dari elemen diagonalnya.
+  \item \(k\) adalah konstanta empiris yang biasanya bernilai antara 0.04 hingga 0.06.
+\end{itemize}
 
-  Nilai \(R\) akan menunjukkan keberadaan sudut pada area tersebut. 
-Jika nilai \(R\) yang besar akan menunjukkan keberadaan sudut di area tersebut, sebaliknya nilai \(R\) yang kecil menunjukkan daerah tersebut merupakan tepi.
+Nilai respon Harris digunakan untuk menentukan karakteristik suatu piksel pada citra:
+\begin{itemize}
+  \item Jika nilai R besar dan positif, maka piksel tersebut merupakan sudut (\emph{corner}).
+  \item Jika nilai R bernilai negatif, maka piksel tersebut merupakan tepi (\emph{edge}).
+  \item Jika nilai R mendekati nol, maka piksel tersebut merupakan area datar (\emph{flat area}).
+\end{itemize} 
 
-\section{Proyeksi Perspectif}
-    Proyeksi perspektif adalah metode dalam komputer grafik yang digunakan untuk memetakan objek tiga dimensi (3D) ke dalam bidang dua dimensi (2D) dengan mempertimbangkan efek perspektif seperti yang terlihat oleh mata manusia. Dalam proyeksi ini, objek yang lebih jauh dari kamera akan terlihat lebih kecil dibandingkan objek yang lebih dekat (\cite{Gonzalez2018}).
+Keunggulan utama metode Harris-Corner Detection adalah kemampuannya dalam mendeteksi sudut secara stabil terhadap perubahan rotasi dan gangguan noise lokal.
+Selain itu, metode ini memiliki kompleksitas komputasi yang relatif ringan dibandingkan metode ekstraksi fitur lain seperti SIFT (\emph{Scale Invariant Feature Transform}) sehingga lebih sesuai digunakan pada sistem pengolahan citra dengan kebutuhan komputasi yang lebih efisien (\cite{Lowe2004})
 
-Proyeksi perspektif didasarkan pada model kamera lubang jarum (pinhole camera), di mana semua titik pada objek diproyeksikan melalui satu titik pusat (center of projection) menuju bidang proyeksi (image plane). Hal ini menyebabkan garis-garis sejajar pada dunia nyata tampak bertemu pada satu titik yang disebut vanishing point (\cite{Gonzalez2018}).
+%   Nilai \(R\) akan menunjukkan keberadaan sudut pada area tersebut. 
+% Jika nilai \(R\) yang besar akan menunjukkan keberadaan sudut di area tersebut, sebaliknya nilai \(R\) yang kecil menunjukkan daerah tersebut merupakan tepi.
 
-Menurut Digital Image Processing, pembentukan citra digital dapat dijelaskan melalui model geometrik kamera, di mana hubungan antara koordinat dunia nyata (3D) dan citra (2D) bergantung pada proses proyeksi perspektif. Model ini menjelaskan bagaimana ukuran objek pada citra dipengaruhi oleh jaraknya terhadap kamera, sehingga objek yang lebih jauh akan memiliki ukuran yang lebih kecil pada bidang citra.
+\section{Proyeksi Perspektif}
 
-Metode ini banyak digunakan dalam bidang komputer grafik, visi komputer, dan simulasi visual karena mampu menghasilkan tampilan yang realistis serta menjelaskan hubungan antara dunia nyata dan citra digital.
-\subsection{Pinhole Camera}
-  Pinhole camera adalah model kamera yang paling sederhana, di mana cahaya dari objek melewati sebuah lubang kecil (pinhole) dan membentuk citra terbalik pada bidang proyeksi di belakangnya. Model ini digunakan untuk menjelaskan dasar-dasar proyeksi perspektif, di mana semua titik pada objek diproyeksikan melalui satu titik pusat (center of projection) menuju bidang proyeksi (image plane)~\cite{Marschner2021}.
-Berbeda dengan kamera yang menggunakan lensa, pinhole camera tidak mengalami distorsi optik, sehingga sering digunakan sebagai model ideal dalam analisis geometri citra. Meskipun demikian, model ini tetap mampu menjelaskan hubungan antara ukuran objek pada citra dengan jaraknya terhadap kamera, di mana objek yang lebih jauh akan tampak lebih kecil dibandingkan objek yang lebih dekat (\cite{Marschner2021}).
+Proyeksi perspektif merupakan metode pemetaan objek tiga dimensi (3D) ke bidang dua dimensi (2D) dengan mempertimbangkan jarak objek terhadap kamera. Pada proyeksi ini, objek yang berada lebih jauh dari kamera akan terlihat lebih kecil dibandingkan objek yang berada lebih dekat.
+Konsep ini banyak digunakan dalam pengolahan citra digital dan visi komputer untuk merepresentasikan hubungan antara dunia nyata dan citra hasil tangkapan kamera (\cite{Gonzalez2018}).
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.8\textwidth]{gambar/pinhole camera.jpg}
-  \caption{Model pinhole camera dalam proyeksi perspektif}\label{fig:pinhole-camera}
+Proyeksi perspektif didasarkan pada model pinhole camera, yaitu model kamera sederhana yang memproyeksikan titik objek menuju bidang citra melalui satu titik pusat proyeksi (\emph{center of projection}) (\cite{Marschner2021}).
+Hubungan proyeksi perspektif dapat dinyatakan sebagai berikut:
 
-\end{figure}
+\begin{equation}
+  x' = \frac{fX}{Z}, \quad y' = \frac{fY}{Z}
+\end{equation}
 
- Dimana \(f\) adalah jarak fokus, \(P\) adalah titik pada objek, \(P'\) adalah titik pada bidang proyeksi, \((X,Y,Z)\) adalah koordinat dalam sistem koordinat 3D, dan \((x,y)\) adalah koordinat pada bidang proyeksi. 
- Hubungan ini menunjukkan bahwa ukuran objek pada citra dipengaruhi oleh jaraknya terhadap kamera, sehingga objek yang lebih jauh akan memiliki ukuran yang lebih kecil pada bidang citra (\cite{Marschner2021}). 
-Model pinhole camera ini menjadi dasar dalam pemahaman proyeksi perspektif dan digunakan secara luas dalam berbagai aplikasi seperti komputer grafik, visi komputer, dan simulasi visual untuk menghasilkan tampilan yang realistis serta menjelaskan hubungan antara dunia nyata dan citra digital.
+di mana:
+\begin{itemize}
+  \item \(f\) adalah jarak fokus kamera.
+  \item \(X, Y, Z\) adalah koordinat titik objek dalam ruang 3D.
+  \item \(x', y'\) adalah koordinat titik pada bidang citra 2D setelah proyeksi.
+\end{itemize}
+
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{gambar/pinhole camera.jpg}
+%   \caption{Model pinhole camera dalam proyeksi perspektif}\label{fig:pinhole-camera}
+
+% \end{figure}
+
+Persamaan tersebut menunjukkan bahwa ukuran objek pada citra dipengaruhi oleh jarak objek terhadap kamera. Semakin besar nilai \(Z\) atau semakin jauh objek dari kamera, maka ukuran objek pada citra akan terlihat semakin kecil.
+
+%     Proyeksi perspektif adalah metode dalam komputer grafik yang digunakan untuk memetakan objek tiga dimensi (3D) ke dalam bidang dua dimensi (2D) dengan mempertimbangkan efek perspektif seperti yang terlihat oleh mata manusia. Dalam proyeksi ini, objek yang lebih jauh dari kamera akan terlihat lebih kecil dibandingkan objek yang lebih dekat (\cite{Gonzalez2018}).
+
+% Proyeksi perspektif didasarkan pada model kamera lubang jarum (pinhole camera), di mana semua titik pada objek diproyeksikan melalui satu titik pusat (center of projection) menuju bidang proyeksi (image plane). Hal ini menyebabkan garis-garis sejajar pada dunia nyata tampak bertemu pada satu titik yang disebut vanishing point (\cite{Gonzalez2018}).
+
+% Menurut Digital Image Processing, pembentukan citra digital dapat dijelaskan melalui model geometrik kamera, di mana hubungan antara koordinat dunia nyata (3D) dan citra (2D) bergantung pada proses proyeksi perspektif. Model ini menjelaskan bagaimana ukuran objek pada citra dipengaruhi oleh jaraknya terhadap kamera, sehingga objek yang lebih jauh akan memiliki ukuran yang lebih kecil pada bidang citra.
+
+% Metode ini banyak digunakan dalam bidang komputer grafik, visi komputer, dan simulasi visual karena mampu menghasilkan tampilan yang realistis serta menjelaskan hubungan antara dunia nyata dan citra digital.
+% \subsection{Pinhole Camera}
+%   Pinhole camera adalah model kamera yang paling sederhana, di mana cahaya dari objek melewati sebuah lubang kecil (pinhole) dan membentuk citra terbalik pada bidang proyeksi di belakangnya. Model ini digunakan untuk menjelaskan dasar-dasar proyeksi perspektif, di mana semua titik pada objek diproyeksikan melalui satu titik pusat (center of projection) menuju bidang proyeksi (image plane)~\cite{Marschner2021}.
+% Berbeda dengan kamera yang menggunakan lensa, pinhole camera tidak mengalami distorsi optik, sehingga sering digunakan sebagai model ideal dalam analisis geometri citra. Meskipun demikian, model ini tetap mampu menjelaskan hubungan antara ukuran objek pada citra dengan jaraknya terhadap kamera, di mana objek yang lebih jauh akan tampak lebih kecil dibandingkan objek yang lebih dekat (\cite{Marschner2021}).
+
+
+
+%  Dimana \(f\) adalah jarak fokus, \(P\) adalah titik pada objek, \(P'\) adalah titik pada bidang proyeksi, \((X,Y,Z)\) adalah koordinat dalam sistem koordinat 3D, dan \((x,y)\) adalah koordinat pada bidang proyeksi. 
+%  Hubungan ini menunjukkan bahwa ukuran objek pada citra dipengaruhi oleh jaraknya terhadap kamera, sehingga objek yang lebih jauh akan memiliki ukuran yang lebih kecil pada bidang citra (\cite{Marschner2021}). 
+% Model pinhole camera ini menjadi dasar dalam pemahaman proyeksi perspektif dan digunakan secara luas dalam berbagai aplikasi seperti komputer grafik, visi komputer, dan simulasi visual untuk menghasilkan tampilan yang realistis serta menjelaskan hubungan antara dunia nyata dan citra digital.
 
 
 \section{Rotasi}
@@ -329,13 +384,17 @@ rotasi dihitung dengan rumus berikut:
   \centering
   \includegraphics[width=0.8\textwidth]{gambar/opencv_rotate_header.png}
   \caption{Contoh rotasi citra digital}
+  \caption*{Sumber: https://pyimagesearch.com/2021/01/20/opencv-rotate-image/}
 \end{figure}
   
 Di mana \((x, y)\) adalah koordinat asli piksel, \((x', y')\) adalah koordinat piksel setelah rotasi, dan \(\theta\) adalah sudut rotasi dalam radian. Proses ini memastikan bahwa citra dapat diputar sesuai kebutuhan tanpa kehilangan informasi penting yang terkandung di dalamnya (\cite{Gonzalez2018}).
 
 \section{Bounding Box}
-  Bounding box adalah sebuah kotak persegi panjang yang digunakan untuk membatasi atau mengelilingi objek dalam citra. Dalam konteks pengolahan citra digital, bounding box sering digunakan untuk mendeteksi dan mengukur objek, seperti dalam aplikasi pengenalan pola, deteksi objek, dan analisis citra medis. Bounding box biasanya didefinisikan oleh koordinat titik sudut kiri atas dan kanan bawah, atau oleh koordinat pusat dan ukuran (lebar dan tinggi) dari kotak tersebut.
+  %Bounding box adalah sebuah kotak persegi panjang yang digunakan untuk membatasi atau mengelilingi objek dalam citra. Dalam konteks pengolahan citra digital, bounding box sering digunakan untuk mendeteksi dan mengukur objek, seperti dalam aplikasi pengenalan pola, deteksi objek, dan analisis citra medis. Bounding box biasanya didefinisikan oleh koordinat titik sudut kiri atas dan kanan bawah, atau oleh koordinat pusat dan ukuran (lebar dan tinggi) dari kotak tersebut.
+Bounding box adalah kotak berbentuk persegi panjang yang digunakan untuk membatasi area objek pada citra digital. 
+Dalam pengolahan citra, bounding box sering digunakan untuk menentukan posisi, panjang, lebar, dan ukuran objek berdasarkan koordinat piksel terluar objek tersebut (\cite{Gonzalez2018}).
 
+Bounding box umumnya dibentuk menggunakan titik koordinat minimum dan maksimum pada sumbu \(x\) dan \(y\). Dengan memanfaatkan koordinat tersebut, sistem dapat menentukan dimensi objek secara otomatis.
 
   \begin{figure}[H]
   \centering
@@ -344,13 +403,33 @@ Di mana \((x, y)\) adalah koordinat asli piksel, \((x', y')\) adalah koordinat p
 
 \end{figure}
 
-\section{Length-Weight Relationship}
-  Length-Weight Relationship (LWR) merupakan metode yang digunakan untuk
-menjelaskan hubungan antara panjang dan berat ikan. Hubungan ini banyak
-digunakan dalam bidang perikanan dan biologi untuk mengetahui pola
-pertumbuhan ikan, kondisi tubuh, serta memperkirakan berat ikan berdasarkan
-panjangnya. Menurut \textcite{LeCren1951}, hubungan panjang dan berat ikan
-dapat dinyatakan menggunakan persamaan allometrik sebagai berikut:
+\section{Visual-Weight Relationship dan Length-Weight Relationship}
+
+\emph{Visual-Weight Relationship} (VWR) merupakan metode yang digunakan untuk memperkirakan berat suatu objek berdasarkan karakteristik visual yang diperoleh dari citra digital.
+Dalam bidang pengolahan citra dan \emph{computer vision}, metode ini banyak digunakan untuk estimasi berat ikan karena mampu melakukan pengukuran secara otomatis tanpa kontak langsung dengan objek (\textcite{Balaban2010}).
+
+Pada penelitian berbasis citra digital, parameter visual seperti panjang, lebar, luas area (\emph{view area}), dan bentuk objek dapat digunakan untuk membangun hubungan terhadap berat ikan.
+Pendekatan ini menjadi alternatif yang lebih efisien dibandingkan pengukuran manual karena dapat mengurangi waktu pengukuran dan meminimalkan kerusakan fisik pada ikan selama proses grading.
+
+Salah satu model yang umum digunakan dalam Visual-Weight Relationship adalah persamaan pangkat (\emph{power equation}) sebagai berikut:
+\begin{equation}
+W = aV^b
+\label{eq:vwr}
+\end{equation}
+
+di mana:
+\begin{itemize}
+    \item $W$ berat ikan,
+    \item $V$ luas area tampak (\textit{view area}) objek pada citra,
+    \item $a$ konstanta regresi,
+    \item $b$ eksponen hubungan area terhadap berat.
+\end{itemize}
+
+Parameter visual V dapat berupa luas area objek, panjang, atau parameter geometris lain yang diperoleh dari hasil segmentasi citra.
+Penelitian yang dilakukan oleh \textcite{Balaban2010} menunjukkan bahwa parameter visual memiliki korelasi yang kuat terhadap berat ikan sehingga dapat digunakan sebagai metode estimasi berat berbasis citra digital.
+
+Selain Visual-Weight Relationship, dalam bidang perikanan juga dikenal metode \emph{Length-Weight Relationship} (LWR),
+yaitu hubungan biologis antara panjang dan berat ikan. Metode ini digunakan untuk menggambarkan pola pertumbuhan ikan berdasarkan panjang tubuhnya dan secara umum dirumuskan sebagai berikut:
 
 \begin{equation}
 W = aL^b
@@ -359,70 +438,92 @@ W = aL^b
 
 di mana:
 \begin{itemize}
-    \item $W$ = berat ikan,
-    \item $L$ = panjang ikan,
-    \item $a$ = konstanta atau koefisien intercept,
-    \item $b$ = koefisien pertumbuhan (growth exponent).
+    \item $W$ berat ikan,
+    \item $L$ panjang ikan,
+    \item $a$ dan $b$  koefisien pertumbuhan (growth exponent).
 \end{itemize}
 
-Nilai $b$ digunakan untuk menunjukkan pola pertumbuhan ikan. Jika nilai
-$b = 3$, maka pertumbuhan ikan bersifat isometrik, yaitu pertambahan panjang
-dan berat berlangsung secara seimbang. Jika $b > 3$, maka pertumbuhan
-bersifat allometrik positif, di mana berat ikan bertambah lebih cepat dibanding
-panjangnya. Sebaliknya, jika $b < 3$, maka pertumbuhan bersifat allometrik
-negatif, yaitu panjang ikan bertambah lebih cepat dibanding beratnya
-(\cite{LeCren1951}).
+Nilai b digunakan untuk menentukan pola pertumbuhan ikan, yaitu isometrik atau allometrik (\cite{LeCren1951}).
+Namun, pada penelitian berbasis pengolahan citra digital, pendekatan \emph{Visual-Weight Relationship} lebih sering digunakan karena parameter visual dapat diperoleh langsung dari citra tanpa perlu pengukuran fisik secara manual.
 
-\subsection{Visual-Weight Relationship}
-  Visual-Weight Relationship (VWR) merupakan konsep yang digunakan untuk
-menggambarkan hubungan antara karakteristik visual objek dengan beratnya.
-Dalam bidang pengolahan citra digital dan machine vision, hubungan ini
-digunakan untuk memperkirakan berat ikan berdasarkan parameter visual yang
-diperoleh dari citra, seperti luas area tampak (\textit{view area}), panjang,
-lebar, bentuk, dan karakteristik morfologi lainnya. Metode ini banyak
-digunakan pada bidang akuakultur dan industri perikanan karena mampu
-mengurangi pengukuran manual serta mempercepat proses estimasi berat ikan
-(\textcite{Balaban2010,Gm2023}).
+%   Length-Weight Relationship (LWR) merupakan metode yang digunakan untuk
+% menjelaskan hubungan antara panjang dan berat ikan. Hubungan ini banyak
+% digunakan dalam bidang perikanan dan biologi untuk mengetahui pola
+% pertumbuhan ikan, kondisi tubuh, serta memperkirakan berat ikan berdasarkan
+% panjangnya. Menurut \textcite{LeCren1951}, hubungan panjang dan berat ikan
+% dapat dinyatakan menggunakan persamaan allometrik sebagai berikut:
 
-Menurut \textcite{Balaban2010}, estimasi berat ikan dapat dilakukan
-menggunakan hubungan antara berat ikan dan luas area objek hasil segmentasi
-citra. Persamaan yang umum digunakan adalah persamaan linear, polinomial,
-dan persamaan pangkat (\textit{power equation}). Persamaan pangkat yang sering
-digunakan dalam penelitian visual-weight relationship dirumuskan sebagai:
+% \begin{equation}
+% W = aL^b
+% \label{eq:lwr}
+% \end{equation}
 
-\begin{equation}
-W = aV^b
-\label{eq:vwr}
-\end{equation}
+% di mana:
+% \begin{itemize}
+%     \item $W$ = berat ikan,
+%     \item $L$ = panjang ikan,
+%     \item $a$ = konstanta atau koefisien intercept,
+%     \item $b$ = koefisien pertumbuhan (growth exponent).
+% \end{itemize}
 
-di mana:
-\begin{itemize}
-    \item $W$ = berat ikan,
-    \item $V$ = luas area tampak (\textit{view area}) objek pada citra,
-    \item $a$ = konstanta regresi,
-    \item $b$ = eksponen hubungan area terhadap berat.
-\end{itemize}
+% Nilai $b$ digunakan untuk menunjukkan pola pertumbuhan ikan. Jika nilai
+% $b = 3$, maka pertumbuhan ikan bersifat isometrik, yaitu pertambahan panjang
+% dan berat berlangsung secara seimbang. Jika $b > 3$, maka pertumbuhan
+% bersifat allometrik positif, di mana berat ikan bertambah lebih cepat dibanding
+% panjangnya. Sebaliknya, jika $b < 3$, maka pertumbuhan bersifat allometrik
+% negatif, yaitu panjang ikan bertambah lebih cepat dibanding beratnya
+% (\cite{LeCren1951}).
 
-Penelitian yang dilakukan oleh \textcite{Gm2023} menunjukkan bahwa
-analisis citra dapat digunakan secara akurat untuk memprediksi berat ikan
-rainbow trout berdasarkan parameter visual yang diperoleh dari citra digital.
-Hasil penelitian tersebut menunjukkan bahwa luas area objek memiliki korelasi
-yang sangat kuat terhadap berat ikan, sehingga parameter visual dapat
-digunakan sebagai alternatif pengukuran non-destruktif dan otomatis.
+% \subsection{Visual-Weight Relationship}
+%   Visual-Weight Relationship (VWR) merupakan konsep yang digunakan untuk
+% menggambarkan hubungan antara karakteristik visual objek dengan beratnya.
+% Dalam bidang pengolahan citra digital dan machine vision, hubungan ini
+% digunakan untuk memperkirakan berat ikan berdasarkan parameter visual yang
+% diperoleh dari citra, seperti luas area tampak (\textit{view area}), panjang,
+% lebar, bentuk, dan karakteristik morfologi lainnya. Metode ini banyak
+% digunakan pada bidang akuakultur dan industri perikanan karena mampu
+% mengurangi pengukuran manual serta mempercepat proses estimasi berat ikan
+% (\textcite{Balaban2010,Gm2023}).
 
-Selain itu, \textcite{Balaban2010} juga menyatakan bahwa penggunaan luas area
-(\textit{view area}) sebagai parameter utama sering kali memberikan hasil yang
-lebih baik dibandingkan kombinasi panjang dan lebar ikan, karena pengukuran
-panjang dan lebar lebih sensitif terhadap posisi dan orientasi ikan pada saat
-pengambilan citra. Oleh karena itu, pendekatan berbasis area citra banyak
-digunakan dalam sistem estimasi berat ikan berbasis computer vision.
+% Menurut \textcite{Balaban2010}, estimasi berat ikan dapat dilakukan
+% menggunakan hubungan antara berat ikan dan luas area objek hasil segmentasi
+% citra. Persamaan yang umum digunakan adalah persamaan linear, polinomial,
+% dan persamaan pangkat (\textit{power equation}). Persamaan pangkat yang sering
+% digunakan dalam penelitian visual-weight relationship dirumuskan sebagai:
 
-Dalam penelitian pengolahan citra digital, proses Visual-Weight Relationship
-biasanya diawali dengan segmentasi objek ikan untuk memperoleh area objek
-dalam satuan piksel atau satuan nyata setelah proses kalibrasi. Nilai area
-tersebut kemudian digunakan pada Persamaan~\ref{eq:vwr} untuk memperkirakan
-berat ikan melalui model regresi yang telah dibangun menggunakan data
-pengukuran aktual.
+% \begin{equation}
+% W = aV^b
+% \label{eq:vwr}
+% \end{equation}
+
+% di mana:
+% \begin{itemize}
+%     \item $W$ = berat ikan,
+%     \item $V$ = luas area tampak (\textit{view area}) objek pada citra,
+%     \item $a$ = konstanta regresi,
+%     \item $b$ = eksponen hubungan area terhadap berat.
+% \end{itemize}
+
+% Penelitian yang dilakukan oleh \textcite{Gm2023} menunjukkan bahwa
+% analisis citra dapat digunakan secara akurat untuk memprediksi berat ikan
+% rainbow trout berdasarkan parameter visual yang diperoleh dari citra digital.
+% Hasil penelitian tersebut menunjukkan bahwa luas area objek memiliki korelasi
+% yang sangat kuat terhadap berat ikan, sehingga parameter visual dapat
+% digunakan sebagai alternatif pengukuran non-destruktif dan otomatis.
+
+% Selain itu, \textcite{Balaban2010} juga menyatakan bahwa penggunaan luas area
+% (\textit{view area}) sebagai parameter utama sering kali memberikan hasil yang
+% lebih baik dibandingkan kombinasi panjang dan lebar ikan, karena pengukuran
+% panjang dan lebar lebih sensitif terhadap posisi dan orientasi ikan pada saat
+% pengambilan citra. Oleh karena itu, pendekatan berbasis area citra banyak
+% digunakan dalam sistem estimasi berat ikan berbasis computer vision.
+
+% Dalam penelitian pengolahan citra digital, proses Visual-Weight Relationship
+% biasanya diawali dengan segmentasi objek ikan untuk memperoleh area objek
+% dalam satuan piksel atau satuan nyata setelah proses kalibrasi. Nilai area
+% tersebut kemudian digunakan pada Persamaan~\ref{eq:vwr} untuk memperkirakan
+% berat ikan melalui model regresi yang telah dibangun menggunakan data
+% pengukuran aktual.
 
 \section{Mean Absolute Error (MAE)}
   Mean Absolute Error (MAE) merupakan salah satu metrik evaluasi yang

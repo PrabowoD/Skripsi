@@ -1,143 +1,135 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.13)  19 MAY 2026 13:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.17)  20 MAY 2026 08:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/ASUS/Documents/GitHub/Skripsi/docs/latex_source/template-skripsi.tex
-(c:/Users/ASUS/Documents/GitHub/Skripsi/docs/latex_source/template-skripsi.tex
-LaTeX2e <2025-11-01>
-L3 programming layer <2026-03-20>
+**c:/Users/USER/Documents/GitHub/Skripsi/docs/latex_source/template-skripsi.tex
+(c:/Users/USER/Documents/GitHub/Skripsi/docs/latex_source/template-skripsi.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
 (jtetiskripsi.cls
 Document Class: jtetiskripsi 
-(C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2026/04/15 v26.6 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2025/08/03 v25.12 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
 \babel@savecnt=\count275
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2078.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2080.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2082.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2083.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2084.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2086.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2111.
-\U@D=\dimen150
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2045.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2047.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2049.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2050.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2051.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2053.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2078.
+\U@D=\dimen148
 \l@unhyphenated=\language79
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count276
-Package babel Info: Configuration files are deprecated, as
-(babel)             they can break document portability.
-(babel)             Reported on input line 4206.
 
 *************************************
 * Local config file bblopts.cfg used
 *
-(C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/invalid\babel-bahasa.tex) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-english.tex)
-
-Package babel Warning: Name 'bahasa' is deprecated.
-(babel)                Use 'indonesian' instead.
-(babel)                Reported on input line 4330.
-
-Package babel Info: Importing font and identification data for bahasa
-(babel)             from babel-id.ini. Reported on input line 4330.
-(C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/babel-indonesian\indonesian.ldf
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/babel-indonesian\bahasa.ldf
+Language: bahasa 2025/06/01 v1.0n Bahasa Indonesia support from the babel system
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/babel-indonesian\indonesian.ldf
 Language: indonesian 2025/06/01 v1.0n Bahasa Indonesia support from the babel system
-)
-Package babel Info: Importing font and identification data for english
-(babel)             from babel-en.ini. Reported on input line 4330.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ldf
+)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 12.
+)
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 (babel)             (\language73). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language73). Reported on input line 108.
-)) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
+)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\times.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen151
-\Gin@req@width=\dimen152
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/base\latexsym.sty
+\Gin@req@height=\dimen149
+\Gin@req@width=\dimen150
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
-Package: geometry 2026/03/07 v6.0 Page Geometry
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
 \Gm@cnth=\count277
 \Gm@cntv=\count278
 \c@Gm@tempcnt=\count279
-\Gm@bindingoffset=\dimen153
-\Gm@wd@mp=\dimen154
-\Gm@odd@mp=\dimen155
-\Gm@even@mp=\dimen156
-\Gm@layoutwidth=\dimen157
-\Gm@layoutheight=\dimen158
-\Gm@layouthoffset=\dimen159
-\Gm@layoutvoffset=\dimen160
+\Gm@bindingoffset=\dimen151
+\Gm@wd@mp=\dimen152
+\Gm@odd@mp=\dimen153
+\Gm@even@mp=\dimen154
+\Gm@layoutwidth=\dimen155
+\Gm@layoutheight=\dimen156
+\Gm@layouthoffset=\dimen157
+\Gm@layoutvoffset=\dimen158
 \Gm@dimlist=\toks18
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks19
 \verbatim@line=\toks20
 \verbatim@in@stream=\read3
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/tools\enumerate.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/tools\enumerate.sty
 Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
 \@enLab=\toks21
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen161
-\lightrulewidth=\dimen162
-\cmidrulewidth=\dimen163
-\belowrulesep=\dimen164
-\belowbottomsep=\dimen165
-\aboverulesep=\dimen166
-\abovetopsep=\dimen167
-\cmidrulesep=\dimen168
-\cmidrulekern=\dimen169
-\defaultaddspace=\dimen170
+\heavyrulewidth=\dimen159
+\lightrulewidth=\dimen160
+\cmidrulewidth=\dimen161
+\belowrulesep=\dimen162
+\belowbottomsep=\dimen163
+\aboverulesep=\dimen164
+\abovetopsep=\dimen165
+\cmidrulesep=\dimen166
+\cmidrulekern=\dimen167
+\defaultaddspace=\dimen168
 \@cmidla=\count280
 \@cmidlb=\count281
-\@aboverulesep=\dimen171
-\@belowrulesep=\dimen172
+\@aboverulesep=\dimen169
+\@belowrulesep=\dimen170
 \@thisruleclass=\count282
 \@lastruleclass=\count283
-\@thisrulewidth=\dimen173
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+\@thisrulewidth=\dimen171
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -147,13 +139,13 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
-Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen174
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
+\col@sep=\dimen172
 \ar@mcellbox=\box53
-\extrarowheight=\dimen175
+\extrarowheight=\dimen173
 \NC@list=\toks22
 \extratabsurround=\skip49
 \backup@length=\skip50
@@ -162,22 +154,22 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \everycr=\toks23
 \minrowclearance=\skip51
 \rownum=\count284
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip52
 \multirow@cntb=\count285
 \multirow@dima=\skip53
-\bigstrutjot=\dimen176
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+\bigstrutjot=\dimen174
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count286
 \float@exts=\toks24
 \float@box=\box55
 \@float@everytoks=\toks25
 \@floatcapt=\box56
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
 Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
-(C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count287
@@ -191,8 +183,8 @@ File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \c@table=\count295
 \abovecaptionskip=\skip54
 \belowcaptionskip=\skip55
-\bibindent=\dimen177
-)) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
+\bibindent=\dimen175
+)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
 \cftparskip=\skip56
@@ -231,99 +223,99 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cftbeforetabskip=\skip87
 \cfttabindent=\skip88
 \cfttabnumwidth=\skip89
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2026-04-24 v7.01q Hypertext links for LaTeX
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
-Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count298
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count299
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen178
+\@linkdim=\dimen176
 \Hy@linkcounter=\count300
 \Hy@pagecounter=\count301
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count302
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4199.
-Package hyperref Info: Link nesting OFF on input line 4204.
-Package hyperref Info: Hyper index ON on input line 4207.
-Package hyperref Info: Plain pages OFF on input line 4214.
-Package hyperref Info: Backreferencing OFF on input line 4219.
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4466.
+Package hyperref Info: Bookmarks ON on input line 4462.
 \c@Hy@tempcnt=\count303
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4805.
-\XeTeXLinkMargin=\dimen179
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen177
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count304
-\Field@Width=\dimen180
-\Fld@charsize=\dimen181
-Package hyperref Info: Hyper figures OFF on input line 6091.
-Package hyperref Info: Link nesting OFF on input line 6096.
-Package hyperref Info: Hyper index ON on input line 6099.
-Package hyperref Info: backreferencing OFF on input line 6106.
-Package hyperref Info: Link coloring OFF on input line 6111.
-Package hyperref Info: Link coloring with OCG OFF on input line 6116.
-Package hyperref Info: PDF/A mode OFF on input line 6121.
+\Field@Width=\dimen178
+\Fld@charsize=\dimen179
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
 \Hy@abspage=\count305
 \c@Item=\count306
 \c@Hfootnote=\count307
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2026-04-24 v7.01q Hyperref driver for pdfTeX
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
 \Fld@listcount=\count308
 \c@bookmark@seq@number=\count309
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
@@ -331,56 +323,56 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip90
 )
 \mylenf=\skip91
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen182
-\captionmargin=\dimen183
-\caption@leftmargin=\dimen184
-\caption@rightmargin=\dimen185
-\caption@width=\dimen186
-\caption@indent=\dimen187
-\caption@parindent=\dimen188
-\caption@hangindent=\dimen189
+\caption@tempdima=\dimen180
+\captionmargin=\dimen181
+\caption@leftmargin=\dimen182
+\caption@rightmargin=\dimen183
+\caption@width=\dimen184
+\caption@indent=\dimen185
+\caption@parindent=\dimen186
+\caption@hangindent=\dimen187
 Package caption Info: Standard document class detected.
 )
 \c@caption@flags=\count310
 \c@continuedfloat=\count311
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count312
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count313
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
-Package: pdfpages 2026/03/30 v0.6h Insert pages of external PDF documents (AM)
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
+Package: pdfpages 2025/07/23 v0.6g Insert pages of external PDF documents (AM)
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
 \calc@Acount=\count314
 \calc@Bcount=\count315
-\calc@Adimen=\dimen190
-\calc@Bdimen=\dimen191
+\calc@Adimen=\dimen188
+\calc@Bdimen=\dimen189
 \calc@Askip=\skip92
 \calc@Bskip=\skip93
 LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
 \calc@Ccount=\count316
 \calc@Cskip=\skip94
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
-Package: eso-pic 2025/12/10 v3.0d eso-pic (RN)
-\ESO@tempdima=\dimen192
-\ESO@tempdimb=\dimen193
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen190
+\ESO@tempdimb=\dimen191
 )
-\AM@pagewidth=\dimen194
-\AM@pageheight=\dimen195
-\AM@fboxrule=\dimen196
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
-File: pppdftex.def 2026/03/30 v0.6h Pdfpages driver for pdfTeX (AM)
+\AM@pagewidth=\dimen192
+\AM@pageheight=\dimen193
+\AM@fboxrule=\dimen194
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
+File: pppdftex.def 2025/07/23 v0.6g Pdfpages driver for pdfTeX (AM)
 )
 \pdfpages@includegraphics@status=\count317
 \AM@pagebox=\box57
@@ -390,14 +382,14 @@ File: pppdftex.def 2026/03/30 v0.6h Pdfpages driver for pdfTeX (AM)
 \AM@lof@heading=\toks28
 \c@AM@survey=\count319
 \AM@templatesizebox=\box58
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
-Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2024-12-18 v4.23 Multi-page Table package (DPC)
 \LTleft=\skip95
 \LTright=\skip96
 \LTpre=\skip97
 \LTpost=\skip98
 \LTchunksize=\count320
-\LTcapwidth=\dimen197
+\LTcapwidth=\dimen195
 \LT@head=\box59
 \LT@firsthead=\box60
 \LT@foot=\box61
@@ -408,14 +400,14 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \c@LT@tables=\count323
 \c@LT@chunks=\count324
 \LT@p@ftn=\toks29
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
-\wrapoverhang=\dimen198
-\WF@size=\dimen199
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
+\wrapoverhang=\dimen196
+\WF@size=\dimen197
 \c@WF@wrappedlines=\count325
 \WF@box=\box64
 \WF@everypar=\toks30
 Package: wrapfig 2003/01/31  v 3.6
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
 \csq@reset=\count326
 \csq@gtype=\count327
@@ -424,19 +416,19 @@ Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
 \csq@maxlvl=\count330
 \csq@tshold=\count331
 \csq@ltx@everypar=\toks31
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
 File: csquotes.cfg 
-)) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count332
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
 \c@tabx@nest=\count333
@@ -498,7 +490,7 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \c@mincompwidth=\count378
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
 File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
@@ -589,12 +581,12 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \localshorteditorwidth=\skip120
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
 File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 \c@textcitecount=\count447
 \c@textcitetotal=\count448
@@ -612,22 +604,22 @@ File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load bibliography style 'authoryear-icomp'...
 Package biblatex Info: ... file 'authoryear-icomp.bbx' found.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\authoryear-icomp.bbx
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\authoryear-icomp.bbx
 File: authoryear-icomp.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\authoryear.bbx
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\authoryear.bbx
 File: authoryear.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count456
 \c@bbx:relatedtotal=\count457
 )))
 Package biblatex Info: Trying to load citation style 'authoryear-icomp'...
 Package biblatex Info: ... file 'authoryear-icomp.cbx' found.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\authoryear-icomp.cbx
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\authoryear-icomp.cbx
 File: authoryear-icomp.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
@@ -644,7 +636,7 @@ Package biblatex Info: Redefining '\smartcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
 File: biblatex.cfg 
 )
 
@@ -653,35 +645,35 @@ Package biblatex Warning: 'firstinits' option is deprecated.
 
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
-(C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2026-03-20 L3 programming layer (loader) 
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2025-08-13 L3 programming layer (loader) 
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count458
 ))
 Package biblatex Info: ... and expl3
-(biblatex)             2026-03-20 L3 programming layer (loader) 
+(biblatex)             2025-08-13 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
-Package: xparse 2025-10-09 L3 Experimental document command parser
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
-)) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2025/07/09 v2.17z AMS math features
+)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2025/06/16 v2.17y AMS math features
 \@mathmargin=\skip121
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks32
-\ex@=\dimen256
-)) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+\ex@=\dimen198
+)) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen257
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+\pmbraise@=\dimen199
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count459
@@ -701,7 +693,7 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen258
+\big@size=\dimen256
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
 \macc@depth=\count464
@@ -719,25 +711,25 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \column@=\count469
 \maxfields@=\count470
 \andhelp@=\toks34
-\eqnshift@=\dimen259
-\alignsep@=\dimen260
-\tagshift@=\dimen261
-\tagwidth@=\dimen262
-\totwidth@=\dimen263
-\lineht@=\dimen264
+\eqnshift@=\dimen257
+\alignsep@=\dimen258
+\tagshift@=\dimen259
+\tagwidth@=\dimen260
+\totwidth@=\dimen261
+\lineht@=\dimen262
 \@envbody=\toks35
 \multlinegap=\skip122
 \multlinetaggap=\skip123
 \mathdisplay@stack=\toks36
-LaTeX Info: Redefining \[ on input line 2950.
-LaTeX Info: Redefining \] on input line 2951.
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.sty
+LaTeX Info: Redefining \[ on input line 2949.
+LaTeX Info: Redefining \] on input line 2950.
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
 \@float@every@algorithm=\toks37
 \c@algorithm=\count471
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudocode.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudocode.sty
 Package: algpseudocode 
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmicx.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
@@ -753,48 +745,42 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip126
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count479
 \lst@gtempboxa=\box67
 \lst@token=\toks38
 \lst@length=\count480
-\lst@currlwidth=\dimen265
+\lst@currlwidth=\dimen263
 \lst@column=\count481
 \lst@pos=\count482
-\lst@lostspace=\dimen266
-\lst@width=\dimen267
+\lst@lostspace=\dimen264
+\lst@width=\dimen265
 \lst@newlines=\count483
 \lst@lineno=\count484
-\lst@maxwidth=\dimen268
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
-File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\lst@maxwidth=\dimen266
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 \c@lstnumber=\count485
 \lst@skipnumbers=\count486
 \lst@framebox=\box68
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
-File: listings.cfg 2025/11/14 1.11b listings configuration
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
-Package: listings 2025/11/14 1.11b (Carsten Heinz)
-
-==> First Aid for listings.sty no longer applied!
-    Expected:
-        2024/09/23 1.10c (Carsten Heinz)
-    but found:
-        2025/11/14 1.11b (Carsten Heinz)
-    so I'm assuming it got fixed.
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
+
 
 Package biblatex Warning: Conflicting options.
 (biblatex)                '<namepart>inits' conflicts with 'uniquename=full'.
 (biblatex)                Setting 'uniquename=init' on input line 170.
 
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 170.
-(C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (template-skripsi.aux (kata-pengantar.aux) (abstrak.aux) (abstract.aux) (bab1.aux) (bab2dif1.aux) (bab3.aux) (bab4.aux) (bab5.aux) (lampiran.aux))
 \openout1 = `template-skripsi.aux'.
@@ -817,23 +803,23 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 170.
 LaTeX Font Info:    ... okay on input line 170.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 170.
 LaTeX Font Info:    ... okay on input line 170.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count487
-\scratchdimen=\dimen269
+\scratchdimen=\dimen267
 \scratchbox=\box69
 \nofMPsegments=\count488
 \nofMParguments=\count489
 \everyMPshowfont=\toks39
 \MPscratchCnt=\count490
-\MPscratchDim=\dimen270
+\MPscratchDim=\dimen268
 \MPnumerator=\count491
 \makeMPintoPDFobject=\count492
 \everyMPtoPDFconversion=\toks40
-) (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+) (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 *geometry* driver: auto-detecting
@@ -872,23 +858,23 @@ Package hyperref Info: Link coloring OFF on input line 170.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
 Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
 File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load language 'bahasa'...
@@ -909,27 +895,35 @@ Package biblatex Info: ... file 'template-skripsi.bbl' found.
 Package biblatex Info: Reference section=0 on input line 170.
 Package biblatex Info: Reference segment=0 on input line 170.
 \c@lstlisting=\count493
-<gambar/logounj.png, id=279, 513.92pt x 513.92pt>
+<gambar/logounj.png, id=275, 513.92pt x 513.92pt>
 File: gambar/logounj.png Graphic file (type png)
 <use gambar/logounj.png>
 Package pdftex.def Info: gambar/logounj.png  used on input line 172.
 (pdftex.def)             Requested size: 162.7473pt x 162.74825pt.
- [1
 
-{C:/Users/ASUS/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./gambar/logounj.png>]
+
+[1
+
+{C:/Users/USER/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./gambar/logounj.png>]
 \openout2 = `kata-pengantar.aux'.
 
  (kata-pengantar.tex
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 30.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)) [2
+))
+
+[2
 
 
-] [3]
+]
+
+[3]
 \openout2 = `abstrak.aux'.
 
- (abstrak.tex) [4
+ (abstrak.tex)
+
+[4
 
 
 
@@ -937,12 +931,16 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ]
 \openout2 = `abstract.aux'.
 
- (abstract.tex) [5
+ (abstract.tex)
+
+[5
 
 
 
 
-] (template-skripsi.toc [6
+] (template-skripsi.toc
+
+[6
 
 
 
@@ -950,237 +948,324 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 \tf@toc=\write5
 \openout5 = `template-skripsi.toc'.
 
- [7] (template-skripsi.lof)
+
+
+[7] (template-skripsi.lof)
 \tf@lof=\write6
 \openout6 = `template-skripsi.lof'.
 
- [8
+
+
+[8
 
 ] (template-skripsi.lot)
 \tf@lot=\write7
 \openout7 = `template-skripsi.lot'.
 
- [9
+
+
+[9
 
 ]
 \openout2 = `bab1.aux'.
 
  (bab1.tex
 BAB I.
+
+
 [1
 
 
 
-] [2] [3]) [4]
+]
+
+[2]
+
+[3])
+
+[4]
 \openout2 = `bab2dif1.aux'.
 
  (bab2dif1.tex
 BAB II.
-<gambar/Colour_pixel.jpg, id=496, 1405.25pt x 936.49875pt>
+<gambar/Colour_pixel.jpg, id=489, 1405.25pt x 936.49875pt>
 File: gambar/Colour_pixel.jpg Graphic file (type jpg)
 <use gambar/Colour_pixel.jpg>
 Package pdftex.def Info: gambar/Colour_pixel.jpg  used on input line 15.
 (pdftex.def)             Requested size: 369.88582pt x 246.49907pt.
-<gambar/Slide2.jpg, id=500, 722.7pt x 542.025pt>
+<gambar/Slide2.jpg, id=493, 722.7pt x 542.025pt>
 File: gambar/Slide2.jpg Graphic file (type jpg)
 <use gambar/Slide2.jpg>
 Package pdftex.def Info: gambar/Slide2.jpg  used on input line 27.
 (pdftex.def)             Requested size: 284.52756pt x 213.39865pt.
+
+
 [5
 
 
 
 
- <./gambar/Colour_pixel.jpg>] [6 <./gambar/Slide2.jpg>]
-<gambar/IMG_20240121_131125.jpg, id=522, 4175.6pt x 1879.02pt>
+ <./gambar/Colour_pixel.jpg>]
+
+[6 <./gambar/Slide2.jpg>]
+<gambar/IMG_20240121_131125.jpg, id=515, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_131125.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_131125.jpg>
-Package pdftex.def Info: gambar/IMG_20240121_131125.jpg  used on input line 72.
+Package pdftex.def Info: gambar/IMG_20240121_131125.jpg  used on input line 75.
 (pdftex.def)             Requested size: 113.81102pt x 51.20729pt.
-<gambar/IMG_20240121_131125 copy.jpg, id=523, 4175.6pt x 1879.02pt>
+<gambar/IMG_20240121_131125 copy.jpg, id=516, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_131125 copy.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_131125 copy.jpg>
-Package pdftex.def Info: gambar/IMG_20240121_131125 copy.jpg  used on input line 78.
+Package pdftex.def Info: gambar/IMG_20240121_131125 copy.jpg  used on input line 81.
 (pdftex.def)             Requested size: 113.81102pt x 51.20729pt.
- [7 <./gambar/IMG_20240121_131125.jpg> <./gambar/IMG_20240121_131125 copy.jpg>]
 
-LaTeX Warning: Reference `(' on page 8 undefined on input line 115.
 
-[8]
-<gambar/Uniform Gaussian kernel.jpg, id=542, 290.88675pt x 78.2925pt>
+[7]
+
+[8 <./gambar/IMG_20240121_131125.jpg> <./gambar/IMG_20240121_131125 copy.jpg>]
+<gambar/Uniform Gaussian kernel.jpg, id=533, 290.88675pt x 78.2925pt>
 File: gambar/Uniform Gaussian kernel.jpg Graphic file (type jpg)
 <use gambar/Uniform Gaussian kernel.jpg>
-Package pdftex.def Info: gambar/Uniform Gaussian kernel.jpg  used on input line 159.
+Package pdftex.def Info: gambar/Uniform Gaussian kernel.jpg  used on input line 168.
 (pdftex.def)             Requested size: 284.52756pt x 76.58275pt.
- [9 <./gambar/Uniform Gaussian kernel.jpg>] [10]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 252.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+
+
+[9 <./gambar/Uniform Gaussian kernel.jpg>]
+
+[10]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 261.
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
+
+[11]
 <gambar/harris_corner_detection_example.jpg, id=564, 526.96875pt x 357.58594pt>
 File: gambar/harris_corner_detection_example.jpg Graphic file (type jpg)
 <use gambar/harris_corner_detection_example.jpg>
-Package pdftex.def Info: gambar/harris_corner_detection_example.jpg  used on input line 265.
+Package pdftex.def Info: gambar/harris_corner_detection_example.jpg  used on input line 279.
 (pdftex.def)             Requested size: 325.50082pt x 220.88799pt.
- [11] [12 <./gambar/harris_corner_detection_example.jpg>]
-<gambar/pinhole camera.jpg, id=581, 722.7pt x 542.025pt>
-File: gambar/pinhole camera.jpg Graphic file (type jpg)
-<use gambar/pinhole camera.jpg>
-Package pdftex.def Info: gambar/pinhole camera.jpg  used on input line 294.
-(pdftex.def)             Requested size: 325.50082pt x 244.12402pt.
- [13] [14 <./gambar/pinhole camera.jpg>]
-<gambar/opencv_rotate_header.png, id=595, 702.625pt x 451.6875pt>
+
+
+[12]
+
+[13 <./gambar/harris_corner_detection_example.jpg>]
+
+[14]
+<gambar/opencv_rotate_header.png, id=587, 702.625pt x 451.6875pt>
 File: gambar/opencv_rotate_header.png Graphic file (type png)
 <use gambar/opencv_rotate_header.png>
-Package pdftex.def Info: gambar/opencv_rotate_header.png  used on input line 330.
+Package pdftex.def Info: gambar/opencv_rotate_header.png  used on input line 385.
 (pdftex.def)             Requested size: 325.50082pt x 209.2537pt.
- [15 <./gambar/opencv_rotate_header.png>]
-<gambar/Bounding B Car.jpg, id=604, 478.78876pt x 352.31625pt>
+
+
+[15]
+<gambar/Bounding B Car.jpg, id=596, 478.78876pt x 352.31625pt>
 File: gambar/Bounding B Car.jpg Graphic file (type jpg)
 <use gambar/Bounding B Car.jpg>
-Package pdftex.def Info: gambar/Bounding B Car.jpg  used on input line 342.
+Package pdftex.def Info: gambar/Bounding B Car.jpg  used on input line 401.
 (pdftex.def)             Requested size: 325.50082pt x 239.51811pt.
- [16 <./gambar/Bounding B Car.jpg>] [17] [18] [19]) [20]
+
+
+[16 <./gambar/opencv_rotate_header.png>]
+
+[17 <./gambar/Bounding B Car.jpg>]
+
+[18]
+
+[19])
+
+[20]
 \openout2 = `bab3.aux'.
 
  (bab3.tex
 BAB III.
-<gambar/Alur Penelitian.png, id=650, 462.72874pt x 412.54124pt>
+<gambar/Alur Penelitian.png, id=637, 462.72874pt x 412.54124pt>
 File: gambar/Alur Penelitian.png Graphic file (type png)
 <use gambar/Alur Penelitian.png>
 Package pdftex.def Info: gambar/Alur Penelitian.png  used on input line 13.
 (pdftex.def)             Requested size: 323.90791pt x 288.7769pt.
+
+
 [21
 
 
 
 
- <./gambar/Alur Penelitian.png>] [22]
+ <./gambar/Alur Penelitian.png>]
+
+[22]
 File: gambar/IMG_20240121_131125.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_131125.jpg>
-Package pdftex.def Info: gambar/IMG_20240121_131125.jpg  used on input line 41.
+Package pdftex.def Info: gambar/IMG_20240121_131125.jpg  used on input line 78.
 (pdftex.def)             Requested size: 85.35826pt x 38.39113pt.
-<gambar/IMG_20240121_132544.jpg, id=661, 4175.6pt x 1879.02pt>
+<gambar/IMG_20240121_132544.jpg, id=649, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_132544.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_132544.jpg>
-Package pdftex.def Info: gambar/IMG_20240121_132544.jpg  used on input line 46.
+Package pdftex.def Info: gambar/IMG_20240121_132544.jpg  used on input line 83.
 (pdftex.def)             Requested size: 85.35826pt x 38.39113pt.
-<gambar/IMG_20240121_140044.jpg, id=662, 4175.6pt x 1879.02pt>
+<gambar/IMG_20240121_140044.jpg, id=650, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_140044.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_140044.jpg>
-Package pdftex.def Info: gambar/IMG_20240121_140044.jpg  used on input line 51.
+Package pdftex.def Info: gambar/IMG_20240121_140044.jpg  used on input line 88.
 (pdftex.def)             Requested size: 85.35826pt x 38.39113pt.
-<gambar/IMG_20240121_131125 - Copy.jpg, id=663, 4175.6pt x 1879.02pt>
+<gambar/IMG_20240121_131125 - Copy.jpg, id=651, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_131125 - Copy.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_131125 - Copy.jpg>
-Package pdftex.def Info: gambar/IMG_20240121_131125 - Copy.jpg  used on input line 63.
+Package pdftex.def Info: gambar/IMG_20240121_131125 - Copy.jpg  used on input line 101.
 (pdftex.def)             Requested size: 85.35826pt x 38.39113pt.
-<gambar/IMG_20240121_132544 - Copy.jpg, id=664, 4175.6pt x 1879.02pt>
+<gambar/IMG_20240121_132544 - Copy.jpg, id=652, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_132544 - Copy.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_132544 - Copy.jpg>
-Package pdftex.def Info: gambar/IMG_20240121_132544 - Copy.jpg  used on input line 68.
+Package pdftex.def Info: gambar/IMG_20240121_132544 - Copy.jpg  used on input line 106.
 (pdftex.def)             Requested size: 85.35826pt x 38.39113pt.
-<gambar/IMG_20240121_135842 - Copy.jpg, id=665, 4175.6pt x 1879.02pt>
+<gambar/IMG_20240121_135842 - Copy.jpg, id=653, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_135842 - Copy.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_135842 - Copy.jpg>
-Package pdftex.def Info: gambar/IMG_20240121_135842 - Copy.jpg  used on input line 73.
+Package pdftex.def Info: gambar/IMG_20240121_135842 - Copy.jpg  used on input line 111.
 (pdftex.def)             Requested size: 85.35826pt x 38.39113pt.
-<gambar/IMG_20240121_131125 - Output.jpg, id=666, 4175.6pt x 1879.02pt>
+
+
+[23 <./gambar/IMG_20240121_132544.jpg> <./gambar/IMG_20240121_140044.jpg>]
+
+[24 <./gambar/IMG_20240121_131125 - Copy.jpg> <./gambar/IMG_20240121_132544 - Copy.jpg> <./gambar/IMG_20240121_135842 - Copy.jpg>]
+<gambar/IMG_20240121_131125 - Output.jpg, id=664, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_131125 - Output.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_131125 - Output.jpg>
-Package pdftex.def Info: gambar/IMG_20240121_131125 - Output.jpg  used on input line 104.
+Package pdftex.def Info: gambar/IMG_20240121_131125 - Output.jpg  used on input line 158.
 (pdftex.def)             Requested size: 113.81102pt x 51.20729pt.
-<gambar/IMG_20240121_131125 - rotate.jpg, id=667, 4175.6pt x 1879.02pt>
+<gambar/IMG_20240121_131125 - rotate.jpg, id=665, 4175.6pt x 1879.02pt>
 File: gambar/IMG_20240121_131125 - rotate.jpg Graphic file (type jpg)
 <use gambar/IMG_20240121_131125 - rotate.jpg>
-Package pdftex.def Info: gambar/IMG_20240121_131125 - rotate.jpg  used on input line 109.
+Package pdftex.def Info: gambar/IMG_20240121_131125 - rotate.jpg  used on input line 163.
 (pdftex.def)             Requested size: 113.81102pt x 51.20729pt.
- [23 <./gambar/IMG_20240121_132544.jpg> <./gambar/IMG_20240121_140044.jpg> <./gambar/IMG_20240121_131125 - Copy.jpg> <./gambar/IMG_20240121_132544 - Copy.jpg> <./gambar/IMG_20240121_135842 - Copy.jpg>] [24 <./gambar/IMG_20240121_131125 - Output.jpg> <./gambar/IMG_20240121_131125 - rotate.jpg>] [25] [26]
+
+
+[25 <./gambar/IMG_20240121_131125 - Output.jpg> <./gambar/IMG_20240121_131125 - rotate.jpg>]
+
+[26]
+
+[27]
+
+[28]
 <gambar/ikan_mas_1 - Box.jpg, id=694, 4175.6pt x 1879.02pt>
 File: gambar/ikan_mas_1 - Box.jpg Graphic file (type jpg)
 <use gambar/ikan_mas_1 - Box.jpg>
-Package pdftex.def Info: gambar/ikan_mas_1 - Box.jpg  used on input line 242.
+Package pdftex.def Info: gambar/ikan_mas_1 - Box.jpg  used on input line 306.
 (pdftex.def)             Requested size: 119.50148pt x 53.75905pt.
 <gambar/ikan_lele_1 - Box.jpg, id=695, 4175.6pt x 1879.02pt>
 File: gambar/ikan_lele_1 - Box.jpg Graphic file (type jpg)
 <use gambar/ikan_lele_1 - Box.jpg>
-Package pdftex.def Info: gambar/ikan_lele_1 - Box.jpg  used on input line 247.
+Package pdftex.def Info: gambar/ikan_lele_1 - Box.jpg  used on input line 311.
 (pdftex.def)             Requested size: 119.50148pt x 53.75905pt.
 <gambar/ikan_nila_1 - Box.jpg, id=696, 4175.6pt x 1879.02pt>
 File: gambar/ikan_nila_1 - Box.jpg Graphic file (type jpg)
 <use gambar/ikan_nila_1 - Box.jpg>
-Package pdftex.def Info: gambar/ikan_nila_1 - Box.jpg  used on input line 252.
+Package pdftex.def Info: gambar/ikan_nila_1 - Box.jpg  used on input line 316.
 (pdftex.def)             Requested size: 119.50148pt x 53.75905pt.
- [27] [28 <./gambar/ikan_mas_1 - Box.jpg> <./gambar/ikan_lele_1 - Box.jpg> <./gambar/ikan_nila_1 - Box.jpg>]) [29]
+
+
+[29 <./gambar/ikan_mas_1 - Box.jpg> <./gambar/ikan_lele_1 - Box.jpg> <./gambar/ikan_nila_1 - Box.jpg>]
+
+[30])
+
+[31]
 \openout2 = `bab4.aux'.
 
  (bab4.tex
 BAB IV.
-<gambar/Screenshot_3.jpg, id=713, 921.4425pt x 508.90125pt>
+<gambar/Screenshot_3.jpg, id=712, 921.4425pt x 508.90125pt>
 File: gambar/Screenshot_3.jpg Graphic file (type jpg)
 <use gambar/Screenshot_3.jpg>
 Package pdftex.def Info: gambar/Screenshot_3.jpg  used on input line 14.
 (pdftex.def)             Requested size: 325.50082pt x 179.76433pt.
-(C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-) [30
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
+
+[32
 
 
 
 
- <./gambar/Screenshot_3.jpg>] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40]) [41]
+ <./gambar/Screenshot_3.jpg>]
+
+[33]
+
+[34]
+
+[35]
+
+[36]
+
+[37]
+
+[38]
+
+[39]
+
+[40]
+
+[41]
+
+[42])
+
+[43]
 \openout2 = `bab5.aux'.
 
  (bab5.tex
 BAB V.
-) [42
+)
+
+[44
 
 
 
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 226.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
+ (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [43
+)
+
+[45
 
 
 
-] [44]
+]
+
+[46]
 \openout2 = `lampiran.aux'.
 
  (lampiran.tex
 LAMPIRAN A.
-) [45
+)
+
+[47
 
 
 ] (template-skripsi.aux (kata-pengantar.aux) (abstrak.aux) (abstract.aux) (bab1.aux) (bab2dif1.aux) (bab3.aux) (bab4.aux) (bab5.aux) (lampiran.aux))
  ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2026-03-20>
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `template-skripsi.out' has not changed.
-(rerunfilecheck)             Checksum: 0BEC69E02E45F01A9CB54F4D62051F02;10024.
+(rerunfilecheck)             Checksum: 654D03F5724464C1ACEFAF2FA3AB5AF7;10053.
 Package logreq Info: Writing requests to 'template-skripsi.run.xml'.
 \openout1 = `template-skripsi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26369 strings out of 467690
- 461178 string characters out of 5415450
- 1790058 words of memory out of 5000000
- 54643 multiletter control sequences out of 15000+600000
- 673809 words of font info for 87 fonts, out of 8000000 for 9000
+ 26273 strings out of 468133
+ 458273 string characters out of 5431196
+ 1780595 words of memory out of 5000000
+ 54104 multiletter control sequences out of 15000+600000
+ 672913 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,97p,2258b,2288s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template-skripsi.pdf (54 pages, 19812207 bytes).
+ 75i,10n,84p,2258b,2279s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on template-skripsi.pdf (56 pages, 19785127 bytes).
 PDF statistics:
  1095 PDF objects out of 1200 (max. 8388607)
- 373 named destinations out of 1000 (max. 500000)
- 663 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 376 named destinations out of 1000 (max. 500000)
+ 650 words of extra memory for PDF output out of 10000 (max. 10000000)
 
