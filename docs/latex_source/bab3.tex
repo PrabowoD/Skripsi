@@ -20,9 +20,9 @@ Sistem yang dikembangkan bekerja dengan memanfaatkan citra ikan yang diambil men
 Alur penelitian pada sistem dapat dilihat pada gambar~\ref{Alur Penelitian}. 
 
 Pada penelitian ini, citra ikan diambil dari sudut pandang atas (\emph{top-down view}) dengan jarak pengambilan yang relatif tetap untuk meminimalkan distorsi perspektif. Citra yang diperoleh kemudian digunakan sebagai masukan (\emph{input}) pada sistem.
-Tahapan pertama yang dilakukan adalah pre-processing citra yang meliputi penghapusan latar belakang (\emph{background removal}), rotasi citra, dan Gaussian smoothing. Tahapan ini bertujuan untuk mempermudah proses deteksi sudut dengan mengurangi noise dan menyesuaikan orientasi objek ikan.
+Tahapan pertama yang dilakukan adalah \emph{pra-processing} citra yang meliputi penghapusan latar belakang (\emph{background removal}), rotasi citra, dan Gaussian smoothing. Tahapan ini bertujuan untuk mempermudah proses deteksi sudut dengan mengurangi noise dan menyesuaikan orientasi objek ikan.
 
-Setelah tahap \emph{pre-processing}, sistem melakukan perhitungan gradien citra menggunakan operator Sobel untuk memperoleh perubahan intensitas pada arah horizontal dan vertikal. 
+Setelah tahap \emph{pra-processing}, sistem melakukan perhitungan gradien citra menggunakan operator Sobel untuk memperoleh perubahan intensitas pada arah horizontal dan vertikal. 
 Nilai gradien tersebut kemudian digunakan untuk membentuk \emph{second moment matrix} atau matriks autokorelasi yang menjadi dasar dalam perhitungan nilai respon Harris.
 
 Tahap berikutnya adalah menghitung nilai respon Harris menggunakan matriks autokorelasi. 
@@ -59,61 +59,23 @@ Tingkat akurasi sistem dianalisis menggunakan metode \emph{Mean Absolute Percent
     Dataset yang digunakan dalam penelitian ini berasal dari penangkaran ikan di daerah Bogor. Dataset diambil dengan menggunakan kamera \emph{smartphone} dengan resolusi 12 MP.\@ Gambar diambil pada siang hari dengan pencahayaan alami yang cukup untuk memastikan kualitas gambar yang baik.
 Setiap gambar diambil dari sudut pandang yang konsisten, yaitu \emph{TopDown} dengan jarak 45 centimeter dari Ikan, untuk memastikan bahwa seluruh bagian ikan terlihat jelas dalam gambar. 
 
-Citra ikan kemudian disimpan dalam format JPEG atau PNG dengan resolusi \(4160 x 1872\) piksel. Seluruh gambar digunakan sebagai \emph{input} dalam sistem penghitungan panjang dan estimasi berat ikan.
+Citra ikan kemudian disimpan dalam format JPEG atau PNG dengan resolusi \(4160 \times 1872\) piksel. Seluruh gambar digunakan sebagai \emph{input} dalam sistem penghitungan panjang dan estimasi berat ikan.
 
 Seluruh dataset berjumlah 32 gambar yang terdiri dari tiga jenis ikan yaitu ikan lele, ikan mas, dan ikan nila. Masing-masing jenis ikan memiliki jumlah gambar yang berbeda yaitu 13 gambar untuk ikan lele, 13 gambar untuk ikan nila, dan 6 gambar untuk ikan mas.
 Setiap ikan yang telah diambil gambarnya akan dilakukan pengukuran panjang dan berat secara manual menggunakan alat ukur konvensional untuk mendapatkan data aktual yang akan digunakan sebagai referensi dalam evaluasi sistem. 
 
-Sebelum dilakukan proses pengolahan citra, seluruh gambar melalui tahap \emph{Pre-Processing}. 
+Sebelum dilakukan proses pengolahan citra, seluruh gambar melalui tahap \emph{Pra-Processing}. 
 Proses ini bertujuan untuk mempermudah tahapan deteksi sudut menggunakan metode Harris Corner Detection.
 
-\section{Pre-Processing Citra}
+\section{Pra-Processing Citra}
     Pada tahap ini citra ikan akan melalui tiga tahapan penghapusan background, rotasi gambar, dan \emph{smoothing gaussian} untuk memperhalus \emph{feature}.~Tahapan ini bertujuan untuk mempersiapkan citra untuk diproses lebih lanjut.
 
-% \subsection{Tahap Pengambilan Gambar}
 \subsection{Penghapusan Background}
-    \begin{figure}[H]
-	\centering
-	\begin{subfigure}{.3\textwidth}
-		\centering
-        \includegraphics[keepaspectratio, width=3cm]{gambar/IMG_20240121_131125.jpg}
-		\caption{Ikan Mas}
-	\end{subfigure}
-	\begin{subfigure}{.3\textwidth}
-		\centering
-		\includegraphics[keepaspectratio, width=3cm]{gambar/IMG_20240121_132544.jpg}
-		\caption{Ikan lele}
-	\end{subfigure} 
-	\begin{subfigure}{.3\textwidth}
-		\centering
-		\includegraphics[keepaspectratio, width=3cm]{gambar/IMG_20240121_140044.jpg}
-		\caption{Ikan Nila Merah}
-	\end{subfigure}
-	\caption{Contoh Gambar dan Jenis Ikan yang Digunakan}\label{fig:dataset}
-\end{figure}
+
 
 % \subsection{Penghapusan Background}
-    Penghapusan latar belakang dilakukan menggunakan library \textbf{rembg} sebagai tahap preprocessing untuk memisahkan objek ikan dari background sehingga proses deteksi sudut dapat dilakukan dengan lebih optimal. 
+    Penghapusan latar belakang dilakukan menggunakan library \textbf{rembg} sebagai tahap \emph{pra-processing} untuk memisahkan objek ikan dari background sehingga proses deteksi sudut dapat dilakukan dengan lebih optimal. 
 Proses penghapusan background dilakukan dengan cara menginput gambar yang akan diproses ke dalam library \emph{rembg}, hasil outputnya berupa gambar yang telah dihilangkan latar belakangnya dan digantikan dengan warna solid putih sebagai latar belakang penggantinya.
-    \begin{figure}[H]
-	\centering
-	\begin{subfigure}{.3\textwidth}
-		\centering
-        \includegraphics[keepaspectratio, width=3cm]{gambar/IMG_20240121_131125 - Copy.jpg}
-		\caption{Ikan Mas}
-	\end{subfigure}
-	\begin{subfigure}{.3\textwidth}
-		\centering
-		\includegraphics[keepaspectratio, width=3cm]{gambar/IMG_20240121_132544 - Copy.jpg}
-		\caption{Ikan lele}
-	\end{subfigure} 
-	\begin{subfigure}{.3\textwidth}
-		\centering
-		\includegraphics[keepaspectratio, width=3cm]{gambar/IMG_20240121_135842 - Copy.jpg}
-		\caption{Ikan Nila Merah}
-	\end{subfigure}
-	\caption{Contoh hasil gambar yang telah dihilangkan backgroundnya}\label{fig:rembg}
-\end{figure}
 
 %\section{Perancangan Sistem}
 %   Pada bagian ini akan membahas tentang proses yang akan dilakukan untuk mengetahui tahapan yang ditempuh dalam membangun sistem penghitungan berat dan panjang ikan. Tahapan pertama yang dilakukan adalah melakukan \emph{input} gambar
@@ -132,42 +94,6 @@ Proses penghapusan background dilakukan dengan cara menginput gambar yang akan d
 %     \item Setelah citra dikonversi ke \emph{grayscale}, langkah selanjutnya adalah menerapkan \emph{Gaussian smoothing} untuk mengurangi \emph{noise} pada gambar.
 %     \item Seletah \emph{Gaussian smoothing} diterapkan, citra akan dilakukan rotasi menggunakan 
 % \end{enumerate}
-
-\subsection{Rotasi}
-    Rotasi dilakukan untuk menyesuaikan orientasi objek ikan agar posisi tubuh ikan berada sejajar terhadap sumbu horizontal citra. Proses ini bertujuan untuk mempermudah pengukuran panjang ikan serta meningkatkan kestabilan proses deteksi sudut menggunakan metode \emph{Harris Corner Detection}. 
-    
-    Rotasi citra dilakukan menggunakan metode \emph{Principal Component Analysis} (PCA). 
-    Metode PCA digunakan untuk menentukan arah utama (\emph{principal axis}) dari objek ikan berdasarkan distribusi koordinat piksel objek hasil segmentasi. Sumbu utama tersebut merepresentasikan arah dominan tubuh ikan pada citra. 
-    Sudut rotasi diperoleh dari arah eigenvector utama terhadap sumbu horizontal menggunakan persamaan berikut:
-
-    \begin{equation}
-        \theta = \tan^{-1}\left(\frac{v_y}{v_x}\right)
-    \end{equation}
-    di mana:
-    \begin{itemize}
-        \item \(v_x\) adalah komponen horizontal dari eigenvector utama.
-        \item \(v_y\) adalah komponen vertikal dari eigenvector utama.
-        \item \(\theta\) adalah sudut rotasi yang diperlukan untuk menyelaraskan objek ikan dengan sumbu horizontal.
-    \end{itemize}
-
-    Setelah sudut rotasi diperoleh, citra diputar menggunakan matriks transformasi rotasi sehingga orientasi tubuh ikan menjadi lebih sejajar terhadap sumbu horizontal. Transformasi rotasi dinyatakan mengganakan rumus~\ref{eq:rotasi}
-    
-    \begin{figure}[H]
-        \centering
-        \begin{subfigure}{.3\textwidth}
-            \centering
-            \includegraphics[keepaspectratio, width=4cm]{gambar/IMG_20240121_131125 - Output.jpg}
-            \caption{Sebelum Rotasi}
-        \end{subfigure}
-        \begin{subfigure}{.3\textwidth}
-            \centering
-            \includegraphics[keepaspectratio, width=4cm]{gambar/IMG_20240121_131125 - rotate.jpg}
-            \caption{Setelah Rotasi}
-        \end{subfigure}
-        \caption{Contoh hasil gambar yang telah dirotasi}\label{fig:rotasi}
-    \end{figure}
-
-
 
 \subsection{Smoothing Gaussian}
    \emph{Smoothing Gaussian} bertujuan untuk mengurangi \emph{noise} pada gambar sebelum melanjutkan ke perhitungan lebih lanjut.
@@ -200,6 +126,26 @@ Maka rumusannya akan seperti berikut:
         G_{x} = S_{x} * I(x)\\ G_{y} = S_{y} * I(x)
     \end{aligned}
 \end{equation}
+
+\subsection{Rotasi}
+    Rotasi dilakukan untuk menyesuaikan orientasi objek ikan agar posisi tubuh ikan berada sejajar terhadap sumbu horizontal citra. Proses ini bertujuan untuk mempermudah pengukuran panjang ikan serta meningkatkan kestabilan proses deteksi sudut menggunakan metode \emph{Harris Corner Detection}. 
+    
+    Rotasi citra dilakukan menggunakan metode \emph{Principal Component Analysis} (PCA). 
+    Metode PCA digunakan untuk menentukan arah utama (\emph{principal axis}) dari objek ikan berdasarkan distribusi koordinat piksel objek hasil segmentasi. Sumbu utama tersebut merepresentasikan arah dominan tubuh ikan pada citra. 
+    Sudut rotasi diperoleh dari arah eigenvector utama terhadap sumbu horizontal menggunakan persamaan berikut:
+
+    \begin{equation}
+        \theta = \tan^{-1}\left(\frac{v_y}{v_x}\right)
+    \end{equation}
+    di mana:
+    \begin{itemize}
+        \item \(v_x\) adalah komponen horizontal dari eigenvector utama.
+        \item \(v_y\) adalah komponen vertikal dari eigenvector utama.
+        \item \(\theta\) adalah sudut rotasi yang diperlukan untuk menyelaraskan objek ikan dengan sumbu horizontal.
+    \end{itemize}
+
+    Setelah sudut rotasi diperoleh, citra diputar menggunakan matriks transformasi rotasi sehingga orientasi tubuh ikan menjadi lebih sejajar terhadap sumbu horizontal. Transformasi rotasi dinyatakan mengganakan rumus~\ref{eq:rotasi}
+
 
 
 \section{Menghitung Second Moment Matriks}
@@ -300,26 +246,6 @@ jika keempat titik tersebut digunakan untuk menghitung panjang dan lebar, maka h
     \emph{Bounding box} digunakan untuk membuat titik  sejajar dengan menggunakan nilai x dan y dari titik maksimum dan minimun. Hasil titik tersebut akan menghasil sebuah persegi panjang yang mengelilingi gambar ikan, 
 sehingga panjang dan lebar ikan dapat dihitung dengan lebih akurat, seperti pada gambar~\ref{fig:box}.
 
-\begin{figure}[H]
-        \centering
-    \begin{subfigure}{.3\textwidth}
-        \centering
-        \includegraphics[keepaspectratio, width=4.2cm]{gambar/ikan_mas_1 - Box.jpg}
-        \caption{Ikan Mas}
-    \end{subfigure}
-    \begin{subfigure}{.3\textwidth}
-        \centering
-        \includegraphics[keepaspectratio, width=4.2cm]{gambar/ikan_lele_1 - Box.jpg}
-        \caption{Ikan lele}
-    \end{subfigure} 
-    \begin{subfigure}{.3\textwidth}
-        \centering
-        \includegraphics[keepaspectratio, width=4.2cm]{gambar/ikan_nila_1 - Box.jpg}
-        \caption{Ikan Nila}
-    \end{subfigure}
-    \caption{Contoh hasil gambar yang telah diberi bounding box}\label{fig:box}
-\end{figure}
-
 \subsection{Menghitung Panjang}
 Setelah koordinat \emph{bounding box} diperoleh, langkah selanjutnya adalah menghitung panjang ikan berdasarkan jarak piksel pada citra. 
 Panjang ikan pada citra awalnya masih dalam satuan piksel sehingga diperlukan proses konversi ke satuan centimeter agar hasil pengukuran dapat merepresentasikan ukuran nyata objek ikan.
@@ -390,6 +316,6 @@ Rumus ini merupakan turunan sederhana dari konsep biologis \emph{lenght-weight R
     % Akurasi = \frac{1}{n} \sum_{i=1}^{n} \frac{1}{1 + |E_i|} \cdot 100\%
     Akurasi = (1 - (\frac{Predict - GroudTruth}{GroundTruth})) \cdot 100\%
 \end{equation}
-    Rumus berasal dari MAE (Mean Absolute Error) yang digunakan untuk mengukur seberapa dekat hasil prediksi dengan nilai sebenarnya.
-Setelah itu nilai dinormalisasikan dengan menjadikan bentuk persentase menggunakan MAPE (Mean Absolute Percentage Error), lalu hasil MAPE mengurangi 100\% untuk mendapatkan nilai akurasi. 
+    Rumus berasal dari MAE (\emph{Mean Absolute Error}) yang digunakan untuk mengukur seberapa dekat hasil prediksi dengan nilai sebenarnya.
+Setelah itu nilai dinormalisasikan dengan menjadikan bentuk persentase menggunakan MAPE (\emph{Mean Absolute Percentage Error}), Dengan mengurangi nilai MAE 100\% untuk mendapatkan nilai akurasi. 
  

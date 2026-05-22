@@ -28,6 +28,45 @@ Berikut \emph{Source Code} yang digunakan dalam proses Pra-Processing:
 
 Fungsi \emph{remove} digunakan untuk menghapus background dari gambar dengan menggunakan library \emph{rembg}. Parameter \emph{bgcolor} digunakan untuk menentukan warna background yang akan dihapus, dalam hal ini adalah warna putih dengan nilai RGB (255, 255, 255). Setelah fungsi ini dijalankan, gambar akan memiliki background transparan sehingga memudahkan proses ekstraksi sudut pada citra.
 
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.3\textwidth}
+		\centering
+        \includegraphics[keepaspectratio, width=3cm]{gambar/IMG_20240121_131125.jpg}
+		\caption{Ikan Mas}
+	\end{subfigure}
+	\begin{subfigure}{.3\textwidth}
+		\centering
+		\includegraphics[keepaspectratio, width=3cm]{gambar/IMG_20240121_132544.jpg}
+		\caption{Ikan lele}
+	\end{subfigure} 
+	\begin{subfigure}{.3\textwidth}
+		\centering
+		\includegraphics[keepaspectratio, width=3cm]{gambar/IMG_20240121_140044.jpg}
+		\caption{Ikan Nila Merah}
+	\end{subfigure}
+	\caption{Contoh Gambar dan Jenis Ikan yang Digunakan}\label{fig:dataset}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.3\textwidth}
+		\centering
+        \includegraphics[keepaspectratio, width=3cm]{gambar/IMG_20240121_131125 - Copy.jpg}
+		\caption{Ikan Mas}
+	\end{subfigure}
+	\begin{subfigure}{.3\textwidth}
+		\centering
+		\includegraphics[keepaspectratio, width=3cm]{gambar/IMG_20240121_132544 - Copy.jpg}
+		\caption{Ikan lele}
+	\end{subfigure} 
+	\begin{subfigure}{.3\textwidth}
+		\centering
+		\includegraphics[keepaspectratio, width=3cm]{gambar/IMG_20240121_135842 - Copy.jpg}
+		\caption{Ikan Nila Merah}
+	\end{subfigure}
+	\caption{Contoh hasil gambar yang telah dihilangkan backgroundnya}\label{fig:rembg}
+\end{figure}
 \subsection{Rotasi}
 
 \begin{figure}[H]
@@ -59,6 +98,21 @@ Fungsi \emph{remove} digunakan untuk menghapus background dari gambar dengan men
     Sebelum fungsi rotasi dijalankan, gambar akan melalui proses penghitungan sudut dengan menggunakan harris respon. 
 Sudut hasil dari proses tersebut akan digunakan untuk mencari \emph{pca\_angle} dengan menggunakan fungsi \emph{PCA\_rotate}, lalu hasil dari fungsi tersebut untuk rotasi.
 Setelah rotasi dilakukan dengan fungsi \emph{PCa\_Rotate\_image}, gambar akan memiliki bagian hitam hasil dari rotasi. Maka dari itu, bagian hitam akan di-isi dengan warna putih dengan menambahkan parameter \emph{borderValue} pada fungsi \emph{cv2.warpAffine}.
+
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[keepaspectratio, width=4cm]{gambar/IMG_20240121_131125 - Output.jpg}
+            \caption{Sebelum Rotasi}
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[keepaspectratio, width=4cm]{gambar/IMG_20240121_131125 - rotate.jpg}
+            \caption{Setelah Rotasi}
+        \end{subfigure}
+        \caption{Contoh hasil gambar yang telah dirotasi}\label{fig:rotasi}
+    \end{figure}
 
 \subsection{Smoothing Gaussian}
 
@@ -164,6 +218,26 @@ Sementara itu, bagian tengah tubuh ikan cenderung menghasilkan nilai respon yang
 Hasil Harris response pada tahap ini masih mengandung cukup banyak kandidat titik sudut, termasuk beberapa titik yang muncul akibat noise atau perubahan intensitas kecil pada tubuh ikan. 
 Oleh karena itu, diperlukan proses thresholding dan \emph{Non-Maximum Suppression} (NMS) pada tahap berikutnya untuk menyaring titik sudut sehingga hanya titik sudut paling signifikan yang dipertahankan.
 
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[keepaspectratio, width=4cm]{gambar/ikan_mas_1_Harris.jpg}
+        \caption{Ikan Mas}
+    \end{subfigure}
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[keepaspectratio, width=4cm]{gambar/ikan_lele_induk_1_Harris.jpg}
+        \caption{Ikan lele}
+    \end{subfigure} 
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[keepaspectratio, width=4cm]{gambar/ikan_nila_induk_1_Harris.jpg}
+        \caption{Ikan Nila Merah}
+    \end{subfigure}
+    \caption{Contoh hasil gambar yang telah dilakukan Harris Respon}\label{fig:harris_respon}
+\end{figure}
+
 \section{NMS dan thresholding}
 Setelah nilai Harris response diperoleh, tahap selanjutnya adalah melakukan proses thresholding dan \emph{Non-Maximum Suppression} (NMS). 
 Tahapan ini bertujuan untuk menyaring kandidat titik sudut sehingga hanya titik sudut paling signifikan yang dipertahankan untuk proses selanjutnya.
@@ -201,6 +275,26 @@ Setelah proses thresholding, tahap berikutnya adalah \emph{Non-Maximum Suppressi
 
 Pada proses ini, nilai \emph{Harris response} akan didilatasi menggunakan fungsi \emph{cv2.dilate} untuk menemukan nilai maksimum dalam suatu area lokal.
 kemudian, dibuat sebuah mask yang menunjukan piksel-piksel yang memiliki nilai respon yang sama dengan hasil thresholding. Hasil piksel-piksel tersebulah yang akan digunakan untuk menghitung panjang dan estimasi berat ikan pada tahap selanjutnya.  
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[keepaspectratio, width=4cm]{gambar/ikan_mas_1_NMS.jpg}
+        \caption{Ikan Mas}
+    \end{subfigure}
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[keepaspectratio, width=4cm]{gambar/ikan_lele_induk_1_NMS.jpg}
+        \caption{Ikan lele}
+    \end{subfigure} 
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[keepaspectratio, width=4cm]{gambar/ikan_nila_induk_1_NMS.jpg}
+        \caption{Ikan Nila Merah}
+    \end{subfigure}
+    \caption{Contoh hasil gambar yang telah dilakukan thresholding dan NMS}\label{fig:corner}
+\end{figure}
 
 \section{Menghitung Panjang dan Berat}
 \subsection{Bounding Box}
@@ -243,6 +337,26 @@ Namun, terdapat beberapa kondisi yang dapat mempengaruhi akurasi bounding box, s
     \item Bagian tubuh ikan yang tidak terdeteksi dengan sempurna.
     \item Bentuk tubuh ikan yang tidak simetris.
 \end{itemize}
+
+\begin{figure}[H]
+        \centering
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[keepaspectratio, width=4.2cm]{gambar/ikan_mas_1 - Box.jpg}
+        \caption{Ikan Mas}
+    \end{subfigure}
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[keepaspectratio, width=4.2cm]{gambar/ikan_lele_1 - Box.jpg}
+        \caption{Ikan lele}
+    \end{subfigure} 
+    \begin{subfigure}{.3\textwidth}
+        \centering
+        \includegraphics[keepaspectratio, width=4.2cm]{gambar/ikan_nila_1 - Box.jpg}
+        \caption{Ikan Nila}
+    \end{subfigure}
+    \caption{Contoh hasil gambar yang telah diberi bounding box}\label{fig:box}
+\end{figure}
 
 Kondisi tersebut dapat menyebabkan ukuran bounding box menjadi terlalu besar atau terlalu kecil sehingga mempengaruhi hasil pengukuran panjang ikan pada tahap berikutnya.
 

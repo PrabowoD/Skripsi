@@ -1,0 +1,340 @@
+%!TEX root = ./template-skripsi.tex
+%-------------------------------------------------------------------------------
+%                            	BAB III
+%               		    METODE PENELITIAN
+%-------------------------------------------------------------------------------
+
+\chapter{METODE PENELITIAN}
+
+\section{Alur Penelitian}
+    Pada penelitian ini, metode yang digunakan untuk melakukan penghitungan panjang dan estimasi berat ikan berbasis citra digital adalah dengan menggunakan metode \textit{image processing} dengan algoritma \textit{Harris corner detection}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale= 0.7]{gambar/Alur Penelitian.png}
+    \caption{Alur Penelitian}\label{Alur Penelitian}
+\end{figure}
+
+    Implementasi algoritma bertujuan untuk melakukan pengukuran panjang serta mengestimasi berat ikan berbasis citra digital.
+Sistem yang dikembangkan bekerja dengan memanfaatkan citra ikan yang diambil menggunakan kamera smartphone, kemudian diproses melalui beberapa tahapan pengolahan citra untuk memperoleh informasi panjang dan berat ikan secara otomatis.
+Alur penelitian pada sistem dapat dilihat pada gambar~\ref{Alur Penelitian}. 
+
+Pada penelitian ini, citra ikan diambil dari sudut pandang atas (\emph{top-down view}) dengan jarak pengambilan yang relatif tetap untuk meminimalkan distorsi perspektif. Citra yang diperoleh kemudian digunakan sebagai masukan (\emph{input}) pada sistem.
+Tahapan pertama yang dilakukan adalah \emph{pra-processing} citra yang meliputi penghapusan latar belakang (\emph{background removal}), rotasi citra, dan Gaussian smoothing. Tahapan ini bertujuan untuk mempermudah proses deteksi sudut dengan mengurangi noise dan menyesuaikan orientasi objek ikan.
+
+Setelah tahap \emph{pra-processing}, sistem melakukan perhitungan gradien citra menggunakan operator Sobel untuk memperoleh perubahan intensitas pada arah horizontal dan vertikal. 
+Nilai gradien tersebut kemudian digunakan untuk membentuk \emph{second moment matrix} atau matriks autokorelasi yang menjadi dasar dalam perhitungan nilai respon Harris.
+
+Tahap berikutnya adalah menghitung nilai respon Harris menggunakan matriks autokorelasi. 
+Nilai respon Harris digunakan untuk menentukan kandidat titik sudut (\emph{corner}) pada objek ikan. 
+Piksel dengan nilai respon tinggi menunjukkan adanya perubahan intensitas yang signifikan pada dua arah sehingga dapat dikategorikan sebagai titik sudut.
+
+Hasil respon Harris selanjutnya diproses menggunakan metode \emph{thresholding} dan \emph{Non-Maximum Suppression} (NMS). 
+Tahapan ini bertujuan untuk menyaring titik sudut sehingga hanya titik-titik sudut paling signifikan yang dipertahankan. 
+Titik sudut yang diperoleh kemudian digunakan untuk menentukan koordinat terluar objek ikan.
+
+Koordinat hasil deteksi sudut digunakan untuk membentuk bounding box pada tubuh ikan. 
+\emph{Bounding box} dimanfaatkan untuk memperoleh nilai panjang dan lebar objek ikan berdasarkan koordinat minimum dan maksimum pada sumbu \(x\) dan \(y\). 
+Nilai panjang dalam satuan piksel kemudian dikonversi ke satuan centimeter menggunakan nilai skala yang telah ditentukan sebelumnya.
+
+Setelah panjang ikan diperoleh, tahap selanjutnya adalah melakukan estimasi berat ikan menggunakan pendekatan \emph{Length-Weight Relationship} (LWR). 
+Estimasi berat dilakukan berdasarkan hubungan antara panjang tubuh ikan dan berat aktual ikan yang diperoleh dari data referensi masing-masing jenis ikan.
+
+Tahap terakhir pada penelitian ini adalah evaluasi akurasi sistem. 
+Evaluasi dilakukan dengan membandingkan hasil pengukuran panjang dan estimasi berat ikan terhadap data aktual hasil pengukuran manual. 
+Tingkat akurasi sistem dianalisis menggunakan metode \emph{Mean Absolute Percentage Error} (MAPE) untuk mengetahui tingkat kesalahan sistem dalam melakukan pengukuran panjang dan estimasi berat ikan.
+
+% Penelitian berfokus dalam menghasilkan berupa data hasil panjang dan berat objek ikan. Penggunaan conveyor belt dalam penangkaran ikan bertujuan untuk memudahkan dalam pengambilan citra ikan. Citra ikan diambil menggunakan \emph{Smartphone} pada sebuah penangkaran ikan.
+% Setelah itu citra akan melalui tahapan \emph{pra-processing} untuk mengoptimalkan dalam pendeteksian sudut.
+
+% Sistem pendeteksian sudut Harris-Corner pada penelitian ini diawali dengan tahapan pemrosesan citra yang terstruktur. Citra ikan yang diambil melalui kamera smartphone terlebih dahulu dikonversi ke format grayscale dan diberi Gaussian smoothing guna mengurangi noise. Setelah itu, sistem melakukan perhitungan gradien menggunakan operator Sobel untuk memperoleh nilai gradien arah horizontal \(Ix\) dan vertikal \(Iy\) Nilai gradien ini penting untuk mendeteksi perubahan intensitas piksel pada dua arah utama.
+
+% Hasil gradien kemudian digunakan untuk membentuk matriks momen kedua \(second~moment~matrix\) atau matriks autokorelasi, yang memuat informasi variasi intensitas di sekitar setiap piksel. Matriks ini merepresentasikan struktur lokal citra; daerah dengan kedua nilai eigen besar menandakan keberadaan sudut. Dengan matriks momen kedua ini, sistem menghitung respon Harris menggunakan persamaan \(R = \det(M) - k * {trace(M)}^2\), Nilai R menjadi indikator utama untuk menentukan apakah suatu piksel merupakan sudut \(corner\), tepi, atau area datar.
+
+% Tahapan selanjutnya adalah \(thresholding\) dan \(non-maximum~suppression\) untuk menyaring piksel-piksel dengan respon Harris tertinggi sehingga hanya titik sudut yang paling signifikan yang dipertahankan. Dari titik-titik sudut inilah sistem menghitung jarak \(Euclidean\) antara dua titik terjauh sebagai panjang ikan, kemudian mengestimasi berat ikan berdasarkan data referensi panjang-berat menggunakan regresi interpolasi. Seluruh rangkaian proses ini dirancang agar dapat bekerja otomatis dan efisien dalam mengukur panjang serta estimasi berat ikan secara digital
+
+% Tahapan dalam penghitungan panjang dan estimasi berat ikan menggunakan \emph{Harris-Corner Detection} adalah Pemrosesan Citra, Perhitungan gradien, autokorelasi matriks gradien, \emph{Harris Respons}, melakukan threshold-ing dan \emph{Non-Maximum Suppression}, menentukan koordinat sudut, perhitungan panjang dan lebar, estimasi berat, dan terakhir adalah mengasosiasikan data.
+
+\section{Dataset Penelitian}
+    Dataset yang digunakan dalam penelitian ini berasal dari penangkaran ikan di daerah Bogor. Dataset diambil dengan menggunakan kamera \emph{smartphone} dengan resolusi 12 MP.\@ Gambar diambil pada siang hari dengan pencahayaan alami yang cukup untuk memastikan kualitas gambar yang baik.
+Setiap gambar diambil dari sudut pandang yang konsisten, yaitu \emph{TopDown} dengan jarak 45 centimeter dari Ikan, untuk memastikan bahwa seluruh bagian ikan terlihat jelas dalam gambar. 
+
+Citra ikan kemudian disimpan dalam format JPEG atau PNG dengan resolusi \(4160 \times 1872\) piksel. Seluruh gambar digunakan sebagai \emph{input} dalam sistem penghitungan panjang dan estimasi berat ikan.
+
+Seluruh dataset berjumlah 32 gambar yang terdiri dari tiga jenis ikan yaitu ikan lele, ikan mas, dan ikan nila. Masing-masing jenis ikan memiliki jumlah gambar yang berbeda yaitu 13 gambar untuk ikan lele, 13 gambar untuk ikan nila, dan 6 gambar untuk ikan mas.
+Setiap ikan yang telah diambil gambarnya akan dilakukan pengukuran panjang dan berat secara manual menggunakan alat ukur konvensional untuk mendapatkan data aktual yang akan digunakan sebagai referensi dalam evaluasi sistem. 
+
+Sebelum dilakukan proses pengolahan citra, seluruh gambar melalui tahap \emph{Pra-Processing}. 
+Proses ini bertujuan untuk mempermudah tahapan deteksi sudut menggunakan metode Harris Corner Detection.
+
+\section{Pra-Processing Citra}
+    Pada tahap ini citra ikan akan melalui tiga tahapan penghapusan background, rotasi gambar, dan \emph{smoothing gaussian} untuk memperhalus \emph{feature}.~Tahapan ini bertujuan untuk mempersiapkan citra untuk diproses lebih lanjut, alur \emph{Pra-processing} bisa dilihat pada gambar~\ref{Alur Pra-Processing}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{gambar/Alur Pra-Processing.png}
+    \caption{Alur Pra-Processing}\label{Alur Pra-Processing}
+\end{figure}
+
+% \subsection{Tahap Pengambilan Gambar}
+\subsection{Penghapusan Background}
+
+
+% \subsection{Penghapusan Background}
+    Penghapusan latar belakang dilakukan menggunakan library \textbf{rembg} sebagai tahap \emph{pra-processing} untuk memisahkan objek ikan dari background sehingga proses deteksi sudut dapat dilakukan dengan lebih optimal. 
+Proses penghapusan background dilakukan dengan cara menginput gambar yang akan diproses ke dalam library \emph{rembg}, hasil outputnya berupa gambar yang telah dihilangkan latar belakangnya dan digantikan dengan warna solid putih sebagai latar belakang penggantinya.
+
+%\section{Perancangan Sistem}
+%   Pada bagian ini akan membahas tentang proses yang akan dilakukan untuk mengetahui tahapan yang ditempuh dalam membangun sistem penghitungan berat dan panjang ikan. Tahapan pertama yang dilakukan adalah melakukan \emph{input} gambar
+%yang akan dibaca sistem, setelah itu citra akan diproses menggunakan \emph{Smoothing Gaussian} untuk mengurangi \emph{noise}. Kemudian perhitungan gradien dilakukan bertujuan untuk menghitung setiap perubahan intensitas yang berada di sekitar titik,
+%hasil tersebut akan diolah kembali menggunakan autokorelasi matriks gradien, dan dilanjutkan dengan menjalankan \emph{Harris Respons}.\emph{Harris Respons} bertujuan untuk mengetahui bahwa titik tersebut adalah sebuah sudut, atau sisi berdasarkan pada hasil respon Harris.
+%Hasil dari Harris akan memasuki tahapan thresholding dan \emph{non-maximum suppression} untuk memilih sudut maksimum pada area tertentu. Setelah mendapatkan titik yang merupakan sebuah sudut, titik-titik tersebut akan dipilih.
+%Hasil dari pemilihan tersebut akan digunakan untuk menghitung panjang, lebar, dan berat ikan. Gambaran perancangan sistem yang sederhana terdapat pada gambar~\ref*{Alur Penelitian}
+
+
+%     Pada tahap ini, citra ikan yang akan digunakan sebagai input sistem akan melalui beberapa tahapan pra-processing.
+% Pra-processing bertujuan untuk mempersiapkan citra agar siap untuk diproses lebih lanjut. Langkah-langkah pra-processing yang dilakukan adalah sebagai berikut:
+% \begin{enumerate}
+%     \item Gambar yang akan digunakan berformat jpg atau png, dengan latar belakang yang telah dihilangkan dan digantikan dengan warna solid putih menggunakan library \textbf{rembg}. Jenis dataset dapat dilihat pada Gambar~\ref{fig:dataset}.
+%     \item Proses input citra ke dalam sistem dilakukan menggunakan library \emph{cv2} pada bahasa pemrograman Python.~\emph{cv2} merupakan library open-source yang digunakan untuk pemrosesan citra digital, menyediakan berbagai fungsi seperti pembacaan, konversi, filtering, segmentasi, dan analisis citra secara efisien. Dengan \emph{cv2.imread}, citra dapat dibaca dan diproses lebih lanjut secara efisien.
+%     \item Setelah citra berhasil diinput, langkah selanjutnya adalah konversi ke \emph{grayscale} untuk mempermudah proses pendeteksian sudut agar lebih akurat.
+%     \item Setelah citra dikonversi ke \emph{grayscale}, langkah selanjutnya adalah menerapkan \emph{Gaussian smoothing} untuk mengurangi \emph{noise} pada gambar.
+%     \item Seletah \emph{Gaussian smoothing} diterapkan, citra akan dilakukan rotasi menggunakan 
+% \end{enumerate}
+
+\subsection{Smoothing Gaussian}
+   \emph{Smoothing Gaussian} bertujuan untuk mengurangi \emph{noise} pada gambar sebelum melanjutkan ke perhitungan lebih lanjut.
+\emph{Noise} merupakan sebuah gangguan yang muncul dalam gambar digital yang dapat mengaburkan detail atau informasi penting.~\emph{noise} dapat disebabkan oleh berbagai faktor, seperti kualitas sensor kamera yang rendah, pencahayaan yang buruk, atau kesalahan dalam proses pemindahan data.
+Dalam gambar, \emph{noise} biasanya terlihat sebagai bintik-bintik acak atau intensitas piksel yang tidak diinginkan. Keberadaan \emph{noise} ini dapat menjadi masalah dalam proses pendeteksian sudut, karena \emph{noise} dapat menyebabkan munculnya sudut palsu yang tidak sesuai dengan gambar asli.
+    
+    Langkah pertama dalam \emph{smoothing Gaussian} adalah membentuk \emph{Gaussian kernel}. Pemilihan ukuran kernel sangat berpengaruh terhadap hasil \emph{smoothing}, khususnya pada tingkat kehalusan gambar dan jumlah \emph{noise} yang berkurang.
+Semakin besar kernel yang digunakan, semakin banyak \emph{noise} yang dihilangkan, tetapi hal ini dapat menyebabkan detail gambar ikut terhapus. Sebaliknya, jika kernel yang digunakan berukuran kecil, detail gambar akan lebih terjaga, tetapi \emph{noise} mungkin masih tetap ada.
+Setelah menentukan ukuran kernel yang akan digunakan kernel dapat dihitung dengan menggunakan persamaan~\eqref{eq:gaussian kernel}.
+
+    Langkah selanjutnya adalah mengaplikasikan kernel pada gambar. Proses ini dilakukan dengan menerapkan kernel secara berulang pada setiap piksel di seluruh gambar.
+Namun, sebelum langkah tersebut, gambar perlu di-\emph{padding} terlebih dahulu.~\emph{Padding} adalah proses menambahkan piksel pada tepi gambar sebelum pemrosesan dengan kernel atau model dimulai.
+Tujuan dari \emph{padding} adalah untuk mempertahankan ukuran gambar setelah diterapkannya operasi tertentu, seperti konvolusi. 
+Setelah \emph{padding} diterapkan, konvolusi akan dilakukan dengan menggunakan persamaan~\eqref{eq:konvolusi}. 
+
+\subsection{Rotasi}
+    Rotasi dilakukan untuk menyesuaikan orientasi objek ikan agar posisi tubuh ikan berada sejajar terhadap sumbu horizontal citra. Proses ini bertujuan untuk mempermudah pengukuran panjang ikan serta meningkatkan kestabilan proses deteksi sudut menggunakan metode \emph{Harris Corner Detection}. 
+    
+    Rotasi citra dilakukan menggunakan metode \emph{Principal Component Analysis} (PCA). 
+    Metode PCA digunakan untuk menentukan arah utama (\emph{principal axis}) dari objek ikan berdasarkan distribusi koordinat piksel objek hasil segmentasi. Sumbu utama tersebut merepresentasikan arah dominan tubuh ikan pada citra. 
+    Sudut rotasi diperoleh dari arah eigenvector utama terhadap sumbu horizontal menggunakan persamaan berikut:
+
+    \begin{equation}
+        \theta = \tan^{-1}\left(\frac{v_y}{v_x}\right)
+    \end{equation}
+    di mana:
+    \begin{itemize}
+        \item \(v_x\) adalah komponen horizontal dari eigenvector utama.
+        \item \(v_y\) adalah komponen vertikal dari eigenvector utama.
+        \item \(\theta\) adalah sudut rotasi yang diperlukan untuk menyelaraskan objek ikan dengan sumbu horizontal.
+    \end{itemize}
+
+    Setelah sudut rotasi diperoleh, citra diputar menggunakan matriks transformasi rotasi sehingga orientasi tubuh ikan menjadi lebih sejajar terhadap sumbu horizontal. Transformasi rotasi dinyatakan mengganakan rumus~\ref{eq:rotasi}
+
+\section{Menghitung Gradien}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{gambar/Alur Gradient.png}
+    \caption{Alur Perhitungan Gradien}\label{Alur Perhitungan Gradien}
+\end{figure}
+
+    Gambar yang telah diperhalus akan dilanjutkan dengan menghitung gradien pada setiap \emph{pixel}-nya. Tujuan dari penghitungan gradien adalah untuk mengetahui perubahan intensitas pada setiap piksel, yang pada umumnya akan menujukan tepi atau kontur dalam sebuah gambar.
+Penghitungan gradien juga memerlukan kernel untuk dapat bekerja, terdapat banyak kernel yang dapat digunakan untuk menghitung gradien, contohnya kernel sobel. 
+
+    Kernel Sobel digunakan untuk menghitung estimasi gradien dengan memberikan bobot yang lebih besar pada piksel tetangga terdekat di sekitar piksel pusat.
+Kernel sobel terdiri dari dua matriks \(3 \times 3\), yang bertujuan untuk menghitung gradien pada dua arah yaitu:
+ \begin{itemize}
+    \item \textbf{Gradien Horizontal} \((G_{x})\): Mengukur perubahan intensitas sepanjang sumbu x.
+    \item \textbf{Gradien Vertical} \((G_{y})\): Mengukur perubahan intensitas sepanjang sumbu y.
+\end{itemize}Kernel operator sobel dapat dilihat pada persamaan~\eqref{eq:sobel-kernel}. 
+Perhitungan gradien juga akan menggunakan rumus~\eqref{eq:konvolusi} tetapi gaussian filter akan diganti dengan kernel sobel horizontal (Gx) dan kernel sobel vertical (Gy).
+Maka rumusannya akan seperti berikut:
+\begin{equation}
+    \begin{aligned}
+        G_{x} = S_{x} * I(x)\\ G_{y} = S_{y} * I(x)
+    \end{aligned}
+\end{equation}
+
+
+\section{Menghitung Second Moment Matriks}
+    Setelah hasil dari perhitungan gradien didapatkan, hasil tersebut akan dibuat menjadi matriks kembali dengan rumus~\eqref{eq:SecondMomentMatrix}. Nilai gradien dihitung untuk mendapatkan koefisien matriks autokorelasi. Setelah koefisien didapatkan, koefisien tersebut akan dikonvolusi dengan filter gaussian.
+Hasil dari konvolusi digunakan untuk membentuk matriks \(M\) yang akan digunakan untuk perhitungan selanjutnya. Bentuk dari matriks \(M\) sebagai berikut:
+
+\begin{equation}
+    \begin{aligned}
+        S_{xx} = g(\sigma) * G_{x}^2 \\
+        S_{xy} = g(\sigma) * G_{x} * G_{y} \\
+        S_{yy} = g(\sigma) * G_{y}^2
+    \end{aligned}
+\end{equation}
+
+di mana:
+\begin{itemize}
+    \item \(S_{xx}\) adalah komponen matriks yang merepresentasikan variasi intensitas dalam arah horizontal.
+    \item \(S_{xy}\) adalah komponen matriks yang merepresentasikan korelasi antara perubahan intensitas dalam arah horizontal dan vertikal.
+    \item \(S_{yy}\) adalah komponen matriks yang merepresentasikan variasi intensitas dalam arah vertikal.
+    \item \(g(\sigma)\) adalah fungsi Gaussian dengan parameter \(\sigma\) yang digunakan untuk menghaluskan hasil perhitungan gradien, sehingga mengurangi efek noise pada perhitungan matriks autokorelasi.
+    \item \(*\) adalah operator konvolusi yang digunakan untuk mengaplikasikan fungsi Gaussian pada hasil perhitungan gradien.
+\end{itemize} 
+Ketiga komponen tersebut kemudian digunakan untuk membentuk second moment matrix \(M\) sebagai berikut:
+
+\begin{equation}
+    M = 
+    \begin{bmatrix}
+        S_{xx} & S_{xy} \\
+        S_{xy} & S_{yy}
+    \end{bmatrix} 
+\end{equation}
+
+\section{Harris Respon}
+    Matriks \(M\) digunakan untuk menghitung respon Harris, menggunakan rumus Harris yaitu:
+\begin{equation}
+    R(x,y) = Det(M) - k * {trace(M)}^2
+\end{equation}
+Dimana \(Det(M)\):
+\begin{equation*}
+    Det(M) = S_{xx} * S_{yy} - S_{xy}^2
+\end{equation*}
+Dan \(trace(M)\) 
+\begin{equation*}
+    trace(M) = S_{xx} + S_{yy}
+\end{equation*}
+
+    Dimana \(k = 0.04\). Penggunaan \emph{Harris-Corner Detection} bertujuan untuk menandai bahwa piksel tersebut adalah sudut atau tidak.
+
+    Nilai respon Harris (\(R\)) menunjukkan seberapa besar kemungkinan suatu piksel merupakan titik sudut pada citra. Jika nilai \(R\) besar dan positif, maka area tersebut memiliki perubahan intensitas yang signifikan ke segala arah dan kemungkinan merupakan sudut (\emph{corner}). Jika nilai \(R\) kecil atau negatif, maka area tersebut cenderung merupakan tepi atau bagian datar. Dengan demikian, perhitungan respon Harris sangat penting untuk membedakan antara sudut, tepi, dan area datar pada citra, sehingga hanya titik-titik yang benar-benar merupakan sudut yang akan dipilih untuk proses selanjutnya.
+
+\section{Thresholding dan \emph{Non-Maximum suppression}}
+    Setelah nilai harris didapatkan tahapan langkah selanjutnya adalah melakukan Thresholding.
+Thresholding adalah cara untuk memilih hasil deteksi dengan cara menetapkan nilai ambang batas.
+Jika nilai harris melebihi dari ambang batas, maka piksel tersebut akan dianggap sebagai potensial sudut kuat, Sebaliknya jika nilai harris lebih kecil maka piksel tersebut akan diabaikan.
+Tujuannya supaya mengurangi piksel yang perlu diproses lebih lanjut.
+\begin{equation}
+    Corner(x,y) = 
+    \begin{cases}  
+        1 & \text{jika } R(x,y) > T \\ 
+        0 & \text{jika } R(x,y) <= T
+    \end{cases}
+\end{equation}
+
+    Setelah melewati Thresholding, setiap piksel yang telah lolos akan diperiksa kembali dengan \emph{Non-Maximum Suppression} atau NMS,
+NMS bertujuan untuk mengelola kembali piksel yang saling berdekatan satu sama lain. NMS akan memilih piksel pada rentang tertentu, piksel dengan nilai \(R\) terbesar akan terpilih sebagai puncak lokal dan dipertahankan sebagai sudut, dan yang lainnya akan diabaikan.
+\begin{equation*}
+    NMS(x,y) =
+    \begin{cases}
+        1 & \text{jika } R(x,y) = MaxLocal R(i,j) \\
+        0 & \text{lainnya }
+    \end{cases}
+\end{equation*}
+Dimana \emph{MaxLocal} \(R(i,j)\) adalah nilai maksimum yang berada di sekitar piksel \((x,y)\).
+
+\section{Penghitungan panjang dan Estimasi berat}
+    Setelah sudut-sudut hasil Thresholding dan NMS diperoleh, langkah selanjutnya adalah memilih piksel-piksel yang akan digunakan sebagai acuan pengukuran panjang dan lebar ikan. 
+Pemilihan titik sudut didasarkan pada titik maksimum dan minimum pada setiap sumbu, sehingga diperoleh titik yang mewakili bagian-bagian utama tubuh ikan, seperti ujung kepala (mulut), ujung ekor, sirip atas, dan bagian bawah perut.
+
+    Proses pemilihan dilakukan dengan cara mencari titik maksimum dan minimum pada sumbu (x) dan sumbu (y) dengan menggunakan library \emph{numpy}. Keseluruhan alur penghitungan panjang dan estimasi berat dapat dilihat pada gambar~\ref{Alur Panjang dan Berat}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{gambar/Alur Penghitungan panjang dan Estimasi Berat.png}
+    \caption{Alur Penghitungan Panjang dan Estimasi Berat}\label{Alur Panjang dan Berat}
+\end{figure}
+
+    %     Proses pemilihan dilakukan dengan cara mencari pasangan titik sudut yang memiliki jarak Euclidean terjauh satu sama lain. Rumus jarak Euclidean antara dua titik \((x_1, y_1)\) dan \((x_2, y_2)\) adalah:
+% \begin{equation}
+%     d = \sqrt({x_2 - x_1}^2 + {y_2 - y_1}^2)
+% \end{equation}
+
+%     Langkah-langkah pemilihan titik adalah sebagai berikut:
+% \begin{enumerate}
+%     \item Hitung jarak Euclidean untuk setiap pasangan titik sudut yang terdeteksi.
+%     \item Pilih dua titik dengan jarak maksimum sebagai titik ujung (biasanya mewakili mulut dan ekor ikan).
+%     \item Untuk menentukan titik sirip atas dan bawah, cari dua titik lain yang memiliki jarak maksimum secara vertikal terhadap garis yang menghubungkan dua titik utama (mulut dan ekor).
+% \end{enumerate}
+
+%     Dengan pendekatan ini, pemilihan titik menjadi lebih objektif dan akurat karena didasarkan pada distribusi spasial sudut-sudut hasil deteksi, bukan hanya pada posisi relatif secara manual. Jika jenis ikan memiliki morfologi khusus (misal ikan lele), penyesuaian dapat dilakukan dengan memilih titik-titik yang relevan sesuai bentuk tubuh ikan.
+\subsection{Bounding Box}
+    Penggunaan \emph{bounding box} untuk mempermudah penghitungan panajang dan lebar ikan. Hasil dari pemilihan titik masih berbentuk koordinat pada sumbunya, 
+jika keempat titik tersebut digunakan untuk menghitung panjang dan lebar, maka hasilnya akan tidak akurat karena titik-titik tersebut tidak sejajar satu sama lain pada sumbu masing-masing.
+
+    \emph{Bounding box} digunakan untuk membuat titik  sejajar dengan menggunakan nilai x dan y dari titik maksimum dan minimun. Hasil titik tersebut akan menghasil sebuah persegi panjang yang mengelilingi gambar ikan, 
+sehingga panjang dan lebar ikan dapat dihitung dengan lebih akurat, seperti pada gambar~\ref{fig:box}.
+
+\subsection{Menghitung Panjang}
+Setelah koordinat \emph{bounding box} diperoleh, langkah selanjutnya adalah menghitung panjang ikan berdasarkan jarak piksel pada citra. 
+Panjang ikan pada citra awalnya masih dalam satuan piksel sehingga diperlukan proses konversi ke satuan centimeter agar hasil pengukuran dapat merepresentasikan ukuran nyata objek ikan.
+
+Konversi piksel ke centimeter dilakukan menggunakan nilai skala (\emph{scale factor}). 
+Nilai skala diperoleh berdasarkan perbandingan antara ukuran objek referensi pada dunia nyata dengan ukuran objek tersebut pada citra digital. 
+Pada penelitian ini, nilai skala ditentukan berdasarkan jarak pengambilan gambar yang dibuat tetap, yaitu sekitar 45 cm antara kamera dan objek ikan, sehingga perbandingan ukuran piksel terhadap ukuran nyata dapat diasumsikan konstan.
+
+nilai skala dapat dihitung dengan menggunakan rumus berikut:
+\begin{equation*}
+    Skala = \frac{\text{Ukuran nyata (cm)}}{\text{Ukuran pada gambar (piksel)}}
+\end{equation*}
+setelah nilai skala diperoleh, panjang ikan dalam satuan nyata dapat dihitung dengan menggunakan rumus berikut:
+\begin{equation}
+    Panjang\ Nyata = d \times Skala
+\end{equation}
+    Dimana \(d\) adalah jarak antar 2 titik sejajar pada bounding box.
+
+\subsection{Melakukan Proyeksi Perspektif}
+    Proyeksi perspektif digunakan untuk mengoreksi distorsi yang terjadi pada gambar akibat sudut pengambilan gambar yang tidak sejajar dengan objek. Proyeksi perspektif bertujuan untuk mengubah citra sehingga tampak seolah-olah diambil dari sudut pandang yang lebih langsung, sehingga panjang dan lebar ikan dapat dihitung dengan lebih akurat. Berikut adalah rumus-nya:
+
+    \begin{equation*}
+        x' = \frac{panjang\ nyata}{panjang\ deteksi} \times panjang\ nyata
+    \end{equation*}
+    \begin{equation*}
+        y' = \frac{panjang\ nyata}{panjang\ deteksi} \times lebar\ nyata
+    \end{equation*}
+
+    Dimana \(x'\) dan \(y'\) adalah panjang dan lebar ikan yang telah dikoreksi dengan proyeksi perspektif dan akan digunakan untuk estimasi berat ikan pada tahap selanjutnya. 
+
+\subsection{Mengestimasi Berat}
+Setelah panjang ikan dalam satuan nyata diketahui, estimasi berat ikan dilakukan dengan cara melakukan perkalian antara keliling ikan dengan berat rata per keliling ikan.
+rata-rata berat per keliling ikan diperoleh dari data referensi yang telah diambil sebelumnya. Data referensi tersebut berisi informasi panjang, lebar, dan berat ikan. 
+% \begin{equation*}
+%     Luas\ Ikan = Panjang\ Ikan * Lebar\ Ikan
+% \end{equation*}
+\begin{equation}
+    W = k \times A
+\end{equation}
+
+Dimana:
+\begin{itemize}
+    \item $W$ = berat ikan,
+    \item $k$ = koefisien regresi (berat per satuan luas),
+    \item $A$ = luas ikan.
+\end{itemize}
+
+Rumus ini merupakan turunan sederhana dari konsep biologis \emph{lenght-weight Relationship} atau disingkat LWR, yang menyatakan bahwa berat ikan berbanding lurus dengan pangkat tertentu dari panjangnya. 
+
+%      Setelah panjang ikan dalam satuan nyata diketahui, estimasi berat ikan dapat dilakukan menggunakan rumus interpolasi linier berdasarkan data panjang dan berat ikan yang telah diketahui sebelumnya. Rumus interpolasi linier yang digunakan adalah:
+% \begin{equation}
+%     W_n = W_x + \frac{(L_n - L_x)}{(L_y - L_x)} \times (W_y - W_x)
+% \end{equation}
+%     di mana:
+% \begin{itemize}
+%     \item \(W_n\) = berat ikan yang dicari,
+%     \item \(L_n\) = panjang ikan hasil pengukuran,
+%     \item \(L_x\) dan \(L_y\) = panjang ikan pada data referensi sebelum dan sesudah,
+%     \item \(W_x\) dan \(W_y\) = berat ikan pada data referensi sebelum dan sesudah.
+% \end{itemize}
+
+    % Dengan metode ini, sistem dapat menghitung panjang dan mengestimasi berat ikan secara otomatis dari citra digital, sehingga proses pengukuran menjadi lebih efisien, dan minim kontak langsung dengan ikan.
+
+\section{Evaluasi Akurasi}
+    Setelah sistem selesai melakukan pengukuran panjang dan berat ikan, langkah terakhir adalah mengevaluasi akurasi hasil pengukuran. Evaluasi dilakukan dengan membandingkan hasil pengukuran sistem dengan data referensi yang telah diketahui sebelumnya. 
+    Akurasi dihitung menggunakan rumus:
+\begin{equation}
+    % Akurasi = \frac{1}{n} \sum_{i=1}^{n} \frac{1}{1 + |E_i|} \cdot 100\%
+    Akurasi = (1 - (\frac{Predict - GroudTruth}{GroundTruth})) \cdot 100\%
+\end{equation}
+    Rumus berasal dari MAE (\emph{Mean Absolute Error}) yang digunakan untuk mengukur seberapa dekat hasil prediksi dengan nilai sebenarnya.
+Setelah itu nilai dinormalisasikan dengan menjadikan bentuk persentase menggunakan MAPE (\emph{Mean Absolute Percentage Error}), Dengan mengurangi nilai MAE 100\% untuk mendapatkan nilai akurasi. 
+ 
