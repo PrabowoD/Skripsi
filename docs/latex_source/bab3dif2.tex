@@ -7,7 +7,7 @@
 \chapter{METODE PENELITIAN}
 
 \section{Alur Penelitian}
-    Pada penelitian ini, metode yang digunakan untuk melakukan penghitungan panjang dan estimasi berat ikan berbasis citra digital adalah dengan menggunakan metode \textit{image processing} dengan algoritma \textit{Harris corner detection}.
+    Pada penelitian ini, metode yang digunakan untuk melakukan penghitungan panjang dan estimasi berat ikan berbasis citra digital adalah dengan menggunakan metode \textit{image processing} dengan algoritma \textit{Harris corner detection} dan \emph{Length-Weight Relationship}.
 
 \begin{figure}[H]
     \centering
@@ -68,7 +68,7 @@ Sebelum dilakukan proses pengolahan citra, seluruh gambar melalui tahap \emph{Pr
 Proses ini bertujuan untuk mempermudah tahapan deteksi sudut menggunakan metode Harris Corner Detection.
 
 \section{Pra-Processing Citra}
-    Pada tahap ini citra ikan akan melalui tiga tahapan penghapusan background, rotasi gambar, dan \emph{smoothing gaussian} untuk memperhalus \emph{feature}.~Tahapan ini bertujuan untuk mempersiapkan citra untuk diproses lebih lanjut, alur \emph{Pra-processing} bisa dilihat pada gambar~\ref{Alur Pra-Processing}.
+    Pada tahap ini citra ikan akan melalui tiga tahapan penghapusan background, rotasi gambar, dan \emph{smoothing gaussian} untuk memperhalus \emph{feature}.~Tahapan ini bertujuan untuk mempersiapkan citra untuk diproses lebih lanjut, alur \emph{pra-processing} bisa dilihat pada gambar~\ref{Alur Pra-Processing}.
 
 \begin{figure}[H]
     \centering
@@ -81,7 +81,7 @@ Proses ini bertujuan untuk mempermudah tahapan deteksi sudut menggunakan metode 
 
 
 % \subsection{Penghapusan Background}
-    Penghapusan latar belakang dilakukan menggunakan library \textbf{rembg} sebagai tahap \emph{pra-processing} untuk memisahkan objek ikan dari background sehingga proses deteksi sudut dapat dilakukan dengan lebih optimal. 
+    Penghapusan latar belakang dilakukan menggunakan library \textbf{rembg} sebagai tahap \emph{Pra-processing} untuk memisahkan objek ikan dari background sehingga proses deteksi sudut dapat dilakukan dengan lebih optimal. 
 Proses penghapusan background dilakukan dengan cara menginput gambar yang akan diproses ke dalam library \emph{rembg}, hasil outputnya berupa gambar yang telah dihilangkan latar belakangnya dan digantikan dengan warna solid putih sebagai latar belakang penggantinya.
 
 %\section{Perancangan Sistem}
@@ -109,7 +109,7 @@ Dalam gambar, \emph{noise} biasanya terlihat sebagai bintik-bintik acak atau int
     
     Langkah pertama dalam \emph{smoothing Gaussian} adalah membentuk \emph{Gaussian kernel}. Pemilihan ukuran kernel sangat berpengaruh terhadap hasil \emph{smoothing}, khususnya pada tingkat kehalusan gambar dan jumlah \emph{noise} yang berkurang.
 Semakin besar kernel yang digunakan, semakin banyak \emph{noise} yang dihilangkan, tetapi hal ini dapat menyebabkan detail gambar ikut terhapus. Sebaliknya, jika kernel yang digunakan berukuran kecil, detail gambar akan lebih terjaga, tetapi \emph{noise} mungkin masih tetap ada.
-Setelah menentukan ukuran kernel yang akan digunakan kernel dapat dihitung dengan menggunakan persamaan~\eqref{eq:gaussian kernel}.
+Maka dari itu ukuran kernel yang akan digunakan adalah \(3 \times 3\), setelah menentukan ukuran kernel yang akan digunakan kernel dapat dihitung dengan menggunakan persamaan~\eqref{eq:gaussian kernel}.
 
     Langkah selanjutnya adalah mengaplikasikan kernel pada gambar. Proses ini dilakukan dengan menerapkan kernel secara berulang pada setiap piksel di seluruh gambar.
 Namun, sebelum langkah tersebut, gambar perlu di-\emph{padding} terlebih dahulu.~\emph{Padding} adalah proses menambahkan piksel pada tepi gambar sebelum pemrosesan dengan kernel atau model dimulai.
@@ -133,7 +133,15 @@ Setelah \emph{padding} diterapkan, konvolusi akan dilakukan dengan menggunakan p
         \item \(\theta\) adalah sudut rotasi yang diperlukan untuk menyelaraskan objek ikan dengan sumbu horizontal.
     \end{itemize}
 
-    Setelah sudut rotasi diperoleh, citra diputar menggunakan matriks transformasi rotasi sehingga orientasi tubuh ikan menjadi lebih sejajar terhadap sumbu horizontal. Transformasi rotasi dinyatakan mengganakan rumus~\ref{eq:rotasi}
+    Setelah sudut rotasi diperoleh, citra diputar menggunakan matriks transformasi rotasi sehingga orientasi tubuh ikan menjadi lebih sejajar terhadap sumbu horizontal. Transformasi rotasi dinyatakan mengganakan rumus~\ref{eq:rotasi}.
+
+Setelah semua proses \emph{Pre-Processing} selesai, citra siap untuk diproses lebih lanjut dengan metode \emph{Harris Corner Detection} untuk mendeteksi titik-titik sudut pada objek ikan, Alur pendeteksian sudut dapat dilihat pada gambar~\ref{Alur Harris}.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{gambar/Alur Harris.png}
+    \caption{Alur Deteksi Sudut Harris}\label{Alur Harris}
+\end{figure}
 
 \section{Menghitung Gradien}
 
@@ -144,7 +152,7 @@ Setelah \emph{padding} diterapkan, konvolusi akan dilakukan dengan menggunakan p
 \end{figure}
 
     Gambar yang telah diperhalus akan dilanjutkan dengan menghitung gradien pada setiap \emph{pixel}-nya. Tujuan dari penghitungan gradien adalah untuk mengetahui perubahan intensitas pada setiap piksel, yang pada umumnya akan menujukan tepi atau kontur dalam sebuah gambar.
-Penghitungan gradien juga memerlukan kernel untuk dapat bekerja, terdapat banyak kernel yang dapat digunakan untuk menghitung gradien, contohnya kernel sobel. 
+Penghitungan gradien juga memerlukan kernel untuk dapat bekerja, terdapat banyak kernel yang dapat digunakan untuk menghitung gradien, contohnya kernel sobel. Alur Penghitungan gradien dapat dilihat pada gambar~\ref{Alur Perhitungan Gradien}
 
     Kernel Sobel digunakan untuk menghitung estimasi gradien dengan memberikan bobot yang lebih besar pada piksel tetangga terdekat di sekitar piksel pusat.
 Kernel sobel terdiri dari dua matriks \(3 \times 3\), yang bertujuan untuk menghitung gradien pada dua arah yaitu:
@@ -262,6 +270,7 @@ Pemilihan titik sudut didasarkan pada titik maksimum dan minimum pada setiap sum
     Penggunaan \emph{bounding box} untuk mempermudah penghitungan panajang dan lebar ikan. Hasil dari pemilihan titik masih berbentuk koordinat pada sumbunya, 
 jika keempat titik tersebut digunakan untuk menghitung panjang dan lebar, maka hasilnya akan tidak akurat karena titik-titik tersebut tidak sejajar satu sama lain pada sumbu masing-masing.
 
+%    Dengan hanya mengambil nilai maksimum dan minimum dari titik-titik tersebut, dan membentuk sebuah \emph{bounding box} yang mengelilingi objek ikan, maka titik-titik tersebut akan sejajar dengan sumbu masing-masing, sehingga panjang dan lebar ikan dapat dihitung dengan lebih akurat.
     \emph{Bounding box} digunakan untuk membuat titik  sejajar dengan menggunakan nilai x dan y dari titik maksimum dan minimun. Hasil titik tersebut akan menghasil sebuah persegi panjang yang mengelilingi gambar ikan, 
 sehingga panjang dan lebar ikan dapat dihitung dengan lebih akurat, seperti pada gambar~\ref{fig:box}.
 
@@ -277,11 +286,12 @@ nilai skala dapat dihitung dengan menggunakan rumus berikut:
 \begin{equation*}
     Skala = \frac{\text{Ukuran nyata (cm)}}{\text{Ukuran pada gambar (piksel)}}
 \end{equation*}
-setelah nilai skala diperoleh, panjang ikan dalam satuan nyata dapat dihitung dengan menggunakan rumus berikut:
+Skala didapatkan dengan cara mengukur panjang objek referensi yang diketahui pada citra digital (dalam piksel) dan membandingkannya dengan ukuran sebenarnya dari objek tersebut dalam satuan centimeter.
+Setelah nilai skala diperoleh, panjang ikan dalam satuan nyata dapat dihitung dengan menggunakan rumus berikut:
 \begin{equation}
     Panjang\ Nyata = d \times Skala
 \end{equation}
-    Dimana \(d\) adalah jarak antar 2 titik sejajar pada bounding box.
+    Dimana \(d\) adalah jarak antar 2 titik sejajar pada bounding box, titik sejajar pada bounding box dibentuk dengan cara mengambil nilai maksimum dan minimum dari hasil deteksi.
 
 \subsection{Melakukan Proyeksi Perspektif}
     Proyeksi perspektif digunakan untuk mengoreksi distorsi yang terjadi pada gambar akibat sudut pengambilan gambar yang tidak sejajar dengan objek. Proyeksi perspektif bertujuan untuk mengubah citra sehingga tampak seolah-olah diambil dari sudut pandang yang lebih langsung, sehingga panjang dan lebar ikan dapat dihitung dengan lebih akurat. Berikut adalah rumus-nya:
@@ -312,7 +322,7 @@ Dimana:
     \item $A$ = luas ikan.
 \end{itemize}
 
-Rumus ini merupakan turunan sederhana dari konsep biologis \emph{lenght-weight Relationship} atau disingkat LWR, yang menyatakan bahwa berat ikan berbanding lurus dengan pangkat tertentu dari panjangnya. 
+Rumus ini merupakan turunan sederhana dari konsep biologis \emph{length-weight Relationship} atau disingkat LWR, yang menyatakan bahwa berat ikan berbanding lurus dengan pangkat tertentu dari panjangnya. 
 
 %      Setelah panjang ikan dalam satuan nyata diketahui, estimasi berat ikan dapat dilakukan menggunakan rumus interpolasi linier berdasarkan data panjang dan berat ikan yang telah diketahui sebelumnya. Rumus interpolasi linier yang digunakan adalah:
 % \begin{equation}

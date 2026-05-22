@@ -144,8 +144,14 @@ Maka rumusannya akan seperti berikut:
         \item \(\theta\) adalah sudut rotasi yang diperlukan untuk menyelaraskan objek ikan dengan sumbu horizontal.
     \end{itemize}
 
-    Setelah sudut rotasi diperoleh, citra diputar menggunakan matriks transformasi rotasi sehingga orientasi tubuh ikan menjadi lebih sejajar terhadap sumbu horizontal. Transformasi rotasi dinyatakan mengganakan rumus~\ref{eq:rotasi}
+    Setelah sudut rotasi diperoleh, citra diputar menggunakan matriks transformasi rotasi sehingga orientasi tubuh ikan menjadi lebih sejajar terhadap sumbu horizontal. Transformasi rotasi dinyatakan mengganakan rumus~\ref{eq:rotasi}.
+Setelah semua proses \emph{Pre-Processing} selesai, citra siap untuk diproses lebih lanjut dengan metode \emph{Harris Corner Detection} untuk mendeteksi titik-titik sudut pada objek ikan, Alur pendeteksian sudut dapat dilihat pada gambar~\ref{Alur Harris}.
 
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{gambar/Alur Harris.png}
+    \caption{Alur Deteksi Sudut Harris}\label{Alur Harris}
+\end{figure}
 
 
 \section{Menghitung Second Moment Matriks}
