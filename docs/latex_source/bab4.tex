@@ -15,9 +15,9 @@
     \caption{Gambar yang akan digunakan dalam penelitian}\label{fig:folder-ikan}
 \end{figure}
 
-Langkah pertama yang dilakukan dalam penelitian adalah dengan memasukan \emph{dataset} untuk dilakukan Pra-processing. Dalam hal ini, gambar akan diberikan nama sesuai dengan jenis ikan, yaitu Ikan Mas, Ikan Lele, dan Ikan Nila.
-Pra-processing dilakukan untuk memudahkan proses ektraksi sudut pada citra. Pra-processing terbagi menjadi beberapa tahapan, yaitu penghilangan background, rotasi citra berdasarkan sudut PCA, dan smoothing citra dengan Gaussian blur.
-Berikut \emph{Source Code} yang digunakan dalam proses Pra-Processing:
+Langkah pertama yang dilakukan dalam penelitian adalah dengan memasukan \emph{dataset} untuk dilakukan \emph{pra-processing}. Dalam hal ini, gambar akan diberikan nama sesuai dengan jenis ikan, yaitu Ikan Mas, Ikan Lele, dan Ikan Nila.
+\emph{pra-processing} dilakukan untuk memudahkan proses ektraksi sudut pada citra. \emph{pra-processing} terbagi menjadi beberapa tahapan, yaitu penghilangan background, rotasi citra berdasarkan sudut PCA, dan smoothing citra dengan Gaussian blur.
+Berikut \emph{Source Code} yang digunakan dalam proses penghapusan background:
 
 \begin{figure}[H]
     \begin{lstlisting}[language=Python, basicstyle=\tiny]
@@ -448,7 +448,7 @@ fungsi \emph{transform\_size} digunakan untuk melakukan proyeksi perspektif deng
             else:
                     break
     \end{lstlisting}
-    \caption{\emph{source code}: Untuk mengEstimasi berat ikan berdasarkan Rumus turunan \emph{Lenght-Weight Relationship}}
+    \caption{\emph{source code}: Untuk mengestimasi berat ikan berdasarkan Rumus turunan \emph{Length-Weight Relationship}}
     
 \end{figure}
 

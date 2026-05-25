@@ -37,7 +37,7 @@ Adapun metode \emph{Visual-Weight Relationship} (VWR) yang juga dapat digunakan 
 Beberapa penelitian sebelumnya telah menerapkan pengolahan citra dalam bidang perikanan, seperti penggunaan metode \emph{Gaussian Mixture Model} (GMM) dan \emph{Kalman Filter} untuk pelacakan gerakan ikan (Alim,2021), 
 serta metode \emph{GrabCut} untuk pemisahan objek ikan dari latar belakang (Nugraha, 2022). Namun, penelitian tersebut umumnya hanya berfokus pada deteksi keberadaan atau pelacakan ikan, dan belum secara khusus melakukan pengukuran panjang dan estimasi berat ikan.
 
-Berdasarkan permasalahan tersebut, diusulkan metode \emph{Harris-Corner Detection} dan \emph{Visual-Weight Relationship} untuk mengukur panjang dan mengestimasi berat ikan secara otomatis dari citra digital.
+Berdasarkan permasalahan tersebut, diusulkan metode \emph{Harris-Corner Detection} dan \emph{Length-Weight Relationship} untuk mengukur panjang dan mengestimasi berat ikan secara otomatis dari citra digital.
 Penelitian ini diharapkan mampu untuk mendeteksi titik-titik sudut penting pada citra ikan, sehingga dapat mengukur panjang serta mengestimasi berat ikan secara otomatis.
 
 % Di sisi lain, metode seperti SIFT (\emph{Scale Invariant Feature Transform}) (\cite{Lowe2004}) memang kuat terhadap perubahan skala dan rotasi, namun proses perhitungannya relatif kompleks dan memerlukan waktu komputasi lebih tinggi. Untuk kasus estimasi bentuk linear seperti panjang dan lebar, pendekatan berbasis deteksi sudut seperti \emph{Harris-Corner Detection} terbukti lebih efisien dan akurat dalam mendeteksi titik-titik sudut penting pada citra (\cite{Harris2013}).\emph{Harris-Corner Detection} memberikan kestabilan terhadap rotasi dan noise lokal serta memiliki struktur komputasi yang lebih ringan dibanding SIFT, sehingga cocok untuk diterapkan dalam sistem real-time atau perangkat keras terbatas.
@@ -45,7 +45,7 @@ Penelitian ini diharapkan mampu untuk mendeteksi titik-titik sudut penting pada 
 % Oleh karena itu, penelitian ini bertujuan untuk membangun sistem pengukuran panjang dan estimasi berat ikan berbasis citra digital menggunakan metode \emph{Harris-Corner Detection}. Diharapkan sistem ini dapat membantu pembudidaya ikan dalam melakukan monitoring pertumbuhan ikan secara efisien dan akurat, serta mendukung pengambilan keputusan dalam manajemen budidaya.
 
 \section{Rumusan Masalah}
-Berdasarkan pemaparan masalah di atas, perumusan masalah dalam penelitian ini adalah \textbf{“Bagaimana cara implementasi metode \emph{Harris-Corner Detection} untuk mengukur panjang dan berat ikan?"}%mengukur panjang serta mengestimasi berat ikan menggunakan metode \emph{Harris-Corner Detection}?”}
+Berdasarkan pemaparan masalah di atas, perumusan masalah dalam penelitian ini adalah \textbf{“Bagaimana cara implementasi metode \emph{Harris-Corner Detection} dan \emph{Length-Weight Relationship} untuk mengukur panjang dan estimasi berat ikan?"}%mengukur panjang serta mengestimasi berat ikan menggunakan metode \emph{Harris-Corner Detection}?”}
 
 \section{Batasan Masalah}
 \begin{enumerate}
@@ -60,7 +60,7 @@ Berdasarkan pemaparan masalah di atas, perumusan masalah dalam penelitian ini ad
 \end{enumerate}
 	
 \section{Tujuan Penelitian}
-Tujuan dari penelitian ini adalah untuk implemntasi algoritma \emph{Harris-Corner} dan \emph{Length-Weight Relationship} untuk menghitung panjang dan estimasi berat Ikan.
+Tujuan dari penelitian ini adalah untuk mengimplemntasi metode \emph{Harris-Corner} untuk menghitung panjang ikan dan \emph{Length-Weight Relationship} untuk estimasi berat ikan berbasis citra digital.
 
 \section{Manfaat Penelitian}
 \begin{enumerate}
