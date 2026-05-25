@@ -440,6 +440,8 @@ INPUT .\gambar\harris_corner_detection_example.jpg
 INPUT .\gambar\harris_corner_detection_example.jpg
 INPUT .\gambar\harris_corner_detection_example.jpg
 INPUT .\gambar\harris_corner_detection_example.jpg
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT .\gambar\opencv_rotate_header.png
 INPUT .\gambar\opencv_rotate_header.png
 INPUT .\gambar\opencv_rotate_header.png
@@ -481,8 +483,6 @@ INPUT .\gambar\Alur Gradient.png
 INPUT .\gambar\Alur Gradient.png
 INPUT .\gambar\Alur Gradient.png
 INPUT .\gambar\Alur Gradient.png
-INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
-INPUT C:\Users\USER\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
 INPUT .\gambar\Alur Penghitungan panjang dan Estimasi Berat.png
 INPUT .\gambar\Alur Penghitungan panjang dan Estimasi Berat.png
 INPUT .\gambar\Alur Penghitungan panjang dan Estimasi Berat.png

@@ -161,7 +161,7 @@ Maka rumusannya akan seperti berikut:
 \end{equation}
 
 
-\section{Menghitung Second Moment Matriks}
+\section{Menghitung \emph{Second Moment Matrix}}
     Setelah hasil dari perhitungan gradien didapatkan, hasil tersebut akan dibuat menjadi matriks kembali dengan rumus~\eqref{eq:SecondMomentMatrix}. Nilai gradien dihitung untuk mendapatkan koefisien matriks autokorelasi. Setelah koefisien didapatkan, koefisien tersebut akan dikonvolusi dengan filter gaussian.
 Hasil dari konvolusi digunakan untuk membentuk matriks \(M\) yang akan digunakan untuk perhitungan selanjutnya. Bentuk dari matriks \(M\) sebagai berikut:
 
@@ -191,7 +191,7 @@ Ketiga komponen tersebut kemudian digunakan untuk membentuk second moment matrix
     \end{bmatrix} 
 \end{equation}
 
-\section{Harris Respon}
+\section{\emph{Harris Response}}
     Matriks \(M\) digunakan untuk menghitung respon Harris, menggunakan rumus Harris yaitu:
 \begin{equation}
     R(x,y) = Det(M) - k * {trace(M)}^2
@@ -209,32 +209,18 @@ Dan \(trace(M)\)
 
     Nilai respon Harris (\(R\)) menunjukkan seberapa besar kemungkinan suatu piksel merupakan titik sudut pada citra. Jika nilai \(R\) besar dan positif, maka area tersebut memiliki perubahan intensitas yang signifikan ke segala arah dan kemungkinan merupakan sudut (\emph{corner}). Jika nilai \(R\) kecil atau negatif, maka area tersebut cenderung merupakan tepi atau bagian datar. Dengan demikian, perhitungan respon Harris sangat penting untuk membedakan antara sudut, tepi, dan area datar pada citra, sehingga hanya titik-titik yang benar-benar merupakan sudut yang akan dipilih untuk proses selanjutnya.
 
-\section{Thresholding dan \emph{Non-Maximum suppression}}
+\section{\emph{Thresholding} dan \emph{Non-Maximum suppression}}
     Setelah nilai harris didapatkan tahapan langkah selanjutnya adalah melakukan Thresholding.
 Thresholding adalah cara untuk memilih hasil deteksi dengan cara menetapkan nilai ambang batas.
 Jika nilai harris melebihi dari ambang batas, maka piksel tersebut akan dianggap sebagai potensial sudut kuat, Sebaliknya jika nilai harris lebih kecil maka piksel tersebut akan diabaikan.
 Tujuannya supaya mengurangi piksel yang perlu diproses lebih lanjut.
-\begin{equation}
-    Corner(x,y) = 
-    \begin{cases}  
-        1 & \text{jika } R(x,y) > T \\ 
-        0 & \text{jika } R(x,y) <= T
-    \end{cases}
-\end{equation}
 
     Setelah melewati Thresholding, setiap piksel yang telah lolos akan diperiksa kembali dengan \emph{Non-Maximum Suppression} atau NMS,
 NMS bertujuan untuk mengelola kembali piksel yang saling berdekatan satu sama lain. NMS akan memilih piksel pada rentang tertentu, piksel dengan nilai \(R\) terbesar akan terpilih sebagai puncak lokal dan dipertahankan sebagai sudut, dan yang lainnya akan diabaikan.
-\begin{equation*}
-    NMS(x,y) =
-    \begin{cases}
-        1 & \text{jika } R(x,y) = MaxLocal R(i,j) \\
-        0 & \text{lainnya }
-    \end{cases}
-\end{equation*}
-Dimana \emph{MaxLocal} \(R(i,j)\) adalah nilai maksimum yang berada di sekitar piksel \((x,y)\).
+
 
 \section{Penghitungan panjang dan Estimasi berat}
-    Setelah sudut-sudut hasil Thresholding dan NMS diperoleh, langkah selanjutnya adalah memilih piksel-piksel yang akan digunakan sebagai acuan pengukuran panjang dan lebar ikan. 
+    Setelah sudut-sudut hasil dari \emph{Harris-Corner} melewati \emph{Thresholding} dan \emph{Non-Maximum Suppression}, langkah selanjutnya adalah memilih piksel-piksel yang akan digunakan sebagai acuan pengukuran panjang dan lebar ikan. 
 Pemilihan titik sudut didasarkan pada titik maksimum dan minimum pada setiap sumbu, sehingga diperoleh titik yang mewakili bagian-bagian utama tubuh ikan, seperti ujung kepala (mulut), ujung ekor, sirip atas, dan bagian bawah perut.
 
     Proses pemilihan dilakukan dengan cara mencari titik maksimum dan minimum pada sumbu (x) dan sumbu (y) dengan menggunakan library \emph{numpy}. Keseluruhan alur penghitungan panjang dan estimasi berat dapat dilihat pada gambar~\ref{Alur Panjang dan Berat}.

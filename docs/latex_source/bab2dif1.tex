@@ -313,6 +313,57 @@ Walaupun tubuh ikan tidak memiliki struktur geometris yang kaku seperti objek bu
 %   Nilai \(R\) akan menunjukkan keberadaan sudut pada area tersebut. 
 % Jika nilai \(R\) yang besar akan menunjukkan keberadaan sudut di area tersebut, sebaliknya nilai \(R\) yang kecil menunjukkan daerah tersebut merupakan tepi.
 
+\section{Thresholding dan Non-Maximum Suppression}
+
+Setelah nilai \textit{Harris response} diperoleh, diperlukan proses seleksi untuk menentukan titik sudut (\textit{corner}) yang valid. Nilai respon Harris umumnya masih menghasilkan banyak titik dengan respon rendah akibat noise atau perubahan intensitas kecil pada citra. Oleh karena itu, digunakan metode \textit{thresholding} dan \textit{Non-Maximum Suppression} (NMS) untuk menyaring titik sudut yang paling signifikan.
+
+\textit{Thresholding} merupakan proses penyaringan nilai respon Harris berdasarkan nilai ambang tertentu (\textit{threshold}). Piksel yang memiliki nilai respon lebih besar dari nilai ambang akan dipertahankan sebagai kandidat titik sudut, sedangkan piksel dengan nilai respon di bawah ambang akan dihilangkan. Secara matematis, proses thresholding dapat dinyatakan sebagai berikut:
+
+\[
+R(x,y) =
+\begin{cases}
+1, & \text{jika } R(x,y) > T \\
+0, & \text{jika } R(x,y) \leq T
+\end{cases}
+\]
+
+di mana:
+\begin{itemize}
+    \item $R(x,y)$ adalah nilai respon Harris pada koordinat $(x,y)$,
+    \item $T$ adalah nilai \textit{threshold} yang digunakan,
+\end{itemize}
+
+Proses thresholding mampu mengurangi jumlah titik sudut palsu (\textit{false corner}) yang disebabkan oleh noise atau perubahan intensitas kecil pada citra. Namun, hasil thresholding masih dapat menghasilkan beberapa titik sudut yang berdekatan pada area yang sama. Oleh karena itu, digunakan metode \textit{Non-Maximum Suppression} (NMS).
+
+\textit{Non-Maximum Suppression} merupakan metode yang digunakan untuk mempertahankan hanya titik sudut dengan nilai respon terbesar pada suatu area lokal. Setelah thresholding dilakukan, sering kali masih terdapat banyak titik sudut yang berdekatan akibat respon tinggi pada area yang sama. Oleh karena itu, NMS digunakan untuk mengurangi redundansi titik sudut.
+
+Proses NMS dilakukan dengan membandingkan nilai respon suatu piksel terhadap piksel-piksel di sekitarnya dalam sebuah jendela lokal. Jika nilai respon piksel tersebut bukan yang terbesar, maka piksel akan dihilangkan. Sebaliknya, jika nilai respon merupakan yang terbesar dalam area lokal, maka piksel dipertahankan sebagai titik sudut akhir.
+
+\[
+    NMS(x,y) =
+    \begin{cases}
+        1 & \text{jika } R(x,y) = MaxLocal R(i,j) \\
+        0 & \text{lainnya }
+    \end{cases}
+\]
+
+di mana:
+\begin{itemize}
+    \item $NMS(x,y)$ adalah hasil dari proses Non-Maximum Suppression pada koordinat $(x,y)$,
+    \item $R(x,y)$ adalah nilai respon Harris yang telah melalui proses thresholding.
+    \item $MaxLocal R(i,j)$ adalah nilai respon Harris maksimum dalam jendela lokal di sekitar koordinat $(x,y)$.
+\end{itemize}
+
+Dengan penerapan thresholding dan Non-Maximum Suppression, titik sudut yang dihasilkan menjadi lebih akurat dan terfokus pada bagian penting objek. Dalam penelitian ini, kedua proses tersebut digunakan untuk menyaring titik sudut pada tubuh ikan sehingga hanya titik sudut yang paling representatif yang digunakan dalam proses pengukuran panjang ikan.
+
+% \section{Thresholding}
+%   Thresholding adalah teknik yang digunakan untuk 
+
+% \section{\emph{Non-Maximum Suppression}}
+%   \emph{Non-Maximum Suppression} adalah teknik yang digunakan untuk menyaring titik-titik sudut yang terdeteksi oleh metode Harris-Corner Detection. 
+% Setelah nilai respon Harris dihitung untuk setiap piksel, \emph{Non-Maximum Suppression} digunakan untuk memastikan bahwa hanya titik-titik sudut yang paling kuat (nilai \(R\) tertinggi) yang dipertahankan, sementara titik-titik sudut yang lebih lemah di sekitar titik tersebut dihilangkan.
+ 
+
 \section{Proyeksi Perspektif}
 
 Proyeksi perspektif merupakan metode pemetaan objek tiga dimensi (3D) ke bidang dua dimensi (2D) dengan mempertimbangkan jarak objek terhadap kamera. Pada proyeksi ini, objek yang berada lebih jauh dari kamera akan terlihat lebih kecil dibandingkan objek yang berada lebih dekat.

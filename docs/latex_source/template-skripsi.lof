@@ -9,30 +9,30 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Citra RGB dan \emph {Grayscale}}}{8}{figure.caption.9}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Uniform gaussian Kernel}}{9}{figure.caption.10}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Contoh hasil deteksi sudut menggunakan metode Harris-Corner Detection}}{13}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Contoh rotasi citra digital}}{16}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Contoh bounding box pada citra digital}}{17}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Contoh rotasi citra digital}}{17}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Contoh bounding box pada citra digital}}{18}{figure.caption.13}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Alur Penelitian}}{21}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Alur Pra-Processing}}{24}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Alur Perhitungan Gradien}}{27}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Alur Penghitungan Panjang dan Estimasi Berat}}{31}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Alur Penelitian}}{22}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Alur Pra-Processing}}{25}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Alur Perhitungan Gradien}}{28}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Alur Penghitungan Panjang dan Estimasi Berat}}{32}{figure.caption.17}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Gambar yang akan digunakan dalam penelitian}}{35}{figure.caption.18}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces \emph {source code}: Untuk menghapus background dari library rembg}}{35}{figure.caption.19}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Contoh Gambar dan Jenis Ikan yang Digunakan}}{36}{figure.caption.20}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Contoh hasil gambar yang telah dihilangkan backgroundnya}}{36}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces \emph {source code}: Untuk melakukan rotasi citra berdasarkan sudut PCA}}{36}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Contoh hasil gambar yang telah dirotasi}}{37}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces \emph {source code}: Untuk menghitung Gradien pada sumbu X dan Y}}{38}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces \emph {source code}: Untuk menghitung auto korelasi}}{38}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces \emph {source code}: Untuk menghitung Harris Respon}}{39}{figure.caption.27}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Contoh hasil gambar yang telah dilakukan Harris Respon}}{40}{figure.caption.28}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces \emph {source code}: Untuk melakukan thresholding dan non-maximum suppression}}{41}{figure.caption.29}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Contoh hasil gambar yang telah dilakukan thresholding dan NMS}}{41}{figure.caption.30}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces \emph {source code}: Untuk menentukan nilai maksimal dan minimal sumbu x dan y dari titik sudut yang telah didapatkan}}{42}{figure.caption.31}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Contoh hasil gambar yang telah diberi bounding box}}{43}{figure.caption.32}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces \emph {source code}: Untuk menghitung panjang, lebar, dan keliling ikan}}{44}{figure.caption.33}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces \emph {source code}: Untuk melakukan proyeksi perspektif}}{44}{figure.caption.34}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces \emph {source code}: Untuk mengEstimasi berat ikan berdasarkan Rumus turunan \emph {Lenght-Weight Relationship}}}{45}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Gambar yang akan digunakan dalam penelitian}}{36}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \emph {source code}: Untuk menghapus background dari library rembg}}{36}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Contoh Gambar dan Jenis Ikan yang Digunakan}}{37}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Contoh hasil gambar yang telah dihilangkan backgroundnya}}{37}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces \emph {source code}: Untuk melakukan rotasi citra berdasarkan sudut PCA}}{37}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Contoh hasil gambar yang telah dirotasi}}{38}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces \emph {source code}: Untuk menghitung Gradien pada sumbu X dan Y}}{39}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \emph {source code}: Untuk menghitung auto korelasi}}{39}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces \emph {source code}: Untuk menghitung Harris Respon}}{40}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Contoh hasil gambar yang telah dilakukan Harris Respon}}{41}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces \emph {source code}: Untuk melakukan thresholding dan non-maximum suppression}}{42}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Contoh hasil gambar yang telah dilakukan thresholding dan NMS}}{42}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces \emph {source code}: Untuk menentukan nilai maksimal dan minimal sumbu x dan y dari titik sudut yang telah didapatkan}}{43}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Contoh hasil gambar yang telah diberi bounding box}}{44}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces \emph {source code}: Untuk menghitung panjang, lebar, dan keliling ikan}}{45}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces \emph {source code}: Untuk melakukan proyeksi perspektif}}{45}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces \emph {source code}: Untuk mengEstimasi berat ikan berdasarkan Rumus turunan \emph {Lenght-Weight Relationship}}}{46}{figure.caption.35}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
