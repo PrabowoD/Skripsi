@@ -6,9 +6,11 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Nilai referensi ikan}}{49}{table.caption.38}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Hasil Deteksi}}{51}{table.caption.40}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Rata-Rata MAPE Ikan}}{51}{table.caption.41}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Hasil Evaluasi Akurasi}}{52}{table.caption.43}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Hasil Deteksi}}{49}{table.4.1}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Rata-Rata MAPE Ikan}}{49}{table.caption.37}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Hasil Evaluasi Akurasi}}{50}{table.caption.39}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Nilai referensi ikan}}{59}{table.C.1}%

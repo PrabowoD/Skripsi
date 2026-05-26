@@ -3,9 +3,9 @@
 \contentsline {chapter}{KATA PENGANTAR}{iv}{Item.5}%
 \contentsline {chapter}{ABSTRAK}{v}{chapter*.2}%
 \contentsline {chapter}{\emph {ABSTRACT}}{vi}{chapter*.3}%
-\contentsline {chapter}{DAFTAR ISI}{vii}{chapter*.4}%
-\contentsline {chapter}{DAFTAR GAMBAR}{viii}{chapter*.5}%
-\contentsline {chapter}{DAFTAR TABEL}{ix}{chapter*.6}%
+\contentsline {chapter}{DAFTAR ISI}{viii}{chapter*.4}%
+\contentsline {chapter}{DAFTAR GAMBAR}{ix}{chapter*.5}%
+\contentsline {chapter}{DAFTAR TABEL}{x}{chapter*.6}%
 \babel@toc {bahasa}{}\relax 
 \contentsline {chapter}{\numberline {I}PENDAHULUAN}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Latar Belakang Masalah}{1}{section.1.1}%
@@ -65,9 +65,11 @@
 \contentsline {subsection}{\numberline {4.6.3}Memproyeksi Perspectif}{46}{subsection.4.6.3}%
 \contentsline {subsection}{\numberline {4.6.4}Mengitung Berat}{47}{subsection.4.6.4}%
 \contentsline {section}{\numberline {4.7}Evaluasi Akurasi}{48}{section.4.7}%
-\contentsline {chapter}{\numberline {V}KESIMPULAN DAN SARAN}{54}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Kesimpulan}{54}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Saran}{54}{section.5.2}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{55}{Item.26}%
-\contentsline {chapter}{LAMPIRAN}{57}{chapter*.44}%
-\contentsline {chapter}{\numberline {A}\textit {Source Code}}{57}{appendix.A}%
+\contentsline {chapter}{\numberline {V}KESIMPULAN DAN SARAN}{52}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kesimpulan}{52}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Saran}{52}{section.5.2}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{53}{Item.26}%
+\contentsline {chapter}{LAMPIRAN}{55}{chapter*.40}%
+\contentsline {chapter}{\numberline {A}\textit {Source Code}}{55}{chapter.A}%
+\contentsline {chapter}{\numberline {B}Table Data}{56}{chapter.B}%
+\contentsline {chapter}{\numberline {C}Tabel Nilai Referensi}{58}{chapter.C}%
